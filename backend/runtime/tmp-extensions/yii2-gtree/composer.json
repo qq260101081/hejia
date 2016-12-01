@@ -1,0 +1,21 @@
+{
+    "name": "gliek/yii2-gtree",
+    "description": "增加了pid",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "BSD-4-Clause",
+    "authors": [
+        {
+            "name": "carl",
+            "email": "260101081@qq.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "gilek\\gtree\\": ""
+        }
+    }
+}
