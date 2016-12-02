@@ -89,7 +89,6 @@
                     <div class="li_r">
                         {input}
                         <a href="">{image}</a>
-                        <a href="">看不清楚？换张图片</a>
                     </div>
                 </li>'
                     //'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',

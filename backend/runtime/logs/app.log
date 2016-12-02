@@ -58463,3 +58463,254 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1480492563.763
     'REQUEST_TIME' => 1480492563
 ]
+2016-12-02 16:34:41 [::1][11][jbvpro0kh1geo4ft686og74po7][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: users/users/guestbook in /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Controller.php:125
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('guestbook', Array)
+#1 /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('users/users/gue...', Array)
+#2 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /Users/carl/www/hejia/backend/web/index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/backend/web/index.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-02 16:34:41 [::1][11][jbvpro0kh1geo4ft686og74po7][info][application] $_GET = [
+    'r' => 'users/users/guestbook'
+]
+
+$_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 11
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/backend/web/'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/backend/web/index.php'
+    'REMOTE_PORT' => '63216'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=users%2Fusers%2Fguestbook'
+    'REQUEST_URI' => '/hejia/backend/web/index.php?r=users%2Fusers%2Fguestbook'
+    'SCRIPT_NAME' => '/hejia/backend/web/index.php'
+    'PHP_SELF' => '/hejia/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1480667681.797
+    'REQUEST_TIME' => 1480667681
+]
+2016-12-02 16:39:14 [::1][11][jbvpro0kh1geo4ft686og74po7][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: users/users/guestbook in /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Controller.php:125
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('guestbook', Array)
+#1 /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('users/users/gue...', Array)
+#2 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /Users/carl/www/hejia/backend/web/index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/backend/web/index.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-02 16:39:14 [::1][11][jbvpro0kh1geo4ft686og74po7][info][application] $_GET = [
+    'r' => 'users/users/guestbook'
+]
+
+$_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 11
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/backend/web/'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/backend/web/index.php'
+    'REMOTE_PORT' => '63218'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=users%2Fusers%2Fguestbook'
+    'REQUEST_URI' => '/hejia/backend/web/index.php?r=users%2Fusers%2Fguestbook'
+    'SCRIPT_NAME' => '/hejia/backend/web/index.php'
+    'PHP_SELF' => '/hejia/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1480667954.489
+    'REQUEST_TIME' => 1480667954
+]
+2016-12-02 16:39:18 [::1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'app\modules\users\controllers\GuestbookController' in file: /Users/carl/www/hejia/backend/modules/users/controllers/GuestbookController.php. Namespace missing? in /Users/carl/www/hejia/vendor/yiisoft/yii2/BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\modules\\use...')
+#1 [internal function]: spl_autoload_call('app\\modules\\use...')
+#2 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Module.php(562): class_exists('app\\modules\\use...')
+#3 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Module.php(520): yii\base\Module->createControllerByID('guestbook')
+#4 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Module.php(512): yii\base\Module->createController('index')
+#5 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Module.php(448): yii\base\Module->createController('guestbook/index')
+#6 /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('users/guestbook...', Array)
+#7 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /Users/carl/www/hejia/backend/web/index.php(18): yii\base\Application->run()
+#9 {main}
+2016-12-02 16:39:18 [::1][-][-][info][application] $_GET = [
+    'r' => 'users/guestbook/index'
+]
+
+$_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/backend/web/index.php?r=users%2Fusers%2Fguestbook'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/backend/web/index.php'
+    'REMOTE_PORT' => '63218'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=users%2Fguestbook%2Findex'
+    'REQUEST_URI' => '/hejia/backend/web/index.php?r=users%2Fguestbook%2Findex'
+    'SCRIPT_NAME' => '/hejia/backend/web/index.php'
+    'PHP_SELF' => '/hejia/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1480667958.279
+    'REQUEST_TIME' => 1480667958
+]
+2016-12-02 16:40:19 [::1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\modules\users\models\GuestbookSearch::type in /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Component.php:143
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/db/BaseActiveRecord.php(252): yii\base\Component->__get('type')
+#1 /Users/carl/www/hejia/backend/modules/users/models/GuestbookSearch.php(67): yii\db\BaseActiveRecord->__get('type')
+#2 /Users/carl/www/hejia/backend/modules/users/controllers/GuestbookController.php(38): app\modules\users\models\GuestbookSearch->search(Array)
+#3 [internal function]: app\modules\users\controllers\GuestbookController->actionIndex()
+#4 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#7 /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('users/guestbook...', Array)
+#8 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /Users/carl/www/hejia/backend/web/index.php(18): yii\base\Application->run()
+#10 {main}
+2016-12-02 16:40:19 [::1][-][-][info][application] $_GET = [
+    'r' => 'users/guestbook/index'
+]
+
+$_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/backend/web/index.php?r=users%2Fusers%2Fguestbook'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/backend/web/index.php'
+    'REMOTE_PORT' => '63220'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=users%2Fguestbook%2Findex'
+    'REQUEST_URI' => '/hejia/backend/web/index.php?r=users%2Fguestbook%2Findex'
+    'SCRIPT_NAME' => '/hejia/backend/web/index.php'
+    'PHP_SELF' => '/hejia/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1480668019.471
+    'REQUEST_TIME' => 1480668019
+]

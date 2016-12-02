@@ -6,6 +6,7 @@
 use yii\helpers\Html;
 use \yii\helpers\Url;
 use frontend\assets\AppAsset;
+use common\widgets\Alert;
 $this->title = '广州和家服务';
 AppAsset::register($this);
 
@@ -54,7 +55,7 @@ $category_id = Yii::$app->getRequest()->getQueryParam('category_id');
     </div>
 </div>
 <!--头部-->
-
+<?= Alert::widget() ?>
 <?php echo $content?>
 
 <!--底部-->
@@ -64,7 +65,7 @@ $category_id = Yii::$app->getRequest()->getQueryParam('category_id');
             <li class="f_about">
                 <b>公司简介</b>
                 <div class="f_nav_m">
-                    <p>广东和家网是一家致力于家庭服务的互联网O2O服务平台，提供中高端家政服务。服务包括家庭助理、家政服务员、育儿服务、管家、营养师配套服务、保洁、学生托管业务及相应教育、旅游、家居生活代购服务和护理养老服务。</p>
+                    <p>广东和家服务是一家致力于家庭服务的互联网O2O服务平台，提供中高端家政服务。服务包括家庭助理、家政服务员、育儿服务、管家、营养师配套服务、保洁、学生托管业务及相应教育、旅游、家居生活代购服务和护理养老服务。</p>
                 </div>
             </li>
             <li>
@@ -92,29 +93,29 @@ $category_id = Yii::$app->getRequest()->getQueryParam('category_id');
             <li>
                 <b>活动资讯</b>
                 <div class="f_nav_m">
-                    <a href="">最新活动</a>
-                    <a href="">活动花絮</a>
+                    <a href="<?= Url::to(['news/index','category_id'=>4])?>">最新活动</a>
+                    <a href="<?= Url::to(['interesting/index'])?>">活动花絮</a>
                 </div>
             </li>
             <li>
                 <b>联系我们</b>
                 <div class="f_nav_m">
-                    <a href="">联系方式</a>
-                    <a href="">留言反馈</a>
+                    <a href="<?= Url::to(['site/contact'])?>">联系方式</a>
+                    <a href="<?= Url::to(['site/guestbook'])?>">留言反馈</a>
                 </div>
             </li>
         </ul>
         <div class="f_tel">
             <p class="yellow">您可以拨打我们的服务电话</p>
             <h3>13926486877</h3>
-            <p><b>广东和家网络公司</b></p>
+            <p><b>广东和家服务</b></p>
             <p>广州市高新技术产业开发区科学大道162号B1区504</p>
             <p><b>E-mail:</b>135@163.com</p>
         </div>
     </div>
 </div>
 <div class="copyright">
-    <p>Copyright © 2016 广东和家网络公司 All rights reserved.  粤ICP备11036519号-1 </p>
+    <p>Copyright © 2016 广东和家服务 All rights reserved.  粤ICP备11036519号-1 </p>
 </div>
 <!--底部-->
 

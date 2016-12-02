@@ -13,8 +13,8 @@
     <div class="sidenav">
         <div class="side_m">
             <div class="side_h">
-                <p>About us</p>
-                <img src="frontend/web/images/news.png"/>
+                <p>Team's Mien</p>
+                <img src="frontend/web/images/tuandui.png"/>
             </div>
             <div class="line_01">&nbsp;</div>
             <ul class="side_nav_l">

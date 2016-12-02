@@ -27,6 +27,7 @@
                         'url' => '#',
                         'items' => [
                             ['label' => '用户列表', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/users/users/index'],],
+                            ['label' => '留言列表', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/users/guestbook/index'],],
                         ],
                     ],
                     ['label' => '轮播图管理', 'icon' => 'fa fa-share', 'url' => ['/ad/ad/index']],

@@ -15,8 +15,8 @@
     <div class="sidenav">
         <div class="side_m">
             <div class="side_h">
-                <p>About us</p>
-                <img src="frontend/web/images/news.png"/>
+                <p>Activities</p>
+                <img src="frontend/web/images/huaxu.png"/>
             </div>
             <div class="line_01">&nbsp;</div>
             <ul class="side_nav_l">

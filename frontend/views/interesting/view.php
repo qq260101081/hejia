@@ -5,7 +5,7 @@
     <div class="position_ab">
         <b>所在位置：</b>
         <a href="/">首页</a>>
-        <a class="yellow">活动资讯</a>
+        <a class="yellow">活动花絮</a>
     </div>
     <!--当前位置-->
     <!--左边重要导航盒子-->
@@ -13,8 +13,8 @@
     <div class="sidenav">
         <div class="side_m">
             <div class="side_h">
-                <p>About us</p>
-                <img src="frontend/web/images/news.png" />
+                <p>Activities</p>
+                <img src="frontend/web/images/huaxu.png" />
             </div>
             <div class="line_01">&nbsp;</div>
             <ul class="side_nav_l">

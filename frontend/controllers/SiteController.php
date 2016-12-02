@@ -147,10 +147,11 @@ class SiteController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             if ($model->save()) {
 
-                $model->sendEmail(Yii::$app->params['adminEmail']);
+                //$model->sendEmail(Yii::$app->params['adminEmail']);
                 Yii::$app->session->setFlash('success', '谢谢您的留言，我们将尽快回复您.');
             } else {
-                Yii::$app->session->setFlash('error', 'There was an error sending email.');
+                print_r($model->getErrors());
+                Yii::$app->session->setFlash('error', '提交失败.');
             }
 
             return $this->refresh();
