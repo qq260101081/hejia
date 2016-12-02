@@ -14,6 +14,6 @@ class Mien extends ActiveRecord
 {
     public static function tableName()
     {
-        return '{{%Mien}}';
+        return '{{%mien}}';
     }
 }

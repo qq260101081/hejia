@@ -6,7 +6,7 @@
 use yii\helpers\Html;
 use \yii\helpers\Url;
 use frontend\assets\AppAsset;
-$this->title = '广东和家网络公司';
+$this->title = '广州和家服务';
 AppAsset::register($this);
 
 $ctl =  $this->context->id;
@@ -47,7 +47,7 @@ $category_id = Yii::$app->getRequest()->getQueryParam('category_id');
             <li <?php if($ctl == 'site' && $act_id == 'index') echo 'class="now"';?>><a href="<?= Url::to(['site/index']);?>">网站首页</a></li>
             <li <?php if($ctl == 'product' && $category_id==4) echo 'class="now"';?>><a href="<?= Url::to(['product/index', 'category_id' => 4]);?>">家庭服务</a></li>
             <li <?php if($ctl == 'product' && $category_id==106) echo 'class="now"';?>><a href="<?= Url::to(['product/index', 'category_id' => 106]);?>">托辅中心</a></li>
-            <li><a href="news.html">服务流程</a></li>
+            <li><a href="#">服务流程</a></li>
             <li <?php if($ctl == 'news') echo 'class="now"';?>><a href="<?= Url::to(['news/index']);?>">活动资讯</a></li>
             <li <?php if($ctl == 'site' && $act_id == 'contact') echo 'class="now"';?>><a href="<?= Url::to(['site/contact']);?>">联系我们</a></li>
         </ul>

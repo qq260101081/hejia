@@ -69,7 +69,7 @@
             </div>
             <a class="more_cp" href="<?= Url::to(['interesting/index'])?>">更多>></a>
             <div class="box_body">
-                <a href=""><img src="upload/<?= $interesting->list_img;?>"></a>
+                <a href="<?= Url::to(['interesting','id'=>$interesting->id])?>"><img src="upload/<?= $interesting->list_img;?>"></a>
             </div>
         </li>
         <li class="mstd">
@@ -78,7 +78,7 @@
             </div>
             <a class="more_cp" href="">更多>></a>
             <div class="box_body">
-                <a href=""><img src="upload/<?= $mien->list_img;?>"/></a>
+                <a href="<?= Url::to(['mien','id'=>$mien->id])?>"><img src="upload/<?= $mien->list_img;?>"/></a>
             </div>
         </li>
     </ul>

@@ -6,7 +6,7 @@
     $this->title = "留言反馈";
 
 ?>
-<div class="second">
+
     <!--当前位置-->
     <div class="position_ab">
         <b>所在位置：</b>
@@ -14,7 +14,7 @@
         <a class="yellow"><?= $this->title;?></a>
     </div>
     <!--当前位置-->
-    <div class="second">
+<div class="second">
     <!--左边重要导航盒子-->
     <div class="sidenav">
         <div class="side_m">
@@ -29,7 +29,6 @@
             </ul>
             <div class="line_02">&nbsp;</div>
         </div>
-    </div>
     <!--左边重要导航盒子-->
     </div>
     <!--右边主要内容-->
