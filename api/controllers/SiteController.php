@@ -1,12 +1,6 @@
 <?php
-namespace frontend\controllers;
+namespace api\controllers;
 
-use frontend\models\Ad;
-use frontend\models\Interesting;
-use frontend\models\Mien;
-use frontend\models\News;
-use frontend\models\Product;
-use frontend\models\ProductCategory;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
@@ -14,11 +8,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
-use frontend\models\PasswordResetRequestForm;
-use frontend\models\ResetPasswordForm;
-use frontend\models\SignupForm;
-use frontend\models\Guestbook;
-use frontend\models\WebCfg;
+
 
 /**
  * Site controller
