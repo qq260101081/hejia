@@ -48,6 +48,7 @@
                             ['label' => '生活资料库管理', 'icon' => 'fa fa-dot-circle-o', 'url' => ['repository/index']],
                             ['label' => '用户生活资料库', 'icon' => 'fa fa-dot-circle-o', 'url' => ['user-live/index']],
                             ['label' => '文章管理', 'icon' => 'fa fa-dot-circle-o', 'url' => ['article/index']],
+                            ['label' => '产品管理', 'icon' => 'fa fa-dot-circle-o', 'url' => ['goods/index']],
                             ['label' => '家教管理', 'icon' => 'fa fa-dot-circle-o', 'url' => ['teacher/index']],
                             ['label' => '保姆管理', 'icon' => 'fa fa-dot-circle-o', 'url' => ['babysitter/index']],
                         ],
