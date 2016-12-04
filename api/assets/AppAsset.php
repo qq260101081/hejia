@@ -18,12 +18,12 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        '/api/web/css/amazeui.min.css',
-        '/api/web/css/style.css',
+        'api/web/css/amazeui.min.css',
+        'api/web/css/style.css',
 
     ];
     public $js = [
-        '/api/web/js/amazeui.min.js',
+        'api/web/js/amazeui.min.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

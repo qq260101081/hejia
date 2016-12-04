@@ -5,9 +5,6 @@
 
 use api\assets\AppAsset;
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
 
 AppAsset::register($this);
 ?>
@@ -24,23 +21,39 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-<div class="wrap">
-
-    <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= $content ?>
+<header data-am-widget="header" class="am-header am-header-default jz">
+    <div class="am-header-left am-header-nav">
+        <a href="javascript:history.back()" class="">
+            <i class="am-icon-chevron-left"></i>
+        </a>
     </div>
+    <h1 class="am-header-title">
+        <a href="#title-link" class="">家庭服务</a>
+    </h1>
+</header>
+<?= $content;?>
+<div data-am-widget="navbar" class="am-navbar  gm-foot am-no-layout" id="">
+    <ul class="am-navbar-nav am-cf am-avg-sm-4">
+        <li class="curr">
+            <a href="index.html" class="curr">
+                <span class="am-icon-home"></span>
+                <span class="am-navbar-label">首页</span>
+            </a>
+        </li>
+        <li>
+            <a href="order.html" class="">
+                <span class="am-icon-th-large"></span>
+                <span class="am-navbar-label">订单</span>
+            </a>
+        </li>
+        <li>
+            <a href="member.html" class="">
+                <span class="am-icon-user"></span>
+                <span class="am-navbar-label">我的</span>
+            </a>
+        </li>
+    </ul>
 </div>
-
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
-    </div>
-</footer>
 
 <?php $this->endBody() ?>
 </body>

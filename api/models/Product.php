@@ -4,7 +4,7 @@
  * User: carl
  * Date: 16/12/3 下午12:21
  */
-namespace backend\models;
+namespace api\models;
 
 use Yii;
 

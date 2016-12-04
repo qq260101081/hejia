@@ -7,17 +7,15 @@
 
 namespace api\controllers;
 
-use app\modules\product\models\Product;
+use api\models\Product;
 use yii\web\Controller;
 
 class ProductController extends Controller
 {
-    public $enableCsrfValidation = false;
-
     public function actionIndex()
     {
         $model = Product::find()->orderBy('id desc')->all();
-        return $this->render('index', [
+        return $this->render('family', [
             'model' => $model
         ]);
     }
