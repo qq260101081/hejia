@@ -3,35 +3,255 @@
 namespace api\controllers;
 
 use Yii;
-use yii\rest\ActiveController;
-use yii\web\Response;
-use yii\filters\Cors;
-use api\sdk\WechatPay;
-use api\models\WechatUser;
-use common\models\Order;
-use common\models\Product;
+use yii\web\Controller;
+use api\components\WXBizMsgCrypt;
 
-class WechatController extends ActiveController
+
+class WechatController extends Controller
 {
+    public $enableCsrfValidation = false;
 
-    public $modelClass = '';
-
-    public function behaviors()
+    public function actionIndex()
     {
-        $behaviors = parent::behaviors();
-        $behaviors['contentNegotiator']['formats']['text/html'] = Response::FORMAT_JSON;
-        $behaviors['corsFilter'] = [
-            'class' => Cors::className(),
-            'cors' => [
-                'Origin' => ['*'],
-                'Access-Control-Request-Method' => ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
-                'Access-Control-Request-Headers' => ['*'],
-                'Access-Control-Allow-Credentials' => true,
-                'Access-Control-Max-Age' => 86400,
+        $data       = Yii::$app->request->get();
+        $nonce     = $data['nonce'];
+        $timestamp = $data['timestamp'];
+        $echostr   = isset($data['echostr']) ? $data['echostr'] : '';
+        $signature = $data['signature'];
+        $token     = Yii::$app->params['wechat']['token'];
+
+        if (!$token) die('TOKEN is not defined!');
+
+        $arr = [$nonce, $timestamp, $token];
+        sort($arr, SORT_STRING);
+        $tmpStr = implode( $arr );
+        $tmpStr = sha1( $tmpStr );
+        //第一次接入微信接口的时候
+        if( $tmpStr == $signature && $echostr) die($echostr);
+        //第二次以后，回复消息
+        $this->reponseMsg();
+    }
+
+    //接收事件推送并回复
+    public function reponseMsg()
+    {
+        //1.获取到微信推送过来的POST数据（xml格式）
+        $postArr = Yii::$app->request->getRawBody();
+        //2.处理消息类型，并设回复类型和内容
+        $postObj = simplexml_load_string($postArr);
+
+        //判断该数据包是否是订阅的事件推送
+        if ($postObj->MsgType == 'event')
+        {
+            //如果是关注 subscribe 事件
+            if (strtolower($postObj->Event) == 'subscribe')
+            {
+                //回复用户消息
+                $encryptMsg = '';
+                $nonce      = Yii::$app->request->get('nonce');
+
+                $toUser     = $postObj->FromUserName;
+                $fromUser   = $postObj->ToUserName;
+                $time       = time();
+                $MsgType    = 'text';
+                $Content    = '欢迎关注我们的微信公众号';
+                $template   = "<xml>
+                                <ToUserName><![CDATA[%s]]></ToUserName>
+                                <FromUserName><![CDATA[%s]]></FromUserName>
+                                <CreateTime>%s</CreateTime>
+                                <MsgType><![CDATA[%s]]></MsgType>
+                                <Content><![CDATA[%s]]></Content>
+                            </xml>";
+                $info     = sprintf($template, $toUser, $fromUser, $time, $MsgType, $Content);
+
+                $pc = new WXBizMsgCrypt(
+                    Yii::$app->params['wechat']['token'],
+                    Yii::$app->params['wechat']['encodingAESKey'],
+                    Yii::$app->params['wechat']['appid']
+                );
+                //加密消息
+                $errCode = $pc->encryptMsg($info, $time, $nonce, $encryptMsg);
+
+                if ($errCode != 0) echo $errCode;
+
+                echo $encryptMsg;
+            }
+            //客服接入
+            elseif (strtolower($postObj->Event) == 'click' && strtolower($postObj->EventKey) == 'customer')
+            {
+                $encryptMsg = '';
+                $nonce      = Yii::$app->request->get('nonce');
+                $toUser     = $postObj->FromUserName;
+                $fromUser   = $postObj->ToUserName;
+                $time       = time();
+                $MsgType    = 'transfer_customer_service';
+
+                $template   = "<xml>
+                                <ToUserName><![CDATA[%s]]></ToUserName>
+                                <FromUserName><![CDATA[%s]]></FromUserName>
+                                <CreateTime>%s</CreateTime>
+                                <MsgType><![CDATA[%s]]></MsgType>
+                               </xml>";
+                $info       = sprintf($template, $toUser, $fromUser, $time, $MsgType);
+                $pc = new WXBizMsgCrypt(
+                    Yii::$app->params['wechat']['token'],
+                    Yii::$app->params['wechat']['encodingAESKey'],
+                    Yii::$app->params['wechat']['appid']
+                );
+                //加密消息
+                $errCode = $pc->encryptMsg($info, $time, $nonce, $encryptMsg);
+                if ($errCode != 0) echo $errCode;
+
+                echo $encryptMsg;
+            }
+        }
+    }
+
+    //获取微信token
+    public function actionGetAccessToken()
+    {
+        $appid = Yii::$app->params['wechat']['appid'];
+        $appsecret = Yii::$app->params['wechat']['appsecret'];
+        $url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.$appid.'&secret='.$appsecret;
+        $result = $this->httpCurl($url);
+        return $result['access_token'];
+    }
+
+    //封装curl
+    public function httpCurl($url, $type = 'get', $res = 'json', $data = '')
+    {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        //curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        //curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        if($type = 'post')
+        {
+            curl_setopt($ch, CURLOPT_POST, 1);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+        }
+        $result = curl_exec($ch);
+
+        if(curl_error($ch)) return curl_error($ch);
+        if($res == 'json')
+        {
+            $result = json_decode($result ,true);
+        }
+        curl_close($ch);
+        return $result;
+    }
+
+    //自定义微信菜单
+    public function actionCreateMenus()
+    {
+        $accessToken = $this->actionGetAccessToken();
+        $url = 'https://api.weixin.qq.com/cgi-bin/menu/create?access_token=' . $accessToken;
+        $data = [
+            'button' => [
+                [
+                    'name' => urlencode('和家服务'),
+                    'sub_button' => [
+                        [
+                            'name' => urlencode('主页'),
+                            'type' => 'click',
+                            'key'  => 'songs'
+                        ],
+                        [
+                            'name' => urlencode('团队风采'),
+                            'type' => 'click',
+                            'key'  => 'songs'
+                        ],
+                        [
+                            'name' => urlencode('托辅中心'),
+                            'type' => 'view',
+                            'url'  => 'http://www.baidu.com'
+                        ]
+                        ,
+                        [
+                            'name' => urlencode('家庭服务'),
+                            'type' => 'view',
+                            'url'  => 'http://www.baidu.com'
+                        ]
+                    ]
+                ],
+                [
+                    'name' => urlencode('活动资讯'),
+                    'sub_button' => [
+                        [
+                            'name' => urlencode('活动花絮'),
+                            'type' => 'click',
+                            'key'  => 'songs'
+                        ],
+                        [
+                            'name' => urlencode('和家动态'),
+                            'type' => 'view',
+                            'url'  => 'http://www.baidu.com'
+                        ],
+                        [
+                            'name' => urlencode('行业资讯'),
+                            'type' => 'view',
+                            'url'  => 'http://www.baidu.com'
+                        ],
+                        [
+                            'name' => urlencode('最新活动'),
+                            'type' => 'view',
+                            'url'  => 'http://www.baidu.com'
+                        ]
+                    ]
+                ],
+                [
+                    'name' => urlencode('我的'),
+                    'sub_button' => [
+                        [
+                            'name' => urlencode('关于和家'),
+                            'type' => 'view',
+                            'url'  => 'http://mp.weixin.qq.com/s/MZvyaqG67Kvsnmj1BkrKSw'
+                        ],
+                        [
+                            'name' => urlencode('我的消息'),
+                            'type' => 'view',
+                            'url'  => 'http://www.baidu.com'
+                        ],
+                        [
+                            'name' => urlencode('我的订单'),
+                            'type' => 'view',
+                            'url'  => 'http://www.baidu.com'
+                        ],
+                        [
+                            'name' => urlencode('联系客服'),
+                            'type' => 'click',
+                            'key'  => 'customer'
+                        ]
+                    ]
+                ]
             ],
         ];
-        return $behaviors;
+        $data = urldecode(json_encode($data));
+        $result = $this->httpCurl($url, 'post', 'json', $data);
+        print_r($result);
     }
+
+    //新增永久图文素材
+    public function actionCreatePermanentMaterial()
+    {
+        $accessToken = $this->actionGetAccessToken();
+        $url = 'https://api.weixin.qq.com/cgi-bin/material/add_news?access_token=' . $accessToken;
+        $postData = [
+            'articles' => [
+                "title" => '关于和家',
+               "thumb_media_id" => THUMB_MEDIA_ID,
+               "author" => '小杨',
+               "digest" => DIGEST,
+               "show_cover_pic" => SHOW_COVER_PIC(0 / 1),
+               "content" => '',
+               "content_source_url" => CONTENT_SOURCE_URL
+            ]
+        ];
+    }
+
+
+
+
 
     //微信服务接入时，服务器需授权验证
     public function actionValid()

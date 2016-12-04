@@ -67,6 +67,8 @@ return [
     					//"skin-green-light"
     			],
     		],
+            'basePath' => '@webroot/backend/web/assets',
+            'baseUrl' => '@web/backend/web/assets'
     	],
 
         'log' => [

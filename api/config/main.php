@@ -11,40 +11,24 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'api\controllers',
-    'defaultRoute' => 'site/index',
+    'defaultRoute' => 'wechat/index',
     'components' => [
          'user' => [
              'identityClass' => 'common\models\User',
              'enableAutoLogin' => true,
          ],
+        'urlManager' => [
+            'enablePrettyUrl' => true,  //美化url==ture
+            'enableStrictParsing' => false,  //不启用严格解析
+            'showScriptName' => false,   //隐藏index.php
+            'rules' => [
+                '<module:\w+>/<controller:\w+>/<id:\d+>' => '<module>/<controller>/view',
+                '<controller:\w+>/<id:\d+>' => '<controller>/view',
+            ],
+        ],
         'request'=>[
             // Enable Yii Validate CSRF Token
             'enableCsrfValidation' => false,
-        ],
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'enableStrictParsing' => true,
-            'showScriptName' => false,
-            'rules' => [
-                ['class' => 'yii\rest\UrlRule',
-                 'controller' => [
-                        'product',
-                        'user',
-                    ],
-                ],
-                [
-                    'class' => 'yii\rest\UrlRule',
-                    'controller' => 'wechat',
-                    'extraPatterns' => [
-                        'GET valid' => 'valid',
-                        'GET accesstoken' => 'accesstoken',
-                        'POST userinfo' => 'userinfo',
-                        'POST pay' => 'pay',
-                        'POST notify' => 'notify',
-                        'POST config' => 'config',
-                    ],
-                ],
-            ],
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -57,6 +41,10 @@ return [
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
+        ],
+        'assetManager' => [
+            'basePath' => '@webroot/api/web/assets',
+            'baseUrl' => '@web/api/web/assets'
         ],
     ],
     'language' =>'zh-CN',
