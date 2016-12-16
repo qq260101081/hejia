@@ -3,9 +3,11 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
+use yii\helpers\ArrayHelper;
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\ArticleSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
+
 
 $this->title = '产品管理';
 $this->params['breadcrumbs'][] = $this->title;
@@ -18,14 +20,20 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a(Yii::t('app', '创建产品'), ['create'], ['class' => 'btn btn-success btn-xs']) ?>
     </p>
 
-<?php Pjax::begin(); ?>    <?= GridView::widget([
+<?php Pjax::begin(); ?>
+        <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'typename',
+            [
+                'attribute' => 'category_id',
+                'label' => '分类',
+                'value' => 'categoryName.name',
+                'filter' => Html::activeDropDownList($searchModel, 'category_id',ArrayHelper::map($category,'id','name'),['prompt'=>'全部'] )
+            ],
             'name',
             'list_img',
             'info',

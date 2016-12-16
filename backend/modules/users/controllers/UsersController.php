@@ -44,6 +44,17 @@ class UsersController extends Controller
         ]);
     }
 
+    public function actionModalList()
+    {
+        $searchModel = new UsersSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->renderAjax('/modal-list', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
     /**
      * Displays a single Users model.
      * @param integer $id
@@ -64,10 +75,23 @@ class UsersController extends Controller
     public function actionCreate()
     {
         $model = new Users();
+        $model->role = 'frontend';
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        } else {
+        $dada = Yii::$app->request->post();
+        if($dada)
+        {
+            $dada['Users']['password_hash'] = Yii::$app->security->generatePasswordHash($dada['Users']['password']);
+            $dada['Users']['auth_key'] = Yii::$app->security->generateRandomString();
+            if ($model->load($dada) && $model->save()) {
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
+            else
+            {
+                Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败！']);
+            }
+        }
+        else
+        {
             return $this->render('/create', [
                 'model' => $model,
             ]);
@@ -84,9 +108,23 @@ class UsersController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        } else {
+        $dada = Yii::$app->request->post();
+        if($dada)
+        {
+            if($dada['Users']['password'])
+                $dada['Users']['password_hash'] = Yii::$app->security->generatePasswordHash($dada['Users']['password']);
+
+            $dada['Users']['auth_key'] = Yii::$app->security->generateRandomString();
+            if ($model->load($dada) && $model->save()) {
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
+            else
+            {
+                Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败！']);
+            }
+        }
+        else
+        {
             return $this->render('/update', [
                 'model' => $model,
             ]);

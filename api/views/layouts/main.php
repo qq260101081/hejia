@@ -21,16 +21,6 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-<header data-am-widget="header" class="am-header am-header-default jz">
-    <div class="am-header-left am-header-nav">
-        <a href="javascript:history.back()" class="">
-            <i class="am-icon-chevron-left"></i>
-        </a>
-    </div>
-    <h1 class="am-header-title">
-        <a href="#title-link" class="">家庭服务</a>
-    </h1>
-</header>
 <?= $content;?>
 <div data-am-widget="navbar" class="am-navbar  gm-foot am-no-layout" id="">
     <ul class="am-navbar-nav am-cf am-avg-sm-4">

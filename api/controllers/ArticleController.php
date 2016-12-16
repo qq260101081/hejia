@@ -7,14 +7,25 @@
 
 namespace api\controllers;
 
+use api\models\Article;
 use yii\web\Controller;
 
 class ArticleController extends Controller
 {
-    public $enableCsrfValidation = false;
-
-    public function actionAbout()
+    public function actionIndex($type = 0)
     {
-        return $this->render('index');
+        $model = Article::find()->where(['type' => $type])->all();
+        return $this->render('index', [
+            'model' => $model,
+            'type' => $type
+        ]);
+    }
+
+    public function actionView($id)
+    {
+        $model = Article::find()->where(['id' => $id])->one();
+        $this->render('view', [
+            'model' => $model
+        ]);
     }
 }

@@ -24,7 +24,14 @@ use \kartik\file\FileInput;
                 ]
             ]); ?>
 
-    <?= $form->field($model, 'typename')->dropDownList(['托辅中心'=>'托辅中心','家庭服务'=>'家庭服务']) ?>
+    <div class="form-group">
+        <div class="category">
+            <label class="col-sm-2 control-label">产品分类</label>
+            <select class="form-control" id="category"></select>
+        </div>
+
+    </div>
+    <?= Html::hiddenInput('Goods[category_id]','', ['id' => 'category_id'])?>
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
@@ -55,3 +62,20 @@ use \kartik\file\FileInput;
 
 </div>
     </div>
+<?php $this->beginBlock('js_end') ?>
+    var categoryPath = <?= json_encode(array_keys(isset($categoryPath) ? $categoryPath : []))?>;
+    var opts = {
+    ajax: '?r=/product/product-category/get-node',
+    select: '#category',
+    selClass: 'form-control',
+    head: '--请选择--',
+    defVal: categoryPath
+
+    };
+    var linkageSel = new LinkageSel(opts);
+    $('form button[type=submit]').on('click', function(){
+    $('#category_id').val(linkageSel.getSelectedValue());
+    });
+<?php $this->endBlock(); ?>
+
+<?php $this->registerJs($this->blocks['js_end'],\yii\web\View::POS_LOAD);//将编写的js代码注册到页面底部 ?>

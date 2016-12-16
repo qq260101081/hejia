@@ -15,6 +15,16 @@ use yii\web\NotFoundHttpException;
 class MienController extends Controller
 {
 
+    public function actions()
+    {
+        return [
+            'upload' => ['class' => 'kucha\ueditor\UEditorAction'],
+            'config' => [
+                'imageUrlPrefix' => $_SERVER['HTTP_HOST'],
+                'imagePathFormat' => "/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}"
+            ]
+        ];
+    }
     /**
      * Lists all Guarantee models.
      * @return mixed

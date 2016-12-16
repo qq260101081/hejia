@@ -6,6 +6,7 @@
  */
 namespace backend\models;
 
+use app\modules\product\models\ProductCategory;
 use Yii;
 
 /**
@@ -29,15 +30,20 @@ class Goods extends \yii\db\ActiveRecord
         return '{{%wx_product}}';
     }
 
+    public function getCategoryName()
+    {
+        return $this->hasOne(ProductCategory::className(), ['id' => 'category_id']);
+    }
     /**
      * @inheritdoc
      */
     public function rules()
     {
         return [
-            [['created_at'], 'integer'],
+            [['category_id','name','content'], 'required'],
+            [['category_id','created_at'], 'integer'],
             [['content'], 'string'],
-            [['typename','name'], 'string', 'max' => 90],
+            [['name'], 'string', 'max' => 90],
             [['list_img'], 'string', 'max' => 150],
             [['info'], 'string', 'max' => 105],
             ['created_at', 'default', 'value' => time()]
@@ -51,7 +57,7 @@ class Goods extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'typename' => '产品类型',
+            'category_id' => '产品类型',
             'name' => '产品名称',
             'list_img' => '列表图片',
             'info' => '描述',

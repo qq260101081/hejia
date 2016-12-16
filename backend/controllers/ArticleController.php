@@ -29,7 +29,16 @@ class ArticleController extends Controller
             ],
         ];
     }
-
+    public function actions()
+    {
+        return [
+            'upload' => ['class' => 'kucha\ueditor\UEditorAction'],
+            'config' => [
+                'imageUrlPrefix' => $_SERVER['HTTP_HOST'],
+                'imagePathFormat' => "/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}"
+            ]
+        ];
+    }
     /**
      * Lists all Article models.
      * @return mixed

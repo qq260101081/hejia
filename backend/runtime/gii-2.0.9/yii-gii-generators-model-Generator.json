@@ -1,1 +1,1 @@
-{"template":"default","enableI18N":"0","messageCategory":"app","ns":"app\\models","db":"db","baseClass":"yii\\db\\ActiveRecord","generateRelations":"all","generateLabelsFromComments":"1","queryNs":"app\\models","queryBaseClass":"yii\\db\\ActiveQuery"}
+{"template":"default","enableI18N":"1","messageCategory":"app","ns":"app\\modules\\orders\\models","db":"db","baseClass":"yii\\db\\ActiveRecord","generateRelations":"all","generateLabelsFromComments":"1","queryNs":"app\\modules\\orders\\models","queryBaseClass":"yii\\db\\ActiveQuery"}

@@ -45,7 +45,8 @@ public function actions() {
 	        	'manyroots' => true,
 	       		'draggable' => true,
     		],
-			'columnName' => '产品分类管理'
+			'columnName' => '产品分类管理',
+            'title' => ''
 		]);
   	}
 

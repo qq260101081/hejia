@@ -18,6 +18,9 @@ return [
     	'pages' => [
     		'class' => 'app\modules\pages\Module',
     	],
+        'service' => [
+            'class' => 'app\modules\service\Module',
+        ],
         'users' => [
             'class' => 'app\modules\users\Module',
         ],
@@ -30,8 +33,20 @@ return [
         'mien' => [
             'class' => 'app\modules\mien\Module',
         ],
+        'student' => [
+            'class' => 'app\modules\student\Module',
+        ],
+        'staff' => [
+            'class' => 'app\modules\staff\Module',
+        ],
         'product' => [
             'class' => 'app\modules\product\Module',
+        ],
+        'serviceProduct' => [
+            'class' => 'app\modules\serviceProduct\Module',
+        ],
+        'orders' => [
+            'class' => 'app\modules\orders\Module',
         ],
         'stat' => [
             'class' => 'app\modules\stat\Module',

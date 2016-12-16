@@ -158,19 +158,19 @@ class WechatController extends Controller
                         ],
                         [
                             'name' => urlencode('团队风采'),
-                            'type' => 'click',
-                            'key'  => 'songs'
+                            'type' => 'view',
+                            'url'  => 'http://liusheji.com/api.php/article/index?type=4'
                         ],
                         [
                             'name' => urlencode('托辅中心'),
                             'type' => 'view',
-                            'url'  => 'http://liusheji.com/api.php/product/index'
+                            'url'  => 'http://liusheji.com/api.php/product/index?pid=106'
                         ]
                         ,
                         [
                             'name' => urlencode('家庭服务'),
                             'type' => 'view',
-                            'url'  => 'http://liusheji.com/api.php/product/index'
+                            'url'  => 'http://liusheji.com/api.php/product/index?pid=4'
                         ]
                     ]
                 ],
@@ -179,23 +179,23 @@ class WechatController extends Controller
                     'sub_button' => [
                         [
                             'name' => urlencode('活动花絮'),
-                            'type' => 'click',
-                            'key'  => 'songs'
+                            'type' => 'view',
+                            'url'  => 'http://liusheji.com/api.php/article/index?type=3'
                         ],
                         [
                             'name' => urlencode('和家动态'),
                             'type' => 'view',
-                            'url'  => 'http://www.baidu.com'
+                            'url'  => 'http://liusheji.com/api.php/article/index?type=2'
                         ],
                         [
                             'name' => urlencode('行业资讯'),
                             'type' => 'view',
-                            'url'  => 'http://www.baidu.com'
+                            'url'  => 'http://liusheji.com/api.php/article/index?type=1'
                         ],
                         [
                             'name' => urlencode('最新活动'),
                             'type' => 'view',
-                            'url'  => 'http://www.baidu.com'
+                            'url'  => 'http://liusheji.com/api.php/article/index?type=0'
                         ]
                     ]
                 ],
@@ -210,12 +210,12 @@ class WechatController extends Controller
                         [
                             'name' => urlencode('我的消息'),
                             'type' => 'view',
-                            'url'  => 'http://www.baidu.com'
+                            'url'  => 'http://liusheji.com/api.php/user/msg'
                         ],
                         [
                             'name' => urlencode('我的订单'),
                             'type' => 'view',
-                            'url'  => 'http://www.baidu.com'
+                            'url'  => 'http://liusheji.com/api.php/user/orders'
                         ],
                         [
                             'name' => urlencode('联系客服'),

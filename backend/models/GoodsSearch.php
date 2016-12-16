@@ -12,6 +12,7 @@ use yii\data\ActiveDataProvider;
  */
 class GoodsSearch extends Goods
 {
+    public $category_name;
     /**
      * @inheritdoc
      */
@@ -19,7 +20,7 @@ class GoodsSearch extends Goods
     {
         return [
             [['id','created_at'], 'integer'],
-            [['name', 'typename','list_img', 'info', 'content'], 'safe'],
+            [['name', 'category_id','list_img', 'info', 'content'], 'safe'],
         ];
     }
 
@@ -42,13 +43,22 @@ class GoodsSearch extends Goods
     public function search($params)
     {
         $query = Goods::find();
-
+        $query->joinWith('categoryName');
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
 
+        $dataProvider->setSort([
+            'attributes' => [
+                'category_name' => [
+                    'asc' => ['categoryName.name' => SORT_ASC],
+                    'desc' => ['categoryName.name' => SORT_DESC],
+                    'label' => '分类'
+                ],
+            ]
+        ]);
         $this->load($params);
 
         if (!$this->validate()) {
@@ -60,7 +70,7 @@ class GoodsSearch extends Goods
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'typename' => $this->typename,
+            'category_id' => $this->category_id,
             'created_at' => $this->created_at,
         ]);
 

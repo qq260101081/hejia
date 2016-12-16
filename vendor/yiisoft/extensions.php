@@ -139,6 +139,15 @@ return array (
       '@kartik/select2' => $vendorDir . '/kartik-v/yii2-widget-select2',
     ),
   ),
+  'kartik-v/yii2-date-range' =>
+  array (
+    'name' => 'kartik-v/yii2-date-range',
+    'version' => 'dev-master',
+    'alias' =>
+    array (
+      '@kartik/daterange' => $vendorDir . '/kartik-v/yii2-date-range',
+    ),
+  ),
     'kucha/ueditor' =>
    array(
        'name' => 'kucha/ueditor',
@@ -148,6 +157,15 @@ return array (
            '@kucha/ueditor' => $vendorDir . '/kucha/ueditor',
        ),
    ),
+    'kartik-v/yii2-widget-datepicker' =>
+        array(
+            'name' => 'kartik-v/yii2-widget-datepicker',
+            'version' => '1.4.2',
+            'alias' =>
+                array(
+                    '@kartik/date' => $vendorDir . '/kartik-v/yii2-widget-datepicker',
+                ),
+        ),
   'gilek/yii2-gtreetable' =>
   array (
     'name' => 'gilek/yii2-gtreetable',

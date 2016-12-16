@@ -7,13 +7,13 @@ use yii\helpers\Html;
 
 $this->title = '更新产品: ' . $model->name;
 $this->params['breadcrumbs'][] = ['label' => '产品管理', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $this->title, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = '更新';
 ?>
 <div class="product-update">
 
     <?= $this->render('_form', [
         'model' => $model,
+        'categoryPath' => $categoryPath,
     ]) ?>
 
 </div>

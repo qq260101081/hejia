@@ -2,42 +2,48 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
+use \kartik\file\FileInput;
+use yii\helpers\Url;
 /* @var $this yii\web\View */
 /* @var $model app\modules\users\models\Users */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="users-form">
+<div class="users-form box box-info"">
 
-    <?php $form = ActiveForm::begin(); ?>
+<div class="box-header with-border">
+    <h5 class="box-title"><?= $this->title; ?></h5>
+</div>
+<p></p>
 
-    <?= $form->field($model, 'username')->textInput(['maxlength' => true]) ?>
+<div class="box-body">
 
-    <?= $form->field($model, 'type')->dropDownList([ 'ordinary' => 'Ordinary', 'distributor' => 'Distributor', 'agent' => 'Agent', 'cooperative' => 'Cooperative', ], ['prompt' => '']) ?>
+    <?php $form = ActiveForm::begin([
+        'options' => ['class'=>'form-horizontal','enctype'=>'multipart/form-data'],
+        'fieldConfig' => [
+            'labelOptions' => ['class' => 'col-sm-2 control-label'],
+            'template' => "{label}\n<div class=\"col-sm-8\">{input}</div>\n<div class=\"col-sm-8\">{error}</div>",
+        ]
+    ]); ?>
 
-    <?= $form->field($model, 'telephone')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'username')->textInput(['maxlength' => true,'placeholder'=>'用于登录']) ?>
+    <?= $form->field($model, 'nickname')->textInput(['maxlength' => true,'placeholder'=>'用于登录之后显示']) ?>
 
-    <?= $form->field($model, 'website')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'password')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'auth_key')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'role')->radioList(['frontend'=>'前台用户','backend'=>'后台用户']) ?>
 
-    <?= $form->field($model, 'password_hash')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'status')->dropDownList([ 'active' => 'Active', 'inactive' => 'Inactive', ], ['prompt' => '']) ?>
 
-    <?= $form->field($model, 'ip')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'created_at')->textInput() ?>
-
-    <?= $form->field($model, 'updated_at')->textInput() ?>
-
-    <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+    <div class="box-footer">
+        <a href="<?= Url::to(['/users/users/index']);?>" class="btn btn-info fa fa-reply"></a>
+        <?= Html::submitButton('', ['class' => 'btn btn-info pull-right fa fa-save']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
 
+</div>
 </div>

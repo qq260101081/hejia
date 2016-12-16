@@ -4999,3 +4999,1490 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1480852925.595
     'REQUEST_TIME' => 1480852925
 ]
+2016-12-05 10:22:15 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:22:15 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62326'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/images/banner.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/images/banner.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/images/banner.png'
+    'PHP_SELF' => '/hejia/api.php/images/banner.png'
+    'REQUEST_TIME_FLOAT' => 1480929735.416
+    'REQUEST_TIME' => 1480929735
+]
+2016-12-05 10:22:15 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:22:15 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62331'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/images/icon4.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/images/icon4.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/images/icon4.png'
+    'PHP_SELF' => '/hejia/api.php/images/icon4.png'
+    'REQUEST_TIME_FLOAT' => 1480929735.442
+    'REQUEST_TIME' => 1480929735
+]
+2016-12-05 10:22:15 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:22:15 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62328'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/images/icon2.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/images/icon2.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/images/icon2.png'
+    'PHP_SELF' => '/hejia/api.php/images/icon2.png'
+    'REQUEST_TIME_FLOAT' => 1480929735.421
+    'REQUEST_TIME' => 1480929735
+]
+2016-12-05 10:22:15 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:22:15 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62329'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/images/icon3.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/images/icon3.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/images/icon3.png'
+    'PHP_SELF' => '/hejia/api.php/images/icon3.png'
+    'REQUEST_TIME_FLOAT' => 1480929735.43
+    'REQUEST_TIME' => 1480929735
+]
+2016-12-05 10:22:15 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:22:15 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62327'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/images/icon1.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/images/icon1.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/images/icon1.png'
+    'PHP_SELF' => '/hejia/api.php/images/icon1.png'
+    'REQUEST_TIME_FLOAT' => 1480929735.418
+    'REQUEST_TIME' => 1480929735
+]
+2016-12-05 10:22:15 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:22:15 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62330'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/images/icon5.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/images/icon5.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/images/icon5.png'
+    'PHP_SELF' => '/hejia/api.php/images/icon5.png'
+    'REQUEST_TIME_FLOAT' => 1480929735.436
+    'REQUEST_TIME' => 1480929735
+]
+2016-12-05 10:22:15 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:22:15 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62332'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/images/icon8.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/images/icon8.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/images/icon8.png'
+    'PHP_SELF' => '/hejia/api.php/images/icon8.png'
+    'REQUEST_TIME_FLOAT' => 1480929735.508
+    'REQUEST_TIME' => 1480929735
+]
+2016-12-05 10:22:15 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:22:15 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62333'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/images/icon6.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/images/icon6.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/images/icon6.png'
+    'PHP_SELF' => '/hejia/api.php/images/icon6.png'
+    'REQUEST_TIME_FLOAT' => 1480929735.543
+    'REQUEST_TIME' => 1480929735
+]
+2016-12-05 10:22:15 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:22:15 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62334'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/images/icon7.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/images/icon7.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/images/icon7.png'
+    'PHP_SELF' => '/hejia/api.php/images/icon7.png'
+    'REQUEST_TIME_FLOAT' => 1480929735.543
+    'REQUEST_TIME' => 1480929735
+]
+2016-12-05 10:22:15 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:22:15 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62335'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/images/reg.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/images/reg.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/images/reg.png'
+    'PHP_SELF' => '/hejia/api.php/images/reg.png'
+    'REQUEST_TIME_FLOAT' => 1480929735.546
+    'REQUEST_TIME' => 1480929735
+]
+2016-12-05 10:23:16 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:23:16 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62348'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/api/web/images/banner.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/api/web/images/banner.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/api/web/images/banner.png'
+    'PHP_SELF' => '/hejia/api.php/api/web/images/banner.png'
+    'REQUEST_TIME_FLOAT' => 1480929796.943
+    'REQUEST_TIME' => 1480929796
+]
+2016-12-05 10:23:16 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:23:16 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62349'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/api/web/images/icon1.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/api/web/images/icon1.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/api/web/images/icon1.png'
+    'PHP_SELF' => '/hejia/api.php/api/web/images/icon1.png'
+    'REQUEST_TIME_FLOAT' => 1480929796.953
+    'REQUEST_TIME' => 1480929796
+]
+2016-12-05 10:23:17 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:23:16 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62351'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/images/icon3.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/images/icon3.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/images/icon3.png'
+    'PHP_SELF' => '/hejia/api.php/images/icon3.png'
+    'REQUEST_TIME_FLOAT' => 1480929796.965
+    'REQUEST_TIME' => 1480929796
+]
+2016-12-05 10:23:17 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:23:16 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62350'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/api/web/images/icon2.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/api/web/images/icon2.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/api/web/images/icon2.png'
+    'PHP_SELF' => '/hejia/api.php/api/web/images/icon2.png'
+    'REQUEST_TIME_FLOAT' => 1480929796.955
+    'REQUEST_TIME' => 1480929796
+]
+2016-12-05 10:23:17 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:23:16 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62353'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/api/web/images/icon4.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/api/web/images/icon4.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/api/web/images/icon4.png'
+    'PHP_SELF' => '/hejia/api.php/api/web/images/icon4.png'
+    'REQUEST_TIME_FLOAT' => 1480929796.979
+    'REQUEST_TIME' => 1480929796
+]
+2016-12-05 10:23:17 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:23:16 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62352'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/api/web/images/icon5.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/api/web/images/icon5.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/api/web/images/icon5.png'
+    'PHP_SELF' => '/hejia/api.php/api/web/images/icon5.png'
+    'REQUEST_TIME_FLOAT' => 1480929796.966
+    'REQUEST_TIME' => 1480929796
+]
+2016-12-05 10:23:17 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:23:17 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62355'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/api/web/images/icon7.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/api/web/images/icon7.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/api/web/images/icon7.png'
+    'PHP_SELF' => '/hejia/api.php/api/web/images/icon7.png'
+    'REQUEST_TIME_FLOAT' => 1480929797.037
+    'REQUEST_TIME' => 1480929797
+]
+2016-12-05 10:23:17 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:23:17 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62357'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/api/web/images/icon8.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/api/web/images/icon8.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/api/web/images/icon8.png'
+    'PHP_SELF' => '/hejia/api.php/api/web/images/icon8.png'
+    'REQUEST_TIME_FLOAT' => 1480929797.033
+    'REQUEST_TIME' => 1480929797
+]
+2016-12-05 10:23:17 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:23:17 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62356'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/api/web/images/icon6.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/api/web/images/icon6.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/api/web/images/icon6.png'
+    'PHP_SELF' => '/hejia/api.php/api/web/images/icon6.png'
+    'REQUEST_TIME_FLOAT' => 1480929797.035
+    'REQUEST_TIME' => 1480929797
+]
+2016-12-05 10:23:17 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:23:17 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62354'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/api/web/images/reg.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/api/web/images/reg.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/api/web/images/reg.png'
+    'PHP_SELF' => '/hejia/api.php/api/web/images/reg.png'
+    'REQUEST_TIME_FLOAT' => 1480929797.046
+    'REQUEST_TIME' => 1480929797
+]
+2016-12-05 10:23:51 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:23:51 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62360'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/api/web/images/icon1.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/api/web/images/icon1.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/api/web/images/icon1.png'
+    'PHP_SELF' => '/hejia/api.php/api/web/images/icon1.png'
+    'REQUEST_TIME_FLOAT' => 1480929831.606
+    'REQUEST_TIME' => 1480929831
+]
+2016-12-05 10:23:51 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:23:51 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62361'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/api/web/images/icon2.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/api/web/images/icon2.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/api/web/images/icon2.png'
+    'PHP_SELF' => '/hejia/api.php/api/web/images/icon2.png'
+    'REQUEST_TIME_FLOAT' => 1480929831.609
+    'REQUEST_TIME' => 1480929831
+]
+2016-12-05 10:23:51 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:23:51 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62362'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/images/icon3.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/images/icon3.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/images/icon3.png'
+    'PHP_SELF' => '/hejia/api.php/images/icon3.png'
+    'REQUEST_TIME_FLOAT' => 1480929831.612
+    'REQUEST_TIME' => 1480929831
+]
+2016-12-05 10:23:51 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:23:51 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62364'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/api/web/images/icon5.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/api/web/images/icon5.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/api/web/images/icon5.png'
+    'PHP_SELF' => '/hejia/api.php/api/web/images/icon5.png'
+    'REQUEST_TIME_FLOAT' => 1480929831.622
+    'REQUEST_TIME' => 1480929831
+]
+2016-12-05 10:23:51 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:23:51 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62363'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/api/web/images/icon4.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/api/web/images/icon4.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/api/web/images/icon4.png'
+    'PHP_SELF' => '/hejia/api.php/api/web/images/icon4.png'
+    'REQUEST_TIME_FLOAT' => 1480929831.619
+    'REQUEST_TIME' => 1480929831
+]
+2016-12-05 10:23:51 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:23:51 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62365'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/api/web/images/icon8.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/api/web/images/icon8.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/api/web/images/icon8.png'
+    'PHP_SELF' => '/hejia/api.php/api/web/images/icon8.png'
+    'REQUEST_TIME_FLOAT' => 1480929831.676
+    'REQUEST_TIME' => 1480929831
+]
+2016-12-05 10:23:51 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:23:51 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62367'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/api/web/images/icon6.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/api/web/images/icon6.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/api/web/images/icon6.png'
+    'PHP_SELF' => '/hejia/api.php/api/web/images/icon6.png'
+    'REQUEST_TIME_FLOAT' => 1480929831.682
+    'REQUEST_TIME' => 1480929831
+]
+2016-12-05 10:23:51 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:23:51 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62368'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/api/web/images/reg.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/api/web/images/reg.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/api/web/images/reg.png'
+    'PHP_SELF' => '/hejia/api.php/api/web/images/reg.png'
+    'REQUEST_TIME_FLOAT' => 1480929831.688
+    'REQUEST_TIME' => 1480929831
+]
+2016-12-05 10:23:51 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-05 10:23:51 [::1][-][-][info][application] $_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api.php/site'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '62366'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/api/web/images/icon7.png'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/api/web/images/icon7.png'
+    'PATH_TRANSLATED' => '/Users/carl/www/api/web/images/icon7.png'
+    'PHP_SELF' => '/hejia/api.php/api/web/images/icon7.png'
+    'REQUEST_TIME_FLOAT' => 1480929831.681
+    'REQUEST_TIME' => 1480929831
+]
+2016-12-05 14:53:24 [::1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: api\models\ProductCategory::category_id in /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Component.php:143
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/db/BaseActiveRecord.php(252): yii\base\Component->__get('category_id')
+#1 /Users/carl/www/hejia/api/views/product/index.php(9): yii\db\BaseActiveRecord->__get('category_id')
+#2 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/View.php(325): require('/Users/carl/www...')
+#3 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Users/carl/www...', Array)
+#4 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/Users/carl/www...', Array, Object(api\controllers\ProductController))
+#5 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Controller.php(378): yii\base\View->render('index', Array, Object(api\controllers\ProductController))
+#6 /Users/carl/www/hejia/api/controllers/ProductController.php(24): yii\base\Controller->render('index', Array)
+#7 [internal function]: api\controllers\ProductController->actionIndex('4')
+#8 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#9 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#10 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#11 /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('product/index', Array)
+#12 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#14 {main}
+2016-12-05 14:53:24 [::1][-][-][info][application] $_GET = [
+    'pid' => '4'
+]
+
+$_COOKIE = [
+    '_identity-backend' => '657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_identity' => '476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF\",2592000]\";}'
+    '_csrf-frontend' => 'b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7\";}'
+    'advanced-frontend' => 'hlk3ujaj9bgqpk164fumnpfj51'
+    'PHPSESSID' => 'jbvpro0kh1geo4ft686og74po7'
+    '_csrf' => '9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=b52e3cf0733e50d5f7362796f26cfa102c87de6814518207b41350171b62a3d6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22-eFO1F3E2hk-uYuhn4LJU8UZXl9PMqJ7%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=jbvpro0kh1geo4ft686og74po7; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '63677'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'pid=4'
+    'REQUEST_URI' => '/hejia/api.php/product/index?pid=4'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/product/index'
+    'PATH_TRANSLATED' => '/Users/carl/www/product/index'
+    'PHP_SELF' => '/hejia/api.php/product/index'
+    'REQUEST_TIME_FLOAT' => 1480946004.771
+    'REQUEST_TIME' => 1480946004
+]

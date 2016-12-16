@@ -9,6 +9,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use app\components\libs\Common;
+use app\modules\product\models\ProductCategory;
 
 /**
  * ProductController implements the CRUD actions for Product model.
@@ -30,6 +31,17 @@ class GoodsController extends Controller
         ];
     }
 
+    public function actions()
+    {
+        return [
+            'upload' => ['class' => 'kucha\ueditor\UEditorAction'],
+            'config' => [
+                'imageUrlPrefix' => $_SERVER['HTTP_HOST'],
+                'imagePathFormat' => "/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}"
+            ]
+        ];
+    }
+
     /**
      * Lists all Article models.
      * @return mixed
@@ -38,10 +50,12 @@ class GoodsController extends Controller
     {
         $searchModel = new GoodsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $category = ProductCategory::find()->select(['id','name'])->asArray()->all();
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'category' => $category
         ]);
     }
 
@@ -101,6 +115,17 @@ class GoodsController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $categoryInfo = ProductCategory::find()->where(['id'=>$model->category_id])->asArray()->one();
+        $categoryPath = ProductCategory::find()
+            ->where(['<','lft',$categoryInfo['lft']])
+            ->andWhere(['>','rgt',$categoryInfo['rgt']])
+            ->andWhere(['root' => $categoryInfo['root']])
+            ->orderBy('lft')
+            ->indexBy('id')
+            ->asArray()
+            ->all();
+
+        $categoryPath[$categoryInfo['id']] = $categoryInfo;
 
         $data = Yii::$app->request->post();
 
@@ -126,6 +151,7 @@ class GoodsController extends Controller
         {
             return $this->render('update', [
                 'model' => $model,
+                'categoryPath' => $categoryPath
             ]);
         }
     }

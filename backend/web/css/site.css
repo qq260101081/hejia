@@ -7,10 +7,8 @@ body {font-size:12px;}
 .sidebar a {
 	color: gray !important;
 }
-.sidebar-menu > li > a {
-	font-size: 13px;
-}
-.sidebar-menu > li > ul>li>a {
+
+body .sidebar-menu > li > ul>li>a {
 	font-size: 12px !important;
 }
 .sidebar-menu > li.active > a{
@@ -28,6 +26,9 @@ body {font-size:12px;}
 }
 table tr th.action-column {
 	width: 60px;
+}
+form .help-block {
+	margin-left: 26%;
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,

@@ -33,7 +33,7 @@ class Repository extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['created_at'], 'integer'],
+            [['created_at', 'userid'], 'integer'],
             [['type'], 'string', 'max' => 10],
             [['title', 'path'], 'string', 'max' => 150],
             ['created_at', 'default', 'value'=>time()],

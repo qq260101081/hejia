@@ -75,6 +75,7 @@ class RepositoryController extends Controller
 
             if ($listImgFile) $data['Repository']['path'] = $listImgFile['path'];
 
+            $data['Repository']['userid'] = Yii::$app->user->identity->id;
             if($model->load($data) && $model->save())
             {
                 Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'保存成功！']);

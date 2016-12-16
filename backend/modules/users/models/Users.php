@@ -3,7 +3,7 @@
 namespace app\modules\users\models;
 
 use Yii;
-
+use yii\behaviors\TimestampBehavior;
 /**
  * This is the model class for table "{{%user}}".
  *
@@ -22,9 +22,11 @@ use Yii;
  */
 class Users extends \yii\db\ActiveRecord
 {
+
     /**
      * @inheritdoc
      */
+    public $password;
     public static function tableName()
     {
         return '{{%user}}';
@@ -36,17 +38,19 @@ class Users extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['username', 'type', 'telephone', 'auth_key', 'password_hash', 'email', 'status', 'ip', 'updated_at'], 'required'],
-            [['type', 'status'], 'string'],
-            [['created_at', 'updated_at'], 'integer'],
-            [['username'], 'string', 'max' => 60],
-            [['telephone', 'ip'], 'string', 'max' => 15],
-            [['website'], 'string', 'max' => 250],
-            [['auth_key'], 'string', 'max' => 32],
+            [['username'], 'required'],
+            [['status'], 'string'],
+            [['created_at', 'updated_at','sex'], 'integer'],
+            [['username','nickname','openid'], 'string', 'max' => 60],
+            [['phone', 'reg_ip'], 'string', 'max' => 15],
+            [['password'], 'string', 'max' => 16],
+            [['password'], 'string', 'min' => 6],
+            [['auth_key','city','province'], 'string', 'max' => 32],
             [['password_hash'], 'string', 'max' => 65],
+            ['headimgurl', 'string', 'max' => 250],
             [['email'], 'string', 'max' => 45],
-            [['email'], 'unique'],
-            [['username'], 'unique'],
+            [['username','phone','email'], 'unique'],
+            ['role','safe']
         ];
     }
 
@@ -58,14 +62,17 @@ class Users extends \yii\db\ActiveRecord
         return [
             'id' => Yii::t('app', 'ID'),
             'username' => Yii::t('app', '用户名'),
-            'type' => Yii::t('app', '类型'),
-            'telephone' => Yii::t('app', '电话'),
-            'website' => Yii::t('app', '网站'),
+            'nickname' => Yii::t('app', '昵称'),
+            'city' => Yii::t('app', '城市'),
+            'province' => Yii::t('app', '省份'),
+            'phone' => Yii::t('app', '电话'),
             'auth_key' => Yii::t('app', 'Auth Key'),
             'password_hash' => Yii::t('app', 'Password Hash'),
             'email' => Yii::t('app', '邮箱'),
             'status' => Yii::t('app', '状态'),
             'reg_ip' => Yii::t('app', '注册IP'),
+            'password' => Yii::t('app', '密码'),
+            'role' => Yii::t('app', '用户类型'),
             'created_at' => Yii::t('app', '创建于'),
             'updated_at' => Yii::t('app', '更新于'),
         ];

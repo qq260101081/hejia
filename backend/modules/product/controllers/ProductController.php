@@ -43,6 +43,17 @@ class ProductController extends CommonController
         ]);
     }
 
+    public function actionModalList()
+    {
+        $searchModel = new ProductSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->renderAjax('/modal-list', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
     /**
      * Displays a single Product model.
      * @param integer $id
