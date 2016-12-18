@@ -2,6 +2,7 @@
 
 namespace app\modules\student\controllers;
 
+use app\modules\users\models\Users;
 use Yii;
 use app\modules\student\models\Patriarch;
 use app\modules\student\models\PatriarchSearch;
@@ -44,6 +45,34 @@ class PatriarchController extends Controller
         ]);
     }
 
+    //选择家长单选
+    public function actionModalList2()
+    {
+        $searchModel = new PatriarchSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        //给家长开有账号的才显示
+        $dataProvider->query->andFilterWhere(['>', 'userid', '0']);
+
+        return $this->renderAjax('/patriarch-modal-list2', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    //选择家长多选
+    public function actionModalList()
+    {
+        $searchModel = new PatriarchSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        //给家长开有账号的才显示
+        $dataProvider->query->andFilterWhere(['>', 'userid', '0']);
+
+        return $this->renderAjax('/patriarch-modal-list', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
     /**
      * Displays a single Patriarch model.
      * @param integer $id
@@ -73,6 +102,26 @@ class PatriarchController extends Controller
             ]);
         }
     }*/
+
+    //给家长开账号
+    public function actionCreateUser($id)
+    {
+        $model = $this->findModel($id);
+
+        //USER表添加用户
+        $user = new Users();
+        $user->type = 'patriarch';
+        $user->username = $model->phone;
+        $user->password_hash = Yii::$app->security->generatePasswordHash(substr($model->phone, -6));
+        $user->auth_key = Yii::$app->security->generateRandomString();
+        if($user->save())
+        {
+            //更新家长表
+            $model->userid = $user->id;
+            $model->save();
+            return $this->redirect(['/users/users/view', 'id' => $user->id]);
+        }
+    }
 
     /**
      * Updates an existing Patriarch model.

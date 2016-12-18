@@ -1,0 +1,281 @@
+a:8:{s:6:"config";a:5:{s:10:"phpVersion";s:6:"7.0.12";s:10:"yiiVersion";s:5:"2.0.9";s:11:"application";a:4:{s:3:"yii";s:5:"2.0.9";s:4:"name";s:14:"My Application";s:3:"env";s:3:"dev";s:5:"debug";b:1;}s:3:"php";a:4:{s:7:"version";s:6:"7.0.12";s:6:"xdebug";b:1;s:3:"apc";b:0;s:8:"memcache";b:0;}s:10:"extensions";a:20:{s:24:"yiisoft/yii2-swiftmailer";a:3:{s:4:"name";s:24:"yiisoft/yii2-swiftmailer";s:7:"version";s:7:"2.0.6.0";s:5:"alias";a:1:{s:16:"@yii/swiftmailer";s:53:"/Users/carl/www/hejia/vendor/yiisoft/yii2-swiftmailer";}}s:26:"creocoder/yii2-nested-sets";a:3:{s:4:"name";s:26:"creocoder/yii2-nested-sets";s:7:"version";s:7:"0.9.0.0";s:5:"alias";a:1:{s:21:"@creocoder/nestedsets";s:59:"/Users/carl/www/hejia/vendor/creocoder/yii2-nested-sets/src";}}s:24:"yiisoft/yii2-codeception";a:3:{s:4:"name";s:24:"yiisoft/yii2-codeception";s:7:"version";s:7:"2.0.5.0";s:5:"alias";a:1:{s:16:"@yii/codeception";s:53:"/Users/carl/www/hejia/vendor/yiisoft/yii2-codeception";}}s:22:"yiisoft/yii2-bootstrap";a:3:{s:4:"name";s:22:"yiisoft/yii2-bootstrap";s:7:"version";s:7:"2.0.6.0";s:5:"alias";a:1:{s:14:"@yii/bootstrap";s:51:"/Users/carl/www/hejia/vendor/yiisoft/yii2-bootstrap";}}s:18:"yiisoft/yii2-debug";a:3:{s:4:"name";s:18:"yiisoft/yii2-debug";s:7:"version";s:7:"2.0.6.0";s:5:"alias";a:1:{s:10:"@yii/debug";s:47:"/Users/carl/www/hejia/vendor/yiisoft/yii2-debug";}}s:16:"yiisoft/yii2-gii";a:3:{s:4:"name";s:16:"yiisoft/yii2-gii";s:7:"version";s:7:"2.0.5.0";s:5:"alias";a:1:{s:8:"@yii/gii";s:45:"/Users/carl/www/hejia/vendor/yiisoft/yii2-gii";}}s:18:"yiisoft/yii2-faker";a:3:{s:4:"name";s:18:"yiisoft/yii2-faker";s:7:"version";s:7:"2.0.3.0";s:5:"alias";a:1:{s:10:"@yii/faker";s:47:"/Users/carl/www/hejia/vendor/yiisoft/yii2-faker";}}s:24:"filsh/yii2-oauth2-server";a:4:{s:4:"name";s:24:"filsh/yii2-oauth2-server";s:7:"version";s:7:"2.0.1.0";s:5:"alias";a:1:{s:24:"@filsh/yii2/oauth2server";s:53:"/Users/carl/www/hejia/vendor/filsh/yii2-oauth2-server";}s:9:"bootstrap";s:33:"filsh\yii2\oauth2server\Bootstrap";}s:24:"rmrevin/yii2-fontawesome";a:3:{s:4:"name";s:24:"rmrevin/yii2-fontawesome";s:7:"version";s:8:"2.16.1.0";s:5:"alias";a:1:{s:24:"@rmrevin/yii/fontawesome";s:53:"/Users/carl/www/hejia/vendor/rmrevin/yii2-fontawesome";}}s:18:"cebe/yii2-gravatar";a:3:{s:4:"name";s:18:"cebe/yii2-gravatar";s:7:"version";s:7:"1.1.0.0";s:5:"alias";a:1:{s:14:"@cebe/gravatar";s:61:"/Users/carl/www/hejia/vendor/cebe/yii2-gravatar/cebe/gravatar";}}s:25:"dmstr/yii2-adminlte-asset";a:3:{s:4:"name";s:25:"dmstr/yii2-adminlte-asset";s:7:"version";s:7:"2.3.3.0";s:5:"alias";a:1:{s:6:"@dmstr";s:54:"/Users/carl/www/hejia/vendor/dmstr/yii2-adminlte-asset";}}s:26:"kartik-v/yii2-widget-growl";a:3:{s:4:"name";s:26:"kartik-v/yii2-widget-growl";s:7:"version";s:7:"1.1.1.0";s:5:"alias";a:1:{s:13:"@kartik/growl";s:55:"/Users/carl/www/hejia/vendor/kartik-v/yii2-widget-growl";}}s:25:"kartik-v/yii2-krajee-base";a:3:{s:4:"name";s:25:"kartik-v/yii2-krajee-base";s:7:"version";s:7:"1.8.7.0";s:5:"alias";a:1:{s:12:"@kartik/base";s:54:"/Users/carl/www/hejia/vendor/kartik-v/yii2-krajee-base";}}s:28:"kartik-v/yii2-widget-depdrop";a:3:{s:4:"name";s:28:"kartik-v/yii2-widget-depdrop";s:7:"version";s:11:"9999999-dev";s:5:"alias";a:1:{s:15:"@kartik/depdrop";s:57:"/Users/carl/www/hejia/vendor/kartik-v/yii2-widget-depdrop";}}s:28:"kartik-v/yii2-widget-select2";a:3:{s:4:"name";s:28:"kartik-v/yii2-widget-select2";s:7:"version";s:11:"9999999-dev";s:5:"alias";a:1:{s:15:"@kartik/select2";s:57:"/Users/carl/www/hejia/vendor/kartik-v/yii2-widget-select2";}}s:24:"kartik-v/yii2-date-range";a:3:{s:4:"name";s:24:"kartik-v/yii2-date-range";s:7:"version";s:10:"dev-master";s:5:"alias";a:1:{s:17:"@kartik/daterange";s:53:"/Users/carl/www/hejia/vendor/kartik-v/yii2-date-range";}}s:13:"kucha/ueditor";a:3:{s:4:"name";s:13:"kucha/ueditor";s:7:"version";s:3:"1.2";s:5:"alias";a:1:{s:14:"@kucha/ueditor";s:42:"/Users/carl/www/hejia/vendor/kucha/ueditor";}}s:31:"kartik-v/yii2-widget-datepicker";a:3:{s:4:"name";s:31:"kartik-v/yii2-widget-datepicker";s:7:"version";s:5:"1.4.2";s:5:"alias";a:1:{s:12:"@kartik/date";s:60:"/Users/carl/www/hejia/vendor/kartik-v/yii2-widget-datepicker";}}s:21:"gilek/yii2-gtreetable";a:3:{s:4:"name";s:21:"gilek/yii2-gtreetable";s:7:"version";s:7:"1.1.1.0";s:5:"alias";a:1:{s:17:"@gilek/gtreetable";s:50:"/Users/carl/www/hejia/vendor/gilek/yii2-gtreetable";}}s:30:"kartik-v/yii2-widget-fileinput";a:3:{s:4:"name";s:30:"kartik-v/yii2-widget-fileinput";s:7:"version";s:11:"9999999-dev";s:5:"alias";a:1:{s:12:"@kartik/file";s:59:"/Users/carl/www/hejia/vendor/kartik-v/yii2-widget-fileinput";}}}}s:7:"request";a:14:{s:7:"flashes";a:0:{}s:10:"statusCode";i:302;s:14:"requestHeaders";a:11:{s:4:"host";s:9:"localhost";s:10:"user-agent";s:82:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0";s:6:"accept";s:63:"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";s:15:"accept-language";s:35:"zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3";s:15:"accept-encoding";s:13:"gzip, deflate";s:7:"referer";s:65:"http://localhost/hejia/admin.php?r=msg%2Fweekly-push-logs%2Findex";s:6:"cookie";s:940:"_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=69045d60358f812ef24995cd4c644b89bbac2f7e13950ff0fcfba6193574bdc8a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22WWt5w8-jiJjMkkI9OeobX_yO1rTZsxpR%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=rqlkpedodpfat5apqlaaefciu5; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D; Phpstorm-1e280b04=ff8199ca-588b-4ecf-934f-37435ffb78db";s:10:"connection";s:10:"keep-alive";s:25:"upgrade-insecure-requests";s:1:"1";s:12:"content-type";s:33:"application/x-www-form-urlencoded";s:14:"content-length";s:3:"256";}s:15:"responseHeaders";a:7:{s:12:"X-Powered-By";s:10:"PHP/7.0.12";s:7:"Expires";s:29:"Thu, 19 Nov 1981 08:52:00 GMT";s:13:"Cache-Control";s:35:"no-store, no-cache, must-revalidate";s:6:"Pragma";s:8:"no-cache";s:8:"Location";s:65:"http://localhost/hejia/admin.php?r=msg%2Fweekly-push-logs%2Findex";s:12:"Content-Type";s:24:"text/html; charset=UTF-8";s:10:"Set-Cookie";s:281:"_identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; expires=Tue, 17-Jan-2017 12:09:13 GMT; Max-Age=2592000; path=/; HttpOnly";}s:5:"route";s:27:"msg/weekly-push-logs/create";s:6:"action";s:68:"app\modules\msg\controllers\WeeklyPushLogsController::actionCreate()";s:12:"actionParams";a:0:{}s:11:"requestBody";a:3:{s:12:"Content Type";s:33:"application/x-www-form-urlencoded";s:3:"Raw";s:256:"_csrf=YWRIbEJlVUZYEXwzMFFhFCRdLyopMx8vGSE4LS9WHTMrMTsidy0xCQ%3D%3D&selection_all=1&WeeklySearch%5Bid%5D=&WeeklySearch%5Bdiscipline%5D=&WeeklySearch%5Bsleep%5D=&WeeklySearch%5Bdiet%5D=&WeeklySearch%5Bstudy%5D=&WeeklySearch%5Bcreated_at%5D=&selection%5B%5D=1";s:17:"Decoded to Params";a:4:{s:5:"_csrf";s:56:"YWRIbEJlVUZYEXwzMFFhFCRdLyopMx8vGSE4LS9WHTMrMTsidy0xCQ==";s:13:"selection_all";s:1:"1";s:12:"WeeklySearch";a:6:{s:2:"id";s:0:"";s:10:"discipline";s:0:"";s:5:"sleep";s:0:"";s:4:"diet";s:0:"";s:5:"study";s:0:"";s:10:"created_at";s:0:"";}s:9:"selection";a:1:{i:0;s:1:"1";}}}s:6:"SERVER";a:34:{s:9:"HTTP_HOST";s:9:"localhost";s:15:"HTTP_USER_AGENT";s:82:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0";s:11:"HTTP_ACCEPT";s:63:"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";s:20:"HTTP_ACCEPT_LANGUAGE";s:35:"zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3";s:20:"HTTP_ACCEPT_ENCODING";s:13:"gzip, deflate";s:12:"HTTP_REFERER";s:65:"http://localhost/hejia/admin.php?r=msg%2Fweekly-push-logs%2Findex";s:11:"HTTP_COOKIE";s:940:"_identity-backend=657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _identity=476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF%22%2C2592000%5D%22%3B%7D; _csrf-frontend=69045d60358f812ef24995cd4c644b89bbac2f7e13950ff0fcfba6193574bdc8a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22WWt5w8-jiJjMkkI9OeobX_yO1rTZsxpR%22%3B%7D; advanced-frontend=hlk3ujaj9bgqpk164fumnpfj51; PHPSESSID=rqlkpedodpfat5apqlaaefciu5; _csrf=9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229u4_r44RE9gFkVJixEpAm3HuJUsN5HdO%22%3B%7D; Phpstorm-1e280b04=ff8199ca-588b-4ecf-934f-37435ffb78db";s:15:"HTTP_CONNECTION";s:10:"keep-alive";s:30:"HTTP_UPGRADE_INSECURE_REQUESTS";s:1:"1";s:12:"CONTENT_TYPE";s:33:"application/x-www-form-urlencoded";s:14:"CONTENT_LENGTH";s:3:"256";s:4:"PATH";s:29:"/usr/bin:/bin:/usr/sbin:/sbin";s:16:"SERVER_SIGNATURE";s:0:"";s:15:"SERVER_SOFTWARE";s:31:"Apache/2.4.18 (Unix) PHP/7.0.12";s:11:"SERVER_NAME";s:9:"localhost";s:11:"SERVER_ADDR";s:3:"::1";s:11:"SERVER_PORT";s:2:"80";s:11:"REMOTE_ADDR";s:3:"::1";s:13:"DOCUMENT_ROOT";s:15:"/Users/carl/www";s:14:"REQUEST_SCHEME";s:4:"http";s:14:"CONTEXT_PREFIX";s:0:"";s:21:"CONTEXT_DOCUMENT_ROOT";s:15:"/Users/carl/www";s:12:"SERVER_ADMIN";s:15:"you@example.com";s:15:"SCRIPT_FILENAME";s:31:"/Users/carl/www/hejia/admin.php";s:11:"REMOTE_PORT";s:5:"49669";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.1";s:14:"REQUEST_METHOD";s:4:"POST";s:12:"QUERY_STRING";s:33:"r=msg%2Fweekly-push-logs%2Fcreate";s:11:"REQUEST_URI";s:50:"/hejia/admin.php?r=msg%2Fweekly-push-logs%2Fcreate";s:11:"SCRIPT_NAME";s:16:"/hejia/admin.php";s:8:"PHP_SELF";s:16:"/hejia/admin.php";s:18:"REQUEST_TIME_FLOAT";d:1482062953.3399999;s:12:"REQUEST_TIME";i:1482062953;}s:3:"GET";a:1:{s:1:"r";s:27:"msg/weekly-push-logs/create";}s:4:"POST";a:4:{s:5:"_csrf";s:56:"YWRIbEJlVUZYEXwzMFFhFCRdLyopMx8vGSE4LS9WHTMrMTsidy0xCQ==";s:13:"selection_all";s:1:"1";s:12:"WeeklySearch";a:6:{s:2:"id";s:0:"";s:10:"discipline";s:0:"";s:5:"sleep";s:0:"";s:4:"diet";s:0:"";s:5:"study";s:0:"";s:10:"created_at";s:0:"";}s:9:"selection";a:1:{i:0;s:1:"1";}}s:6:"COOKIE";a:7:{s:17:"_identity-backend";s:158:"657b91714b165268dc433b5de915283ac172d01d3c5d1faf751e7722c8c363e3a:2:{i:0;s:17:"_identity-backend";i:1;s:47:"[11,"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF",2592000]";}";s:9:"_identity";s:149:"476ab5946675bd04bead01f3130b800bef793d107a790baedb6f54249a2fac4ba:2:{i:0;s:9:"_identity";i:1;s:47:"[11,"a8IvWdnu1Sxli52teCQh-LJeeVHNGKGF",2592000]";}";s:14:"_csrf-frontend";s:140:"69045d60358f812ef24995cd4c644b89bbac2f7e13950ff0fcfba6193574bdc8a:2:{i:0;s:14:"_csrf-frontend";i:1;s:32:"WWt5w8-jiJjMkkI9OeobX_yO1rTZsxpR";}";s:17:"advanced-frontend";s:26:"hlk3ujaj9bgqpk164fumnpfj51";s:9:"PHPSESSID";s:26:"rqlkpedodpfat5apqlaaefciu5";s:5:"_csrf";s:130:"9c678498921e5c6cbb178e05f5818f45ddcf424e41bfc35a961a5122d57459c5a:2:{i:0;s:5:"_csrf";i:1;s:32:"9u4_r44RE9gFkVJixEpAm3HuJUsN5HdO";}";s:17:"Phpstorm-1e280b04";s:36:"ff8199ca-588b-4ecf-934f-37435ffb78db";}s:5:"FILES";a:0:{}s:7:"SESSION";a:2:{s:7:"__flash";a:0:{}s:4:"__id";i:11;}}s:3:"log";a:1:{s:8:"messages";a:25:{i:0;a:5:{i:0;s:61:"Bootstrap with filsh\yii2\oauth2server\Bootstrap::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1482062953.3581929;i:4;a:0:{}}i:1;a:5:{i:0;s:33:"Bootstrap with yii\log\Dispatcher";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1482062953.3594799;i:4;a:0:{}}i:2;a:5:{i:0;s:21:"Loading module: debug";i:1;i:8;i:2;s:26:"yii\base\Module::getModule";i:3;d:1482062953.3595581;i:4;a:0:{}}i:3;a:5:{i:0;s:44:"Bootstrap with yii\debug\Module::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1482062953.364275;i:4;a:0:{}}i:4;a:5:{i:0;s:19:"Loading module: gii";i:1;i:8;i:2;s:26:"yii\base\Module::getModule";i:3;d:1482062953.3653181;i:4;a:0:{}}i:5;a:5:{i:0;s:42:"Bootstrap with yii\gii\Module::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1482062953.3656189;i:4;a:0:{}}i:6;a:5:{i:0;s:56:"Pretty URL not enabled. Using default URL parsing logic.";i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1482062953.3666461;i:4;a:0:{}}i:7;a:5:{i:0;s:46:"Route requested: 'msg/weekly-push-logs/create'";i:1;i:8;i:2;s:34:"yii\web\Application::handleRequest";i:3;d:1482062953.366677;i:4;a:0:{}}i:8;a:5:{i:0;s:19:"Loading module: msg";i:1;i:8;i:2;s:26:"yii\base\Module::getModule";i:3;d:1482062953.3667009;i:4;a:0:{}}i:9;a:5:{i:0;s:41:"Route to run: msg/weekly-push-logs/create";i:1;i:8;i:2;s:30:"yii\base\Controller::runAction";i:3;d:1482062953.3684189;i:4;a:0:{}}i:10;a:5:{i:0;s:84:"Running action: app\modules\msg\controllers\WeeklyPushLogsController::actionCreate()";i:1;i:8;i:2;s:36:"yii\base\InlineAction::runWithParams";i:3;d:1482062953.3736899;i:4;a:0:{}}i:11;a:5:{i:0;s:39:"SHOW FULL COLUMNS FROM `student_weekly`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.3835499;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:77;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}}i:12;a:5:{i:0;s:56:"Opening DB connection: mysql:host=localhost;dbname=hejia";i:1;i:4;i:2;s:23:"yii\db\Connection::open";i:3;d:1482062953.383647;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:77;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}}i:17;a:5:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'student_weekly' AND kcu.table_name = 'student_weekly'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.385525;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:77;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}}i:20;a:5:{i:0;s:43:"SELECT * FROM `student_weekly` WHERE `id`=1";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.3885701;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:77;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}}i:23;a:5:{i:0;s:67:"SELECT `userid`, `name` FROM `user_patriarch` WHERE `student_id`=13";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.390872;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:78;s:8:"function";s:3:"one";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}}i:26;a:5:{i:0;s:39:"SHOW FULL COLUMNS FROM `user_patriarch`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.3914061;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:78;s:8:"function";s:3:"one";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}}i:29;a:5:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user_patriarch' AND kcu.table_name = 'user_patriarch'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.3939559;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:78;s:8:"function";s:3:"one";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}}i:32;a:5:{i:0;s:15:"Session started";i:1;i:4;i:2;s:21:"yii\web\Session::open";i:3;d:1482062953.397296;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:89;s:8:"function";s:5:"__get";s:5:"class";s:18:"yii\base\Component";s:4:"type";s:2:"->";}}}i:33;a:5:{i:0;s:60:"SELECT * FROM `user` WHERE (`id`=11) AND (`status`='active')";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.397866;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/Users/carl/www/hejia/common/models/User.php";s:4:"line";i:70;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:89;s:8:"function";s:5:"__get";s:5:"class";s:18:"yii\base\Component";s:4:"type";s:2:"->";}}}i:36;a:5:{i:0;s:29:"SHOW FULL COLUMNS FROM `user`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.398766;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/Users/carl/www/hejia/common/models/User.php";s:4:"line";i:70;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:89;s:8:"function";s:5:"__get";s:5:"class";s:18:"yii\base\Component";s:4:"type";s:2:"->";}}}i:39;a:5:{i:0;s:595:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.4001009;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/Users/carl/www/hejia/common/models/User.php";s:4:"line";i:70;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:89;s:8:"function";s:5:"__get";s:5:"class";s:18:"yii\base\Component";s:4:"type";s:2:"->";}}}i:42;a:5:{i:0;s:41:"SHOW FULL COLUMNS FROM `weekly_push_logs`";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.402421;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:95;s:8:"function";s:10:"attributes";s:5:"class";s:19:"yii\db\ActiveRecord";s:4:"type";s:2:"->";}}}i:45;a:5:{i:0;s:619:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'weekly_push_logs' AND kcu.table_name = 'weekly_push_logs'";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.4038799;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:95;s:8:"function";s:10:"attributes";s:5:"class";s:19:"yii\db\ActiveRecord";s:4:"type";s:2:"->";}}}i:48;a:5:{i:0;s:277:"INSERT INTO `weekly_push_logs` (`id`, `student_id`, `student_name`, `patriarch_id`, `patriarch_name`, `discipline`, `sleep`, `diet`, `study`, `synthesize`, `username`, `status`, `created_at`) VALUES (NULL, 13, '小杨1', 19, '杨红12', 2, 3, 4, 5, '90', 'carl', 0, 1482062953)";i:1;i:4;i:2;s:23:"yii\db\Command::execute";i:3;d:1482062953.4046011;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:97;s:8:"function";s:7:"execute";s:5:"class";s:14:"yii\db\Command";s:4:"type";s:2:"->";}}}}}s:9:"profiling";a:3:{s:6:"memory";i:5156328;s:4:"time";d:0.059517860412597656;s:8:"messages";a:26:{i:13;a:5:{i:0;s:56:"Opening DB connection: mysql:host=localhost;dbname=hejia";i:1;i:80;i:2;s:23:"yii\db\Connection::open";i:3;d:1482062953.383709;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:77;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}}i:14;a:5:{i:0;s:56:"Opening DB connection: mysql:host=localhost;dbname=hejia";i:1;i:96;i:2;s:23:"yii\db\Connection::open";i:3;d:1482062953.3842039;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:77;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}}i:15;a:5:{i:0;s:39:"SHOW FULL COLUMNS FROM `student_weekly`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.3842731;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:77;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}}i:16;a:5:{i:0;s:39:"SHOW FULL COLUMNS FROM `student_weekly`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.3847671;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:77;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}}i:18;a:5:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'student_weekly' AND kcu.table_name = 'student_weekly'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.3855879;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:77;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}}i:19;a:5:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'student_weekly' AND kcu.table_name = 'student_weekly'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.385967;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:77;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}}i:21;a:5:{i:0;s:43:"SELECT * FROM `student_weekly` WHERE `id`=1";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.3886371;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:77;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}}i:22;a:5:{i:0;s:43:"SELECT * FROM `student_weekly` WHERE `id`=1";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.388948;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:77;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}}i:24;a:5:{i:0;s:67:"SELECT `userid`, `name` FROM `user_patriarch` WHERE `student_id`=13";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.3909421;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:78;s:8:"function";s:3:"one";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}}i:25;a:5:{i:0;s:67:"SELECT `userid`, `name` FROM `user_patriarch` WHERE `student_id`=13";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.3912759;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:78;s:8:"function";s:3:"one";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}}i:27;a:5:{i:0;s:39:"SHOW FULL COLUMNS FROM `user_patriarch`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.391463;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:78;s:8:"function";s:3:"one";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}}i:28;a:5:{i:0;s:39:"SHOW FULL COLUMNS FROM `user_patriarch`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.3921671;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:78;s:8:"function";s:3:"one";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}}i:30;a:5:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user_patriarch' AND kcu.table_name = 'user_patriarch'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.394109;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:78;s:8:"function";s:3:"one";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}}i:31;a:5:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user_patriarch' AND kcu.table_name = 'user_patriarch'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.395191;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:78;s:8:"function";s:3:"one";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}}i:34;a:5:{i:0;s:60:"SELECT * FROM `user` WHERE (`id`=11) AND (`status`='active')";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.397928;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/Users/carl/www/hejia/common/models/User.php";s:4:"line";i:70;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:89;s:8:"function";s:5:"__get";s:5:"class";s:18:"yii\base\Component";s:4:"type";s:2:"->";}}}i:35;a:5:{i:0;s:60:"SELECT * FROM `user` WHERE (`id`=11) AND (`status`='active')";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.3982799;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/Users/carl/www/hejia/common/models/User.php";s:4:"line";i:70;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:89;s:8:"function";s:5:"__get";s:5:"class";s:18:"yii\base\Component";s:4:"type";s:2:"->";}}}i:37;a:5:{i:0;s:29:"SHOW FULL COLUMNS FROM `user`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.3988271;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/Users/carl/www/hejia/common/models/User.php";s:4:"line";i:70;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:89;s:8:"function";s:5:"__get";s:5:"class";s:18:"yii\base\Component";s:4:"type";s:2:"->";}}}i:38;a:5:{i:0;s:29:"SHOW FULL COLUMNS FROM `user`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.3993139;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/Users/carl/www/hejia/common/models/User.php";s:4:"line";i:70;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:89;s:8:"function";s:5:"__get";s:5:"class";s:18:"yii\base\Component";s:4:"type";s:2:"->";}}}i:40;a:5:{i:0;s:595:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.400219;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/Users/carl/www/hejia/common/models/User.php";s:4:"line";i:70;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:89;s:8:"function";s:5:"__get";s:5:"class";s:18:"yii\base\Component";s:4:"type";s:2:"->";}}}i:41;a:5:{i:0;s:595:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.4005499;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/Users/carl/www/hejia/common/models/User.php";s:4:"line";i:70;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:89;s:8:"function";s:5:"__get";s:5:"class";s:18:"yii\base\Component";s:4:"type";s:2:"->";}}}i:43;a:5:{i:0;s:41:"SHOW FULL COLUMNS FROM `weekly_push_logs`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.4024949;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:95;s:8:"function";s:10:"attributes";s:5:"class";s:19:"yii\db\ActiveRecord";s:4:"type";s:2:"->";}}}i:44;a:5:{i:0;s:41:"SHOW FULL COLUMNS FROM `weekly_push_logs`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.403178;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:95;s:8:"function";s:10:"attributes";s:5:"class";s:19:"yii\db\ActiveRecord";s:4:"type";s:2:"->";}}}i:46;a:5:{i:0;s:619:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'weekly_push_logs' AND kcu.table_name = 'weekly_push_logs'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.4039459;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:95;s:8:"function";s:10:"attributes";s:5:"class";s:19:"yii\db\ActiveRecord";s:4:"type";s:2:"->";}}}i:47;a:5:{i:0;s:619:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'weekly_push_logs' AND kcu.table_name = 'weekly_push_logs'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.404357;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:95;s:8:"function";s:10:"attributes";s:5:"class";s:19:"yii\db\ActiveRecord";s:4:"type";s:2:"->";}}}i:49;a:5:{i:0;s:277:"INSERT INTO `weekly_push_logs` (`id`, `student_id`, `student_name`, `patriarch_id`, `patriarch_name`, `discipline`, `sleep`, `diet`, `study`, `synthesize`, `username`, `status`, `created_at`) VALUES (NULL, 13, '小杨1', 19, '杨红12', 2, 3, 4, 5, '90', 'carl', 0, 1482062953)";i:1;i:80;i:2;s:23:"yii\db\Command::execute";i:3;d:1482062953.404635;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:97;s:8:"function";s:7:"execute";s:5:"class";s:14:"yii\db\Command";s:4:"type";s:2:"->";}}}i:50;a:5:{i:0;s:277:"INSERT INTO `weekly_push_logs` (`id`, `student_id`, `student_name`, `patriarch_id`, `patriarch_name`, `discipline`, `sleep`, `diet`, `study`, `synthesize`, `username`, `status`, `created_at`) VALUES (NULL, 13, '小杨1', 19, '杨红12', 2, 3, 4, 5, '90', 'carl', 0, 1482062953)";i:1;i:96;i:2;s:23:"yii\db\Command::execute";i:3;d:1482062953.4048679;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:97;s:8:"function";s:7:"execute";s:5:"class";s:14:"yii\db\Command";s:4:"type";s:2:"->";}}}}}s:2:"db";a:1:{s:8:"messages";a:24:{i:15;a:5:{i:0;s:39:"SHOW FULL COLUMNS FROM `student_weekly`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.3842731;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:77;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}}i:16;a:5:{i:0;s:39:"SHOW FULL COLUMNS FROM `student_weekly`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.3847671;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:77;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}}i:18;a:5:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'student_weekly' AND kcu.table_name = 'student_weekly'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.3855879;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:77;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}}i:19;a:5:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'student_weekly' AND kcu.table_name = 'student_weekly'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.385967;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:77;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}}i:21;a:5:{i:0;s:43:"SELECT * FROM `student_weekly` WHERE `id`=1";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.3886371;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:77;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}}i:22;a:5:{i:0;s:43:"SELECT * FROM `student_weekly` WHERE `id`=1";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.388948;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:77;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}}}i:24;a:5:{i:0;s:67:"SELECT `userid`, `name` FROM `user_patriarch` WHERE `student_id`=13";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.3909421;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:78;s:8:"function";s:3:"one";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}}i:25;a:5:{i:0;s:67:"SELECT `userid`, `name` FROM `user_patriarch` WHERE `student_id`=13";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.3912759;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:78;s:8:"function";s:3:"one";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}}i:27;a:5:{i:0;s:39:"SHOW FULL COLUMNS FROM `user_patriarch`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.391463;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:78;s:8:"function";s:3:"one";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}}i:28;a:5:{i:0;s:39:"SHOW FULL COLUMNS FROM `user_patriarch`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.3921671;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:78;s:8:"function";s:3:"one";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}}i:30;a:5:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user_patriarch' AND kcu.table_name = 'user_patriarch'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.394109;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:78;s:8:"function";s:3:"one";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}}i:31;a:5:{i:0;s:615:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user_patriarch' AND kcu.table_name = 'user_patriarch'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.395191;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:78;s:8:"function";s:3:"one";s:5:"class";s:18:"yii\db\ActiveQuery";s:4:"type";s:2:"->";}}}i:34;a:5:{i:0;s:60:"SELECT * FROM `user` WHERE (`id`=11) AND (`status`='active')";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.397928;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/Users/carl/www/hejia/common/models/User.php";s:4:"line";i:70;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:89;s:8:"function";s:5:"__get";s:5:"class";s:18:"yii\base\Component";s:4:"type";s:2:"->";}}}i:35;a:5:{i:0;s:60:"SELECT * FROM `user` WHERE (`id`=11) AND (`status`='active')";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.3982799;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/Users/carl/www/hejia/common/models/User.php";s:4:"line";i:70;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:89;s:8:"function";s:5:"__get";s:5:"class";s:18:"yii\base\Component";s:4:"type";s:2:"->";}}}i:37;a:5:{i:0;s:29:"SHOW FULL COLUMNS FROM `user`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.3988271;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/Users/carl/www/hejia/common/models/User.php";s:4:"line";i:70;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:89;s:8:"function";s:5:"__get";s:5:"class";s:18:"yii\base\Component";s:4:"type";s:2:"->";}}}i:38;a:5:{i:0;s:29:"SHOW FULL COLUMNS FROM `user`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.3993139;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/Users/carl/www/hejia/common/models/User.php";s:4:"line";i:70;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:89;s:8:"function";s:5:"__get";s:5:"class";s:18:"yii\base\Component";s:4:"type";s:2:"->";}}}i:40;a:5:{i:0;s:595:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.400219;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/Users/carl/www/hejia/common/models/User.php";s:4:"line";i:70;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:89;s:8:"function";s:5:"__get";s:5:"class";s:18:"yii\base\Component";s:4:"type";s:2:"->";}}}i:41;a:5:{i:0;s:595:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.4005499;i:4;a:2:{i:0;a:5:{s:4:"file";s:44:"/Users/carl/www/hejia/common/models/User.php";s:4:"line";i:70;s:8:"function";s:7:"findOne";s:5:"class";s:23:"yii\db\BaseActiveRecord";s:4:"type";s:2:"::";}i:1;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:89;s:8:"function";s:5:"__get";s:5:"class";s:18:"yii\base\Component";s:4:"type";s:2:"->";}}}i:43;a:5:{i:0;s:41:"SHOW FULL COLUMNS FROM `weekly_push_logs`";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.4024949;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:95;s:8:"function";s:10:"attributes";s:5:"class";s:19:"yii\db\ActiveRecord";s:4:"type";s:2:"->";}}}i:44;a:5:{i:0;s:41:"SHOW FULL COLUMNS FROM `weekly_push_logs`";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.403178;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:95;s:8:"function";s:10:"attributes";s:5:"class";s:19:"yii\db\ActiveRecord";s:4:"type";s:2:"->";}}}i:46;a:5:{i:0;s:619:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'weekly_push_logs' AND kcu.table_name = 'weekly_push_logs'";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.4039459;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:95;s:8:"function";s:10:"attributes";s:5:"class";s:19:"yii\db\ActiveRecord";s:4:"type";s:2:"->";}}}i:47;a:5:{i:0;s:619:"SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'weekly_push_logs' AND kcu.table_name = 'weekly_push_logs'";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1482062953.404357;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:95;s:8:"function";s:10:"attributes";s:5:"class";s:19:"yii\db\ActiveRecord";s:4:"type";s:2:"->";}}}i:49;a:5:{i:0;s:277:"INSERT INTO `weekly_push_logs` (`id`, `student_id`, `student_name`, `patriarch_id`, `patriarch_name`, `discipline`, `sleep`, `diet`, `study`, `synthesize`, `username`, `status`, `created_at`) VALUES (NULL, 13, '小杨1', 19, '杨红12', 2, 3, 4, 5, '90', 'carl', 0, 1482062953)";i:1;i:80;i:2;s:23:"yii\db\Command::execute";i:3;d:1482062953.404635;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:97;s:8:"function";s:7:"execute";s:5:"class";s:14:"yii\db\Command";s:4:"type";s:2:"->";}}}i:50;a:5:{i:0;s:277:"INSERT INTO `weekly_push_logs` (`id`, `student_id`, `student_name`, `patriarch_id`, `patriarch_name`, `discipline`, `sleep`, `diet`, `study`, `synthesize`, `username`, `status`, `created_at`) VALUES (NULL, 13, '小杨1', 19, '杨红12', 2, 3, 4, 5, '90', 'carl', 0, 1482062953)";i:1;i:96;i:2;s:23:"yii\db\Command::execute";i:3;d:1482062953.4048679;i:4;a:1:{i:0;a:5:{s:4:"file";s:82:"/Users/carl/www/hejia/backend/modules/msg/controllers/WeeklyPushLogsController.php";s:4:"line";i:97;s:8:"function";s:7:"execute";s:5:"class";s:14:"yii\db\Command";s:4:"type";s:2:"->";}}}}}s:6:"assets";a:0:{}s:4:"mail";a:0:{}s:7:"summary";a:9:{s:3:"tag";s:13:"58567c695904f";s:3:"url";s:66:"http://localhost/hejia/admin.php?r=msg%2Fweekly-push-logs%2Fcreate";s:4:"ajax";i:0;s:6:"method";s:4:"POST";s:2:"ip";s:3:"::1";s:4:"time";i:1482062953;s:10:"statusCode";i:302;s:8:"sqlCount";i:12;s:9:"mailCount";i:0;}}

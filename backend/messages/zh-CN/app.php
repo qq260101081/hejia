@@ -40,7 +40,10 @@ return [
     'Content' => '内容',
     'Created At' => '创建时间',
     'Updated At' => '更新时间',
-
+    //影像资料
+    'Repository' => '影像资料管理',
+    'Created Repository' => '创建影像资料',
+    'Updated Repository' => '更新影像资料',
     //学生管理
     'Student List' => '学生列表',
     'Create Student' => '创建学生',
@@ -50,6 +53,10 @@ return [
     'Age' => '年龄',
     'School' => '学校',
     'Grade' => '年级',
+    //学生周报
+    'Weekly List' => '学生周报',
+    'Create Weekly' => '创建周报',
+    'Update Weekly' => '更新周报',
     //家长
     'Patriarch List' => '家长列表',
     'Update Patriarch' => '更新家长',
@@ -65,5 +72,14 @@ return [
     'Orders' => '订单管理',
     'Create Orders' => '创建订单',
     'Update Orders' => '更新订单',
+    //消息服务
+    'Msg Push Logs' => '官方消息推送',
+    'Created Msg'  => '创建消息',
+
+    'Weekly Push Logs' => '学生周报推送',
+    'Created Weekly'  => '创建周报推送',
+
+    'Repository Push Logs' => '学生影像推送',
+    'Created Repository'  => '创建影像推送',
 
 ];

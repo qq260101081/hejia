@@ -23,6 +23,19 @@ use yii\behaviors\TimestampBehavior;
 class Users extends \yii\db\ActiveRecord
 {
 
+    public function behaviors()
+    {
+
+        return [
+            [
+                'class' => TimestampBehavior::className(),
+                'createdAtAttribute' => 'created_at',// 自己根据数据库字段修改
+                'updatedAtAttribute' => 'updated_at', // 自己根据数据库字段修改
+                'value' => time(), // 自己根据数据库字段修改
+            ],
+        ];
+    }
+
     /**
      * @inheritdoc
      */
@@ -45,11 +58,11 @@ class Users extends \yii\db\ActiveRecord
             [['phone', 'reg_ip'], 'string', 'max' => 15],
             [['password'], 'string', 'max' => 16],
             [['password'], 'string', 'min' => 6],
-            [['auth_key','city','province'], 'string', 'max' => 32],
+            [['auth_key','city','province','type'], 'string', 'max' => 32],
             [['password_hash'], 'string', 'max' => 65],
             ['headimgurl', 'string', 'max' => 250],
             [['email'], 'string', 'max' => 45],
-            [['username','phone','email'], 'unique'],
+            [['username'], 'unique'],
             ['role','safe']
         ];
     }

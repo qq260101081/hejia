@@ -28,7 +28,21 @@ $this->params['breadcrumbs'][] = $this->title;
                 'urgency_person',
                 'urgency_phone',
 
-                ['class' => 'yii\grid\ActionColumn','header'=>'操作','template' => '{view} {update}'],
+                [
+                    'class' => 'yii\grid\ActionColumn',
+                    'template' => '{view} {update} {open}',
+                    'header' => '操作',
+                    'buttons' => [
+                        'open' => function ($url,$model, $key) {
+                            if($model->userid) return '';
+                            return Html::a('<span class="glyphicon glyphicon-user"></span>',
+                                ['/student/patriarch/create-user','id'=>$model->id],
+                                [
+                                'title'=> '开账号',
+                            ] );
+                        },
+                    ],
+                ],
             ],
         ]); ?>
         <?php Pjax::end(); ?></div>

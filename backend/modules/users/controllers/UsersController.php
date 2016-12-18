@@ -2,6 +2,8 @@
 
 namespace app\modules\users\controllers;
 
+use app\modules\staff\models\Staff;
+use app\modules\student\models\Patriarch;
 use Yii;
 use app\modules\users\models\Users;
 use app\modules\users\models\UsersSearch;
@@ -139,8 +141,21 @@ class UsersController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $model = $this->findModel($id);
+        //删除对应员工
+        if($model->type == 'staff')
+        {
+            Staff::find()->where(['userid' => $model->id])->one()->delete();
+        }
+        //更新对应家长表
+        elseif ($model->type == 'patriarch')
+        {
+            $patriarch = Patriarch::find()->where(['userid' => $model->id])->one();
+            $patriarch->userid = 0;
+            $patriarch->save();
+        }
 
+        $model->delete();
         return $this->redirect(['index']);
     }
 

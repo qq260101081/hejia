@@ -29,7 +29,22 @@ $this->params['breadcrumbs'][] = $this->title;
             'position',
             'campus',
             'phone',
-            ['class' => 'yii\grid\ActionColumn','header'=>'操作'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'template' => '{view} {update} {delete} {open}',
+                'header' => '操作',
+                'headerOptions'=> ['width'=> '75'],
+                'buttons' => [
+                    'open' => function ($url,$model, $key) {
+                        if($model->userid) return '';
+                        return Html::a('<span class="glyphicon glyphicon-user"></span>',
+                            ['/staff/staff/create-user','id'=>$model->id],
+                            [
+                                'title'=> '开账号',
+                            ] );
+                    },
+                ],
+            ],
         ],
     ]); ?>
     <?php Pjax::end(); ?></div>

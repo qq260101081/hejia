@@ -2,6 +2,7 @@
 
 namespace app\modules\staff\controllers;
 
+use app\modules\users\models\Users;
 use Yii;
 use app\modules\staff\models\Staff;
 use app\modules\staff\models\StaffSearch;
@@ -90,6 +91,27 @@ class StaffController extends Controller
         }
     }
 
+    //给员工开账号
+    public function actionCreateUser($id)
+    {
+        $model = $this->findModel($id);
+
+        //USER表添加用户
+        $user = new Users();
+        $user->type = 'staff';
+        $user->role = 'backend';
+        $user->username = $model->phone;
+        $user->password_hash = Yii::$app->security->generatePasswordHash(substr($model->phone, -6));
+        $user->auth_key = Yii::$app->security->generateRandomString();
+        if($user->save())
+        {
+            //更新员工表
+            $model->userid = $user->id;
+            $model->save();
+            return $this->redirect(['/users/users/view', 'id' => $user->id]);
+        }
+    }
+
     /**
      * Updates an existing Staff model.
      * If update is successful, the browser will be redirected to the 'view' page.
@@ -135,7 +157,10 @@ class StaffController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $model = $this->findModel($id);
+        $user = Users::findOne($model->userid);
+
+        if($user->delete()) $model->delete();
 
         return $this->redirect(['index']);
     }

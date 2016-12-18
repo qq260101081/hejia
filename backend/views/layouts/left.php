@@ -15,6 +15,7 @@
                         'url' => '#',
                         'items' => [
                             ['label' => '学生列表', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/student/student/index']],
+                            ['label' => '学生周报', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/student/weekly/index']],
                             ['label' => '家长列表', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/student/patriarch/index']],
                         ],
                     ],
@@ -26,7 +27,37 @@
                             ['label' => '员工列表', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/staff/staff/index']],
                         ],
                     ],
-                    ['label' => '服务项目列表', 'icon' => 'fa share', 'url' => ['/serviceProduct/service-product/index']],
+                    ['label' => '服务项目列表', 'icon' => 'fa fa-share', 'url' => ['/serviceProduct/service-product/index']],
+                    ['label' => '影像资料管理', 'icon' => 'fa fa-share', 'url' => ['/repository/repository/index']],
+                    ['label' => '订单管理', 'icon' => 'fa fa-share', 'url' => ['/orders/orders/index']],
+                    [
+                        'label' => '和家服务管理',
+                        'icon' => 'fa fa-share',
+                        'url' => '#',
+                        'items' => [
+                            ['label' => '分类栏目', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/service/service-category/index']],
+                            ['label' => '页面列表', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/service/service/index']],
+                        ],
+                    ],
+                    [
+                        'label' => '消息服务',
+                        'icon' => 'fa fa-share',
+                        'url' => '#',
+                        'items' => [
+                            ['label' => '学生周报推送', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/msg/weekly-push-logs/index']],
+                            ['label' => '学生影像推送', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/msg/repository-push-logs/index']],
+                            ['label' => '官方消息推送', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/msg/msg-push-logs/index']],
+                        ],
+                    ],
+                    [
+                        'label' => '用户管理',
+                        'icon' => 'fa fa-share',
+                        'url' => '#',
+                        'items' => [
+                            ['label' => '用户列表', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/users/users/index']],
+                            ['label' => '留言列表', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/users/guestbook/index']],
+                        ],
+                    ],
                     [
                         'label' => '产品管理',
                         'icon' => 'fa fa-share',
@@ -39,16 +70,7 @@
                     ['label' => '新闻管理', 'icon' => 'fa fa-share', 'url' => ['/presscentre/presscentre/index']],
                     ['label' => '活动花絮', 'icon' => 'fa fa-share', 'url' => ['/interesting/interesting/index']],
                     ['label' => '团队风采', 'icon' => 'fa fa-share', 'url' => ['/mien/mien/index']],
-                    [
-                        'label' => '用户管理',
-                        'icon' => 'fa fa-share',
-                        'url' => '#',
-                        'items' => [
-                            ['label' => '用户列表', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/users/users/index']],
-                            ['label' => '留言列表', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/users/guestbook/index']],
-                        ],
-                    ],
-                    ['label' => '订单管理', 'icon' => 'fa fa-share', 'url' => ['/orders/orders/index']],
+
                     ['label' => '轮播图管理', 'icon' => 'fa fa-share', 'url' => ['/ad/ad/index']],
                     [
                         'label' => '设置',
@@ -58,26 +80,15 @@
                             ['label' => '网站配置', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/cfg/web-cfg/index']],
                         ],
                     ],
-                    [
-                        'label' => '和家服务管理',
-                        'icon' => 'fa fa-share',
-                        'url' => '#',
-                        'items' => [
-                            ['label' => '分类栏目', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/service/service-category/index']],
-                            ['label' => '页面列表', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/service/service/index']],
-                        ],
-                    ],
+
                     [
                         'label' => '微信后台',
                         'icon' => 'fa fa-share',
                         'url' => '#',
                         'items' => [
-                            ['label' => '生活资料库管理', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/repository/index']],
                             ['label' => '用户生活资料库', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/user-live/index']],
                             ['label' => '文章管理', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/article/index']],
                             ['label' => '产品管理', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/goods/index']],
-                            ['label' => '家教管理', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/teacher/index']],
-                            ['label' => '保姆管理', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/babysitter/index']],
                         ],
                     ],
                 ],

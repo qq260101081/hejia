@@ -69,8 +69,7 @@ class PatriarchSearch extends Patriarch
             ->andFilterWhere(['like', 'phone', $this->phone])
             ->andFilterWhere(['like', 'urgency_phone', $this->urgency_phone])
             ->andFilterWhere(['like', 'urgency_person', $this->urgency_person])
-            ->andFilterWhere(['like', 'address', $this->address])
-            ->andFilterWhere(['like', 'remark', $this->remark]);
+            ->andFilterWhere(['like', 'address', $this->address]);
 
         return $dataProvider;
     }

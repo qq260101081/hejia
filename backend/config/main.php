@@ -48,8 +48,11 @@ return [
         'orders' => [
             'class' => 'app\modules\orders\Module',
         ],
-        'stat' => [
-            'class' => 'app\modules\stat\Module',
+        'repository' => [
+            'class' => 'app\modules\repository\Module',
+        ],
+        'msg' => [
+            'class' => 'app\modules\msg\Module',
         ],
         'cfg' => [
             'class' => 'app\modules\cfg\Module',
