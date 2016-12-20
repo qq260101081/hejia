@@ -2,32 +2,18 @@
 
 namespace app\modules\serviceProduct\controllers;
 
+
 use Yii;
 use app\modules\serviceProduct\models\ServiceProduct;
 use app\modules\serviceProduct\models\ServiceProductSearch;
-use yii\web\Controller;
+use app\components\CommonController;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 
 /**
  * ServiceProductController implements the CRUD actions for ServiceProduct model.
  */
-class ServiceProductController extends Controller
+class ServiceProductController extends CommonController
 {
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
 
     /**
      * Lists all ServiceProduct models.

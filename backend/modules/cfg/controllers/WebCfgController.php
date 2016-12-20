@@ -5,29 +5,15 @@ namespace app\modules\cfg\controllers;
 use Yii;
 use app\modules\cfg\models\WebCfg;
 use app\modules\cfg\models\WebCfgSearch;
-use yii\web\Controller;
+use app\components\CommonController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
  * WebCfgController implements the CRUD actions for WebCfg model.
  */
-class WebCfgController extends Controller
+class WebCfgController extends CommonController
 {
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
 
     /**
      * Lists all WebCfg models.

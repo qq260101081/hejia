@@ -2,33 +2,20 @@
 
 namespace app\modules\msg\controllers;
 
-use app\modules\student\models\Patriarch;
+
 use Yii;
 use app\modules\msg\models\MsgPushLogs;
 use app\modules\msg\models\MsgPushLogsSearch;
-use yii\web\Controller;
+use app\components\CommonController;
+use app\modules\student\models\Patriarch;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 
 /**
  * MsgPushLogsController implements the CRUD actions for MsgPushLogs model.
  */
-class MsgPushLogsController extends Controller
+class MsgPushLogsController extends CommonController
 {
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
+
     public function actions()
     {
         return [

@@ -2,33 +2,19 @@
 
 namespace app\modules\student\controllers;
 
-use app\modules\users\models\Users;
+
 use Yii;
 use app\modules\student\models\Patriarch;
 use app\modules\student\models\PatriarchSearch;
-use yii\web\Controller;
+use app\components\CommonController;
+use app\modules\users\models\Users;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 
 /**
  * PatriarchController implements the CRUD actions for Patriarch model.
  */
-class PatriarchController extends Controller
+class PatriarchController extends CommonController
 {
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
 
     /**
      * Lists all Patriarch models.

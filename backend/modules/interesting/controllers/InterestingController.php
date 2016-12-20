@@ -2,17 +2,18 @@
 
 namespace app\modules\interesting\controllers;
 
-use app\components\libs\Common;
+
 use Yii;
 use app\modules\interesting\models\Interesting;
 use app\modules\interesting\models\InterestingSearch;
-use yii\web\Controller;
+use app\components\CommonController;
+use app\components\libs\Common;
 use yii\web\NotFoundHttpException;
 
 /**
  * PresscentreController implements the CRUD actions for Presscentre model.
  */
-class InterestingController extends Controller
+class InterestingController extends CommonController
 {
     public function actions()
     {

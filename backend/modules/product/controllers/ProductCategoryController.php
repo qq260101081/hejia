@@ -2,17 +2,15 @@
 
 namespace app\modules\product\controllers;
 
+
 use Yii;
 use app\modules\product\models\ProductCategory;
-use yii\web\Controller;
-use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
-use yii\helpers\Json;
+use app\components\CommonController;
 
 /**
  * ProductCategoryController implements the CRUD actions for ProductCategory model.
  */
-class ProductCategoryController extends Controller
+class ProductCategoryController extends CommonController
 {
 public function actions() {
     return [

@@ -2,34 +2,20 @@
 
 namespace app\modules\users\controllers;
 
-use app\modules\staff\models\Staff;
-use app\modules\student\models\Patriarch;
+
 use Yii;
 use app\modules\users\models\Users;
 use app\modules\users\models\UsersSearch;
-use yii\web\Controller;
+use app\components\CommonController;
+use app\modules\staff\models\Staff;
+use app\modules\student\models\Patriarch;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 
 /**
  * UsersController implements the CRUD actions for Users model.
  */
-class UsersController extends Controller
+class UsersController extends CommonController
 {
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
 
     /**
      * Lists all Users models.

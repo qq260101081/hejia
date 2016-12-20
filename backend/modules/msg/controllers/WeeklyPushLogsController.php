@@ -2,35 +2,21 @@
 
 namespace app\modules\msg\controllers;
 
-use app\modules\student\models\Patriarch;
+
 use Yii;
 use app\modules\msg\models\WeeklyPushLogs;
 use app\modules\msg\models\WeeklyPushLogsSearch;
 use app\modules\student\models\Weekly;
-use yii\web\Controller;
+use app\components\CommonController;
+use app\modules\student\models\Patriarch;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
  * WeeklyPushLogsController implements the CRUD actions for WeeklyPushLogs model.
  */
-class WeeklyPushLogsController extends Controller
+class WeeklyPushLogsController extends CommonController
 {
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
-
     /**
      * Lists all WeeklyPushLogs models.
      * @return mixed

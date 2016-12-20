@@ -2,31 +2,19 @@
 
 namespace app\modules\repository\controllers;
 
+
 use Yii;
 use app\components\libs\Common;
 use app\modules\repository\models\Repository;
 use app\modules\repository\models\RepositorySearch;
-use yii\web\Controller;
-use yii\filters\VerbFilter;
+use app\components\CommonController;
 use yii\web\NotFoundHttpException;
 
 /**
  * PresscentreController implements the CRUD actions for Presscentre model.
  */
-class RepositoryController extends Controller
+class RepositoryController extends CommonController
 {
-
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
     /**
      * Lists all Guarantee models.
      * @return mixed

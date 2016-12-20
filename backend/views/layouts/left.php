@@ -55,6 +55,7 @@
                         'url' => '#',
                         'items' => [
                             ['label' => '用户列表', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/users/users/index']],
+                            ['label' => '用户组', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/role/role/index']],
                             ['label' => '留言列表', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/users/guestbook/index']],
                         ],
                     ],

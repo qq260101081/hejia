@@ -2,14 +2,14 @@
 
 namespace app\modules\pages\controllers;
 
+
 use Yii;
 use app\modules\pages\models\PagesCategory;
-use yii\web\Controller;
-
+use app\components\CommonController;
 /**
  * ProductCategoryController implements the CRUD actions for ProductCategory model.
  */
-class ProductCategoryController extends Controller
+class ProductCategoryController extends CommonController
 {
 public function actions() {
     return [

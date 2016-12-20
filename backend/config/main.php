@@ -60,6 +60,9 @@ return [
         'ad' => [
             'class' => 'app\modules\ad\Module',
         ],
+        'role' => [
+            'class' => 'app\modules\role\Module',
+        ],
     ],
     'components' => [
         'user' => [
@@ -139,6 +142,10 @@ return [
                     ],
                 ],
             ],
+        ],
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+            //'defaultRoles' => ['guest'],
         ],
         /*
         'urlManager' => [

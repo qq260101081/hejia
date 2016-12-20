@@ -2,31 +2,17 @@
 
 namespace app\modules\users\controllers;
 
+
 use Yii;
 use app\modules\users\models\GuestbookSearch;
-use yii\web\Controller;
+use app\components\CommonController;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 
 /**
  * UsersController implements the CRUD actions for Users model.
  */
-class GuestbookController extends Controller
+class GuestbookController extends CommonController
 {
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
 
     /**
      * Lists all Users models.

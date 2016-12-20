@@ -2,32 +2,18 @@
 
 namespace app\modules\orders\controllers;
 
+
 use Yii;
 use app\modules\orders\models\Orders;
 use app\modules\orders\models\OrdersSearch;
-use yii\web\Controller;
+use app\components\CommonController;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 
 /**
  * OrdersController implements the CRUD actions for Orders model.
  */
-class OrdersController extends Controller
+class OrdersController extends CommonController
 {
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
 
     /**
      * Lists all Orders models.

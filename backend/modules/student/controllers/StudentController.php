@@ -3,17 +3,18 @@
 namespace app\modules\student\controllers;
 
 
+
 use Yii;
 use app\modules\student\models\Patriarch;
 use app\modules\student\models\Student;
 use app\modules\student\models\StudentSearch;
-use yii\web\Controller;
+use app\components\CommonController;
 use yii\web\NotFoundHttpException;
 
 /**
  * PresscentreController implements the CRUD actions for Presscentre model.
  */
-class StudentController extends Controller
+class StudentController extends CommonController
 {
     /**
      * Lists all Guarantee models.

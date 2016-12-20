@@ -2,17 +2,18 @@
 
 namespace app\modules\mien\controllers;
 
-use app\components\libs\Common;
+
 use Yii;
 use app\modules\mien\models\Mien;
 use app\modules\mien\models\MienSearch;
-use yii\web\Controller;
+use app\components\CommonController;
+use app\components\libs\Common;
 use yii\web\NotFoundHttpException;
 
 /**
  * PresscentreController implements the CRUD actions for Presscentre model.
  */
-class MienController extends Controller
+class MienController extends CommonController
 {
 
     public function actions()

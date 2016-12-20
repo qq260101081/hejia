@@ -2,20 +2,17 @@
 
 namespace app\modules\cfg\controllers;
 
+
 use Yii;
 use app\modules\cfg\models\Cfg;
-use app\components\libs;
-use yii\web\Controller;
-use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
-use yii\helpers\Json;
 use app\components\libs\Common;
+use app\components\CommonController;
 
 
 /**
  * CfgController implements the CRUD actions for Cfg model.
  */
-class CfgController extends Controller
+class CfgController extends CommonController
 {
     /**
      * Lists all Cfg models.

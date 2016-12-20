@@ -2,33 +2,19 @@
 
 namespace app\modules\service\controllers;
 
-use app\modules\service\models\ServiceCategory;
+
 use Yii;
 use app\modules\service\models\Service;
 use app\modules\service\models\ServiceSearch;
+use app\modules\service\models\ServiceCategory;
 use app\components\CommonController;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 
 /**
  * MenusController implements the CRUD actions for Menus model.
  */
 class ServiceController extends CommonController
 {
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
 
     public function actions()
     {

@@ -4,6 +4,19 @@
  * Date: 16/10/17 上午8:33
  */
 return [
+    //权限
+    'role' => '权限管理',
+    'cfg' => '设置',
+    'msg' => '消息服务',
+    'orders' => '订单管理',
+    'repository' => '影像资料管理',
+    'service' => '和家服务管理',
+    'serviceProduct' => '服务项目列表',
+    'site' => '网站',
+    'staff' => '员工管理',
+    'student' => '学生管理',
+    'users' => '用户管理',
+
     'Update' => '更新',
     'Delete' => '删除',
     'View' => '查看',
@@ -81,5 +94,11 @@ return [
 
     'Repository Push Logs' => '学生影像推送',
     'Created Repository'  => '创建影像推送',
+
+    //用户组
+    'Role' => '用户组',
+    'Created Role' => '创建用户组',
+    'Updated Role' => '更新用户组',
+    'Set Role' => '用户组权限',
 
 ];

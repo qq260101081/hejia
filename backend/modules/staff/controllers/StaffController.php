@@ -2,11 +2,12 @@
 
 namespace app\modules\staff\controllers;
 
-use app\modules\users\models\Users;
+
 use Yii;
 use app\modules\staff\models\Staff;
 use app\modules\staff\models\StaffSearch;
-use yii\web\Controller;
+use app\components\CommonController;
+use app\modules\users\models\Users;
 use app\components\libs\Common;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -14,22 +15,8 @@ use yii\filters\VerbFilter;
 /**
  * StaffController implements the CRUD actions for Staff model.
  */
-class StaffController extends Controller
+class StaffController extends CommonController
 {
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
 
     /**
      * Lists all Staff models.
@@ -160,7 +147,8 @@ class StaffController extends Controller
         $model = $this->findModel($id);
         $user = Users::findOne($model->userid);
 
-        if($user->delete()) $model->delete();
+        if($user) $user->delete();
+        $model->delete();
 
         return $this->redirect(['index']);
     }

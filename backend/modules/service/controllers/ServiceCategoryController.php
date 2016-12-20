@@ -2,15 +2,15 @@
 
 namespace app\modules\service\controllers;
 
+
 use Yii;
 use app\modules\service\models\ServiceCategory;
-use yii\web\Controller;
-
+use app\components\CommonController;
 
 /**
  * ProductCategoryController implements the CRUD actions for ProductCategory model.
  */
-class ServiceCategoryController extends Controller
+class ServiceCategoryController extends CommonController
 {
 public function actions() {
     return [

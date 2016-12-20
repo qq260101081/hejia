@@ -2,32 +2,18 @@
 
 namespace app\modules\student\controllers;
 
+
 use Yii;
 use app\modules\student\models\Weekly;
 use app\modules\student\models\WeeklySearch;
-use yii\web\Controller;
+use app\components\CommonController;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 
 /**
  * WeeklyController implements the CRUD actions for Weekly model.
  */
-class WeeklyController extends Controller
+class WeeklyController extends CommonController
 {
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
 
     /**
      * Lists all Weekly models.

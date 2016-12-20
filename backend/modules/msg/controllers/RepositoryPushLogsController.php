@@ -2,33 +2,19 @@
 
 namespace app\modules\msg\controllers;
 
+
 use Yii;
 use app\modules\repository\models\Repository;
 use app\modules\msg\models\RepositoryPushLogs;
 use app\modules\msg\models\RepositoryPushLogsSearch;
-use yii\web\Controller;
+use app\components\CommonController;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 
 /**
  * RepositoryPushLogsController implements the CRUD actions for RepositoryPushLogs model.
  */
-class RepositoryPushLogsController extends Controller
+class RepositoryPushLogsController extends CommonController
 {
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
 
     /**
      * Lists all RepositoryPushLogs models.
