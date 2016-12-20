@@ -5,7 +5,6 @@ use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use common\models\LoginForm;
 
 class CommonController extends Controller
 {
@@ -40,10 +39,7 @@ class CommonController extends Controller
 
         if(Yii::$app->user->isGuest)
         {
-            $model = new LoginForm();
-            return $this->render('login', [
-                'model' => $model,
-            ]);
+            return $this->redirect(['site/login']);
         }
 
         $route = \Yii::$app->requestedRoute ? \Yii::$app->requestedRoute : \Yii::$app->defaultRoute . '/index';
