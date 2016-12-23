@@ -2,7 +2,6 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use \kartik\file\FileInput;
 use yii\helpers\Url;
 /* @var $this yii\web\View */
 /* @var $model app\modules\users\models\Users */
@@ -31,11 +30,15 @@ use yii\helpers\Url;
 
     <?= $form->field($model, 'password')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'role')->radioList(['frontend'=>'前台用户','backend'=>'后台用户']) ?>
 
     <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'role')->dropDownList(
+        \yii\helpers\ArrayHelper::map(Yii::$app->getAuthManager()->getRoles(), 'name', 'description'),
+        ['prompt'=>'']
+    ) ?>
 
 
     <div class="box-footer">

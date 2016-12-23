@@ -48,7 +48,7 @@ use yii\helpers\Url;
 <?php $this->beginBlock('js_end') ?>
 	var categoryPath = <?= json_encode(array_keys(isset($categoryPath) ? $categoryPath : []))?>;
 	var opts = {
-	ajax: '?r=/service/service-category/get-node',
+	ajax: '?r=service/service-category/get-node',
 	select: '#category',
 	selClass: 'form-control',
 	head: '--请选择--',

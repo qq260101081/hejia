@@ -86,7 +86,6 @@ class StaffController extends CommonController
         //USER表添加用户
         $user = new Users();
         $user->type = 'staff';
-        $user->role = 'backend';
         $user->username = $model->phone;
         $user->password_hash = Yii::$app->security->generatePasswordHash(substr($model->phone, -6));
         $user->auth_key = Yii::$app->security->generateRandomString();

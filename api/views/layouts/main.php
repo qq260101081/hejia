@@ -1,9 +1,7 @@
 <?php
 
-/* @var $this \yii\web\View */
-/* @var $content string */
-
 use api\assets\AppAsset;
+use yii\helpers\Url;
 use yii\helpers\Html;
 
 AppAsset::register($this);
@@ -25,7 +23,7 @@ AppAsset::register($this);
 <div data-am-widget="navbar" class="am-navbar  gm-foot am-no-layout" id="">
     <ul class="am-navbar-nav am-cf am-avg-sm-4">
         <li class="curr">
-            <a href="index.html" class="curr">
+            <a href="<?= Url::to(['/api.php/site/index']); ?>" class="curr">
                 <span class="am-icon-home"></span>
                 <span class="am-navbar-label">首页</span>
             </a>
@@ -33,11 +31,17 @@ AppAsset::register($this);
         <li>
             <a href="order.html" class="">
                 <span class="am-icon-th-large"></span>
-                <span class="am-navbar-label">订单</span>
+                <span class="am-navbar-label">和家服务</span>
             </a>
         </li>
         <li>
-            <a href="member.html" class="">
+            <a href="<?= Url::to(['/api.php/user/serve'])?>" class="">
+                <span class="am-icon-coffee"></span>
+                <span class="am-navbar-label">我的服务</span>
+            </a>
+        </li>
+        <li>
+            <a href="<?= Url::to(['/api.php/user'])?>" class="">
                 <span class="am-icon-user"></span>
                 <span class="am-navbar-label">我的</span>
             </a>

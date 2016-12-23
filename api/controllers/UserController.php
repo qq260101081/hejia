@@ -7,17 +7,31 @@
 
 namespace api\controllers;
 
-use api\models\Msg;
-use api\models\User;
-use yii\web\Controller;
 
-class UserController extends Controller
+use Yii;
+use api\models\Msg;
+use api\models\Patriarch;
+use api\models\User;
+use app\components\BaseController;
+
+class UserController extends BaseController
 {
     /*
      * 用户中心
      */
     public function actionIndex()
     {
+        //var_dump(Yii::$app->user->id);
+        return $this->render('index', [
+        ]);
+    }
+    /*
+     * 我的服务
+     */
+    public function actionServe()
+    {
+        //$patriarch = Patriarch::find()->where(['userid'=>Yii::$app->user->id])->one();
+        //print_r($patriarch);
         return $this->render('index', [
         ]);
     }

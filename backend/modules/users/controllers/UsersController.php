@@ -71,6 +71,13 @@ class UsersController extends CommonController
             $dada['Users']['password_hash'] = Yii::$app->security->generatePasswordHash($dada['Users']['password']);
             $dada['Users']['auth_key'] = Yii::$app->security->generateRandomString();
             if ($model->load($dada) && $model->save()) {
+                //添加角色
+                if($model->role)
+                {
+                    $role = Yii::$app->getAuthManager()->createRole($model->role);
+                    Yii::$app->getAuthManager()->assign($role, $model->id);
+                }
+
                 return $this->redirect(['view', 'id' => $model->id]);
             }
             else
@@ -95,7 +102,6 @@ class UsersController extends CommonController
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-
         $dada = Yii::$app->request->post();
         if($dada)
         {
@@ -104,6 +110,37 @@ class UsersController extends CommonController
 
             $dada['Users']['auth_key'] = Yii::$app->security->generateRandomString();
             if ($model->load($dada) && $model->save()) {
+
+                $role = Yii::$app->getAuthManager()->getRolesByUser($model->id);
+                if(!$role && $model->role) //添加角色
+                {
+                    $role = Yii::$app->getAuthManager()->createRole($model->role);
+                    Yii::$app->getAuthManager()->assign($role, $model->id);
+                }
+                elseif ($model->role && $role) //更新角色
+                {
+                    foreach ($role as $v)
+                    {
+                        $role = $v;
+                        break;
+                    }
+
+                    Yii::$app->getAuthManager()->revoke($role, $model->id);
+                    $role = Yii::$app->getAuthManager()->createRole($model->role);
+                    Yii::$app->getAuthManager()->assign($role, $model->id);
+                }
+                elseif($role && !$model->role)
+                {
+                    foreach ($role as $v)
+                    {
+                        $role = $v;
+                        break;
+                    }
+                    Yii::$app->getAuthManager()->revoke($role, $model->id);
+                }
+
+
+                //var_dump($role);die;
                 return $this->redirect(['view', 'id' => $model->id]);
             }
             else

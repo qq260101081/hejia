@@ -1,78 +1,78 @@
 <?php
-
+    use yii\helpers\Url;
 /* @var $this yii\web\View */
 
 $this->title = '和家主页';
 ?>
-<div class="banner"><img src="/api/web/images/banner.png"/></div>
+<div class="banner"><img src="<?= Yii::$app->params['imageUrl'];?>banner.png"/></div>
 <ul class="menu">
     <li>
         <div class="am-gallery-item">
-            <a href="more-jt.html" class="">
-                <img src="/api/web/images/icon1.png">
+            <a href="<?= Url::to(['/api.php/family/index']);?>" class="">
+                <img src="<?= Yii::$app->params['imageUrl'];?>icon1.png">
                 <p>家庭服务</p>
             </a>
         </div>
     </li>
     <li>
         <div class="am-gallery-item">
-            <a href="more-tf.html" class="">
-                <img src="/api/web/images/icon2.png">
+            <a href="<?= Url::to(['/api.php/auxiliary/area']);?>" class="">
+                <img src="<?= Yii::$app->params['imageUrl'];?>icon2.png">
                 <p>托辅中心</p>
             </a>
         </div>
     </li>
     <li>
         <div class="am-gallery-item">
-            <a href="list.html" class="">
-                <img src="/api/web/images/icon3.png">
+            <a href="<?= Url::to(['/api.php/events/activity']);?>" class="">
+                <img src="<?= Yii::$app->params['imageUrl'];?>icon3.png">
                 <p>最新活动</p>
             </a>
         </div>
     </li>
     <li>
         <div class="am-gallery-item">
-            <a href="list.html" class="">
-                <img src="/api/web/images/icon5.png">
-                <p>名优特产</p>
-            </a>
-        </div>
-    </li>
-    <li>
-        <div class="am-gallery-item">
-            <a href="#" class="">
-                <img src="/api/web/images/icon4.png">
-                <p>联系客服</p>
+            <a href="near.html" class="">
+                <img src="<?= Yii::$app->params['imageUrl'];?>icon5.png">
+                <p>和家代购</p>
             </a>
         </div>
     </li>
     <li>
         <div class="am-gallery-item">
             <a href="near.html" class="">
-                <img src="/api/web/images/icon8.png">
-                <p>团队风采</p>
+                <img src="<?= Yii::$app->params['imageUrl'];?>icon8.png">
+                <p>员工服务</p>
             </a>
         </div>
     </li>
     <li>
         <div class="am-gallery-item">
-            <a href="member.html" class="">
-                <img src="/api/web/images/icon6.png">
-                <p>用户中心</p>
+            <a href="near.html" class="">
+                <img src="<?= Yii::$app->params['imageUrl'];?>icon6.png">
+                <p>集中服务</p>
             </a>
         </div>
     </li>
     <li>
         <div class="am-gallery-item">
-            <a href="suggest.html" class="">
-                <img src="/api/web/images/icon7.png">
-                <p>建议反馈</p>
+            <a href="more.html" class="">
+                <img src="<?= Yii::$app->params['imageUrl'];?>icon7.png">
+                <p>和家特色</p>
+            </a>
+        </div>
+    </li>
+    <li>
+        <div class="am-gallery-item">
+            <a href="near.html" class="">
+                <img src="<?= Yii::$app->params['imageUrl'];?>icon4.png">
+                <p>联系客服</p>
             </a>
         </div>
     </li>
 </ul>
 <div class="reg2">
-    <a href="reg.html"><img src="/api/web/images/reg.png"/></a>
+    <a href="reg.html"><img src="<?= Yii::$app->params['imageUrl'];?>reg.png"/></a>
 </div>
 <ul class="brand">
     <li>
@@ -81,11 +81,11 @@ $this->title = '和家主页';
                 <i class="am-icon-user-plus"></i>
                 <div class="text">
                     <h2>服务流程</h2>
-                    <p>让顾客享优质服务</p>
+                    <p>读服务流程享优质服务</p>
                 </div>
             </div>
         </a>
-        <a href="suggest.html">
+        <a href="<?= Url::to(['/api.php/guestbook/create'])?>">
             <div class="brand-right">
                 <i class="am-icon-edit"></i>
                 <div class="text">
@@ -96,4 +96,28 @@ $this->title = '和家主页';
         </a>
     </li>
 </ul>
+<div class="brand">
+    <!--信息列表-->
+    <div data-am-widget="list_news" class="am-list-news am-list-news-default" >
+        <!--列表标题-->
+        <div class="am-list-news-hd am-cf">
+            <!--带更多链接-->
+            <a href="<?= Url::to(['/api.php/events/activity']);?>" class="">
+                <h2>最新活动</h2>
+                <span class="am-list-news-more am-fr">更多 &raquo;</span>
+            </a>
+        </div>
+
+        <div class="am-list-news-bd">
+            <ul class="am-list">
+                <?php foreach ($activity as $v):;?>
+                <li class="am-g am-list-item-desced">
+                    <a href="<?= Url::to(['/api.php/events/view','id'=>$v->id]);?>" class="am-list-item-hd "><?=$v->title;?></a>
+                    <div class="am-list-item-text"><?= $v->info;?></div>
+                </li>
+                <?php endforeach;?>
+            </ul>
+        </div>
+    </div>
+</div>
 <div style="height: 49px;"></div>

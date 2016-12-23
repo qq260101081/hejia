@@ -7,43 +7,21 @@
 ?>
 
 <div class="wo">
-    <img src="/api/web/images/tx.png" />
-    <p><a href="">White <i class="am-icon-angle-right"></i></a></p>
+    <img src="images/tx.png" />
+    <p><a href="">15989292455 <i class="am-icon-angle-right"></i></a></p>
 </div>
-<!--
-<ul class="member">
-    <li>
-        <a href="money.html">
-            <h2>100</h2>
-            <p>余额</p>
-        </a>
-    </li>
-    <li>
-        <a href="">
-            <h2>50</h2>
-            <p>积分</p>
-        </a>
-    </li>
-    <li>
-        <a href="">
-            <h2>2</h2>
-            <p>优惠券</p>
-        </a>
-    </li>
-</ul>
--->
 <ul class="nav">
     <li>
         <a href="money.html">
             <img src="images/i1.png" />
-            <span>我的订单</span>
+            <span>我的资料</span>
             <i class="am-icon-angle-right"></i>
         </a>
     </li>
     <li>
         <a href="serveradd.html">
             <img src="images/i2.png" />
-            <span>我的消息</span>
+            <span>消息中心</span>
             <i class="am-icon-angle-right"></i>
         </a>
     </li>
@@ -52,14 +30,14 @@
     <li>
         <a href="suggest.html">
             <img src="images/i3.png" />
-            <span>官方问卷</span>
+            <span>建议与投诉</span>
             <i class="am-icon-angle-right"></i>
         </a>
     </li>
     <li>
         <a href="about.html">
             <img src="images/i4.png" />
-            <span>关于和家</span>
+            <span>关于我们</span>
             <i class="am-icon-angle-right"></i>
         </a>
     </li>
@@ -67,13 +45,6 @@
         <a href="tel:123456">
             <img src="images/i5.png" />
             <span>联系客服</span>
-            <i class="am-icon-angle-right"></i>
-        </a>
-    </li>
-    <li>
-        <a href="tel:123456">
-            <img src="images/i5.png" />
-            <span>意见反馈</span>
             <i class="am-icon-angle-right"></i>
         </a>
     </li>

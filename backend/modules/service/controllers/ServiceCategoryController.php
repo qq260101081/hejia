@@ -12,30 +12,30 @@ use app\components\CommonController;
  */
 class ServiceCategoryController extends CommonController
 {
-public function actions() {
-    return [
-      	'nodeChildren' => [
-        'class' => 'gilek\gtreetable\actions\NodeChildrenAction',
-        'treeModelName' => ServiceCategory::className()
-    ],
-    'nodeCreate' => [
-        'class' => 'gilek\gtreetable\actions\NodeCreateAction',
-        'treeModelName' => ServiceCategory::className()
-    ],
-    'nodeUpdate' => [
-        'class' => 'gilek\gtreetable\actions\NodeUpdateAction',
-        'treeModelName' => ServiceCategory::className()
-    ],
-    'nodeDelete' => [
-        'class' => 'gilek\gtreetable\actions\NodeDeleteAction',
-        'treeModelName' => ServiceCategory::className()
-    ],
-    'nodeMove' => [
-        'class' => 'gilek\gtreetable\actions\NodeMoveAction',
-        'treeModelName' => ServiceCategory::className()
-      ],
-    ];
- }
+    public function actions() {
+        return [
+            'nodeChildren' => [
+            'class' => 'gilek\gtreetable\actions\NodeChildrenAction',
+            'treeModelName' => ServiceCategory::className()
+        ],
+        'nodeCreate' => [
+            'class' => 'gilek\gtreetable\actions\NodeCreateAction',
+            'treeModelName' => ServiceCategory::className()
+        ],
+        'nodeUpdate' => [
+            'class' => 'gilek\gtreetable\actions\NodeUpdateAction',
+            'treeModelName' => ServiceCategory::className()
+        ],
+        'nodeDelete' => [
+            'class' => 'gilek\gtreetable\actions\NodeDeleteAction',
+            'treeModelName' => ServiceCategory::className()
+        ],
+        'nodeMove' => [
+            'class' => 'gilek\gtreetable\actions\NodeMoveAction',
+            'treeModelName' => ServiceCategory::className()
+          ],
+        ];
+     }
 
 	public function actionIndex() {
 
@@ -48,6 +48,7 @@ public function actions() {
             'title' => ''
 		]);
   	}
+
 
   	public function actionGetNode($id) {
   	    if(!$id)

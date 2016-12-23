@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'city',
             'province',
             'phone',
-            //'website',
+            'type',
             // 'auth_key',
             // 'password_hash',
              //'status',

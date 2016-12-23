@@ -2,7 +2,12 @@ body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul, ol,
 li, dl, dt, dd, form, a, fieldset, input, th, td
 {margin: 0; padding: 0; border: 0; outline: none;}
 html{ height: 100%;}
-body{ font-family: "微软雅黑"; font-size:14px; height: 100%; background: #f5f5f5;}
+body{ font-family: "微软雅黑"; font-size:14px; height:100%; background: #f5f5f5;}
+@media screen and (min-width:800px) {
+body{ width:640px; margin:0 auto; clear:both;
+	  font-family: "微软雅黑"; font-size:14px; height:100%; background: #f5f5f5;	
+	}
+} 
 h1, h2, h3, h4, h5, h6{font-family: "微软雅黑"; padding: 0; margin: 0;}
 ul, ol{list-style: none;}
 a{color: black;text-decoration: none;}
@@ -17,7 +22,7 @@ a:hover{text-decoration: none;}
 .menu .am-gallery-item img{ width: 60%; display: block; margin: 5px auto;}
 .menu li p{ text-align: center;}
 .menu li a{ color: #666;}
-.reg2{width: 94%; margin: 10px 3%;}
+.reg2{width:94%; margin: 10px 3%;}
 .reg2 img{ width: 100%; border: 1px solid #ddd; border-radius: 5px;}
 .brand{width: 94%; margin: 10px 3%; overflow: hidden; border-radius: 5px; border:1px solid #ddd; background: #fff;}
 .brand-left{ width: 50%; float: left; padding: 5px;}
@@ -31,7 +36,7 @@ a:hover{text-decoration: none;}
 .brand-right .text p{ color: #666; font-size: 12px;}
 .gm-foot{ background: #fff; border-top: 1px solid #ddd;}
 .am-navbar-nav a{ color: #999999;}
-.am-navbar-nav .curr a{ color:#ff733e;}
+.am-navbar-nav .curr a{ color: #fe3360;}
 .nav{width: 94%; margin: 10px 3%; border-radius: 5px; border:1px solid #ddd; background: #fff; overflow: hidden;}
 .nav li { border-bottom: 1px solid #ddd;padding: 1rem 0;margin: 0 1rem;overflow: hidden;}
 .nav li a { display: block; overflow: hidden; line-height: 31px;}
@@ -77,23 +82,23 @@ a:hover{text-decoration: none;}
 .reg1{ color: #ff2c4c; text-decoration: underline;}
 .password{ float: right; padding-right: 5px; color: #656565;}
 .agree{ padding: 0 3%; font-size: 1.4rem; color:#000;}
-.money-btn{margin: 1rem 3%; color: #FFF; text-align: center; display: block; width: 94%;font-size: 1.6rem; padding: 1rem; border-radius: 5px; background: #ff2c4c; border: 0;}
+.money-btn{margin: 1rem 3%; color: #FFF; text-align: center; display: block; width: 94%;font-size: 1.6rem; padding: 1rem; border-radius: 5px; background:#e17641; border: 0;}
 .yzm{ overflow: hidden; margin: 0 3%; width: 94%; font-size: 1.4rem;}
 .reg-yzm{ float: left; width: 40%; border: 1px solid #ddd; border-radius: 5px; padding: 1rem;}
 .yzm-hq{ background: #ff2c4c; color:#fff; padding: 1rem; border-radius: 5px; width: 55%; float: right;}
 .login-btn{margin: 1.5rem 3%; border: 0; color: #fff; width: 96%; font-size: 1.6rem; padding: 1rem;border-radius: 5px; background: #ff2c4c;}
 .ts{ padding: 1rem; border: 1px solid #ddd; margin: 1rem 3%; width: 94%; height: 150px; border-radius: 5px;}
-.near{width:100%; margin:10px 0; }
+.near{width: 94%; margin: 10px 3%; }
 .near li{border-radius: 5px; border:1px solid #ddd; background: #fff; overflow: hidden; margin-bottom: 10px; padding: 10px; position: relative;}
 .near .pic{  float: left; width: 20%;}
 .near .pic img{ width: 100%;}
 .near .text{ float: left; margin-left: 10px; width: 75%;}
 .near .text h2{ overflow: hidden; font-weight: normal; margin-bottom: 10px;}
-.near .text h2 i{ float: left; width: 2px; height: 20px; background: #ff733e; margin-top: 4px; }
+.near .text h2 i{ float: left; width: 2px; height: 20px; background: #ff2c4c; margin-top: 4px; }
 .near .text h2 span{ float: left; margin-left: 10px;}
 .near .text p{ color: #999;}
-.near .text em{ float: right; font-style: normal; color: #ff733e;}
-.near .ture{ background: #ff733e;  color: #fff; border-radius: 5px; line-height: 35px; padding: 0 15px; position: absolute; right: 5px; bottom: 10px; border: 0;}
+.near .text em{ float: right; font-style: normal; color: #ff2c4c;}
+.near .ture{ background: #ff2c4c;  color: #fff; border-radius: 5px; line-height: 35px; padding: 0 15px; position: absolute; right: 5px; bottom: 10px; border: 0;}
 .qian{  padding: 2rem 0; border-bottom: 1px solid #ddd;}
 .qian h2{ text-align: center; font-weight: normal; color: #ff5d51; font-size: 40px; }
 .qian p{ text-align: center;}
@@ -140,5 +145,12 @@ a:hover{text-decoration: none;}
 .address li h2{ color: #666;  font-weight: normal;}
 .address li p{ font-size: 14px; color: #999;}
 
-.serve-list{ width:100%; float:left; height:50px; background-color:red;}
-.chakan{ color:#ff733e;}
+.am-cf{ width:100%;}
+.cont{ width:100%; margin:0 auto;}
+.cont-block{ width:100%; float:left; background-color:#fff; margin-top:10px; padding-bottom:15px;}
+.cont-block02{ width:100%; float:left; background-color:#fff; margin-top:10px; padding-bottom:15px;}
+.cont-block03{ width:100%; float:left; background-color:#FFF; margin-top:10px; padding-bottom:15px;}
+.cont-title{ line-height:50px; border-bottom:1px solid #EAEAEA; background-color:#fff; display:block;padding-left:15px; font-weight:bold;}
+.cont-block ul li{ background-color:#fff; border:1px solid #E8E8E8; line-height:40px; padding:0 15px; float:left; margin:15px 5px 0 10px;}
+
+.ch{ clear:both;}

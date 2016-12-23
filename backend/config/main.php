@@ -24,14 +24,8 @@ return [
         'users' => [
             'class' => 'app\modules\users\Module',
         ],
-        'presscentre' => [
-            'class' => 'app\modules\presscentre\Module',
-        ],
-        'interesting' => [
-            'class' => 'app\modules\interesting\Module',
-        ],
-        'mien' => [
-            'class' => 'app\modules\mien\Module',
+        'events' => [
+            'class' => 'app\modules\events\Module',
         ],
         'student' => [
             'class' => 'app\modules\student\Module',
@@ -68,8 +62,14 @@ return [
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
+            'identityCookie' => [
+                'name' => '_backendUser', // unique for backend
+            ],
         ],
-
+        'session' => [
+            'name' => 'BACKENDID',
+            'savePath' => sys_get_temp_dir(),
+        ],
     	'assetManager' => [
     		'bundles' => [
     			'dmstr\web\AdminLteAsset' => [

@@ -35,8 +35,9 @@
                         'icon' => 'fa fa-share',
                         'url' => '#',
                         'items' => [
-                            ['label' => '分类栏目', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/service/service-category/index']],
-                            ['label' => '页面列表', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/service/service/index']],
+                            ['label' => '服务分类', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/service/service-category/index']],
+                            ['label' => '家庭服务', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/service/family/index']],
+                            ['label' => '托辅服务', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/service/auxiliary/index']],
                         ],
                     ],
                     [
@@ -68,9 +69,7 @@
                             ['label' => '产品分类', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/product/product-category/index']],
                         ],
                     ],
-                    ['label' => '新闻管理', 'icon' => 'fa fa-share', 'url' => ['/presscentre/presscentre/index']],
-                    ['label' => '活动花絮', 'icon' => 'fa fa-share', 'url' => ['/interesting/interesting/index']],
-                    ['label' => '团队风采', 'icon' => 'fa fa-share', 'url' => ['/mien/mien/index']],
+                    ['label' => '活动资讯', 'icon' => 'fa fa-share', 'url' => ['/events/events/index']],
 
                     ['label' => '轮播图管理', 'icon' => 'fa fa-share', 'url' => ['/ad/ad/index']],
                     [

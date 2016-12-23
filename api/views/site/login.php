@@ -4,32 +4,16 @@
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \common\models\LoginForm */
 
-use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-$this->title = 'Login';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = '和家会员登录';
 ?>
-<div class="site-login">
-    <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Please fill out the following fields to login:</p>
-
-    <div class="row">
-        <div class="col-lg-5">
-            <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
-
-                <?= $form->field($model, 'username') ?>
-
-                <?= $form->field($model, 'password')->passwordInput() ?>
-
-                <?= $form->field($model, 'rememberMe')->checkbox() ?>
-
-                <div class="form-group">
-                    <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
-                </div>
-
-            <?php ActiveForm::end(); ?>
-        </div>
-    </div>
-</div>
+<?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
+    <div class="logo"><img src="<?= Yii::$app->params['imageUrl'];?>logo.png"/></div>
+    <?= $form->field($model, 'username')->input(['class'=>'login-name','placeholder'=>'请输入您的账号'])->label(false) ?>
+    <?= $form->field($model, 'password')->passwordInput(['class'=>'login-password','placeholder'=>'请输入您的密码'])->label(false) ?>
+    <input type="submit" value="登录" class="money-btn" >
+    <p class="login-text"> 没有账号？点此<a href="#" class="reg">注册</a>
+    <a href="#" class="password">忘记密码</a>
+<?php ActiveForm::end(); ?>

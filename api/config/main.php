@@ -16,7 +16,13 @@ return [
          'user' => [
              'identityClass' => 'common\models\User',
              'enableAutoLogin' => true,
+             'name' => '_apiUser',
+             'loginUrl' => '/api.php/site/login'
          ],
+        'session' => [
+            'name' => 'APIID',
+            'savePath' => sys_get_temp_dir(),
+        ],
         'urlManager' => [
             'enablePrettyUrl' => true,  //美化url==ture
             'enableStrictParsing' => false,  //不启用严格解析
@@ -28,7 +34,8 @@ return [
         ],
         'request'=>[
             // Enable Yii Validate CSRF Token
-            'enableCsrfValidation' => false,
+            //'enableCsrfValidation' => false,
+            //'csrfParam' => '_frontendCSRF',
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,

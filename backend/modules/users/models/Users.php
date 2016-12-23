@@ -85,7 +85,7 @@ class Users extends \yii\db\ActiveRecord
             'status' => Yii::t('app', '状态'),
             'reg_ip' => Yii::t('app', '注册IP'),
             'password' => Yii::t('app', '密码'),
-            'role' => Yii::t('app', '用户类型'),
+            'role' => Yii::t('app', '用户角色'),
             'created_at' => Yii::t('app', '创建于'),
             'updated_at' => Yii::t('app', '更新于'),
         ];

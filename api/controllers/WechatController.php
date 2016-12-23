@@ -172,32 +172,32 @@ class WechatController extends Controller
                             'url'  => 'http://liusheji.com/api.php/product/index?pid=106'
                         ],
                         [
-                            'name' => urlencode('员工服务'),
+                            'name' => urlencode('员工风采'),
                             'type' => 'view',
                             'url'  => 'http://liusheji.com/api.php/product/index?pid=4'
                         ]
                     ]
                 ],
                 [
-                    'name' => urlencode('活动资讯'),
+                    'name' => urlencode('和家资讯'),
                     'sub_button' => [
                         [
-                            'name' => urlencode('活动花絮'),
+                            'name' => urlencode('最新活动'),
                             'type' => 'view',
                             'url'  => 'http://liusheji.com/api.php/article/index?type=3'
                         ],
                         [
-                            'name' => urlencode('和家动态'),
+                            'name' => urlencode('行业资讯'),
                             'type' => 'view',
                             'url'  => 'http://liusheji.com/api.php/article/index?type=2'
                         ],
                         [
-                            'name' => urlencode('行业资讯'),
+                            'name' => urlencode('和家动态'),
                             'type' => 'view',
                             'url'  => 'http://liusheji.com/api.php/article/index?type=1'
                         ],
                         [
-                            'name' => urlencode('最新活动'),
+                            'name' => urlencode('活动花絮'),
                             'type' => 'view',
                             'url'  => 'http://liusheji.com/api.php/article/index?type=0'
                         ]
@@ -222,7 +222,7 @@ class WechatController extends Controller
                             'url'  => 'http://liusheji.com/api.php/user/msg'
                         ],
                         [
-                            'name' => urlencode('关于和家'),
+                            'name' => urlencode('和家特色'),
                             'type' => 'view',
                             'url'  => 'http://mp.weixin.qq.com/s/MZvyaqG67Kvsnmj1BkrKSw'
                         ],
