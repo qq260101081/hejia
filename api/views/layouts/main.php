@@ -20,6 +20,8 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <?= $content;?>
+
+<?php if(Yii::$app->controller->action->id !='login'):?>
 <div data-am-widget="navbar" class="am-navbar  gm-foot am-no-layout" id="">
     <ul class="am-navbar-nav am-cf am-avg-sm-4">
         <li class="curr">
@@ -29,7 +31,7 @@ AppAsset::register($this);
             </a>
         </li>
         <li>
-            <a href="order.html" class="">
+            <a href="<?= Url::to(['/api.php/site/serve'])?>" class="">
                 <span class="am-icon-th-large"></span>
                 <span class="am-navbar-label">和家服务</span>
             </a>
@@ -48,6 +50,7 @@ AppAsset::register($this);
         </li>
     </ul>
 </div>
+<?php endif;?>
 
 <?php $this->endBody() ?>
 </body>

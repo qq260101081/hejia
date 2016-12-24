@@ -152,5 +152,12 @@ a:hover{text-decoration: none;}
 .cont-block03{ width:100%; float:left; background-color:#FFF; margin-top:10px; padding-bottom:15px;}
 .cont-title{ line-height:50px; border-bottom:1px solid #EAEAEA; background-color:#fff; display:block;padding-left:15px; font-weight:bold;}
 .cont-block ul li{ background-color:#fff; border:1px solid #E8E8E8; line-height:40px; padding:0 15px; float:left; margin:15px 5px 0 10px;}
+.tony{ width:100%; float:left;}
+.title-wj{ width:100%; font-weight:bold; padding:5px 0;}
 
 .ch{ clear:both;}
+
+.title-bt{ font-weight:bold; display:block; width:20%; text-align:right; float:left;}
+.title-text{ display:block; float:left; width:75%; padding-left:2%; color:#AAA;}
+.title-xin{ width:135px; height:25px; float:left; background:url(../images/xin-g.png) no-repeat; display:block; position:relative;}
+.title-xinhh{width:135px; height:25px; float:left; background:url(../images/xin-l.png) no-repeat; display:block; position:absolute; top:0; left:-2px;}

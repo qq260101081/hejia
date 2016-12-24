@@ -98,6 +98,7 @@ class PatriarchController extends CommonController
         $user = new Users();
         $user->type = 'patriarch';
         $user->username = $model->phone;
+        $user->name = $model->name;
         $user->password_hash = Yii::$app->security->generatePasswordHash(substr($model->phone, -6));
         $user->auth_key = Yii::$app->security->generateRandomString();
         if($user->save())

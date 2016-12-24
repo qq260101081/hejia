@@ -13,12 +13,13 @@ use yii\web\Controller;
 
 class EventsController extends Controller
 {
-    //最新活动
-    public function actionActivity()
+    //活动资讯列表
+    public function actionIndex($category_id=0)
     {
-        $model = Events::find()->select(['id', 'title', 'list_img', 'info'])->where(['category_id' => '146'])->all();
-        return $this->render('activity', [
+        $model = Events::find()->select(['id', 'title', 'list_img', 'info'])->where(['category_id' => $category_id])->all();
+        return $this->render('index', [
             'model' => $model,
+            'category_id' => $category_id,
         ]);
     }
 

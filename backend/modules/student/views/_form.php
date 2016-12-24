@@ -29,6 +29,7 @@ use yii\helpers\Url;
         <?= $form->field($model, 'age')->textInput() ?>
         <?= $form->field($model, 'school')->textInput() ?>
         <?= $form->field($model, 'grade')->textInput() ?>
+        <?= $form->field($model, 'remark')->textarea(); ?>
 
         <div class="box-header with-border">
             <h5 class="box-title">家长信息</h5>

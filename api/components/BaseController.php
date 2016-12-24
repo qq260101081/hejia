@@ -1,5 +1,5 @@
 <?php
-namespace app\components;
+namespace api\components;
 
 use Yii;
 use yii\web\Controller;
@@ -12,16 +12,15 @@ class BaseController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['login', 'logout', 'signup'],
                 'rules' => [
                     [
+                        'actions' => ['login'],
                         'allow' => true,
-                        'actions' => ['login', 'signup'],
                         'roles' => ['?'],
                     ],
                     [
+                        'actions' => [],
                         'allow' => true,
-                        'actions' => ['logout'],
                         'roles' => ['@'],
                     ],
                 ],

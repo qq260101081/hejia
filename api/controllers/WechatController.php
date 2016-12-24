@@ -159,22 +159,22 @@ class WechatController extends Controller
                         [
                             'name' => urlencode('家庭服务'),
                             'type' => 'view',
-                            'url'  => 'http://liusheji.com/api.php/article/index?type=4'
+                            'url'  => 'http://liusheji.com/api.php/family/index'
                         ],
                         [
                             'name' => urlencode('托辅中心'),
                             'type' => 'view',
-                            'url'  => 'http://liusheji.com/api.php/product/index?pid=106'
+                            'url'  => 'http://liusheji.com/api.php/auxiliary/area'
                         ],
                         [
                             'name' => urlencode('代购服务'),
                             'type' => 'view',
-                            'url'  => 'http://liusheji.com/api.php/product/index?pid=106'
+                            'url'  => 'http://liusheji.com/api.php/behalf/index'
                         ],
                         [
                             'name' => urlencode('员工风采'),
                             'type' => 'view',
-                            'url'  => 'http://liusheji.com/api.php/product/index?pid=4'
+                            'url'  => 'http://liusheji.com/api.php/auxiliary/mien'
                         ]
                     ]
                 ],
@@ -184,22 +184,22 @@ class WechatController extends Controller
                         [
                             'name' => urlencode('最新活动'),
                             'type' => 'view',
-                            'url'  => 'http://liusheji.com/api.php/article/index?type=3'
+                            'url'  => 'http://liusheji.com/api.php/events/index?category_id=146'
                         ],
                         [
                             'name' => urlencode('行业资讯'),
                             'type' => 'view',
-                            'url'  => 'http://liusheji.com/api.php/article/index?type=2'
+                            'url'  => 'http://liusheji.com/api.php/events/index?category_id=136'
                         ],
                         [
                             'name' => urlencode('和家动态'),
                             'type' => 'view',
-                            'url'  => 'http://liusheji.com/api.php/article/index?type=1'
+                            'url'  => 'http://liusheji.com/api.php/events/index?category_id=106'
                         ],
                         [
                             'name' => urlencode('活动花絮'),
                             'type' => 'view',
-                            'url'  => 'http://liusheji.com/api.php/article/index?type=0'
+                            'url'  => 'http://liusheji.com/api.php/events/index?category_id=4'
                         ]
                     ]
                 ],
@@ -209,27 +209,28 @@ class WechatController extends Controller
                         [
                             'name' => urlencode('我的资料'),
                             'type' => 'view',
-                            'url'  => 'http://liusheji.com/api.php/user/msg'
+                            'url'  => 'http://liusheji.com/api.php/user/view'
                         ],
                         [
                             'name' => urlencode('我的服务'),
                             'type' => 'view',
-                            'url'  => 'http://liusheji.com/api.php/user/msg'
+                            'url'  => 'http://liusheji.com/api.php/user/serve'
                         ],
                         [
                             'name' => urlencode('我的消息'),
                             'type' => 'view',
-                            'url'  => 'http://liusheji.com/api.php/user/msg'
+                            'url'  => 'http://liusheji.com/api.php/msg/index'
                         ],
                         [
                             'name' => urlencode('和家特色'),
                             'type' => 'view',
-                            'url'  => 'http://mp.weixin.qq.com/s/MZvyaqG67Kvsnmj1BkrKSw'
+                            //'url'  => 'http://mp.weixin.qq.com/s/MZvyaqG67Kvsnmj1BkrKSw'
+                            'url'  => 'http://liusheji.com/api.php/article/index'
                         ],
                         [
                             'name' => urlencode('投诉建议'),
                             'type' => 'view',
-                            'url'  => 'http://liusheji.com/api.php/suggest/index'
+                            'url'  => 'http://liusheji.com/api.php/guestbook/create'
                         ],
                         /*[
                             'name' => urlencode('我的订单'),

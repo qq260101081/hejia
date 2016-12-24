@@ -8,9 +8,9 @@
 namespace api\controllers;
 use Yii;
 use api\models\Guestbook;
-use yii\web\Controller;
+use api\components\BaseController;
 
-class GuestbookController extends Controller
+class GuestbookController extends BaseController
 {
     public function actionCreate()
     {

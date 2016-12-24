@@ -80,10 +80,7 @@ class User extends ActiveRecord implements IdentityInterface
     public static function findByUsername($username)
     {
         $user = static::findOne(['username' => $username, 'status' => self::STATUS_ACTIVE]);
-        if((Yii::$app->id == 'app-backend') && $user && ($user->role == 'frontend'))
-        {
-            return false;
-        }
+
         return $user;
     }
 

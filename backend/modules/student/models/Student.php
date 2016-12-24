@@ -48,6 +48,7 @@ class Student extends Patriarch
             [['name', 'sex', 'age', 'school', 'grade'], 'required'],
             [['age', 'created_at', 'updated_at'], 'integer'],
             [['sex','name'], 'string', 'max' => 12],
+            ['remark', 'string', 'max' => 300],
             [['school', 'grade'], 'string', 'max' => 90],
         ];
     }
@@ -62,6 +63,7 @@ class Student extends Patriarch
             'name' => Yii::t('app', 'Student Name'),
             'sex' => Yii::t('app', 'Sex'),
             'age' => Yii::t('app', 'Age'),
+            'remark' => Yii::t('app', '备注'),
             'school' => Yii::t('app', 'School'),
             'grade' => Yii::t('app', 'Grade'),
             'created_at' => Yii::t('app', 'Created At'),

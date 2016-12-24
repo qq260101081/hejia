@@ -2,16 +2,19 @@
 namespace api\controllers;
 
 
+
+use api\models\WebCfg;
 use Yii;
 use yii\web\Controller;
-use app\components\BaseController;
+use api\components\CommonController;
 use api\models\Events;
+use api\models\LoginForm;
 
 
 /**
  * Site controller
  */
-class SiteController extends BaseController
+class SiteController extends Controller
 {
     /**
      * Displays homepage.
@@ -26,10 +29,43 @@ class SiteController extends BaseController
         ]);
     }
 
+    //联系我们
+    public function actionContact()
+    {
+        $model = WebCfg::find()->all();
+        return $this->render('contact', [
+            'model' => $model
+        ]);
+    }
+
+    //和家服务
+    public function actionServe()
+    {
+        return $this->render('serve', [
+        ]);
+    }
+
     public function actionLogin()
-    {echo 111;die;
-        $model = new User();
-        return $this->render('login');
+    {
+        if (!Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
+
+        $model = new LoginForm();
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            return $this->goBack();
+        } else {
+            return $this->render('login', [
+                'model' => $model,
+            ]);
+        }
+    }
+
+    public function actionLogout()
+    {
+        Yii::$app->user->logout();
+
+        return $this->goHome();
     }
 
 }

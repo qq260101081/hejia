@@ -52,7 +52,7 @@ class Users extends \yii\db\ActiveRecord
     {
         return [
             [['username'], 'required'],
-            [['status'], 'string'],
+            [['status','name'], 'string'],
             [['created_at', 'updated_at','sex'], 'integer'],
             [['username','nickname','openid'], 'string', 'max' => 60],
             [['phone', 'reg_ip'], 'string', 'max' => 15],

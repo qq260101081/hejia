@@ -24,7 +24,7 @@ $this->title = '和家主页';
     </li>
     <li>
         <div class="am-gallery-item">
-            <a href="<?= Url::to(['/api.php/events/activity']);?>" class="">
+            <a href="<?= Url::to(['/api.php/events/index','category_id'=>146]);?>" class="">
                 <img src="<?= Yii::$app->params['imageUrl'];?>icon3.png">
                 <p>最新活动</p>
             </a>
@@ -32,7 +32,7 @@ $this->title = '和家主页';
     </li>
     <li>
         <div class="am-gallery-item">
-            <a href="near.html" class="">
+            <a href="<?= Url::to(['/api.php/behalf/index']);?>" class="">
                 <img src="<?= Yii::$app->params['imageUrl'];?>icon5.png">
                 <p>和家代购</p>
             </a>
@@ -40,15 +40,15 @@ $this->title = '和家主页';
     </li>
     <li>
         <div class="am-gallery-item">
-            <a href="near.html" class="">
+            <a href="<?= Url::to(['/api.php/auxiliary/mien']);?>" class="">
                 <img src="<?= Yii::$app->params['imageUrl'];?>icon8.png">
-                <p>员工服务</p>
+                <p>员工风采</p>
             </a>
         </div>
     </li>
     <li>
         <div class="am-gallery-item">
-            <a href="near.html" class="">
+            <a href="<?= Url::to(['/api.php/centralize/index']);?>" class="">
                 <img src="<?= Yii::$app->params['imageUrl'];?>icon6.png">
                 <p>集中服务</p>
             </a>
@@ -56,7 +56,7 @@ $this->title = '和家主页';
     </li>
     <li>
         <div class="am-gallery-item">
-            <a href="more.html" class="">
+            <a href="<?= Url::to(['/api.php/article/view','type'=>'about']);?>" class="">
                 <img src="<?= Yii::$app->params['imageUrl'];?>icon7.png">
                 <p>和家特色</p>
             </a>
@@ -64,7 +64,7 @@ $this->title = '和家主页';
     </li>
     <li>
         <div class="am-gallery-item">
-            <a href="near.html" class="">
+            <a href="#" class="">
                 <img src="<?= Yii::$app->params['imageUrl'];?>icon4.png">
                 <p>联系客服</p>
             </a>
@@ -76,7 +76,7 @@ $this->title = '和家主页';
 </div>
 <ul class="brand">
     <li>
-        <a href="about.html">
+        <a href="#####">
             <div class="brand-left">
                 <i class="am-icon-user-plus"></i>
                 <div class="text">
@@ -102,7 +102,7 @@ $this->title = '和家主页';
         <!--列表标题-->
         <div class="am-list-news-hd am-cf">
             <!--带更多链接-->
-            <a href="<?= Url::to(['/api.php/events/activity']);?>" class="">
+            <a href="<?= Url::to(['/api.php/events/index','category_id'=>146]);?>" class="">
                 <h2>最新活动</h2>
                 <span class="am-list-news-more am-fr">更多 &raquo;</span>
             </a>

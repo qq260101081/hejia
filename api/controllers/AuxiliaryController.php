@@ -37,11 +37,20 @@ class AuxiliaryController extends Controller
             'model' => $model,
         ]);
     }
-
+    //内容页面
     public function actionView($id)
     {
         $model = Auxiliary::find()->where(['id' => $id])->one();
         return $this->render('view', [
+            'model' => $model
+        ]);
+    }
+
+    //团队风采
+    public function actionMien()
+    {
+        $model = Auxiliary::find()->select(['id','title','list_img'])->where(['type'=>1])->all();
+        return $this->render('mien', [
             'model' => $model
         ]);
     }

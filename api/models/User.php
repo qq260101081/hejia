@@ -10,9 +10,9 @@ use yii\db\ActiveRecord;
 
 class User extends ActiveRecord
 {
-    /**
-     * @inheritdoc
-     */
+    public $password;
+    public $repassword;
+
     public static function tableName()
     {
         return '{{%user}}';
@@ -21,9 +21,21 @@ class User extends ActiveRecord
     public function rules()
     {
         return [
-            [['username', 'password'], 'required'],
-            ['username', 'string', 'max' => 60],
-            ['password', 'string', 'max' => 16],
+            //[['username'], 'match', 'pattern'=>'/^\w{6,20}$/', 'message'=>'{attribute}为6-20位数字字母或下划线'],
+            [['password','repassword'],'required'],
+            [['password','repassword'], 'string', 'min'=>6],
+            [['password','repassword'], 'string', 'max'=>16],
+            ['password', 'match', 'pattern'=>'/^[\@A-Za-z0-9\!\#\%\^\,\*\.\~]{6,18}$/','message'=>'密码必须数字或字母开头，可以用户字符!#~^,.'],
+            ['repassword','compare','compareAttribute'=>'password','message'=>'两次密码不一致'],
         ];
     }
+
+    public function attributeLabels()
+    {
+        return [
+            'password' => '密码',
+            'repassword' => '重复密码',
+        ];
+    }
+
 }
