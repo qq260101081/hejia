@@ -10,7 +10,7 @@
 
 
 
-    <div class="logo"><img src="<?= Yii::$app->params['imageUrl'];?>logo.png"/></div>
+    <div class="logo"><img src="/images/logo.png"/></div>
 
 <?= Yii::$app->getSession()->getFlash('success');?>
 <?= Yii::$app->getSession()->getFlash('error');?>

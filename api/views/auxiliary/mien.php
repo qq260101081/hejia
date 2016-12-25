@@ -20,7 +20,7 @@
             <?php foreach ($model as $v):;?>
             <li>
                 <div class="am-gallery-item">
-                    <a href="/upload/<?=$v->list_img;?>" class="">
+                    <a href="../../upload/<?=$v->list_img;?>" class="">
                         <img src="/upload/<?=$v->list_img;?>"/>
                         <h3 class="am-gallery-title"><?=$v->title;?></h3>
                     </a>

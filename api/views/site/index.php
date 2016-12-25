@@ -4,12 +4,12 @@
 
 $this->title = '和家主页';
 ?>
-<div class="banner"><img src="<?= Yii::$app->params['imageUrl'];?>banner.png"/></div>
+<div class="banner"><img src="/images/banner.png"/></div>
 <ul class="menu">
     <li>
         <div class="am-gallery-item">
             <a href="<?= Url::to(['family/index']);?>" class="">
-                <img src="<?= Yii::$app->params['imageUrl'];?>icon1.png">
+                <img src="/images/icon1.png">
                 <p>家庭服务</p>
             </a>
         </div>
@@ -17,7 +17,7 @@ $this->title = '和家主页';
     <li>
         <div class="am-gallery-item">
             <a href="<?= Url::to(['auxiliary/area']);?>" class="">
-                <img src="<?= Yii::$app->params['imageUrl'];?>icon2.png">
+                <img src="/images/icon2.png">
                 <p>托辅中心</p>
             </a>
         </div>
@@ -25,7 +25,7 @@ $this->title = '和家主页';
     <li>
         <div class="am-gallery-item">
             <a href="<?= Url::to(['events/index','category_id'=>146]);?>" class="">
-                <img src="<?= Yii::$app->params['imageUrl'];?>icon3.png">
+                <img src="/images/icon3.png">
                 <p>最新活动</p>
             </a>
         </div>
@@ -33,7 +33,7 @@ $this->title = '和家主页';
     <li>
         <div class="am-gallery-item">
             <a href="<?= Url::to(['behalf/index']);?>" class="">
-                <img src="<?= Yii::$app->params['imageUrl'];?>icon5.png">
+                <img src="/images/icon5.png">
                 <p>和家代购</p>
             </a>
         </div>
@@ -41,7 +41,7 @@ $this->title = '和家主页';
     <li>
         <div class="am-gallery-item">
             <a href="<?= Url::to(['auxiliary/mien']);?>" class="">
-                <img src="<?= Yii::$app->params['imageUrl'];?>icon8.png">
+                <img src="/images/icon8.png">
                 <p>员工风采</p>
             </a>
         </div>
@@ -49,7 +49,7 @@ $this->title = '和家主页';
     <li>
         <div class="am-gallery-item">
             <a href="<?= Url::to(['centralize/index']);?>" class="">
-                <img src="<?= Yii::$app->params['imageUrl'];?>icon6.png">
+                <img src="/images/icon6.png">
                 <p>集中服务</p>
             </a>
         </div>
@@ -57,7 +57,7 @@ $this->title = '和家主页';
     <li>
         <div class="am-gallery-item">
             <a href="<?= Url::to(['article/view','type'=>'about']);?>" class="">
-                <img src="<?= Yii::$app->params['imageUrl'];?>icon7.png">
+                <img src="/images/icon7.png">
                 <p>和家特色</p>
             </a>
         </div>
@@ -65,14 +65,14 @@ $this->title = '和家主页';
     <li>
         <div class="am-gallery-item">
             <a href="#" class="">
-                <img src="<?= Yii::$app->params['imageUrl'];?>icon4.png">
+                <img src="/images/icon4.png">
                 <p>联系客服</p>
             </a>
         </div>
     </li>
 </ul>
 <!--<div class="reg2">
-    <a href="#"><img src="<?= Yii::$app->params['imageUrl'];?>reg.png"/></a>
+    <a href="#"><img src="/images/reg.png"/></a>
 </div>-->
 <ul class="brand">
     <li>

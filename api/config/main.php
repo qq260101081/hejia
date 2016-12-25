@@ -29,8 +29,9 @@ return [
             'enableStrictParsing' => false,  //不启用严格解析
             'showScriptName' => false,   //隐藏index.php
             'rules' => [
-                '<module:\w+>/<controller:\w+>/<id:\d+>' => '<module>/<controller>/view',
-                '<controller:\w+>/<id:\d+>' => '<controller>/view',
+                //'<module:\w+>/<controller:\w+>/<id:\d+>' => '<module>/<controller>/view',
+                //'<controller:\w+>/<id:\d+>' => '<controller>/view',
+                '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
             ],
         ],
         'log' => [

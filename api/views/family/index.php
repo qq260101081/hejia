@@ -8,7 +8,7 @@
  */
 ?>
 
-<div class="banner"><img src="<?= Yii::$app->params['imageUrl'];?>banner1.png"/></div>
+<div class="banner"><img src="/images/banner1.png"/></div>
 <ul class="nav">
     <?php foreach ($model as $v):?>
     <li>
