@@ -4,7 +4,7 @@ namespace app\modules\service\controllers;
 
 
 use Yii;
-use app\modules\service\models\ServiceCategory;
+use backend\modules\service\models\ServiceCategory;
 use app\components\CommonController;
 
 /**
