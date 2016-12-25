@@ -4,9 +4,9 @@ namespace app\modules\service\controllers;
 
 
 use Yii;
-use app\modules\service\models\Family;
-use app\modules\service\models\FamilySearch;
-use app\modules\service\models\ServiceCategory;
+use backend\modules\service\models\Family;
+use backend\modules\service\models\FamilySearch;
+use backend\modules\service\models\ServiceCategory;
 use app\components\CommonController;
 use yii\web\NotFoundHttpException;
 

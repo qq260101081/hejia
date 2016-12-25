@@ -86,7 +86,6 @@
                         'icon' => 'fa fa-share',
                         'url' => '#',
                         'items' => [
-                            ['label' => '用户生活资料库', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/user-live/index']],
                             ['label' => '文章管理', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/article/index']],
                             ['label' => '产品管理', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/goods/index']],
                         ],

@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\service\models;
+namespace backend\modules\service\models;
 
 use Yii;
 use gilek\gtreetable\models\TreeModel;

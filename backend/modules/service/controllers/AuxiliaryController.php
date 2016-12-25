@@ -6,9 +6,9 @@ namespace app\modules\service\controllers;
 */
 
 use Yii;
-use app\modules\service\models\Auxiliary;
-use app\modules\service\models\AuxiliarySearch;
-use app\modules\service\models\ServiceCategory;
+use backend\modules\service\models\Auxiliary;
+use backend\modules\service\models\AuxiliarySearch;
+use backend\modules\service\models\ServiceCategory;
 use app\components\CommonController;
 use app\components\libs\Common;
 use yii\web\NotFoundHttpException;

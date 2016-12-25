@@ -22,7 +22,7 @@ class SiteController extends Controller
      * @return mixed
      */
     public function actionIndex()
-    {
+    {print_r(Yii::$app->getRequest());
         $activity = Events::find()->select(['id', 'title', 'info'])->where(['category_id' => '146'])->orderBy('id')->limit(3)->all();
         return $this->render('index',[
             'activity' => $activity
@@ -65,7 +65,7 @@ class SiteController extends Controller
     {
         Yii::$app->user->logout();
 
-        return $this->goHome();
+        return $this->redirect(['/site/login']);
     }
 
 }

@@ -21,6 +21,7 @@ class MsgPushLogsController extends CommonController
         return [
             'upload' => ['class' => 'kucha\ueditor\UEditorAction'],
             'config' => [
+                'lang' => 'zh-cn',
                 'imageUrlPrefix' => $_SERVER['HTTP_HOST'],
                 'imagePathFormat' => "/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}"
             ]
