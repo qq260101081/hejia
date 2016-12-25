@@ -71,9 +71,9 @@ $this->title = '和家主页';
         </div>
     </li>
 </ul>
-<div class="reg2">
-    <a href="reg.html"><img src="<?= Yii::$app->params['imageUrl'];?>reg.png"/></a>
-</div>
+<!--<div class="reg2">
+    <a href="#"><img src="<?= Yii::$app->params['imageUrl'];?>reg.png"/></a>
+</div>-->
 <ul class="brand">
     <li>
         <a href="#####">

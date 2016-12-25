@@ -18,7 +18,7 @@ return [
             'identityCookie' => [
                 'name' => '_apiUser', // unique for backend
             ],
-            'loginUrl' => 'site/login'
+            'loginUrl' => ['/api.php/site/login']
         ],
         'session' => [
             'name' => 'APIID',

@@ -5542,3 +5542,52 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1482581336.115
     'REQUEST_TIME' => 1482581336
 ]
+2016-12-25 10:31:38 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/carl/www/hejia/api.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-25 10:31:37 [::1][-][-][info][application] $_COOKIE = [
+    'Phpstorm-1e280b04' => 'ff8199ca-588b-4ecf-934f-37435ffb78db'
+    '_csrf' => '8be9e8b35b1ec9dbd8a7b3aa6e638708159b19a6eadda99e8409887d5f851930a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YJoQ84wno_bfI0ZrgPUOl6K_carVr9T0\";}'
+    'PHPSESSID' => 'g4ekmn58uk5vpl04kmjq2k1ai7'
+    'BACKENDID' => 'a3hrusa3sk3d67lmif29ofuig2'
+    'APIID' => 'l71soreqhhkne2v6tr35hputg5'
+    '_apiUser' => 'b44f8358fc93d7fc89e5b50ff147a22959803c5820dfc94e8ee7dbdb60b208d5a:2:{i:0;s:8:\"_apiUser\";i:1;s:47:\"[21,\"SOSV1HXHAkFXUs6tWnyh16K749cOSpED\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'Phpstorm-1e280b04=ff8199ca-588b-4ecf-934f-37435ffb78db; _csrf=8be9e8b35b1ec9dbd8a7b3aa6e638708159b19a6eadda99e8409887d5f851930a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YJoQ84wno_bfI0ZrgPUOl6K_carVr9T0%22%3B%7D; PHPSESSID=g4ekmn58uk5vpl04kmjq2k1ai7; BACKENDID=a3hrusa3sk3d67lmif29ofuig2; APIID=l71soreqhhkne2v6tr35hputg5; _apiUser=b44f8358fc93d7fc89e5b50ff147a22959803c5820dfc94e8ee7dbdb60b208d5a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22_apiUser%22%3Bi%3A1%3Bs%3A47%3A%22%5B21%2C%22SOSV1HXHAkFXUs6tWnyh16K749cOSpED%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api.php'
+    'REMOTE_PORT' => '56060'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api.php/guestbook'
+    'SCRIPT_NAME' => '/hejia/api.php'
+    'PATH_INFO' => '/guestbook'
+    'PATH_TRANSLATED' => '/Users/carl/www/guestbook'
+    'PHP_SELF' => '/hejia/api.php/guestbook'
+    'REQUEST_TIME_FLOAT' => 1482633097.965
+    'REQUEST_TIME' => 1482633097
+]
