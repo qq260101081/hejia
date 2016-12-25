@@ -5,6 +5,7 @@ namespace backend\modules\Service\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
+use backend\modules\service\models\Family;
 
 /**
  * PagesSearch represents the model behind the search form about `app\modules\pages\models\Pages`.
