@@ -69,7 +69,7 @@
                     <?php foreach ($model[2] as $v):;?>
 
                     <li class="am-g am-list-item-desced">
-                        <a href="<?= Url::to(['/api.php/auxiliary/view', 'id'=>$v->id]);?>" class="am-list-item-hd "><?= $v->title; ?></a>
+                        <a href="<?= Url::to(['auxiliary/view', 'id'=>$v->id]);?>" class="am-list-item-hd "><?= $v->title; ?></a>
                         <div class="am-list-item-text"><?= $v->info; ?></div>
                     </li>
                     <?php endforeach;?>

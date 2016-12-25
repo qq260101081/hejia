@@ -12,7 +12,7 @@
 <ul class="nav">
     <?php foreach ($model as $v):?>
     <li>
-        <a href="<?= Url::to(['/api.php/family/view', 'id' => $v->id]); ?>">
+        <a href="<?= Url::to(['family/view', 'id' => $v->id]); ?>">
             <span><?= $v->title; ?></span>
             <i class="am-icon-angle-right"></i>
         </a>

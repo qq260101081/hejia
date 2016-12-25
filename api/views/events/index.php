@@ -24,13 +24,13 @@
                 <?php foreach ($model as $v):;?>
                 <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-top">
                     <div class="am-list-thumb am-u-sm-12">
-                        <a href="<?= Url::to(['/api.php/events/view', 'id' => $v->id]);?>" class="">
+                        <a href="<?= Url::to(['events/view', 'id' => $v->id]);?>" class="">
                             <img src="/upload/<?= $v->list_img;?>">
                         </a>
                     </div>
 
                     <div class=" am-list-main">
-                        <h3 class="am-list-item-hd"><a href="<?= Url::to(['/api.php/events/view', 'id' => $v->id]);?>" class=""><?= $v->title; ?></a></h3>
+                        <h3 class="am-list-item-hd"><a href="<?= Url::to(['events/view', 'id' => $v->id]);?>" class=""><?= $v->title; ?></a></h3>
                         <div class="am-list-item-text"><?= $v->info; ?></div>
 
                     </div>

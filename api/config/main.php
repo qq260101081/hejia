@@ -18,7 +18,7 @@ return [
             'identityCookie' => [
                 'name' => '_apiUser', // unique for backend
             ],
-            'loginUrl' => ['/api.php/site/login']
+            'loginUrl' => ['site/login']
         ],
         'session' => [
             'name' => 'APIID',
@@ -32,10 +32,6 @@ return [
                 '<module:\w+>/<controller:\w+>/<id:\d+>' => '<module>/<controller>/view',
                 '<controller:\w+>/<id:\d+>' => '<controller>/view',
             ],
-        ],
-        'assetManager' => [
-            'basePath' => '@webroot/api/web/assets',
-            'baseUrl' => '@web/api/web/assets'
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,

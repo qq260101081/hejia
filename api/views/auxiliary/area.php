@@ -23,7 +23,7 @@
             <?php foreach ($v['son'] as $vv):;?>
             <li>
                 <div class="am-gallery-item">
-                    <a href="<?= Url::to(['/api.php/auxiliary/index','pid'=>$vv['id']]);?>" class="">
+                    <a href="<?= Url::to(['auxiliary/index','pid'=>$vv['id']]);?>" class="">
                         <p><?= $vv['name'] ;?></p>
                     </a>
                 </div>

@@ -8,7 +8,7 @@ $this->title = '和家主页';
 <ul class="menu">
     <li>
         <div class="am-gallery-item">
-            <a href="<?= Url::to(['/api.php/family/index']);?>" class="">
+            <a href="<?= Url::to(['family/index']);?>" class="">
                 <img src="<?= Yii::$app->params['imageUrl'];?>icon1.png">
                 <p>家庭服务</p>
             </a>
@@ -16,7 +16,7 @@ $this->title = '和家主页';
     </li>
     <li>
         <div class="am-gallery-item">
-            <a href="<?= Url::to(['/api.php/auxiliary/area']);?>" class="">
+            <a href="<?= Url::to(['auxiliary/area']);?>" class="">
                 <img src="<?= Yii::$app->params['imageUrl'];?>icon2.png">
                 <p>托辅中心</p>
             </a>
@@ -24,7 +24,7 @@ $this->title = '和家主页';
     </li>
     <li>
         <div class="am-gallery-item">
-            <a href="<?= Url::to(['/api.php/events/index','category_id'=>146]);?>" class="">
+            <a href="<?= Url::to(['events/index','category_id'=>146]);?>" class="">
                 <img src="<?= Yii::$app->params['imageUrl'];?>icon3.png">
                 <p>最新活动</p>
             </a>
@@ -32,7 +32,7 @@ $this->title = '和家主页';
     </li>
     <li>
         <div class="am-gallery-item">
-            <a href="<?= Url::to(['/api.php/behalf/index']);?>" class="">
+            <a href="<?= Url::to(['behalf/index']);?>" class="">
                 <img src="<?= Yii::$app->params['imageUrl'];?>icon5.png">
                 <p>和家代购</p>
             </a>
@@ -40,7 +40,7 @@ $this->title = '和家主页';
     </li>
     <li>
         <div class="am-gallery-item">
-            <a href="<?= Url::to(['/api.php/auxiliary/mien']);?>" class="">
+            <a href="<?= Url::to(['auxiliary/mien']);?>" class="">
                 <img src="<?= Yii::$app->params['imageUrl'];?>icon8.png">
                 <p>员工风采</p>
             </a>
@@ -48,7 +48,7 @@ $this->title = '和家主页';
     </li>
     <li>
         <div class="am-gallery-item">
-            <a href="<?= Url::to(['/api.php/centralize/index']);?>" class="">
+            <a href="<?= Url::to(['centralize/index']);?>" class="">
                 <img src="<?= Yii::$app->params['imageUrl'];?>icon6.png">
                 <p>集中服务</p>
             </a>
@@ -56,7 +56,7 @@ $this->title = '和家主页';
     </li>
     <li>
         <div class="am-gallery-item">
-            <a href="<?= Url::to(['/api.php/article/view','type'=>'about']);?>" class="">
+            <a href="<?= Url::to(['article/view','type'=>'about']);?>" class="">
                 <img src="<?= Yii::$app->params['imageUrl'];?>icon7.png">
                 <p>和家特色</p>
             </a>
@@ -85,7 +85,7 @@ $this->title = '和家主页';
                 </div>
             </div>
         </a>
-        <a href="<?= Url::to(['/api.php/guestbook/create'])?>">
+        <a href="<?= Url::to(['guestbook/create'])?>">
             <div class="brand-right">
                 <i class="am-icon-edit"></i>
                 <div class="text">
@@ -102,7 +102,7 @@ $this->title = '和家主页';
         <!--列表标题-->
         <div class="am-list-news-hd am-cf">
             <!--带更多链接-->
-            <a href="<?= Url::to(['/api.php/events/index','category_id'=>146]);?>" class="">
+            <a href="<?= Url::to(['events/index','category_id'=>146]);?>" class="">
                 <h2>最新活动</h2>
                 <span class="am-list-news-more am-fr">更多 &raquo;</span>
             </a>
@@ -112,7 +112,7 @@ $this->title = '和家主页';
             <ul class="am-list">
                 <?php foreach ($activity as $v):;?>
                 <li class="am-g am-list-item-desced">
-                    <a href="<?= Url::to(['/api.php/events/view','id'=>$v->id]);?>" class="am-list-item-hd "><?=$v->title;?></a>
+                    <a href="<?= Url::to(['events/view','id'=>$v->id]);?>" class="am-list-item-hd "><?=$v->title;?></a>
                     <div class="am-list-item-text"><?= $v->info;?></div>
                 </li>
                 <?php endforeach;?>

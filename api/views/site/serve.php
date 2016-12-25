@@ -10,25 +10,25 @@
 
 <ul class="nav">
     <li>
-        <a href="<?= Url::to(['/api.php/auxiliary/area']); ?>">
+        <a href="<?= Url::to(['auxiliary/area']); ?>">
             <span>托辅中心</span>
             <i class="am-icon-angle-right"></i>
         </a>
     </li>
     <li>
-        <a href="<?= Url::to(['/api.php/family/index']); ?>">
+        <a href="<?= Url::to(['family/index']); ?>">
             <span>家庭服务</span>
             <i class="am-icon-angle-right"></i>
         </a>
     </li>
     <li>
-        <a href="<?= Url::to(['/api.php/centralize/index']); ?>">
+        <a href="<?= Url::to(['centralize/index']); ?>">
             <span>集中服务</span>
             <i class="am-icon-angle-right"></i>
         </a>
     </li>
     <li>
-        <a href="<?= Url::to(['/api.php/behalf/index']); ?>">
+        <a href="<?= Url::to(['behalf/index']); ?>">
             <span>代购服务</span>
             <i class="am-icon-angle-right"></i>
         </a>

@@ -10,25 +10,25 @@
 
 <div class="wo">
     <img src="<?= Yii::$app->params['imageUrl'];?>tx.png" />
-    <p><a href="<?= Url::to(['/api.php/user/view','id'=>Yii::$app->user->id])?>"><?= Yii::$app->user->identity->username;?></a></p>
+    <p><a href="<?= Url::to(['user/view','id'=>Yii::$app->user->id])?>"><?= Yii::$app->user->identity->username;?></a></p>
 </div>
 <ul class="nav">
     <li>
-        <a href="<?= Url::to(['/api.php/user/view'])?>">
+        <a href="<?= Url::to(['user/view'])?>">
             <img src="<?= Yii::$app->params['imageUrl'];?>i1.png" />
             <span>我的资料</span>
             <i class="am-icon-angle-right"></i>
         </a>
     </li>
     <li>
-        <a href="<?= Url::to(['/api.php/msg/index']);?>">
+        <a href="<?= Url::to(['msg/index']);?>">
             <img src="<?= Yii::$app->params['imageUrl'];?>i2.png" />
             <span>消息中心</span>
             <i class="am-icon-angle-right"></i>
         </a>
     </li>
     <li>
-        <a href="<?= Url::to(['/api.php/user/password'])?>">
+        <a href="<?= Url::to(['user/password'])?>">
             <img src="<?= Yii::$app->params['imageUrl'];?>i7.png" />
             <span>修改密码</span>
             <i class="am-icon-angle-right"></i>
@@ -37,14 +37,14 @@
 </ul>
 <ul class="nav">
     <li>
-        <a href="<?= Url::to(['/api.php/guestbook/create'])?>">
+        <a href="<?= Url::to(['guestbook/create'])?>">
             <img src="<?= Yii::$app->params['imageUrl'];?>i3.png" />
             <span>建议与投诉</span>
             <i class="am-icon-angle-right"></i>
         </a>
     </li>
     <li>
-        <a href="<?= Url::to(['/api.php/site/contact'])?>">
+        <a href="<?= Url::to(['site/contact'])?>">
             <img src="<?= Yii::$app->params['imageUrl'];?>i4.png" />
             <span>联系我们</span>
             <i class="am-icon-angle-right"></i>
@@ -60,7 +60,7 @@
 </ul>
 <ul class="nav">
     <li>
-        <a href="<?=Url::to(['/api.php/site/logout']);?>" data-method="post">
+        <a href="<?=Url::to(['site/logout']);?>" data-method="post">
             <img src="<?= Yii::$app->params['imageUrl'];?>i8.png" />
             <span>退出登录</span>
             <i class="am-icon-angle-right"></i>
