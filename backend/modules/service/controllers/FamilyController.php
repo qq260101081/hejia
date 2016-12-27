@@ -22,8 +22,8 @@ class FamilyController extends CommonController
     		'upload' => ['class' => 'kucha\ueditor\UEditorAction'],
     		'config' => [
     		    'lang' => 'zh-cn',
-    			'imageUrlPrefix' => $_SERVER['HTTP_HOST'],
-    			'imagePathFormat' => "upload/image/{yyyy}{mm}{dd}/{time}{rand:6}"
+                'imageUrlPrefix' => Yii::$app->params['imageUrlPrefix'],
+                'imagePathFormat' => "/image/{yyyy}{mm}{dd}/{time}{rand:6}"
     		]
     	];
     }

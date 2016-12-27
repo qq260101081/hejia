@@ -1,7 +1,6 @@
 <?php
     use yii\helpers\Url;
     $this->title = '托辅中心';
-var_dump(Yii::$app->basePath);
 /**`
  * Created by 260101081@qq.com
  * User: carl
