@@ -5777,3 +5777,134 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1482661203.348
     'REQUEST_TIME' => 1482661203
 ]
+2016-12-27 19:48:37 [::1][-][-][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: 您提交的数据无法被验证。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Controller.php:110
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Controller.php(152): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#1 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('login', Array)
+#2 /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('site/login', Array)
+#3 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 /Users/carl/www/hejia/api/web/index.php(18): yii\base\Application->run()
+#5 {main}
+2016-12-27 19:48:37 [::1][-][-][info][application] $_POST = [
+    '_csrf' => 'YU5qSGdIVzItDDI9OGViaw00K3EwHi1.Uw8Mfg08HHFVGRJ9UWUYSA=='
+    'LoginForm' => [
+        'username' => '17722853181'
+        'password' => '853181'
+    ]
+]
+
+$_COOKIE = [
+    'Phpstorm-1e280b04' => 'ff8199ca-588b-4ecf-934f-37435ffb78db'
+    '_identity-backend' => '48e191a6cfb24f55c1e4095c7d98d15a61c8ba5991ff8a3c3de00470c0066019a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"rgWR2CX7yN_QC0uesyVLPbrFEqhad7jw\",2592000]\";}'
+    '_csrf' => '1c7e1f58fd0695c48d6f9ff9a1532d33f8662eaded7bc8d63d023bfea8d42820a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"6i7ZNVKLCbu3zAMxCHL-Dk7XKub4NXlN\";}'
+    'PHPSESSID' => 'g4ekmn58uk5vpl04kmjq2k1ai7'
+    'BACKENDID' => 'a3hrusa3sk3d67lmif29ofuig2'
+    'APIID' => 'v63794rdt9e23in3juqtojsqr5'
+    'advanced-backend' => '8m8b94m7sjektmqpp4q3isn1f5'
+    '_csrf-backend' => '01c3bf96b0cc30ca34a72a4af72d53a99048ad9aab7eaa67e46c5375a05d5a3aa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"xjwX0__q_zJG1ILMLdD3drFMRdUf5-hC\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api/web/site/login'
+    'HTTP_COOKIE' => 'Phpstorm-1e280b04=ff8199ca-588b-4ecf-934f-37435ffb78db; _identity-backend=48e191a6cfb24f55c1e4095c7d98d15a61c8ba5991ff8a3c3de00470c0066019a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22rgWR2CX7yN_QC0uesyVLPbrFEqhad7jw%22%2C2592000%5D%22%3B%7D; _csrf=1c7e1f58fd0695c48d6f9ff9a1532d33f8662eaded7bc8d63d023bfea8d42820a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%226i7ZNVKLCbu3zAMxCHL-Dk7XKub4NXlN%22%3B%7D; PHPSESSID=g4ekmn58uk5vpl04kmjq2k1ai7; BACKENDID=a3hrusa3sk3d67lmif29ofuig2; APIID=v63794rdt9e23in3juqtojsqr5; advanced-backend=8m8b94m7sjektmqpp4q3isn1f5; _csrf-backend=01c3bf96b0cc30ca34a72a4af72d53a99048ad9aab7eaa67e46c5375a05d5a3aa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22xjwX0__q_zJG1ILMLdD3drFMRdUf5-hC%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '133'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api/web/index.php'
+    'REMOTE_PORT' => '52314'
+    'REDIRECT_URL' => '/hejia/api/web/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api/web/site/login'
+    'SCRIPT_NAME' => '/hejia/api/web/index.php'
+    'PHP_SELF' => '/hejia/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1482839317.742
+    'REQUEST_TIME' => 1482839317
+]
+2016-12-27 19:48:42 [::1][-][-][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: 您提交的数据无法被验证。 in /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Controller.php:110
+Stack trace:
+#0 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Controller.php(152): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#1 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('login', Array)
+#2 /Users/carl/www/hejia/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('site/login', Array)
+#3 /Users/carl/www/hejia/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 /Users/carl/www/hejia/api/web/index.php(18): yii\base\Application->run()
+#5 {main}
+2016-12-27 19:48:42 [::1][-][-][info][application] $_POST = [
+    '_csrf' => 'YU5qSGdIVzItDDI9OGViaw00K3EwHi1.Uw8Mfg08HHFVGRJ9UWUYSA=='
+    'LoginForm' => [
+        'username' => '17722853181'
+        'password' => '853181'
+    ]
+]
+
+$_COOKIE = [
+    'Phpstorm-1e280b04' => 'ff8199ca-588b-4ecf-934f-37435ffb78db'
+    '_identity-backend' => '48e191a6cfb24f55c1e4095c7d98d15a61c8ba5991ff8a3c3de00470c0066019a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"rgWR2CX7yN_QC0uesyVLPbrFEqhad7jw\",2592000]\";}'
+    '_csrf' => '1c7e1f58fd0695c48d6f9ff9a1532d33f8662eaded7bc8d63d023bfea8d42820a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"6i7ZNVKLCbu3zAMxCHL-Dk7XKub4NXlN\";}'
+    'PHPSESSID' => 'g4ekmn58uk5vpl04kmjq2k1ai7'
+    'BACKENDID' => 'a3hrusa3sk3d67lmif29ofuig2'
+    'APIID' => 'v63794rdt9e23in3juqtojsqr5'
+    'advanced-backend' => '8m8b94m7sjektmqpp4q3isn1f5'
+    '_csrf-backend' => '01c3bf96b0cc30ca34a72a4af72d53a99048ad9aab7eaa67e46c5375a05d5a3aa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"xjwX0__q_zJG1ILMLdD3drFMRdUf5-hC\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:50.0) Gecko/20100101 Firefox/50.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/hejia/api/web/site/login'
+    'HTTP_COOKIE' => 'Phpstorm-1e280b04=ff8199ca-588b-4ecf-934f-37435ffb78db; _identity-backend=48e191a6cfb24f55c1e4095c7d98d15a61c8ba5991ff8a3c3de00470c0066019a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22rgWR2CX7yN_QC0uesyVLPbrFEqhad7jw%22%2C2592000%5D%22%3B%7D; _csrf=1c7e1f58fd0695c48d6f9ff9a1532d33f8662eaded7bc8d63d023bfea8d42820a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%226i7ZNVKLCbu3zAMxCHL-Dk7XKub4NXlN%22%3B%7D; PHPSESSID=g4ekmn58uk5vpl04kmjq2k1ai7; BACKENDID=a3hrusa3sk3d67lmif29ofuig2; APIID=v63794rdt9e23in3juqtojsqr5; advanced-backend=8m8b94m7sjektmqpp4q3isn1f5; _csrf-backend=01c3bf96b0cc30ca34a72a4af72d53a99048ad9aab7eaa67e46c5375a05d5a3aa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22xjwX0__q_zJG1ILMLdD3drFMRdUf5-hC%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '133'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) PHP/7.0.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/carl/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Users/carl/www'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/carl/www/hejia/api/web/index.php'
+    'REMOTE_PORT' => '52344'
+    'REDIRECT_URL' => '/hejia/api/web/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/hejia/api/web/site/login'
+    'SCRIPT_NAME' => '/hejia/api/web/index.php'
+    'PHP_SELF' => '/hejia/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1482839322.529
+    'REQUEST_TIME' => 1482839322
+]

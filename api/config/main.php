@@ -10,7 +10,6 @@ return [
     'id' => 'app-api',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'api\controllers',
-    'defaultRoute' => 'wechat/index',
     'bootstrap' => ['log'],
     'components' => [
         'user' => [

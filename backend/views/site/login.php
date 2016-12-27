@@ -6,7 +6,7 @@ use yii\bootstrap\ActiveForm;
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \common\models\LoginForm */
 
-$this->title = '后台登录';
+$this->title = '和家服务OA登录';
 
 $fieldOptions1 = [
     'options' => ['class' => 'form-group has-feedback'],
@@ -21,7 +21,7 @@ $fieldOptions2 = [
 
 <div class="login-box">
     <div class="login-logo">
-        <a href="#"><b>广州和家服务有限公司</b>后台管理</a>
+        <a href="#"><b>广州和家服务有限公司</b>OA</a>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">

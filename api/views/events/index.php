@@ -25,7 +25,7 @@
                 <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-top">
                     <div class="am-list-thumb am-u-sm-12">
                         <a href="<?= Url::to(['events/view', 'id' => $v->id]);?>" class="">
-                            <img src="../../upload/<?= $v->list_img;?>">
+                            <img src="http://img.liusheji.com/<?= $v->list_img;?>">
                         </a>
                     </div>
 

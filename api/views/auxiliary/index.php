@@ -1,6 +1,7 @@
 <?php
     use yii\helpers\Url;
     $this->title = '托辅中心';
+var_dump(Yii::$app->basePath);
 /**`
  * Created by 260101081@qq.com
  * User: carl
@@ -41,8 +42,8 @@
 
             <li>
                 <div class="am-gallery-item">
-                    <a href="../../upload/<?= $v->list_img;?>" class="">
-                        <img src="../../upload/<?= $v->list_img;?>" />
+                    <a href="http://img.liusheji.com/<?= $v->list_img;?>" class="">
+                        <img src="http://img.liusheji.com/<?= $v->list_img;?>" />
                         <h3 class="am-gallery-title"><?= $v->title; ?></h3>
                     </a>
                 </div>

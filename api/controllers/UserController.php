@@ -36,7 +36,7 @@ class UserController extends BaseController
         $studentID = isset($patriarch->student_id) ? $patriarch->student_id : 0;
 
         $student = Student::find()->where(['id' => $studentID])->one();
-        $order = Order::find()->where(['id' => $studentID])->one();
+        $order = Order::find()->where(['student_id' => $studentID])->one();
         //print_r($patriarch);
         return $this->render('serve', [
             'patriarch' => $patriarch,

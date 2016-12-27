@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = '后台管理首页';
+$this->title = '和家服务OA首页';
 ?>
 <div class="site-index">
     首页

@@ -6,7 +6,7 @@
 <ul class="near">
     <?php foreach ($model as $v):?>
     <li>
-        <div class="pic"><img src="../../upload/<?=$v->list_img;?>"></div>
+        <div class="pic"><img src="http://img.liusheji.com/<?=$v->list_img;?>"></div>
         <div class="text">
             <h2><i></i><span><?=$v->title;?></span></h2>
             <p><?=$v->info;?>...<a href="<?=Url::to(['article/view', 'id' => $v->id])?>" class="chakan">查看详情></a></p>

@@ -40,8 +40,8 @@
             <?php if($v->type == 'image'):;?>
                 <li>
                     <div class="am-gallery-item">
-                        <img src="../../upload/<?=$v->path;?>"
-                             alt="<?=$v->title;?>" data-rel="../../upload/<?=$v->path;?>"/>
+                        <img src="http://img.liusheji.com/<?=$v->path;?>"
+                             alt="<?=$v->title;?>" data-rel="http://img.liusheji.com/<?=$v->path;?>"/>
                     </div>
                 </li>
             <?php endif;?>
@@ -50,7 +50,7 @@
         <?php foreach ($repository as $v):;?>
         <?php if($v->type == 'video'):;?>
         <li>
-            <embed src="../../upload/<?=$v->path;?>" width=" " height=" ">
+            <embed src="http://img.liusheji.com/<?=$v->path;?>" width=" " height=" ">
                 <div class="am-gallery-item">
 
                     <script language="javascript">
