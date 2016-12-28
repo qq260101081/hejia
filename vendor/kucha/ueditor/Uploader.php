@@ -99,7 +99,7 @@ class Uploader
             $this->stateInfo = $this->getStateInfo("ERROR_TYPE_NOT_ALLOWED");
             return;
         }
-var_dump($dirname);die;
+
         //创建目录失败
         if (!is_dir($dirname) && !mkdir($dirname, 0777, true)) {
 
