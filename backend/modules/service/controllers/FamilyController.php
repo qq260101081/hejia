@@ -23,7 +23,8 @@ class FamilyController extends CommonController
     		'config' => [
     		    'lang' => 'zh-cn',
                 'imageUrlPrefix' => Yii::$app->params['imageUrlPrefix'],
-                'imagePathFormat' => "/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}"
+                'imagePathFormat' => "/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}",
+                "imageRoot" => Yii::getAlias("@webroot"),
     		]
     	];
     }

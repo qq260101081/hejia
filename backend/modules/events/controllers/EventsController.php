@@ -24,8 +24,8 @@ class EventsController extends CommonController
             'upload' => ['class' => 'kucha\ueditor\UEditorAction'],
             'config' => [
                 'lang' => 'zh-cn',
-                'imageUrlPrefix' => Yii::$app->params['imageUrlPrefix'],
-                'imagePathFormat' => "/image/{yyyy}{mm}{dd}/{time}{rand:6}"
+                //'imageUrlPrefix' => 'http://www.baidu.com',
+                'imagePathFormat' => "aaaa/image/{yyyy}{mm}{dd}/{time}{rand:6}"
             ]
         ];
     }
