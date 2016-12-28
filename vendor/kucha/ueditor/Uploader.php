@@ -101,25 +101,19 @@ class Uploader
         }
 
         //创建目录失败
-        if (!is_dir($dirname) && !mkdir($dirname, 0777, true)) {
-
+        if (!file_exists($dirname) && !mkdir($dirname, 0777, true)) {
             $this->stateInfo = $this->getStateInfo("ERROR_CREATE_DIR");
             return;
         } else if (!is_writeable($dirname)) {
-
             $this->stateInfo = $this->getStateInfo("ERROR_DIR_NOT_WRITEABLE");
             return;
         }
-
         //移动文件
         if (!(move_uploaded_file($file["tmp_name"], $this->filePath) && file_exists($this->filePath))) { //移动失败
             $this->stateInfo = $this->getStateInfo("ERROR_FILE_MOVE");
-
         } else { //移动成功
-
             $this->stateInfo = $this->stateMap[0];
         }
-
     }
 
     /**
@@ -278,7 +272,7 @@ class Uploader
         $format = str_replace("{filename}", $oriName, $format);
 
         //替换随机字符串
-        $randNum = rand(1, 10000000000) . rand(1, 10000000000);
+        $randNum = mt_rand(1, 1000000000) . mt_rand(1, 1000000000);
         if (preg_match("/\{rand\:([\d]*)\}/i", $format, $matches)) {
             $format = preg_replace("/\{rand\:[\d]*\}/i", substr($randNum, 0, $matches[1]), $format);
         }
@@ -303,11 +297,12 @@ class Uploader
     private function getFilePath()
     {
         $fullname = $this->fullName;
-        $rootPath = $_SERVER['DOCUMENT_ROOT'];
+
         if (substr($fullname, 0, 1) != '/') {
             $fullname = '/' . $fullname;
         }
-        return $rootPath . $fullname;
+
+        return $this->config['pathRoot'] . $fullname;
     }
 
     /**

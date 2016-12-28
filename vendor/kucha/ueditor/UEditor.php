@@ -27,7 +27,12 @@ class UEditor extends InputWidget
      */
     public function init()
     {
-        $this->id = $this->hasModel() ? Html::getInputId($this->model, $this->attribute) : $this->id;
+        if (isset($this->options['id'])) {
+            $this->id = $this->options['id'];
+        } else {
+            $this->id = $this->hasModel() ? Html::getInputId($this->model,
+                $this->attribute) : $this->id;
+        }
         $this->_options = [
             'serverUrl' => Url::to(['upload']),
             'initialFrameWidth' => '100%',
@@ -55,7 +60,7 @@ class UEditor extends InputWidget
     {
         UEditorAsset::register($this->view);
         $clientOptions = Json::encode($this->clientOptions);
-        $script = "UE.getEditor('" . $this->id . "', " . $clientOptions . ")";
+        $script = "UE.getEditor('" . $this->id . "', " . $clientOptions . ");";
         $this->view->registerJs($script, View::POS_READY);
     }
 }
