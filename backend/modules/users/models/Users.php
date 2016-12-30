@@ -51,16 +51,15 @@ class Users extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['username'], 'required'],
+            [['username','name'], 'required'],
             [['status','name'], 'string'],
-            [['created_at', 'updated_at','sex'], 'integer'],
-            [['username','nickname','openid'], 'string', 'max' => 60],
-            [['phone', 'reg_ip'], 'string', 'max' => 15],
+            [['created_at', 'updated_at','sex','confine'], 'integer'],
+            ['username', 'string', 'max' => 60],
+            ['phone', 'string', 'max' => 15],
             [['password'], 'string', 'max' => 16],
             [['password'], 'string', 'min' => 6],
-            [['auth_key','city','province','type'], 'string', 'max' => 32],
+            [['auth_key','type'], 'string', 'max' => 32],
             [['password_hash'], 'string', 'max' => 65],
-            ['headimgurl', 'string', 'max' => 250],
             [['email'], 'string', 'max' => 45],
             [['username'], 'unique'],
             ['role','safe']
@@ -75,17 +74,15 @@ class Users extends \yii\db\ActiveRecord
         return [
             'id' => Yii::t('app', 'ID'),
             'username' => Yii::t('app', '用户名'),
-            'nickname' => Yii::t('app', '昵称'),
-            'city' => Yii::t('app', '城市'),
-            'province' => Yii::t('app', '省份'),
+            'name' => Yii::t('app', '姓名'),
             'phone' => Yii::t('app', '电话'),
             'auth_key' => Yii::t('app', 'Auth Key'),
             'password_hash' => Yii::t('app', 'Password Hash'),
             'email' => Yii::t('app', '邮箱'),
             'status' => Yii::t('app', '状态'),
-            'reg_ip' => Yii::t('app', '注册IP'),
             'password' => Yii::t('app', '密码'),
             'role' => Yii::t('app', '用户角色'),
+            'confine' => '受职位权限',
             'created_at' => Yii::t('app', '创建于'),
             'updated_at' => Yii::t('app', '更新于'),
         ];

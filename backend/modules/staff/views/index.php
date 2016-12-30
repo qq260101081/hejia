@@ -22,12 +22,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             'id',
-            'userid',
             'name',
             'diploma',
             // 'photo',
             'position',
-            'campus',
+            'school',
             'phone',
             [
                 'class' => 'yii\grid\ActionColumn',

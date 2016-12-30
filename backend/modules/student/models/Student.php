@@ -45,8 +45,8 @@ class Student extends Patriarch
     public function rules()
     {
         return [
-            [['name', 'sex', 'age', 'school', 'grade'], 'required'],
-            [['age', 'created_at', 'updated_at'], 'integer'],
+            [['name', 'sex', 'age', 'school', 'grade', 'category_id'], 'required'],
+            [['age', 'created_at', 'updated_at', 'category_id'], 'integer'],
             [['sex','name'], 'string', 'max' => 12],
             ['remark', 'string', 'max' => 300],
             [['school', 'grade'], 'string', 'max' => 90],
@@ -65,6 +65,7 @@ class Student extends Patriarch
             'age' => Yii::t('app', 'Age'),
             'remark' => Yii::t('app', '备注'),
             'school' => Yii::t('app', 'School'),
+            'category_id' => Yii::t('app', '所属校区'),
             'grade' => Yii::t('app', 'Grade'),
             'created_at' => Yii::t('app', 'Created At'),
             'updated_at' => Yii::t('app', 'Updated At'),

@@ -37,7 +37,7 @@ class Patriarch extends \yii\db\ActiveRecord
     {
         return [
             [['student_id', 'name', 'urgency_person','urgency_phone', 'relation', 'phone'], 'required'],
-            [['student_id'], 'integer'],
+            [['student_id','category_id'], 'integer'],
             ['phone','number'],
             ['phone','string', 'min' =>11],
             ['phone','string', 'max' =>11],

@@ -24,6 +24,13 @@ class PatriarchController extends CommonController
     {
         $searchModel = new PatriarchSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        //职位权限限制
+        $staff = $this->getStaff();
+        if($staff['staff'])
+        {
+            if($staff['staff']->position != '校长')
+                $dataProvider->query->andWhere(['category_id'=>$staff['staff']->category_id]);
+        }
 
         return $this->render('/patriarch_index', [
             'searchModel' => $searchModel,
@@ -38,6 +45,13 @@ class PatriarchController extends CommonController
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         //给家长开有账号的才显示
         $dataProvider->query->andFilterWhere(['>', 'userid', '0']);
+        //职位权限限制
+        $staff = $this->getStaff();
+        if($staff['staff'])
+        {
+            if($staff['staff']->position != '校长')
+                $dataProvider->query->andWhere(['category_id'=>$staff['staff']->category_id]);
+        }
 
         return $this->renderAjax('/patriarch-modal-list2', [
             'searchModel' => $searchModel,
@@ -52,6 +66,14 @@ class PatriarchController extends CommonController
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         //给家长开有账号的才显示
         $dataProvider->query->andFilterWhere(['>', 'userid', '0']);
+        //职位权限限制
+        $staff = $this->getStaff();
+        if($staff['staff'])
+        {
+            if($staff['staff']->position != '校长')
+                $dataProvider->query->andWhere(['category_id'=>$staff['staff']->category_id]);
+        }
+
 
         return $this->renderAjax('/patriarch-modal-list', [
             'searchModel' => $searchModel,

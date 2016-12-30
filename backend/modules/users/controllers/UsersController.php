@@ -63,7 +63,7 @@ class UsersController extends CommonController
     public function actionCreate()
     {
         $model = new Users();
-        $model->role = 'frontend';
+        $model->confine = 1;
 
         $dada = Yii::$app->request->post();
         if($dada)

@@ -23,11 +23,85 @@ class WeeklyController extends CommonController
     {
         $searchModel = new WeeklySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        //职位权限限制
+        $staff = $this->getStaff();
+        if($staff['staff'])
+        {
+            if($staff['staff']->position != '校长')
+                $dataProvider->query->andWhere(['category_id'=>$staff['staff']->category_id]);
+        }
 
         return $this->render('/weekly_index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
+    }
+
+    //客服审核周报
+    public function actionCustomerIndex()
+    {
+        $searchModel = new WeeklySearch();
+        $data = Yii::$app->request->queryParams;
+
+        $dataProvider = $searchModel->search($data);
+        $dataProvider->query->andFilterWhere(['check1'=>0]);
+        $dataProvider->query->andWhere(['remark'=>null]);
+
+
+        return $this->render('/customer-index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+    public function actionCustomerCheck($id)
+    {
+        $model = $this->findModel($id);
+
+        if ($model->load(Yii::$app->request->post())) {
+            if(!$model->remark) $model->check1 = 1;
+            $model->save();
+            return $this->redirect(['customer-index']);
+        } else {
+            return $this->render('/customer-check', [
+                'model' => $model,
+            ]);
+        }
+    }
+    //校长审核周报
+    public function actionPresidentIndex()
+    {
+        $searchModel = new WeeklySearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider->query->andFilterWhere(['check1'=>1]);
+        $dataProvider->query->andFilterWhere(['check2'=>0]);
+        $dataProvider->query->andWhere(['remark'=>null]);
+
+        return $this->render('/president-index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+    public function actionPresidentCheck($id)
+    {
+        $model = $this->findModel($id);
+
+        if ($model->load(Yii::$app->request->post())) {
+            if(!$model->remark)
+            {
+                $model->check2 = 1;
+            }
+            else
+            {
+                $model->check1 = 0;
+                $model->check2 = 0;
+            }
+            $model->save();
+            return $this->redirect(['president-index']);
+        } else {
+            return $this->render('/president-check', [
+                'model' => $model,
+            ]);
+        }
     }
 
     //推送周报时选择
@@ -82,7 +156,11 @@ class WeeklyController extends CommonController
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+            $model->remark = NULL;
+            $model->check1 = 0;
+            $model->check2 = 0;
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('/weekly_update', [

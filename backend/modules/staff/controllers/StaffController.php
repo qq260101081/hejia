@@ -11,6 +11,7 @@ use app\modules\users\models\Users;
 use app\components\libs\Common;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use backend\modules\service\models\ServiceCategory;
 
 /**
  * StaffController implements the CRUD actions for Staff model.
@@ -19,13 +20,23 @@ class StaffController extends CommonController
 {
 
     /**
-     * Lists all Staff models.
-     * @return mixed
+     * 员工列表
      */
     public function actionIndex()
     {
         $searchModel = new StaffSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        //职位权限限制
+        $staff = $this->getStaff();
+
+        if($staff['staff'])
+        {
+            $dataProvider->query->andWhere(['category_id'=>$staff['staff']->category_id]);
+            foreach ($staff['shield'] as $v)
+            {
+                $dataProvider->query->andWhere(['<>','position',$v]);
+            }
+        }
 
         return $this->render('/index', [
             'searchModel' => $searchModel,
@@ -54,6 +65,17 @@ class StaffController extends CommonController
     {
         $model = new Staff();
         $model->sex = '男';
+        $categoryInfo = ServiceCategory::find()->where(['id'=>137])->asArray()->one();
+        $categoryPath = ServiceCategory::find()
+            ->where(['<','lft',$categoryInfo['lft']])
+            ->andWhere(['>','rgt',$categoryInfo['rgt']])
+            ->andWhere(['root' => $categoryInfo['root']])
+            ->orderBy('lft')
+            ->indexBy('id')
+            ->asArray()
+            ->all();
+
+        $categoryPath[$categoryInfo['id']] = $categoryInfo;
 
         $data = Yii::$app->request->post();
 
@@ -73,7 +95,8 @@ class StaffController extends CommonController
         else
         {
             return $this->render('/create', [
-                'model' => $model
+                'model' => $model,
+                'categoryPath' => $categoryPath,
             ]);
         }
     }
@@ -95,8 +118,9 @@ class StaffController extends CommonController
             //更新员工表
             $model->userid = $user->id;
             $model->save();
-            return $this->redirect(['/users/users/view', 'id' => $user->id]);
         }
+        //print_r($user->getErrors());die;
+        return $this->redirect(['index']);
     }
 
     /**
@@ -108,6 +132,18 @@ class StaffController extends CommonController
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $categoryInfo = ServiceCategory::find()->where(['id'=>$model->category_id])->asArray()->one();
+        $categoryPath = ServiceCategory::find()
+            ->where(['<','lft',$categoryInfo['lft']])
+            ->andWhere(['>','rgt',$categoryInfo['rgt']])
+            ->andWhere(['root' => $categoryInfo['root']])
+            ->orderBy('lft')
+            ->indexBy('id')
+            ->asArray()
+            ->all();
+
+        $categoryPath[$categoryInfo['id']] = $categoryInfo;
+
         $data = Yii::$app->request->post();
 
         if ($data) {
@@ -132,6 +168,7 @@ class StaffController extends CommonController
         {
             return $this->render('/update', [
                 'model' => $model,
+                'categoryPath' => $categoryPath,
             ]);
         }
     }

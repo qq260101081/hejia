@@ -19,7 +19,7 @@ class UsersSearch extends Users
     {
         return [
             [['id', 'created_at', 'updated_at'], 'integer'],
-            [['username','nickname','city','province', 'phone', 'auth_key', 'password_hash', 'email', 'status', 'reg_ip'], 'safe'],
+            [['username', 'phone', 'auth_key', 'password_hash', 'email', 'status', 'name'], 'safe'],
         ];
     }
 
@@ -65,15 +65,12 @@ class UsersSearch extends Users
         ]);
 
         $query->andFilterWhere(['like', 'username', $this->username])
-            ->andFilterWhere(['like', 'nickname', $this->nickname])
-            ->andFilterWhere(['like', 'city', $this->city])
-            ->andFilterWhere(['like', 'province', $this->province])
+            ->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'phone', $this->phone])
             ->andFilterWhere(['like', 'auth_key', $this->auth_key])
             ->andFilterWhere(['like', 'password_hash', $this->password_hash])
             ->andFilterWhere(['like', 'email', $this->email])
-            ->andFilterWhere(['like', 'status', $this->status])
-            ->andFilterWhere(['like', 'reg_ip', $this->reg_ip]);
+            ->andFilterWhere(['like', 'status', $this->status]);
 
         return $dataProvider;
     }

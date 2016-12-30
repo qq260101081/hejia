@@ -32,7 +32,7 @@ use yii\widgets\Pjax;
                     'select' => function ($url,$model, $key) {
                         return Html::a('选择', 'javascript:;', [
                             'title'=> '选择',
-                            'onclick'=>"$('#student_id').val($model->id);$('#student_name').val('$model->name');",
+                            'onclick'=>"$('#student_id').val($model->id);$('#student_name').val('$model->name');$('#category_id').val('$model->category_id');",
                             'data-dismiss'=> 'modal'
                         ] );
                     },

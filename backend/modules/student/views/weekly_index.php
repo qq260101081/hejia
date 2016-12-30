@@ -28,8 +28,36 @@ $this->params['breadcrumbs'][] = $this->title;
                 'diet',
                 'study',
                 'synthesize',
+                [
+                    'attribute'=>'remark',
+                    'format' => 'raw',
+                    'label'=>'审核',
+                    'value'=> function($model){
+                        if($model->remark)
+                            return '<b title="'.$model->remark.'" style="color: red">未通过</b>';
+                        else
+                            return '';
+                    }
+                ],
                 'created_at:date',
-                ['class' => 'yii\grid\ActionColumn', 'header' => '操作'],
+                [
+                    'class' => 'yii\grid\ActionColumn',
+                    'template' => '{view} &nbsp; &nbsp;{update}&nbsp; &nbsp; {delete}',
+                    'header' => '操作',
+                    'headerOptions'=> ['width'=> '80'],
+                    'buttons' => [
+                        'update' => function ($url,$model, $key) {
+                            if(!$model->check1)
+                            {
+                                return Html::a('<span class="glyphicon glyphicon-edit"></span>',
+                                    ['update','id'=>$key],
+                                    [
+                                        'title'=> '更新',
+                                    ] );
+                            }
+                        },
+                    ],
+                ],
             ],
         ]); ?>
         <?php Pjax::end(); ?></div>

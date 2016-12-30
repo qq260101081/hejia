@@ -19,6 +19,7 @@ class WeeklySearch extends Weekly
     {
         return [
             [['id', 'student_id', 'discipline', 'sleep', 'diet', 'study', 'synthesize', 'created_at'], 'integer'],
+            ['remark','safe']
         ];
     }
 
@@ -64,6 +65,7 @@ class WeeklySearch extends Weekly
             'sleep' => $this->sleep,
             'diet' => $this->diet,
             'study' => $this->study,
+            'remark' => $this->remark,
             'synthesize' => $this->synthesize,
             'created_at' => $this->created_at,
         ]);

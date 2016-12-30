@@ -64,6 +64,10 @@ return [
     'Weekly List' => '学生周报',
     'Create Weekly' => '创建周报',
     'Update Weekly' => '更新周报',
+    //客服周报审核
+    'Customer Weekly List' => '客服周报审核',
+    'President Weekly List' => '校长周报审核',
+    'Weekly Check' => '周报审核',
     //家长
     'Patriarch List' => '家长列表',
     'Update Patriarch' => '更新家长',

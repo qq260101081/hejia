@@ -25,8 +25,8 @@ use yii\helpers\Url;
         ]
     ]); ?>
 
-    <?= $form->field($model, 'username')->textInput(['maxlength' => true,'placeholder'=>'用于登录']) ?>
-    <?= $form->field($model, 'nickname')->textInput(['maxlength' => true,'placeholder'=>'用于登录之后显示']) ?>
+    <?= $form->field($model, 'username')->textInput(['maxlength' => true,'placeholder'=>'输入登录账号']) ?>
+    <?= $form->field($model, 'name')->textInput(['maxlength' => true,'placeholder'=>'输入您的姓名']) ?>
 
     <?= $form->field($model, 'password')->textInput(['maxlength' => true]) ?>
 
@@ -34,6 +34,7 @@ use yii\helpers\Url;
     <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'confine')->dropDownList(['否','是']) ?>
 
     <?= $form->field($model, 'role')->dropDownList(
         \yii\helpers\ArrayHelper::map(Yii::$app->getAuthManager()->getRoles(), 'name', 'description'),

@@ -2,9 +2,8 @@
 
 namespace app\modules\student\controllers;
 
-
-
 use Yii;
+use backend\modules\service\models\ServiceCategory;
 use app\modules\student\models\Patriarch;
 use app\modules\student\models\Student;
 use app\modules\student\models\StudentSearch;
@@ -17,13 +16,19 @@ use yii\web\NotFoundHttpException;
 class StudentController extends CommonController
 {
     /**
-     * Lists all Guarantee models.
-     * @return mixed
+     * 学生列表
      */
     public function actionIndex()
     {
         $searchModel = new StudentSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        //职位权限限制
+        $staff = $this->getStaff();
+        if($staff['staff'])
+        {
+            if($staff['staff']->position != '校长')
+                $dataProvider->query->andWhere(['category_id'=>$staff['staff']->category_id]);
+        }
 
         return $this->render('/index', [
             'searchModel' => $searchModel,
@@ -31,10 +36,18 @@ class StudentController extends CommonController
         ]);
     }
 
+    //弹框学生列表
     public function actionModalList()
     {
         $searchModel = new StudentSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        //职位权限限制
+        $staff = $this->getStaff();
+        if($staff['staff'])
+        {
+            if($staff['staff']->position != '校长')
+                $dataProvider->query->andWhere(['category_id'=>$staff['staff']->category_id]);
+        }
 
         return $this->renderAjax('/modal-list', [
             'searchModel' => $searchModel,
@@ -64,14 +77,28 @@ class StudentController extends CommonController
         $patriarch = new Patriarch();
         $model->sex = '男';
 
+        $categoryInfo = ServiceCategory::find()->where(['id'=>137])->asArray()->one();
+        $categoryPath = ServiceCategory::find()
+            ->where(['<','lft',$categoryInfo['lft']])
+            ->andWhere(['>','rgt',$categoryInfo['rgt']])
+            ->andWhere(['root' => $categoryInfo['root']])
+            ->orderBy('lft')
+            ->indexBy('id')
+            ->asArray()
+            ->all();
+
+        $categoryPath[$categoryInfo['id']] = $categoryInfo;
+
         $data = Yii::$app->request->post();
 
         if ($data) {
+
             if($model->load($data) && $model->save())
             {
                 //保存家长信息
                 $patriarch->load($data);
                 $patriarch->student_id = $model->id;
+                $patriarch->category_id = $model->category_id;
                 $patriarch->save($data);
 
                 Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'保存成功！']);
@@ -85,7 +112,8 @@ class StudentController extends CommonController
         {
             return $this->render('/create', [
                 'model' => $model,
-                'patriarch' => $patriarch
+                'patriarch' => $patriarch,
+                'categoryPath' => $categoryPath,
             ]);
         }
     }
@@ -100,6 +128,19 @@ class StudentController extends CommonController
     {
         $model = $this->findModel($id);
         $patriarch = Patriarch::find()->where(['student_id'=>$id])->one();
+
+        $categoryInfo = ServiceCategory::find()->where(['id'=>$model->category_id])->asArray()->one();
+        $categoryPath = ServiceCategory::find()
+            ->where(['<','lft',$categoryInfo['lft']])
+            ->andWhere(['>','rgt',$categoryInfo['rgt']])
+            ->andWhere(['root' => $categoryInfo['root']])
+            ->orderBy('lft')
+            ->indexBy('id')
+            ->asArray()
+            ->all();
+
+        $categoryPath[$categoryInfo['id']] = $categoryInfo;
+
         $data = Yii::$app->request->post();
 
         if ($data) {
@@ -121,7 +162,8 @@ class StudentController extends CommonController
         {
             return $this->render('/update', [
                 'model' => $model,
-                'patriarch' => $patriarch
+                'patriarch' => $patriarch,
+                'categoryPath' => $categoryPath,
             ]);
         }
     }
@@ -136,7 +178,8 @@ class StudentController extends CommonController
     {
         $this->findModel($id)->delete();
         //删除对应的家长
-        Patriarch::find()->where(['student_id'=>$id])->one()->delete();
+        $patriarch = Patriarch::find()->where(['student_id'=>$id])->one();
+        if($patriarch) $patriarch->delete();
         return $this->redirect(['index']);
     }
 

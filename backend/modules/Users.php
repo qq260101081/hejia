@@ -36,11 +36,11 @@ class Users extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['username', 'type', 'telephone', 'auth_key', 'password_hash', 'email', 'status', 'ip', 'updated_at'], 'required'],
+            [['username', 'type', 'auth_key', 'password_hash', 'email', 'status', 'ip', 'updated_at'], 'required'],
             [['type', 'status'], 'string'],
             [['created_at', 'updated_at'], 'integer'],
             [['username'], 'string', 'max' => 60],
-            [['telephone', 'ip'], 'string', 'max' => 15],
+            [['phone', 'ip'], 'string', 'max' => 15],
             [['website'], 'string', 'max' => 250],
             [['auth_key'], 'string', 'max' => 32],
             [['password_hash'], 'string', 'max' => 65],
@@ -59,7 +59,7 @@ class Users extends \yii\db\ActiveRecord
             'id' => Yii::t('app', 'ID'),
             'username' => Yii::t('app', '用户名'),
             'type' => Yii::t('app', '类型'),
-            'telephone' => Yii::t('app', '电话'),
+            'phone' => Yii::t('app', '电话'),
             'website' => Yii::t('app', '网站'),
             'auth_key' => Yii::t('app', 'Auth Key'),
             'password_hash' => Yii::t('app', 'Password Hash'),

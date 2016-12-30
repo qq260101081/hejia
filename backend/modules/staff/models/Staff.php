@@ -34,14 +34,14 @@ class Staff extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'position','campus', 'phone'], 'required'],
-            [['userid', 'age'], 'integer'],
+            [['name', 'position', 'phone', 'category_id'], 'required'],
+            [['userid', 'age','category_id'], 'integer'],
             [['name'], 'string', 'max' => 15],
             [['diploma','sex','position'], 'string', 'max' => 12],
             [['photo'], 'string', 'max' => 100],
-            [['campus'], 'string', 'max' => 150],
+            [['school'], 'string', 'max' => 90],
             [['phone'], 'string', 'max' => 11],
-            [['userid'], 'unique'],
+            //[['userid'], 'unique'],
         ];
     }
 
@@ -56,10 +56,11 @@ class Staff extends \yii\db\ActiveRecord
             'name' => Yii::t('app', '姓名'),
             'sex' => Yii::t('app', '性别'),
             'age' => Yii::t('app', '年龄'),
+            'category_id' => Yii::t('app', '所属校区'),
             'diploma' => Yii::t('app', '学历'),
             'photo' => Yii::t('app', '照片'),
             'position' => Yii::t('app', '岗位'),
-            'campus' => Yii::t('app', '所属校区'),
+            'school' => Yii::t('app', '所属校区'),
             'phone' => Yii::t('app', '联系电话'),
         ];
     }

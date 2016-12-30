@@ -23,6 +23,14 @@ use yii\helpers\Url;
             ]
         ]); ?>
 
+        <div class="form-group field-student-category_id">
+            <div class="category">
+                <label class="col-sm-2 control-label">所属校区</label>
+                <select class="form-control" id="category"></select>
+            </div>
+            <div class="col-sm-8"><div class="help-block"></div></div>
+        </div>
+
         <?= $form->field($model, 'name')->textInput() ?>
 
         <?= $form->field($model, 'sex')->dropDownList(['男' => '男', '女' => '女']) ?>
@@ -53,11 +61,11 @@ use yii\helpers\Url;
         ]);
         ?>
 
-        <?= $form->field($model, 'position')->dropDownList(['校长' => '校长','教师' => '教师','客服' => '客服']) ?>
-
-        <?= $form->field($model, 'campus')->textInput(['maxlength' => true]) ?>
+        <?= $form->field($model, 'position')->dropDownList(Yii::$app->params['position']) ?>
 
         <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
+        <?= Html::hiddenInput('Staff[category_id]','', ['id' => 'category_id'])?>
+        <?= Html::hiddenInput('Staff[school]','', ['id' => 'school'])?>
 
         <div class="box-footer">
         <a href="<?= Url::to(['/staff/staff/index']);?>" class="btn btn-info fa fa-reply"></a>
@@ -68,3 +76,29 @@ use yii\helpers\Url;
     </div>
 
 </div>
+
+<?php $this->beginBlock('js_end') ?>
+var categoryPath = <?= json_encode(array_keys(isset($categoryPath) ? $categoryPath : []))?>;
+var opts = {
+ajax: '?r=service/service-category/get-node',
+select: '#category',
+selClass: 'form-control',
+head: '--请选择--',
+defVal: categoryPath
+
+};
+var linkageSel = new LinkageSel(opts);
+$('form button[type=submit]').on('click', function(){
+if(!linkageSel.getSelectedArr().pop()){
+$('.field-student-category_id .help-block').css('color','#dd4b39');
+$('.field-student-category_id .help-block').text('选择所属校区');
+return false;
+}else{
+$('.field-student-category_id .help-block').css('display','none');
+}
+$('#category_id').val(linkageSel.getSelectedValue());
+$('#school').val(linkageSel.getSelectedData().name);
+});
+<?php $this->endBlock(); ?>
+
+<?php $this->registerJs($this->blocks['js_end'],\yii\web\View::POS_LOAD);//将编写的js代码注册到页面底部 ?>

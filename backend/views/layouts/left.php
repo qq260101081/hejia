@@ -16,6 +16,8 @@
                         'items' => [
                             ['label' => '学生列表', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/student/student/index']],
                             ['label' => '学生周报', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/student/weekly/index']],
+                            ['label' => '周报审核(客服)', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/student/weekly/customer-index']],
+                            ['label' => '周报审核(校长)', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/student/weekly/president-index']],
                             ['label' => '家长列表', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/student/patriarch/index']],
                         ],
                     ],
@@ -60,15 +62,6 @@
                             ['label' => '留言列表', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/users/guestbook/index']],
                         ],
                     ],
-                    [
-                        'label' => '产品管理',
-                        'icon' => 'fa fa-share',
-                        'url' => '#',
-                        'items' => [
-                            ['label' => '产品列表', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/product/product/index']],
-                            ['label' => '产品分类', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/product/product-category/index']],
-                        ],
-                    ],
                     ['label' => '活动资讯', 'icon' => 'fa fa-share', 'url' => ['/events/events/index']],
 
                     ['label' => '轮播图管理', 'icon' => 'fa fa-share', 'url' => ['/ad/ad/index']],
@@ -81,15 +74,6 @@
                         ],
                     ],
 
-                    [
-                        'label' => '微信后台',
-                        'icon' => 'fa fa-share',
-                        'url' => '#',
-                        'items' => [
-                            ['label' => '文章管理', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/article/index']],
-                            ['label' => '产品管理', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/goods/index']],
-                        ],
-                    ],
                 ],
             ]
         ) ?>

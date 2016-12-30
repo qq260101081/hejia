@@ -43,6 +43,7 @@ use yii\bootstrap\Modal;
         <?= $form->field($model, 'synthesize')->textarea() ?>
 
         <?= Html::hiddenInput('Weekly[student_id]',$model->student_id,['id'=>'student_id']);?>
+        <?= Html::hiddenInput('Weekly[category_id]',$model->category_id,['id'=>'category_id']);?>
 
         <div class="box-footer">
             <a href="<?= Url::to(['/student/weekly/index']);?>" class="btn btn-info fa fa-reply"></a>

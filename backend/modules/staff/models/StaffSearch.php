@@ -19,7 +19,7 @@ class StaffSearch extends Staff
     {
         return [
             [['id', 'userid', 'sex', 'age', 'position'], 'integer'],
-            [['name', 'diploma', 'photo', 'campus', 'phone'], 'safe'],
+            [['name', 'diploma', 'photo', 'school', 'phone'], 'safe'],
         ];
     }
 
@@ -69,7 +69,7 @@ class StaffSearch extends Staff
         $query->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'diploma', $this->diploma])
             ->andFilterWhere(['like', 'photo', $this->photo])
-            ->andFilterWhere(['like', 'campus', $this->campus])
+            ->andFilterWhere(['like', 'school', $this->school])
             ->andFilterWhere(['like', 'phone', $this->phone]);
 
         return $dataProvider;
