@@ -23,13 +23,8 @@ class WeeklyController extends CommonController
     {
         $searchModel = new WeeklySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        //职位权限限制
-        $staff = $this->getStaff();
-        if($staff['staff'])
-        {
-            if($staff['staff']->position != '校长')
-                $dataProvider->query->andWhere(['category_id'=>$staff['staff']->category_id]);
-        }
+        //限制跨校区操作
+        $dataProvider = $this->schoolRule($dataProvider);
 
         return $this->render('/weekly_index', [
             'searchModel' => $searchModel,
@@ -46,6 +41,8 @@ class WeeklyController extends CommonController
         $dataProvider = $searchModel->search($data);
         $dataProvider->query->andFilterWhere(['check1'=>0]);
         $dataProvider->query->andWhere(['remark'=>null]);
+        //限制跨校区操作
+        $dataProvider = $this->schoolRule($dataProvider);
 
 
         return $this->render('/customer-index', [
@@ -75,6 +72,8 @@ class WeeklyController extends CommonController
         $dataProvider->query->andFilterWhere(['check1'=>1]);
         $dataProvider->query->andFilterWhere(['check2'=>0]);
         $dataProvider->query->andWhere(['remark'=>null]);
+        //限制跨校区操作
+        $dataProvider = $this->schoolRule($dataProvider);
 
         return $this->render('/president-index', [
             'searchModel' => $searchModel,

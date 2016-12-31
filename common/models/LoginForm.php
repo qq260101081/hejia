@@ -11,7 +11,7 @@ class LoginForm extends Model
 {
     public $username;
     public $password;
-    public $rememberMe = false;
+    public $rememberMe = true;
 
     private $_user;
 
@@ -42,10 +42,11 @@ class LoginForm extends Model
     {
         if (!$this->hasErrors()) {
             $user = $this->getUser();
-           
-            if (!$user || !$user->validatePassword($this->password)) {
-                $this->addError($attribute, '账号或密码错误.');
-            }
+            if(!$user)
+                $this->addError($attribute, '账号不存在，请联系管理员开通.');
+            elseif (!$user->validatePassword($this->password))
+                $this->addError($attribute, '密码错误.');
+
         }
     }
 

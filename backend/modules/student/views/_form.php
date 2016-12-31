@@ -24,13 +24,16 @@ use yii\helpers\Url;
             ]
         ]); ?>
 
-        <div class="form-group field-student-category_id">
-            <div class="category">
-                <label class="col-sm-2 control-label">所属校区</label>
-                <select class="form-control" id="category"></select>
+        <?php if(!Yii::$app->user->identity->type):;?>
+            <div class="form-group field-student-category_id">
+                <div class="category">
+                    <label class="col-sm-2 control-label">所属校区</label>
+                    <select class="form-control" id="category"></select>
+                </div>
+                <div class="col-sm-8"><div class="help-block"></div></div>
             </div>
-            <div class="col-sm-8"><div class="help-block"></div></div>
-        </div>
+         <?php endif;?>
+
         <?= $form->field($model, 'name')->textInput() ?>
         <?= $form->field($model, 'sex')->dropDownList(['男' => '男', '女' => '女']) ?>
         <?= $form->field($model, 'age')->textInput() ?>
@@ -64,6 +67,7 @@ use yii\helpers\Url;
 
 </div>
 
+<?php if(!Yii::$app->user->identity->type):;?>
 <?php $this->beginBlock('js_end') ?>
     var categoryPath = <?= json_encode(array_keys(isset($categoryPath) ? $categoryPath : []))?>;
     var opts = {
@@ -89,3 +93,4 @@ use yii\helpers\Url;
 <?php $this->endBlock(); ?>
 
 <?php $this->registerJs($this->blocks['js_end'],\yii\web\View::POS_LOAD);//将编写的js代码注册到页面底部 ?>
+<?php endif;?>

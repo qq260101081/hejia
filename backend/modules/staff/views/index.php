@@ -30,19 +30,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'phone',
             [
                 'class' => 'yii\grid\ActionColumn',
-                'template' => '{view} {update} {delete} {open}',
+                'template' => '{view} &nbsp;&nbsp; {update} &nbsp;&nbsp; {delete}',
                 'header' => '操作',
                 'headerOptions'=> ['width'=> '75'],
-                'buttons' => [
-                    'open' => function ($url,$model, $key) {
-                        if($model->userid) return '';
-                        return Html::a('<span class="glyphicon glyphicon-user"></span>',
-                            ['/staff/staff/create-user','id'=>$model->id],
-                            [
-                                'title'=> '开账号',
-                            ] );
-                    },
-                ],
+
             ],
         ],
     ]); ?>

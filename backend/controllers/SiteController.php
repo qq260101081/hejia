@@ -55,11 +55,6 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        $mail = \Yii::$app->mailer->compose();
-        $mail->setTo("260101081@qq.com");
-        $mail ->setSubject('Password reset for ' . \Yii::$app->name);
-        $mail->setHtmlBody("<br>问我我我我我");
-        //var_dump($mail->send());
         return $this->render('index');
     }
 

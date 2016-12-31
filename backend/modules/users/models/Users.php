@@ -53,16 +53,15 @@ class Users extends \yii\db\ActiveRecord
         return [
             [['username','name'], 'required'],
             [['status','name'], 'string'],
-            [['created_at', 'updated_at','sex','confine'], 'integer'],
+            [['created_at', 'updated_at','sex'], 'integer'],
             ['username', 'string', 'max' => 60],
             ['phone', 'string', 'max' => 15],
             [['password'], 'string', 'max' => 16],
             [['password'], 'string', 'min' => 6],
             [['auth_key','type'], 'string', 'max' => 32],
             [['password_hash'], 'string', 'max' => 65],
-            [['email'], 'string', 'max' => 45],
+            [['email','role'], 'string', 'max' => 45],
             [['username'], 'unique'],
-            ['role','safe']
         ];
     }
 
@@ -82,7 +81,6 @@ class Users extends \yii\db\ActiveRecord
             'status' => Yii::t('app', '状态'),
             'password' => Yii::t('app', '密码'),
             'role' => Yii::t('app', '用户角色'),
-            'confine' => '受职位权限',
             'created_at' => Yii::t('app', '创建于'),
             'updated_at' => Yii::t('app', '更新于'),
         ];

@@ -2,8 +2,10 @@
 
 namespace app\modules\student\controllers;
 
+
 use Yii;
 use backend\modules\service\models\ServiceCategory;
+use app\modules\staff\models\Staff;
 use app\modules\student\models\Patriarch;
 use app\modules\student\models\Student;
 use app\modules\student\models\StudentSearch;
@@ -22,13 +24,8 @@ class StudentController extends CommonController
     {
         $searchModel = new StudentSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        //职位权限限制
-        $staff = $this->getStaff();
-        if($staff['staff'])
-        {
-            if($staff['staff']->position != '校长')
-                $dataProvider->query->andWhere(['category_id'=>$staff['staff']->category_id]);
-        }
+        //限制跨校区操作
+        $dataProvider = $this->schoolRule($dataProvider);
 
         return $this->render('/index', [
             'searchModel' => $searchModel,
@@ -41,13 +38,8 @@ class StudentController extends CommonController
     {
         $searchModel = new StudentSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        //职位权限限制
-        $staff = $this->getStaff();
-        if($staff['staff'])
-        {
-            if($staff['staff']->position != '校长')
-                $dataProvider->query->andWhere(['category_id'=>$staff['staff']->category_id]);
-        }
+        //限制跨校区操作
+        $dataProvider = $this->schoolRule($dataProvider);
 
         return $this->renderAjax('/modal-list', [
             'searchModel' => $searchModel,
@@ -92,7 +84,13 @@ class StudentController extends CommonController
         $data = Yii::$app->request->post();
 
         if ($data) {
-
+            //如果当前用户为教师，客服，客服主管，校长则默认为本校区
+            if(Yii::$app->user->identity->type)
+            {
+                $staff = Staff::find()->select(['id','category_id','school'])->where(['userid'=>Yii::$app->user->identity->id])->one();
+                $data['Student']['category_id'] = $staff ? $staff->category_id : 0;
+                $data['Student']['school'] = $staff ? $staff->school : '';
+            }
             if($model->load($data) && $model->save())
             {
                 //保存家长信息
@@ -102,20 +100,19 @@ class StudentController extends CommonController
                 $patriarch->save($data);
 
                 Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'保存成功！']);
-                return $this->redirect(['/student/student/view', 'id' => $model->id]);
+                return $this->redirect(['index']);
             }
             else{
                 Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败！']);
             }
         }
-        else
-        {
-            return $this->render('/create', [
-                'model' => $model,
-                'patriarch' => $patriarch,
-                'categoryPath' => $categoryPath,
-            ]);
-        }
+
+        return $this->render('/create', [
+            'model' => $model,
+            'patriarch' => $patriarch,
+            'categoryPath' => $categoryPath,
+        ]);
+
     }
 
     /**
@@ -144,28 +141,28 @@ class StudentController extends CommonController
         $data = Yii::$app->request->post();
 
         if ($data) {
+            $data['Student']['category_id'] = $data['Student']['category_id'] ? $data['Student']['category_id'] : $model->category_id;
+            $data['Student']['school'] = $data['Student']['school'] ? $data['Student']['school'] : $model->school;
 
             if($model->load($data) && $model->save())
             {
                 //保存家长信息
                 $patriarch->load($data);
-                $patriarch->save($data);
+                $patriarch->save();
 
                 Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'保存成功！']);
-                return $this->redirect(['/student/student/view', 'id' => $model->id]);
+                return $this->redirect(['index']);
             }
-            else{
-                Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败！']);
-            }
+
+            Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败！']);
         }
-        else
-        {
-            return $this->render('/update', [
-                'model' => $model,
-                'patriarch' => $patriarch,
-                'categoryPath' => $categoryPath,
-            ]);
-        }
+
+        return $this->render('/update', [
+            'model' => $model,
+            'patriarch' => $patriarch,
+            'categoryPath' => $categoryPath,
+        ]);
+
     }
 
     /**

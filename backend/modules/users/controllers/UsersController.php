@@ -63,7 +63,6 @@ class UsersController extends CommonController
     public function actionCreate()
     {
         $model = new Users();
-        $model->confine = 1;
 
         $dada = Yii::$app->request->post();
         if($dada)
@@ -177,6 +176,15 @@ class UsersController extends CommonController
             $patriarch->userid = 0;
             $patriarch->save();
         }
+
+        //删除对应的角色
+        $role = Yii::$app->getAuthManager()->getRolesByUser($model->id);
+        foreach ($role as $v)
+        {
+            Yii::$app->getAuthManager()->revoke($v, $model->id);
+            break;
+        }
+
 
         $model->delete();
         return $this->redirect(['index']);

@@ -41,7 +41,7 @@ class Staff extends \yii\db\ActiveRecord
             [['photo'], 'string', 'max' => 100],
             [['school'], 'string', 'max' => 90],
             [['phone'], 'string', 'max' => 11],
-            //[['userid'], 'unique'],
+            [['phone'], 'unique'],
         ];
     }
 

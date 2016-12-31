@@ -2,8 +2,8 @@
 
 /* @var $this yii\web\View */
 
-$this->title = '和家服务OA首页';
+$this->title = '欢迎使用和家服务OA';
 ?>
 <div class="site-index">
-    首页
+    <img src="backend/web/images/welcome.jpg" width="100%">
 </div>

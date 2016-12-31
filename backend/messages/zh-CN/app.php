@@ -6,13 +6,13 @@
 return [
     //权限
     'role' => '权限管理',
-    'cfg' => '设置',
+    'cfg' => '网站信息',
     'msg' => '消息服务',
     'events' => '活动资讯',
     'orders' => '订单管理',
     'repository' => '影像资料管理',
     'service' => '和家服务管理',
-    'serviceProduct' => '服务项目列表',
+    'serviceProduct' => '服务项目',
     'site' => '网站',
     'staff' => '员工管理',
     'student' => '学生管理',
@@ -108,6 +108,6 @@ return [
     'Role' => '用户组',
     'Created Role' => '创建用户组',
     'Updated Role' => '更新用户组',
-    'Set Role' => '用户组权限',
+    'Set Role' => '组权限配置',
 
 ];

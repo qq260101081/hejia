@@ -56,7 +56,7 @@ $fieldOptions2 = [
        
         <!-- /.social-auth-links -->
 
-        <a href="#">忘记密码？</a><br>
+        <!--<a href="#">忘记密码？</a><br>-->
 
     </div>
     <!-- /.login-box-body -->

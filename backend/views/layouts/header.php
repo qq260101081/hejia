@@ -32,7 +32,7 @@ use yii\helpers\Url;
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-left">
-                                <a href="<?=Url::to(['user/view','id'=>Yii::$app->user->identity->id])?>" class="btn btn-default btn-flat">用户信息</a>
+                                <a href="<?=Url::to(['/users/users/view','id'=>Yii::$app->user->identity->id])?>" class="btn btn-default btn-flat">用户信息</a>
                             </div>
                             <div class="pull-right">
                                 <?= Html::a(

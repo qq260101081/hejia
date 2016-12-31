@@ -33,9 +33,8 @@ use yii\helpers\Url;
 
         <?= $form->field($model, 'name')->textInput() ?>
 
+        <?= $form->field($model, 'position')->dropDownList(Yii::$app->params['position']) ?>
         <?= $form->field($model, 'sex')->dropDownList(['男' => '男', '女' => '女']) ?>
-
-        <?= $form->field($model, 'age')->textInput() ?>
 
         <?= $form->field($model, 'diploma')->dropDownList([
             '博士' => '博士',
@@ -44,6 +43,8 @@ use yii\helpers\Url;
             '专科' => '专科',
             '高中' => '高中',
         ]) ?>
+
+        <?= $form->field($model, 'age')->textInput() ?>
 
         <?=
         $form->field($model, 'photo')->widget(FileInput::classname(), [
@@ -61,7 +62,7 @@ use yii\helpers\Url;
         ]);
         ?>
 
-        <?= $form->field($model, 'position')->dropDownList(Yii::$app->params['position']) ?>
+
 
         <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
         <?= Html::hiddenInput('Staff[category_id]','', ['id' => 'category_id'])?>

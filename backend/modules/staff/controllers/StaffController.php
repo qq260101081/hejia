@@ -26,17 +26,8 @@ class StaffController extends CommonController
     {
         $searchModel = new StaffSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        //职位权限限制
-        $staff = $this->getStaff();
-
-        if($staff['staff'])
-        {
-            $dataProvider->query->andWhere(['category_id'=>$staff['staff']->category_id]);
-            foreach ($staff['shield'] as $v)
-            {
-                $dataProvider->query->andWhere(['<>','position',$v]);
-            }
-        }
+        //限制跨校区操作
+        $dataProvider = $this->schoolRule($dataProvider);
 
         return $this->render('/index', [
             'searchModel' => $searchModel,
@@ -79,48 +70,49 @@ class StaffController extends CommonController
 
         $data = Yii::$app->request->post();
 
-        if ($data) {
+        if ($data)
+        {
             $listImgFile = Common::uploadFile('Staff[photo]');
             if($listImgFile) $data['Staff']['photo'] = $listImgFile['path'];
 
-            if($model->load($data) && $model->save())
+            if($model->load($data))
             {
+                //开通员工账号
+                $user = new Users();
+                $user->type = 'staff';
+
+                if($model->position=='校长')
+                    $user->role = 'principal';
+                elseif ($model->position=='老师')
+                    $user->role = 'teacher';
+                elseif ($model->position=='客服')
+                    $user->role = 'customer';
+                elseif ($model->position=='客服主管')
+                    $user->role = 'customer_super';
+
+                $user->name = $model->name;
+                $user->username = $model->phone;
+                $user->password_hash = Yii::$app->security->generatePasswordHash(substr($user->username, -6));
+                $user->auth_key = Yii::$app->security->generateRandomString();
+                if($user->save())
+                {
+                    $model->userid = $user->id;
+                    //分配到权限组
+                    $role = Yii::$app->getAuthManager()->createRole($user->role);
+                    Yii::$app->getAuthManager()->assign($role, $user->id);
+                }
+
+                $model->save();
+
                 Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'保存成功！']);
-                return $this->redirect(['/staff/staff/view', 'id' => $model->id]);
+                return $this->redirect(['index']);
             }
-            else{
-                Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败！']);
-            }
+            Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败！']);
         }
-        else
-        {
-            return $this->render('/create', [
-                'model' => $model,
-                'categoryPath' => $categoryPath,
-            ]);
-        }
-    }
-
-    //给员工开账号
-    public function actionCreateUser($id)
-    {
-        $model = $this->findModel($id);
-
-        //USER表添加用户
-        $user = new Users();
-        $user->type = 'staff';
-        $user->name = $model->name;
-        $user->username = $model->phone;
-        $user->password_hash = Yii::$app->security->generatePasswordHash(substr($model->phone, -6));
-        $user->auth_key = Yii::$app->security->generateRandomString();
-        if($user->save())
-        {
-            //更新员工表
-            $model->userid = $user->id;
-            $model->save();
-        }
-        //print_r($user->getErrors());die;
-        return $this->redirect(['index']);
+        return $this->render('/create', [
+            'model' => $model,
+            'categoryPath' => $categoryPath,
+        ]);
     }
 
     /**
@@ -155,22 +147,48 @@ class StaffController extends CommonController
                 @unlink(\Yii::getAlias('@upPath') . '/' . $model->photo);
             }
 
-            if($model->load($data) && $model->save())
+            if($model->load($data))
             {
+                //如果电话（用户名有改动）或 岗位有改动则更新用户表
+                if($model->phone != $model->oldAttributes['phone'] || $model->position != $model->oldAttributes['position'])
+                {
+                    $user = Users::findOne($model->userid);
+                    $user->username = $model->phone;
+
+                    if($model->position=='校长')
+                        $user->role = 'principal';
+                    elseif ($model->position=='老师')
+                        $user->role = 'teacher';
+                    elseif ($model->position=='客服')
+                        $user->role = 'customer';
+                    elseif ($model->position=='客服主管')
+                        $user->role = 'customer_super';
+                    //如果岗位发生变化
+                    if($model->position != $model->oldAttributes['position'])
+                    {
+                        //更新用户角色
+                        $role = Yii::$app->getAuthManager()->getRolesByUser($user->id);
+                        foreach ($role as $v)
+                        {
+                            Yii::$app->getAuthManager()->revoke($v, $user->id);
+                            $role = Yii::$app->getAuthManager()->createRole($user->role);
+                            Yii::$app->getAuthManager()->assign($role, $user->id);
+                            break;
+                        }
+                    }
+                    $user->save();
+                }
+
+                $model->save();
                 Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'保存成功！']);
-                return $this->redirect(['/staff/staff/view', 'id' => $model->id]);
+                return $this->redirect(['index']);
             }
-            else{
-                Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败！']);
-            }
+            Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败！']);
         }
-        else
-        {
-            return $this->render('/update', [
-                'model' => $model,
-                'categoryPath' => $categoryPath,
-            ]);
-        }
+        return $this->render('/update', [
+            'model' => $model,
+            'categoryPath' => $categoryPath,
+        ]);
     }
 
     /**
@@ -183,10 +201,19 @@ class StaffController extends CommonController
     {
         $model = $this->findModel($id);
         $user = Users::findOne($model->userid);
-
-        if($user) $user->delete();
+        if($user)
+        {
+            //删除对应的角色
+            $role = Yii::$app->getAuthManager()->getRolesByUser($model->userid);
+            foreach ($role as $v)
+            {
+                Yii::$app->getAuthManager()->revoke($v, $model->userid);
+                break;
+            }
+            //删除对应的用户
+            $user->delete();
+        }
         $model->delete();
-
         return $this->redirect(['index']);
     }
 

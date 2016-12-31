@@ -36,49 +36,28 @@ class CommonController extends Controller
         ];
     }
 
+    //路由过滤
     public function beforeAction($action) {
 
         if(Yii::$app->user->isGuest)
         {
             return $this->redirect(['site/login']);
         }
-
+        $actionID = Yii::$app->controller->action->id;
         $route = \Yii::$app->requestedRoute ? \Yii::$app->requestedRoute : \Yii::$app->defaultRoute . '/index';
-
-        if(Yii::$app->user->can($route))
+        if(Yii::$app->user->can($route) || Yii::$app->request->isAjax || $actionID=='upload')
         {
             return true;
         }
         die('<div style="color:red; padding-top:50px;text-align:center;">您没有权限执行此操作</div>');
     }
 
-    //获取员工
-    public function getStaff()
+    //限制跨校区操作
+    public function schoolRule($dataProvider)
     {
-        $data = ['staff'=>null, 'shield'=>[]];
-        if(Yii::$app->user->identity->type == 'staff')
-        {
-            $data['staff'] = Staff::find()->select(['id','position','category_id'])->where(['userid'=>Yii::$app->user->identity->id])->one();
-            if($data['staff'])
-            {
-                switch ($data['staff']->position)
-                {
-                    case '校长':
-                        break;
-                    case '教师':
-                        //教师不能看校长信息，过滤校长
-                        $data['shield'][] = '校长';
-                        $data['shield'][] = '客服';
-                        break;
-                    case '客服':
-                        //客服不能看校长信息，过滤校长
-                        $data['shield'][] = '教师';
-                        $data['shield'][] = '校长';
-                        break;
-                }
-            }
-        }
-        return $data;
+        $staff = Staff::find()->select(['id','category_id'])->where(['userid'=>Yii::$app->user->identity->id])->one();
+        if($staff) $dataProvider->query->andWhere(['category_id'=>$staff->category_id]);
+        return $dataProvider;
     }
 
 }

@@ -34,7 +34,6 @@ use yii\helpers\Url;
     <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
-    <?= $form->field($model, 'confine')->dropDownList(['否','是']) ?>
 
     <?= $form->field($model, 'role')->dropDownList(
         \yii\helpers\ArrayHelper::map(Yii::$app->getAuthManager()->getRoles(), 'name', 'description'),

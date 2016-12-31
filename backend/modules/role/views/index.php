@@ -38,7 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         &nbsp;&nbsp;&nbsp;
                         <a href="<?= Url::to(['/role/role/delete', 'id' => $v->name]);?>" title="删除"><span class="glyphicon glyphicon-trash"></span></a>
                         &nbsp;&nbsp;&nbsp;
-                        <a href="<?= Url::to(['/role/role/permissions', 'id' => $v->name]);?>" title="权限设置"><span class="glyphicon glyphicon-lock"></span></a>
+                        <a href="<?= Url::to(['/role/role/permissions', 'id' => $v->name]);?>" title="权限配置"><span class="glyphicon glyphicon-lock"></span></a>
                     </td>
                 </tr>
                 <?php endforeach;?>
