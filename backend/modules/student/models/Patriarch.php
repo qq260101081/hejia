@@ -29,6 +29,11 @@ class Patriarch extends \yii\db\ActiveRecord
         return '{{%user_patriarch}}';
     }
 
+    //获取学生
+    public function getStudent()
+    {
+        return $this->hasOne(Student::className(), ['id' => 'student_id']);
+    }
 
     /**
      * @inheritdoc

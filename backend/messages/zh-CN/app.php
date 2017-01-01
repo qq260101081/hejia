@@ -97,9 +97,9 @@ return [
     'Create Events' => '创建活动资讯',
     'Update Events' => '更新活动资讯',
     //和家服务
-    'Auxiliary' => '托辅服务',
-    'Create Auxiliary' => '创建托辅服务',
-    'Update Auxiliary' => '更新托辅服务',
+    'Auxiliary' => '校区管理',
+    'Create Auxiliary' => '创建校区管理',
+    'Update Auxiliary' => '更新校区管理',
 
     'Family' => '家庭服务',
     'Create Family' => '创建家庭服务',

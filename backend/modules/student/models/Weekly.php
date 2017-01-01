@@ -38,7 +38,8 @@ class Weekly extends \yii\db\ActiveRecord
             ['synthesize', 'string', 'max'=>300],
             ['remark', 'string', 'max'=>600],
             ['remark', 'default', 'value'=>NULL],
-            ['created_at', 'default', 'value' => time()]
+            ['created_at', 'default', 'value' => time()],
+            ['userid', 'default', 'value' => Yii::$app->user->identity->id],
         ];
     }
 
@@ -53,6 +54,7 @@ class Weekly extends \yii\db\ActiveRecord
             'student_name' => Yii::t('app', '学生姓名'),
             'discipline' => Yii::t('app', '纪律'),
             'sleep' => Yii::t('app', '睡眠'),
+            'userid' => Yii::t('app', '老师'),
             'diet' => Yii::t('app', '饮食'),
             'remark' => Yii::t('app', '不通过原因'),
             'study' => Yii::t('app', '学习'),

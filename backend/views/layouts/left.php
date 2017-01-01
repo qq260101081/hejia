@@ -39,7 +39,7 @@
                         'items' => [
                             ['label' => '服务分类', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/service/service-category/index']],
                             ['label' => '家庭服务', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/service/family/index']],
-                            ['label' => '托辅服务', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/service/auxiliary/index']],
+                            ['label' => '校区管理', 'icon' => 'fa fa-dot-circle-o', 'url' => ['/service/auxiliary/index']],
                         ],
                     ],
                     [

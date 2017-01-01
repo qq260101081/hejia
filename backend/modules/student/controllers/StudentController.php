@@ -25,8 +25,7 @@ class StudentController extends CommonController
         $searchModel = new StudentSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         //限制跨校区操作
-        $dataProvider = $this->schoolRule($dataProvider);
-
+        $dataProvider = $this->schoolRule($dataProvider,Student::tableName().'.');
         return $this->render('/index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -39,7 +38,7 @@ class StudentController extends CommonController
         $searchModel = new StudentSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         //限制跨校区操作
-        $dataProvider = $this->schoolRule($dataProvider);
+        $dataProvider = $this->schoolRule($dataProvider, Student::tableName().'.');
 
         return $this->renderAjax('/modal-list', [
             'searchModel' => $searchModel,

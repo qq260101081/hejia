@@ -24,6 +24,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'name',
+            [
+                'label' => '家长',
+                'headerOptions'=>['width' => 100],
+                'value' => 'patriarch.name'
+            ],
             'sex',
             'age',
             'school',

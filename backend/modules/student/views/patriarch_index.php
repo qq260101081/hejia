@@ -21,8 +21,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'columns' => [
 
                 'id',
-                'student_id',
                 'name',
+                [
+                    'label' => '学生',
+                    'headerOptions'=>['width' => 100],
+                    'value' => 'student.name'
+                ],
                 'relation',
                 'phone',
                 'urgency_person',

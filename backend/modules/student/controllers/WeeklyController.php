@@ -3,6 +3,7 @@
 namespace app\modules\student\controllers;
 
 
+use app\modules\users\models\Users;
 use Yii;
 use app\modules\student\models\Weekly;
 use app\modules\student\models\WeeklySearch;
@@ -40,9 +41,8 @@ class WeeklyController extends CommonController
 
         $dataProvider = $searchModel->search($data);
         $dataProvider->query->andFilterWhere(['check1'=>0]);
+        $dataProvider->query->andFilterWhere(['check2'=>1]);
         $dataProvider->query->andWhere(['remark'=>null]);
-        //限制跨校区操作
-        $dataProvider = $this->schoolRule($dataProvider);
 
 
         return $this->render('/customer-index', [
@@ -69,7 +69,6 @@ class WeeklyController extends CommonController
     {
         $searchModel = new WeeklySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        $dataProvider->query->andFilterWhere(['check1'=>1]);
         $dataProvider->query->andFilterWhere(['check2'=>0]);
         $dataProvider->query->andWhere(['remark'=>null]);
         //限制跨校区操作
@@ -122,8 +121,11 @@ class WeeklyController extends CommonController
      */
     public function actionView($id)
     {
+        $model = $this->findModel($id);
+        $user = Users::findOne($model->userid);
+        $model->userid = $user->name;
         return $this->render('/weekly_view', [
-            'model' => $this->findModel($id),
+            'model' => $model,
         ]);
     }
 

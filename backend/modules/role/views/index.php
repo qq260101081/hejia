@@ -19,8 +19,8 @@ $this->params['breadcrumbs'][] = $this->title;
             <table class="table table-striped table-bordered">
                 <thead>
                     <tr>
-                        <th>角色</th>
-                        <th>描述</th>
+                        <th>用户组英文</th>
+                        <th>用户组名称</th>
                         <th>更新时间</th>
                         <th>创建时间</th>
                         <th width="80">操作</th>

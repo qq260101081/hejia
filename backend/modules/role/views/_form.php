@@ -24,8 +24,8 @@ use yii\helpers\Url;
             ]
         ]); ?>
 
-        <?= $form->field($model, 'name')->textInput() ?>
-        <?= $form->field($model, 'description')->textInput() ?>
+        <?= $form->field($model, 'name')->textInput(['placeholder'=>'字段唯一，英文字母数字组合']) ?>
+        <?= $form->field($model, 'description')->textInput(['placeholder'=>'例如：老师，老师用户组']) ?>
 
     <div class="box-footer">
         <a href="<?= Url::to(['/role/role/index']);?>" class="btn btn-info fa fa-reply"></a>

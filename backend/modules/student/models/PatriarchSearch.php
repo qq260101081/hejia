@@ -41,7 +41,7 @@ class PatriarchSearch extends Patriarch
      */
     public function search($params)
     {
-        $query = Patriarch::find();
+        $query = Patriarch::find()->joinWith('student');
 
         // add conditions that should always apply here
 

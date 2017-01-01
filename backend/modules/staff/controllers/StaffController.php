@@ -40,10 +40,15 @@ class StaffController extends CommonController
      * @param integer $id
      * @return mixed
      */
-    public function actionView($id)
+    public function actionView($id,$userid=0)
     {
+        if($userid)
+            $user = Staff::find()->where(['userid'=>$userid])->one();
+        else
+            $user = $this->findModel($id);
+
         return $this->render('/view', [
-            'model' => $this->findModel($id),
+            'model' => $user,
         ]);
     }
 
@@ -72,6 +77,32 @@ class StaffController extends CommonController
 
         if ($data)
         {
+            $allow = false;
+            $position = Yii::$app->params['position'];
+            if(Yii::$app->user->identity->role == 'principal') //校长只能开以下职位员工
+                $position = ['老师'=>'老师'];
+            elseif(Yii::$app->user->identity->role == 'customer') //客服只能开以下职位员工
+                $position = ['老师'=>'老师','校长'=>'校长'];
+            elseif(Yii::$app->user->identity->role == 'customer_super') //客服主管只能开以下职位员工
+                $position = ['老师'=>'老师','校长'=>'校长','客服'=>'客服'];
+
+            foreach ($position as $v)
+            {
+                if($data['Staff']['position'] == $v)
+                {
+                    $allow = true;
+                    break;
+                }
+            }
+            if(!$allow)
+            {
+                Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败！您不能创建岗位为：'.$data['Staff']['position'].'员工']);
+                return $this->render('/create', [
+                    'model' => $model,
+                    'categoryPath' => $categoryPath,
+                ]);
+            }
+
             $listImgFile = Common::uploadFile('Staff[photo]');
             if($listImgFile) $data['Staff']['photo'] = $listImgFile['path'];
 
@@ -178,6 +209,8 @@ class StaffController extends CommonController
                     }
                     $user->save();
                 }
+
+                if($data['Staff']['password']) $model->password_hash = Yii::$app->security->generatePasswordHash($data['Staff']['password']);
 
                 $model->save();
                 Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'保存成功！']);

@@ -11,7 +11,7 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Role'), 'url' => ['i
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<div class="presscentre-form box box-info">
+<div class="permissions box box-info">
     <div class="box-header with-border">
         <h5 class="box-title"><?= $this->title; ?>: <b style="color: #CC0000"><?= $role->description;?></b></h5>
     </div>
@@ -26,11 +26,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="row">
     <?php foreach ($allPermissions as $k => $v):;?>
-        <div class="col-md-3">
-            <div class="box box-warning">
+        <div class="col-md-12">
+            <div class="box box-default">
                 <div class="box-header with-border">
                     <h3 class="box-title"><?=Yii::t('app', $k);?></h3>
-
+                    <span class="select-all"><a class="btn-sm btn-default" href="javascript:;">全选</a></span>
                     <div class="box-tools pull-right">
                         <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                         </button>
@@ -64,3 +64,20 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php ActiveForm::end(); ?>
 </div>
+
+
+<?php $this->beginBlock("checkjs") ?>
+var $form, $checkallbox;
+
+$('.select-all').on('click', function(event) {
+var $checkbox = $(this).find(':checkbox');
+if (event.shiftKey) {
+$checkbox.prop('disabled', !$checkbox.prop('disabled'));
+$checkallbox = $checkbox.parents('fieldset').find('legend input:checkbox');
+$checkallbox.checkallbox('update');
+event.preventDefault();
+}
+
+});
+<?php $this->endBlock() ?>
+<?php $this->registerJs($this->blocks["checkjs"], \yii\web\View::POS_END); ?>

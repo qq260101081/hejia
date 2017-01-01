@@ -41,7 +41,7 @@ class Orders extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['student_id','product_id','stime','etime'], 'required'],
+            [['student_id','student_name','product_name','product_id','stime','etime'], 'required'],
             [['student_id', 'product_id','created_at'], 'integer'],
             [['money'], 'number'],
             [['student_name', 'principal'], 'string', 'max' => 12],

@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     4=>'拓展班',
                     5=>'基础服务',
                     0=>'其他',
-                ],['prompt'=>'全部'] )
+                ],['prompt'=>'全部','class' => 'form-control'] )
             ],
             'created_at:date',
 

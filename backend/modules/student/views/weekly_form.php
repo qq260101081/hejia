@@ -29,18 +29,19 @@ use yii\bootstrap\Modal;
             'data-toggle'=>'modal',
             'data-target'=>'#student-modal',
             'id' => 'student_name',
-            'readonly'=> true
+            'readonly'=> true,
+            'placeholder'=>'请选择学生'
         ]) ?>
 
-        <?= $form->field($model, 'discipline')->textInput() ?>
+        <?= $form->field($model, 'discipline')->textInput(['placeholder'=>'填写数字，最大为5星']) ?>
 
-        <?= $form->field($model, 'sleep')->textInput() ?>
+        <?= $form->field($model, 'sleep')->textInput(['placeholder'=>'填写数字，最大为5星']) ?>
 
-        <?= $form->field($model, 'diet')->textInput() ?>
+        <?= $form->field($model, 'diet')->textInput(['placeholder'=>'填写数字，最大为5星']) ?>
 
-        <?= $form->field($model, 'study')->textInput() ?>
+        <?= $form->field($model, 'study')->textInput(['placeholder'=>'填写数字，最大为5星']) ?>
 
-        <?= $form->field($model, 'synthesize')->textarea() ?>
+        <?= $form->field($model, 'synthesize')->textarea(['placeholder'=>'100字以内评语','rows'=>5]) ?>
 
         <?= Html::hiddenInput('Weekly[student_id]',$model->student_id,['id'=>'student_id']);?>
         <?= Html::hiddenInput('Weekly[category_id]',$model->category_id,['id'=>'category_id']);?>

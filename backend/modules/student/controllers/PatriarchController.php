@@ -25,7 +25,7 @@ class PatriarchController extends CommonController
         $searchModel = new PatriarchSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         //限制跨校区操作
-        $dataProvider = $this->schoolRule($dataProvider);
+        $dataProvider = $this->schoolRule($dataProvider, Patriarch::tableName().'.');
 
         return $this->render('/patriarch_index', [
             'searchModel' => $searchModel,
@@ -41,7 +41,7 @@ class PatriarchController extends CommonController
         //给家长开有账号的才显示
         $dataProvider->query->andFilterWhere(['>', 'userid', '0']);
         //限制跨校区操作
-        $dataProvider = $this->schoolRule($dataProvider);
+        $dataProvider = $this->schoolRule($dataProvider, Patriarch::tableName().'.');
 
         return $this->renderAjax('/patriarch-modal-list2', [
             'searchModel' => $searchModel,
@@ -57,7 +57,7 @@ class PatriarchController extends CommonController
         //给家长开有账号的才显示
         $dataProvider->query->andFilterWhere(['>', 'userid', '0']);
         //限制跨校区操作
-        $dataProvider = $this->schoolRule($dataProvider);
+        $dataProvider = $this->schoolRule($dataProvider, Patriarch::tableName().'.');
 
 
         return $this->renderAjax('/patriarch-modal-list', [
@@ -112,7 +112,10 @@ class PatriarchController extends CommonController
         {
             //更新家长表
             $model->userid = $user->id;
-            $model->save();
+            if($model->save())
+                Yii::$app->session->setFlash('success', [
+                    'delay'=>9000,'message'=>'开通成功！'
+                ]);
             return $this->redirect(['/users/users/view', 'id' => $user->id]);
         }
     }

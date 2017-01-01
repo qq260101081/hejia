@@ -41,7 +41,7 @@ class StudentSearch extends Student
      */
     public function search($params)
     {
-        $query = Student::find();
+        $query = Student::find()->joinWith('patriarch');
 
         // add conditions that should always apply here
 

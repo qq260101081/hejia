@@ -33,7 +33,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'sex',
             'age',
             'diploma',
-            'photo',
+            [
+                'attribute'=>'photo',
+                'format' => 'raw',
+                'value'=> 'upload/'.$model->photo,
+                'format' => ['image',['width'=>'100']],
+            ],
             'position',
             'school',
             'phone',

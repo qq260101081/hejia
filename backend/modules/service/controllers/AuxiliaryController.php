@@ -38,6 +38,8 @@ class AuxiliaryController extends CommonController
     {
         $searchModel = new AuxiliarySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        //限制跨校区操作
+        $dataProvider = $this->schoolRule($dataProvider);
 
         return $this->render('/auxiliary-index', [
             'searchModel' => $searchModel,

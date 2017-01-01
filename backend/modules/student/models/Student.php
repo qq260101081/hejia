@@ -39,6 +39,11 @@ class Student extends Patriarch
         return '{{%student}}';
     }
 
+    //获取家长
+    public function getPatriarch()
+    {
+        return $this->hasOne(Patriarch::className(), ['student_id' => 'id']);
+    }
     /**
      * @inheritdoc
      */

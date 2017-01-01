@@ -91,7 +91,8 @@ use kartik\date\DatePicker;
 Modal::begin([
     'id' => 'student-modal',
     'header' => '<h4 class="modal-title">选取学生</h4>',
-    'footer' => '<a href="#" class="btn btn-primary" data-dismiss="modal">关闭</a>',
+    'footer' => '<a href="'.Url::to(['/student/student/create']).'" class="btn btn-primary pull-left">新增学生</a>
+<a href="#" class="btn btn-primary" data-dismiss="modal">关闭</a>',
 ]);
 
 $getStudentUrl = Url::toRoute('/student/student/modal-list');//弹窗的html内容，下面的js会调用获得该页面的Html内容，直接填充在弹框中
@@ -107,8 +108,8 @@ Modal::end();
 
 Modal::begin([
     'id' => 'product-modal',
-    'header' => '<h4 class="modal-title">选取产品</h4>',
-    'footer' => '<a href="#" class="btn btn-primary" data-dismiss="modal">关闭</a>',
+    'header' => '<h4 class="modal-title">选取项目</h4>',
+    'footer' => '<a href="'.Url::to(['/serviceProduct/service-product/create']).'" class="btn btn-primary pull-left">新增项目</a><a href="#" class="btn btn-primary" data-dismiss="modal">关闭</a>',
 ]);
 $getProductUrl = Url::toRoute('/serviceProduct/service-product/modal-list');//弹窗的html内容，下面的js会调用获得该页面的Html内容，直接填充在弹框中
 $js = <<<JS

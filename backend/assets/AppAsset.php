@@ -17,6 +17,7 @@ class AppAsset extends AssetBundle
     public $js = [
         'backend/web/js/comm.js',
         'backend/web/js/linkagesel-min.js',
+        'backend/web/js/jquery.checkallbox.min.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
