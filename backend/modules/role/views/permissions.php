@@ -26,11 +26,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="row">
     <?php foreach ($allPermissions as $k => $v):;?>
-        <div class="col-md-12">
+        <fieldset class="col-md-12">
             <div class="box box-default">
                 <div class="box-header with-border">
                     <h3 class="box-title"><?=Yii::t('app', $k);?></h3>
-                    <span class="select-all"><a class="btn-sm btn-default" href="javascript:;">全选</a></span>
+                    <span class="select-all"><input type="checkbox" ID="checkall<?=$k;?>"/></span>
                     <div class="box-tools pull-right">
                         <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                         </button>
@@ -51,7 +51,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <!-- /.box-body -->
             </div>
             <!-- /.box -->
-        </div>
+        </fieldset>
     <?php endforeach;?>
 </div>
 
@@ -67,17 +67,15 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 <?php $this->beginBlock("checkjs") ?>
-var $form, $checkallbox;
-
-$('.select-all').on('click', function(event) {
-var $checkbox = $(this).find(':checkbox');
-if (event.shiftKey) {
-$checkbox.prop('disabled', !$checkbox.prop('disabled'));
-$checkallbox = $checkbox.parents('fieldset').find('legend input:checkbox');
-$checkallbox.checkallbox('update');
-event.preventDefault();
-}
-
+$('[id^=checkall]').click(function(){
+$(this).closest('fieldset').find('input').not(this).prop('checked',this.checked);
 });
+
+$(':checkbox').not('[id^=checkall]').click(function(){
+var all = $(this).closest('fieldset').find('[id^=checkall]');
+var chks = $(this).closest('fieldset').find('input').not(all);
+
+all.prop('checked', chks.length == chks.filter(':checked').length);
+})
 <?php $this->endBlock() ?>
 <?php $this->registerJs($this->blocks["checkjs"], \yii\web\View::POS_END); ?>

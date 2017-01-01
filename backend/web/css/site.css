@@ -58,12 +58,9 @@ form .help-block {
 	float: left;
 	padding: 0 10px;
 }
-.permissions .row .checkbox input {
+.permissions .row .checkbox input,
+.permissions .row .select-all input {
 	width: 18px;
 	height: 18px;
 }
-.permissions .row .select-all {
-	font-size: 12px;
-	font-weight: bold;
-	margin-right: 30px;
-}
+
