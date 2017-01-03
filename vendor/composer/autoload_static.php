@@ -23,6 +23,14 @@ class ComposerStaticInit1ffc994a86380a5009bb73dcd55c96bb
             'yii\\bootstrap\\' => 14,
             'yii\\' => 4,
         ),
+        'p' => 
+        array (
+            'phpDocumentor\\Reflection\\' => 25,
+        ),
+        'm' => 
+        array (
+            'mikehaertl\\tmp\\' => 15,
+        ),
         'r' => 
         array (
             'rmrevin\\yii\\fontawesome\\' => 24,
@@ -32,6 +40,9 @@ class ComposerStaticInit1ffc994a86380a5009bb73dcd55c96bb
             'kartik\\select2\\' => 15,
             'kartik\\plugins\\fileinput\\' => 25,
             'kartik\\plugins\\depdrop\\' => 23,
+            'kartik\\grid\\' => 12,
+            'kartik\\export\\' => 14,
+            'kartik\\dialog\\' => 14,
             'kartik\\file\\' => 12,
             'kartik\\depdrop\\' => 15,
             'kartik\\base\\' => 12,
@@ -46,11 +57,47 @@ class ComposerStaticInit1ffc994a86380a5009bb73dcd55c96bb
         ),
         'c' => 
         array (
+            'codemix\\excelexport\\' => 20,
             'cebe\\markdown\\' => 14,
+        ),
+        'W' => 
+        array (
+            'Webmozart\\Assert\\' => 17,
+        ),
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Component\\Yaml\\' => 23,
+            'Symfony\\Component\\Finder\\' => 25,
+            'Symfony\\Component\\EventDispatcher\\' => 34,
+            'Symfony\\Component\\DomCrawler\\' => 29,
+            'Symfony\\Component\\Debug\\' => 24,
+            'Symfony\\Component\\CssSelector\\' => 30,
+            'Symfony\\Component\\Console\\' => 26,
+            'Symfony\\Component\\BrowserKit\\' => 29,
+        ),
+        'P' => 
+        array (
+            'Psr\\Log\\' => 8,
+            'Psr\\Http\\Message\\' => 17,
+        ),
+        'G' => 
+        array (
+            'GuzzleHttp\\Psr7\\' => 16,
         ),
         'F' => 
         array (
             'Faker\\' => 6,
+        ),
+        'D' => 
+        array (
+            'Doctrine\\Instantiator\\' => 22,
+            'DeepCopy\\' => 9,
+        ),
+        'C' => 
+        array (
+            'Codeception\\Extension\\' => 22,
+            'Codeception\\' => 12,
         ),
     );
 
@@ -91,6 +138,28 @@ class ComposerStaticInit1ffc994a86380a5009bb73dcd55c96bb
         array (
             0 => __DIR__ . '/..' . '/rmrevin/yii2-fontawesome',
         ),
+        'phpDocumentor\\Reflection\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+        ),
+        'mikehaertl\\tmp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mikehaertl/php-tmpfile/src',
+        ),
+        'kartik\\grid\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kartik-v/yii2-grid',
+        ),
+        'kartik\\export\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kartik-v/yii2-export',
+        ),
+        'kartik\\dialog\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kartik-v/yii2-dialog',
+        ),
         'kartik\\select2\\' => 
         array (
             0 => __DIR__ . '/..' . '/kartik-v/yii2-widget-select2',
@@ -123,6 +192,10 @@ class ComposerStaticInit1ffc994a86380a5009bb73dcd55c96bb
         array (
             0 => __DIR__ . '/..' . '/dmstr/yii2-adminlte-asset',
         ),
+        'codemix\\excelexport\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/codemix/yii2-excelexport/src',
+        ),
         'cebe\\markdown\\' => 
         array (
             0 => __DIR__ . '/..' . '/cebe/markdown',
@@ -139,6 +212,17 @@ class ComposerStaticInit1ffc994a86380a5009bb73dcd55c96bb
             'cebe\\gravatar\\' => 
             array (
                 0 => __DIR__ . '/..' . '/cebe/yii2-gravatar',
+            ),
+        ),
+        'P' => 
+        array (
+            'Prophecy\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/phpspec/prophecy/src',
+            ),
+            'PHPExcel' => 
+            array (
+                0 => __DIR__ . '/..' . '/phpoffice/phpexcel/Classes',
             ),
         ),
         'O' => 

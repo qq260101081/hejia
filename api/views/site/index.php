@@ -90,7 +90,7 @@ $this->title = '和家主页';
                 <i class="am-icon-edit"></i>
                 <div class="text">
                     <h2>意见反馈</h2>
-                    <p>让我们变得更好</p>
+                    <p>让服务更贴心</p>
                 </div>
             </div>
         </a>

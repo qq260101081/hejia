@@ -184,4 +184,40 @@ return array (
       '@kartik/file' => $vendorDir . '/kartik-v/yii2-widget-fileinput',
     ),
   ),
+    'kartik-v/yii2-dialog' =>
+        array (
+            'name' => 'kartik-v/yii2-dialog',
+            'version' => '1.0.1.0',
+            'alias' =>
+                array (
+                    '@kartik/dialog' => $vendorDir . '/kartik-v/yii2-dialog',
+                ),
+        ),
+    'kartik-v/yii2-grid' =>
+        array (
+            'name' => 'kartik-v/yii2-grid',
+            'version' => '3.1.3.0',
+            'alias' =>
+                array (
+                    '@kartik/grid' => $vendorDir . '/kartik-v/yii2-grid',
+                ),
+        ),
+    'kartik-v/yii2-export' =>
+        array (
+            'name' => 'kartik-v/yii2-export',
+            'version' => '1.2.5.0',
+            'alias' =>
+                array (
+                    '@kartik/export' => $vendorDir . '/kartik-v/yii2-export',
+                ),
+        ),
+    'codemix/yii2-excelexport' =>
+        array (
+            'name' => 'codemix/yii2-excelexport',
+            'version' => '1.0.1.0',
+            'alias' =>
+                array (
+                    '@codemix/excelexport' => $vendorDir . '/codemix/yii2-excelexport/src',
+                ),
+        ),
 );

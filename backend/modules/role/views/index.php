@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Created Role'), ['create'], ['class' => 'btn btn-success btn-xs']) ?>
+        <?php if(Yii::$app->user->can('role/role/create')) echo Html::a(Yii::t('app', 'Created Role'), ['create'], ['class' => 'btn btn-success btn-xs']) ?>
     </p>
             <table class="table table-striped table-bordered">
                 <thead>
@@ -34,11 +34,18 @@ $this->params['breadcrumbs'][] = $this->title;
                     <td><?= date('Y-m-d', $v->createdAt);?></td>
                     <td><?= date('Y-m-d', $v->updatedAt);?></td>
                     <td>
+                        <?php if(Yii::$app->user->can('role/role/update')):;?>
                         <a href="<?= Url::to(['/role/role/update', 'id' => $v->name]);?>" title="修改"><span class="glyphicon glyphicon-pencil"></span></a>
                         &nbsp;&nbsp;&nbsp;
+                        <?php endif;?>
+
+                        <?php if(Yii::$app->user->can('role/role/delete')):;?>
                         <a href="<?= Url::to(['/role/role/delete', 'id' => $v->name]);?>" title="删除"><span class="glyphicon glyphicon-trash"></span></a>
                         &nbsp;&nbsp;&nbsp;
+                        <?php endif;?>
+                        <?php if(Yii::$app->user->can('role/role/permissions')):;?>
                         <a href="<?= Url::to(['/role/role/permissions', 'id' => $v->name]);?>" title="权限配置"><span class="glyphicon glyphicon-lock"></span></a>
+                        <?php endif;?>
                     </td>
                 </tr>
                 <?php endforeach;?>

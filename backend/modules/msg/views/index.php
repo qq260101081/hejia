@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="box-header">
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
     <p>
-        <?= Html::a(Yii::t('app', 'Created Msg'), ['create'], ['class' => 'btn btn-success btn-xs']) ?>
+        <?php if(Yii::$app->user->can('msg/msg-push-logs/create')) echo Html::a(Yii::t('app', 'Created Msg'), ['create'], ['class' => 'btn btn-success btn-xs']) ?>
     </p>
 
 <?php Pjax::begin(); ?>    <?= GridView::widget([

@@ -38,12 +38,25 @@ $this->params['breadcrumbs'][] = $this->title;
                     'header' => '操作',
                     'buttons' => [
                         'open' => function ($url,$model, $key) {
-                            if($model->userid) return '';
-                            return Html::a('<span class="glyphicon glyphicon-user"></span>',
-                                ['/student/patriarch/create-user','id'=>$model->id],
-                                [
-                                'title'=> '开账号',
-                            ] );
+                            if(Yii::$app->user->can('student/patriarch/create-user'))
+                            {
+                                if($model->userid) return '';
+                                return Html::a('<span class="glyphicon glyphicon-user"></span>',
+                                    ['/student/patriarch/create-user','id'=>$model->id],
+                                    [
+                                    'title'=> '开账号',
+                                ] );
+                            }
+                        },
+                        'view' => function ($url, $model) {
+                            return  Yii::$app->user->can('student/patriarch/view') ?
+                                Html::a('<span class="glyphicon glyphicon-eye-open"></span>', $url):
+                                '';
+                        },
+                        'update' => function ($url, $model) {
+                            return  Yii::$app->user->can('student/patriarch/update') ?
+                                Html::a('<span class="glyphicon glyphicon-pencil"></span>', $url):
+                                '';
                         },
                     ],
                 ],

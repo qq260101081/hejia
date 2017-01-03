@@ -38,7 +38,6 @@ class CommonController extends Controller
 
     //路由过滤
     public function beforeAction($action) {
-
         if(Yii::$app->user->isGuest)
         {
             return $this->redirect(['site/login']);

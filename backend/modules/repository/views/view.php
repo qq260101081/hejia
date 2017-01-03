@@ -21,8 +21,8 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="box-body">
                 <img class="img-responsive pad" src="upload/<?= $model->path; ?>">
 
-                <?= Html::a('<i class="fa fa-pencil"></i>更新', ['update', 'id' => $model->id], ['class' => 'btn btn-default btn-xs']) ?>
-                <?= Html::a('<i class="fa fa-institution"></i>删除', ['delete', 'id' => $model->id], ['class' => 'btn btn-default btn-xs']) ?>
+                <?php if(Yii::$app->user->can('repository/repository/update')) echo Html::a('<i class="fa fa-pencil"></i>更新', ['update', 'id' => $model->id], ['class' => 'btn btn-default btn-xs']) ?>
+                <?php if(Yii::$app->user->can('repository/repository/delete')) echo Html::a('<i class="fa fa-institution"></i>删除', ['delete', 'id' => $model->id], ['class' => 'btn btn-default btn-xs']) ?>
 
                 <span class="pull-right text-muted"><?= date('Y-m-d H:i:s', $model->created_at); ?></span>
             </div>

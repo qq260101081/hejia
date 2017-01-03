@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="box-header">
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
     <p>
-        <?= Html::button(Yii::t('app', 'Created Weekly'),
+        <?php if(Yii::$app->user->can('msg/weekly-push-logs/create')) echo Html::button(Yii::t('app', 'Created Weekly'),
             ['class' => 'btn btn-success btn-xs','data-toggle'=>'modal',
                 'data-target'=>'#weekly-modal']
         ) ?>

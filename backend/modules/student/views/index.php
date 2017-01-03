@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Create Student'), ['create'], ['class' => 'btn btn-success btn-xs']) ?>
+        <?php if(Yii::$app->user->can('student/student/create')) echo Html::a(Yii::t('app', 'Create Student'), ['create'], ['class' => 'btn btn-success btn-xs']) ?>
     </p>
     <?php Pjax::begin(); ?>    <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -35,7 +35,28 @@ $this->params['breadcrumbs'][] = $this->title;
             'updated_at:date',
             'created_at:date',
 
-            ['class' => 'yii\grid\ActionColumn','header'=>'操作'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'header'=>'操作',
+                'template' => '{view} {update} {delete}',
+                'buttons' => [
+                    'view' => function ($url, $model) {
+                        return  Yii::$app->user->can('student/student/view') ?
+                        Html::a('<span class="glyphicon glyphicon-eye-open"></span>', $url):
+                        '';
+                    },
+                    'update' => function ($url, $model) {
+                        return  Yii::$app->user->can('student/student/update') ?
+                            Html::a('<span class="glyphicon glyphicon-pencil"></span>', $url):
+                            '';
+                    },
+                    'delete' => function ($url, $model) {
+                        return  Yii::$app->user->can('student/student/delete') ?
+                            Html::a('<span class="glyphicon glyphicon-trash"></span>', $url):
+                            '';
+                    },
+                ],
+            ],
         ],
     ]); ?>
     <?php Pjax::end(); ?></div>

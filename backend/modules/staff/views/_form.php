@@ -4,13 +4,6 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use \kartik\file\FileInput;
 use yii\helpers\Url;
-$position = Yii::$app->params['position'];
-if(Yii::$app->user->identity->role == 'principal') //校长只能开以下职位员工
-    $position = ['老师'=>'老师'];
-elseif(Yii::$app->user->identity->role == 'customer') //客服只能开以下职位员工
-    $position = ['老师'=>'老师','校长'=>'校长'];
-elseif(Yii::$app->user->identity->role == 'customer_super') //客服主管只能开以下职位员工
-    $position = ['老师'=>'老师','校长'=>'校长','客服'=>'客服'];
 
 /* @var $this yii\web\View */
 /* @var $model app\modules\guarantee\models\Guarantee */
@@ -33,12 +26,16 @@ elseif(Yii::$app->user->identity->role == 'customer_super') //客服主管只能
 
         <div class="form-group field-student-category_id">
             <div class="category">
-                <label class="col-sm-2 control-label">所属校区</label>
+
                 <!--如果当前是老师或校长时不允许修改校区-->
                 <?php if(Yii::$app->user->identity->role != 'teacher' && Yii::$app->user->identity->role != 'principal'):;?>
+                    <label class="col-sm-2 control-label">所属校区</label>
                     <select class="form-control" id="category"></select>
                 <?php else:;?>
-                    <div class="col-sm-8" style="margin-top: 7px;"><?php echo $model->school;?></div>
+                    <?php if($model->school):;?>
+                        <label class="col-sm-2 control-label">所属校区</label>
+                        <div class="col-sm-8" style="margin-top: 7px;"><?php echo $model->school;?></div>
+                    <?php endif;?>
                 <?php endif;?>
             </div>
             <div class="col-sm-8"><div class="help-block"></div></div>
@@ -46,15 +43,8 @@ elseif(Yii::$app->user->identity->role == 'customer_super') //客服主管只能
 
         <?= $form->field($model, 'name')->textInput() ?>
 
-        <!--如果当前是老师或校长时不允许修改校区-->
-        <?php if(Yii::$app->user->identity->role != 'teacher' && Yii::$app->user->identity->role != 'principal'):;?>
-            <?= $form->field($model, 'position')->dropDownList($position) ?>
-        <?php else:;?>
-            <div class="form-group field-student-category_id">
-            <label class="col-sm-2 control-label">岗位</label>
-            <div class="col-sm-8" style="margin-top: 7px;"><?php echo $model->position;?></div>
-            </div>
-        <?php endif;?>
+        <?= $form->field($model, 'position')->dropDownList($position) ?>
+
 
 
 
@@ -91,7 +81,7 @@ elseif(Yii::$app->user->identity->role == 'customer_super') //客服主管只能
         <!--如果当前是老师并且不是本人不能修改密码-->
         <?php if(Yii::$app->user->identity->role == 'teacher' && Yii::$app->user->identity->id != $model->userid):;?>
         <?php else:;?>
-        <?= $form->field($model, 'password')->passwordInput() ?>
+            <?php if(isset($model->password_hash)) echo $form->field($model, 'password')->passwordInput();?>
         <?php endif;?>
         <?= Html::hiddenInput('Staff[category_id]','', ['id' => 'category_id'])?>
         <?= Html::hiddenInput('Staff[school]','', ['id' => 'school'])?>

@@ -41,7 +41,7 @@ a:hover{text-decoration: none;}
 .nav li { border-bottom: 1px solid #ddd;padding: 1rem 0;margin: 0 1rem;overflow: hidden;}
 .nav li a { display: block; overflow: hidden; line-height: 31px;}
 .nav img { width: 30px; height: 31px; float: left;}
-.nav li span {color: #000; float: left; margin-left: 2%;}
+.nav li span {float: left; margin-left: 2%;}
 .nav li .am-icon-angle-right{ float: right;}
 .nav li:last-child{ border-bottom: 0;}
 .nav li em{ float: right; font-style: normal; color: #666; margin-right: 2%;}
@@ -82,7 +82,7 @@ a:hover{text-decoration: none;}
 .reg1{ color: #ff2c4c; text-decoration: underline;}
 .password{ float: right; padding-right: 5px; color: #656565;}
 .agree{ padding: 0 3%; font-size: 1.4rem; color:#000;}
-.money-btn{margin: 1rem 3%; color: #FFF; text-align: center; display: block; width: 94%;font-size: 1.6rem; padding: 1rem; border-radius: 5px; background:#e17641; border: 0;}
+.money-btn{margin: 1rem 3%; color: #FFF; text-align: center; display: block; width: 94%;font-size: 1.6rem; padding: 1rem; border-radius: 5px; background:#fe3360; border:0;}
 .yzm{ overflow: hidden; margin: 0 3%; width: 94%; font-size: 1.4rem;}
 .reg-yzm{ float: left; width: 40%; border: 1px solid #ddd; border-radius: 5px; padding: 1rem;}
 .yzm-hq{ background: #ff2c4c; color:#fff; padding: 1rem; border-radius: 5px; width: 55%; float: right;}
@@ -157,7 +157,7 @@ a:hover{text-decoration: none;}
 
 .ch{ clear:both;}
 
-.title-bt{ font-weight:bold; display:block; width:20%; text-align:right; float:left;}
-.title-text{ display:block; float:left; width:75%; padding-left:2%; color:#AAA;}
+.title-bt{ font-weight:bold; display:block; width:30%; text-align:right; float:left;}
+.title-text{ display:block; float:left; width:65%; padding-left:2%; color:#B0B0B0;}
 .title-xin{ width:135px; height:25px; float:left; background:url(../images/xin-g.png) no-repeat; display:block; position:relative;}
 .title-xinhh{width:135px; height:25px; float:left; background:url(../images/xin-l.png) no-repeat; display:block; position:absolute; top:0; left:-2px;}

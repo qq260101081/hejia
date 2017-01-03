@@ -2,10 +2,9 @@
 
 namespace app\modules\student\controllers;
 
-
-use app\modules\users\models\Users;
 use Yii;
 use app\modules\student\models\Weekly;
+use app\modules\student\models\Student;
 use app\modules\student\models\WeeklySearch;
 use app\components\CommonController;
 use yii\web\NotFoundHttpException;
@@ -122,8 +121,8 @@ class WeeklyController extends CommonController
     public function actionView($id)
     {
         $model = $this->findModel($id);
-        $user = Users::findOne($model->userid);
-        $model->userid = $user->name;
+        $student = Student::find()->select(['name','id'])->where(['id'=>$model->student_id])->one();
+        $model->userid = $student->name;
         return $this->render('/weekly_view', [
             'model' => $model,
         ]);
@@ -190,6 +189,30 @@ class WeeklyController extends CommonController
      * @return Weekly the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
+
+    /*
+     * 导出
+     * */
+    public function actionExport()
+    {
+        //print_r($params);die;
+        $searchModel = new WeeklySearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        //限制跨校区操作
+        $dataProvider = $this->schoolRule($dataProvider);
+
+        $file = \Yii::createObject([
+            'class' => 'codemix\excelexport\ExcelFile',
+            'sheets' => [
+                'Weekly' => [
+                    'class' => 'codemix\excelexport\ActiveExcelSheet',
+                    'query' => $dataProvider->query,
+                ]
+            ]
+        ]);
+        $file->send('学生周报.xlsx');
+    }
+
     protected function findModel($id)
     {
         if (($model = Weekly::findOne($id)) !== null) {

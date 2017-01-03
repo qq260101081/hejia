@@ -59,6 +59,15 @@ class StaffController extends CommonController
      */
     public function actionCreate()
     {
+        $position = Yii::$app->params['position'];
+        if(Yii::$app->user->identity->role == 'principal' || Yii::$app->user->identity->role == 'teacher') //校长只能开以下职位员工
+            $position = ['老师'=>'老师'];
+        elseif(Yii::$app->user->identity->role == 'customer') //客服只能开以下职位员工
+            $position = ['老师'=>'老师','校长'=>'校长'];
+        elseif(Yii::$app->user->identity->role == 'customer_super') //客服主管只能开以下职位员工
+            $position = ['老师'=>'老师','校长'=>'校长','客服'=>'客服'];
+
+
         $model = new Staff();
         $model->sex = '男';
         $categoryInfo = ServiceCategory::find()->where(['id'=>137])->asArray()->one();
@@ -143,6 +152,7 @@ class StaffController extends CommonController
         return $this->render('/create', [
             'model' => $model,
             'categoryPath' => $categoryPath,
+            'position' => $position
         ]);
     }
 

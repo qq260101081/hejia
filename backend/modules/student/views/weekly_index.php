@@ -4,6 +4,7 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
+
 /* @var $this yii\web\View */
 /* @var $searchModel app\modules\presscentre\models\PresscentreSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -15,9 +16,12 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="box-header">
         <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
         <p>
-            <?= Html::a(Yii::t('app', 'Create Weekly'), ['create'], ['class' => 'btn btn-success btn-xs']) ?>
+            <?= Html::button(Yii::t('app', '导出'), ['class' => 'btn btn-success btn-xs','id'=>'export']) ?>
+            <?php if(Yii::$app->user->can('student/weekly/create')) echo Html::a(Yii::t('app', 'Create Weekly'), ['create'], ['class' => 'btn btn-success btn-xs']) ?>
         </p>
-        <?php Pjax::begin(); ?>    <?= GridView::widget([
+
+        <?php Pjax::begin(); ?>
+        <?= GridView::widget([
             'dataProvider' => $dataProvider,
             'filterModel' => $searchModel,
             'columns' => [
@@ -46,15 +50,28 @@ $this->params['breadcrumbs'][] = $this->title;
                     'header' => '操作',
                     'headerOptions'=> ['width'=> '80'],
                     'buttons' => [
+                        'view' => function ($url, $model) {
+                            return  Yii::$app->user->can('student/weekly/view') ?
+                                Html::a('<span class="glyphicon glyphicon-eye-open"></span>', $url):
+                                '';
+                        },
                         'update' => function ($url,$model, $key) {
-                            if(!$model->check1)
+                            if(Yii::$app->user->can('student/weekly/update'))
                             {
-                                return Html::a('<span class="glyphicon glyphicon-edit"></span>',
-                                    ['update','id'=>$key],
-                                    [
-                                        'title'=> '更新',
-                                    ] );
+                                if(!$model->check1)
+                                {
+                                    return Html::a('<span class="glyphicon glyphicon-edit"></span>',
+                                        ['update','id'=>$key],
+                                        [
+                                            'title'=> '更新',
+                                        ] );
+                                }
                             }
+                        },
+                        'delete' => function ($url, $model) {
+                            return  Yii::$app->user->can('student/weekly/delete') ?
+                                Html::a('<span class="glyphicon glyphicon-trash"></span>', $url):
+                                '';
                         },
                     ],
                 ],
@@ -62,3 +79,5 @@ $this->params['breadcrumbs'][] = $this->title;
         ]); ?>
         <?php Pjax::end(); ?></div>
 </div>
+
+

@@ -4,6 +4,17 @@ use kartik\growl\Growl;
 /* @var $this \yii\web\View */
 /* @var $content string */
 
+$permissions = [];
+if(!Yii::$app->user->isGuest) {
+    foreach (Yii::$app->getAuthManager()->getChildren(Yii::$app->user->identity->role) as $k => $v) {
+        $arr = explode('/', $k);
+        if (isset($arr[2]))
+            $permissions[$arr[0]][$arr[1]][$arr[2]] = $arr[2];
+        else
+            $permissions[$arr[0]][$arr[1]] = $arr[1];
+    }
+}
+
 
 if (Yii::$app->controller->action->id === 'login') {
 /**
@@ -68,7 +79,7 @@ if (Yii::$app->controller->action->id === 'login') {
 
         <?= $this->render(
             'left.php',
-            ['directoryAsset' => $directoryAsset]
+            ['directoryAsset' => $directoryAsset,'permissions'=>$permissions]
         )
         ?>
 

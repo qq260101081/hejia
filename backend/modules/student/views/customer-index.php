@@ -33,7 +33,9 @@ $this->params['breadcrumbs'][] = $this->title;
                     'template' => '{check}',
                     'buttons' => [
                         'check' => function ($url,$model, $key) {
-                            return Html::a('审核', ['customer-check','id'=>$key], ['title'=> '审核'] );
+                            return  Yii::$app->user->can('student/weekly/customer-check') ?
+                                Html::a('审核', ['customer-check','id'=>$key], ['title'=> '审核'] ):
+                                '';
                         },
                     ],
                 ],
