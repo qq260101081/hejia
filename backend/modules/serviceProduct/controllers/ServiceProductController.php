@@ -63,7 +63,8 @@ class ServiceProductController extends CommonController
         $model = new ServiceProduct();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'保存成功！']);
+            return $this->redirect(['index']);
         } else {
             return $this->render('/create', [
                 'model' => $model,

@@ -106,6 +106,9 @@ class WeeklyController extends CommonController
     {
         $searchModel = new WeeklySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider->query->andWhere(['check1'=>1]);
+        //限制跨校区操作
+        $dataProvider = $this->schoolRule($dataProvider);
 
         return $this->renderAjax('/weekly-modal-list', [
             'searchModel' => $searchModel,
@@ -138,7 +141,10 @@ class WeeklyController extends CommonController
         $model = new Weekly();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            Yii::$app->session->setFlash('success', [
+                'delay'=>3000,'message'=>'创建成功！'
+            ]);
+            return $this->redirect(['index']);
         } else {
             return $this->render('/weekly_create', [
                 'model' => $model,

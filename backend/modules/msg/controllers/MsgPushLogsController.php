@@ -101,7 +101,7 @@ class MsgPushLogsController extends CommonController
                 $model->attributes(),
                 $rows
             )->execute();
-
+            Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'保存成功！']);
             return $this->redirect(['index']);
         } else {
             return $this->render('/create', [

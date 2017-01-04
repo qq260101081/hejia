@@ -30,8 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
 
             'id',
-            'student_id',
-            //'student_name',
+            'student_name',
             'discipline',
             'sleep',
             'diet',

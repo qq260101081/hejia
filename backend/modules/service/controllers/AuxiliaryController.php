@@ -84,7 +84,7 @@ class AuxiliaryController extends CommonController
             if($model->load($data) && $model->save())
             {
                 Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'保存成功！']);
-                return $this->redirect(['view', 'id' => $model->id]);
+                return $this->redirect(['index']);
             }
             else{
                 Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败！']);

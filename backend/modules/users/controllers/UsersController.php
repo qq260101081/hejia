@@ -76,8 +76,8 @@ class UsersController extends CommonController
                     $role = Yii::$app->getAuthManager()->createRole($model->role);
                     Yii::$app->getAuthManager()->assign($role, $model->id);
                 }
-
-                return $this->redirect(['view', 'id' => $model->id]);
+                Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'保存成功！']);
+                return $this->redirect(['index']);
             }
             else
             {
