@@ -118,7 +118,11 @@ $js = <<<JS
         function (data) {
             $('#product-modal .modal-body').html(data);
         }  
-    ); 
+    );
+
+    $('#student_name').on('click',function() {
+        $(this).parent().parent().removeClass('has-error');  
+    });
 JS;
 $this->registerJs($js);
 Modal::end();
