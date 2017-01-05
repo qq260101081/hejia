@@ -7,8 +7,11 @@
  * Date: 16/12/24 下午1:13
  */
 ?>
-<div class="cont-block02">
-    <div data-am-widget="list_news" class="am-list-news am-list-news-default" >
+<style>
+.am-list{ margin-bottom:0;}
+</style>
+<div class="cont-block02" style="margin-top:0; padding-bottom:0;">
+    <div data-am-widget="list_news" class="am-list-news am-list-news-default">
         <!--列表标题-->
         <div class="am-list-news-hd am-cf">
             <!--带更多链接-->
@@ -34,6 +37,7 @@
         </div>
     </div>
 </div>
+<?php if($repository):;?>
 <div class="cont-block02">
     <ul data-am-widget="gallery" class="am-gallery am-avg-sm-2 am-gallery-imgbordered" data-am-gallery="{pureview: 1}">
         <?php foreach ($repository as $v):;?>
@@ -77,6 +81,7 @@
         <?php endforeach;?>
     </ul>
 </div>
+<?php endif;?>
 <div class="ch"></div>
 <div style="height: 49px;"></div>
 <?php

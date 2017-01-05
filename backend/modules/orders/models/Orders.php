@@ -42,7 +42,7 @@ class Orders extends \yii\db\ActiveRecord
     {
         return [
             [['student_id','student_name','product_name','product_id','stime','etime'], 'required'],
-            [['student_id', 'product_id','created_at'], 'integer'],
+            [['student_id', 'product_id', 'category_id','created_at'], 'integer'],
             [['money'], 'number'],
             [['student_name', 'principal'], 'string', 'max' => 12],
             [['product_name'], 'string', 'max' => 90],

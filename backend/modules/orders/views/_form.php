@@ -76,6 +76,7 @@ use kartik\date\DatePicker;
 
         <?= Html::hiddenInput('Orders[student_id]',$model->student_id,['id'=>'student_id']);?>
         <?= Html::hiddenInput('Orders[product_id]',$model->product_id,['id'=>'product_id']);?>
+        <?= Html::hiddenInput('Orders[category_id]',$model->category_id,['id'=>'category_id']);?>
 
     <div class="box-footer">
         <a href="<?= Url::to(['/orders/orders/index']);?>" class="btn btn-info fa fa-reply"></a>

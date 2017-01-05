@@ -2,7 +2,7 @@
 
 namespace app\modules\service\controllers;
 /*
-*托辅服务
+*校区管理
 */
 
 use Yii;

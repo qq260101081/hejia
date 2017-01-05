@@ -33,7 +33,16 @@
                     ],
                     ['label' => '服务项目列表', 'icon' => 'fa fa-share', 'visible'=> isset($permissions['serviceProduct']['service-product']['index']) ? 1 : 0, 'url' => ['/serviceProduct/service-product/index']],
                     ['label' => '影像资料管理', 'icon' => 'fa fa-share', 'visible'=> isset($permissions['repository']['repository']['index']) ? 1 : 0, 'url' => ['/repository/repository/index']],
-                    ['label' => '订单管理', 'icon' => 'fa fa-share', 'visible'=> isset($permissions['orders']['orders']['index']) ? 1 : 0, 'url' => ['/orders/orders/index']],
+                    [
+                        'label' => '订单管理',
+                        'icon' => 'fa fa-share',
+                        'visible'=> isset($permissions['orders']) ? 1 : 0,
+                        'url' => '#',
+                        'items' => [
+                            ['label' => '所有订单', 'icon' => 'fa fa-dot-circle-o', 'visible'=> isset($permissions['orders']['orders']['index']) ? 1 : 0, 'url' => ['/orders/orders/index']],
+                            ['label' => '已过期订单', 'icon' => 'fa fa-dot-circle-o', 'visible'=> isset($permissions['orders']['orders']['expired-index']) ? 1 : 0, 'url' => ['/orders/orders/expired-index']],
+                        ],
+                    ],
                     [
                         'label' => '和家服务管理',
                         'icon' => 'fa fa-share',

@@ -54,9 +54,11 @@ class CommonController extends Controller
     //限制跨校区操作
     public function schoolRule($dataProvider,$tablePrefix='')
     {
-        $staff = Staff::find()->select(['id','category_id'])->where(['userid'=>Yii::$app->user->identity->id])->one();
-        if($staff) $dataProvider->query->andWhere([$tablePrefix.'category_id'=>$staff->category_id]);
-        return $dataProvider;
+        if(Yii::$app->user->identity->role == 'principal' || Yii::$app->user->identity->role == 'teacher') {
+            $staff = Staff::find()->select(['id','category_id'])->where(['userid'=>Yii::$app->user->identity->id])->one();
+            if($staff) $dataProvider->query->andWhere([$tablePrefix.'category_id'=>$staff->category_id]);
+            return $dataProvider;
+        }
     }
 
 }

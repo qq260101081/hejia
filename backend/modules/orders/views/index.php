@@ -7,7 +7,7 @@ use yii\widgets\Pjax;
 /* @var $searchModel app\modules\presscentre\models\PresscentreSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Orders');
+$this->title = Yii::t('app', '所有订单');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
     <div class="box box-info guarantee-index">

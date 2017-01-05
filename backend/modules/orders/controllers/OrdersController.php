@@ -19,12 +19,30 @@ class OrdersController extends CommonController
      * Lists all Orders models.
      * @return mixed
      */
+    //所有订单列表
     public function actionIndex()
     {
         $searchModel = new OrdersSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        //限制跨校区操作
+        $dataProvider = $this->schoolRule($dataProvider);
 
         return $this->render('/index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    //已过期订单列表
+    public function actionExpiredIndex()
+    {
+        $searchModel = new OrdersSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider->query->andWhere(['<','etime',time()]);
+        //限制跨校区操作
+        $dataProvider = $this->schoolRule($dataProvider);
+
+        return $this->render('/expired-index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
@@ -53,7 +71,7 @@ class OrdersController extends CommonController
         $data = Yii::$app->request->post();
 
         if ($model->load($data)) {
-            $model->principal = Yii::$app->user->identity->username;
+            $model->principal = Yii::$app->user->identity->name;
             $model->stime = strtotime($data['Orders']['stime']);
             $model->etime = strtotime($data['Orders']['etime']);
             //print_r($model);die;

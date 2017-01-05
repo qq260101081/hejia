@@ -43,7 +43,7 @@
                 <div class="am-gallery-item">
                     <a href="http://img.liusheji.com/<?= $v->list_img;?>" class="">
                         <img src="http://img.liusheji.com/<?= $v->list_img;?>" />
-                        <h3 class="am-gallery-title"><?= $v->title; ?></h3>
+                        <h3 class="am-gallery-title" style="text-align:center;"><?= $v->title; ?></h3>
                     </a>
                 </div>
             </li>
