@@ -228,7 +228,8 @@ class StaffController extends CommonController
                     $user->save();
                 }
 
-                if($data['Staff']['password']) $model->password_hash = Yii::$app->security->generatePasswordHash($data['Staff']['password']);
+                if(isset($data['Staff']['password']) && $data['Staff']['password'])
+                    $model->password_hash = Yii::$app->security->generatePasswordHash($data['Staff']['password']);
 
                 $model->save();
                 Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'保存成功！']);
