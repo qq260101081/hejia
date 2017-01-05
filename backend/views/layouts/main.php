@@ -47,7 +47,7 @@ if (Yii::$app->controller->action->id === 'login') {
         <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
     </head>
-    <body class="<?= \dmstr\helpers\AdminLteHelper::skinClass() ?>">
+    <body class="sidebar-collapse <?= \dmstr\helpers\AdminLteHelper::skinClass() ?>">
     <?php $this->beginBody() ?>
 
     <?php foreach(Yii::$app->session->getAllFlashes() as $message):; ?>
@@ -89,6 +89,8 @@ if (Yii::$app->controller->action->id === 'login') {
         ) ?>
 
     </div>
+
+
 
     <?php $this->endBody() ?>
     </body>

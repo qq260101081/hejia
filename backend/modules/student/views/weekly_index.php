@@ -31,7 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'sleep',
                 'diet',
                 'study',
-                'synthesize',
+                'synthesize:html',
                 [
                     'attribute'=>'remark',
                     'format' => 'raw',

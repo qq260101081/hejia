@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 use yii\bootstrap\Modal;
+use dosamigos\ckeditor\CKEditor;
 /* @var $this yii\web\View */
 /* @var $model app\modules\guarantee\models\Guarantee */
 /* @var $form yii\widgets\ActiveForm */
@@ -41,7 +42,11 @@ use yii\bootstrap\Modal;
 
         <?= $form->field($model, 'study')->textInput(['placeholder'=>'填写数字，最大为5星']) ?>
 
-        <?= $form->field($model, 'synthesize')->textarea(['placeholder'=>'100字以内评语','rows'=>5]) ?>
+        <?= $form->field($model, 'synthesize')->widget(CKEditor::className(), [
+            'options' => ['rows' => 6],
+            'preset' => 'basic'
+        ]) ?>
+
 
         <?= Html::hiddenInput('Weekly[student_id]',$model->student_id,['id'=>'student_id']);?>
         <?= Html::hiddenInput('Weekly[category_id]',$model->category_id,['id'=>'category_id']);?>

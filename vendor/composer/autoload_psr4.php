@@ -31,6 +31,7 @@ return array(
     'kartik\\date\\' => array($vendorDir . '/kartik-v/yii2-widget-datepicker'),
     'gilek\\gtreetable\\' => array($vendorDir . '/gilek/yii2-gtreetable'),
     'dmstr\\' => array($vendorDir . '/dmstr/yii2-adminlte-asset'),
+    'dosamigos\\ckeditor\\' => array($vendorDir . '/2amigos/yii2-ckeditor-widget/src'),
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),
     'Faker\\' => array($vendorDir . '/fzaninotto/faker/src/Faker'),
     'codemix\\excelexport\\' => array($vendorDir . '/codemix/yii2-excelexport/src'),

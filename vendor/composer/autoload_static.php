@@ -188,6 +188,10 @@ class ComposerStaticInit1ffc994a86380a5009bb73dcd55c96bb
         array (
             0 => __DIR__ . '/..' . '/filsh/yii2-oauth2-server',
         ),
+        'dosamigos\\ckeditor\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/2amigos/yii2-ckeditor-widget/src',
+        ),
         'dmstr\\' => 
         array (
             0 => __DIR__ . '/..' . '/dmstr/yii2-adminlte-asset',

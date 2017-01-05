@@ -58,7 +58,7 @@ $this->title = '和家主页';
         <div class="am-gallery-item">
             <a href="<?= Url::to(['article/view','type'=>'about']);?>" class="">
                 <img src="/images/icon7.png">
-                <p>和家特色</p>
+                <p>和家教育</p>
             </a>
         </div>
     </li>
@@ -81,7 +81,7 @@ $this->title = '和家主页';
                 <i class="am-icon-user-plus"></i>
                 <div class="text">
                     <h2>服务流程</h2>
-                    <p>读服务流程享优质服务</p>
+                    <p>享受优质服务</p>
                 </div>
             </div>
         </a>

@@ -14,7 +14,6 @@ use yii\web\NotFoundHttpException;
  */
 class WeeklyController extends CommonController
 {
-
     /**
      * Lists all Weekly models.
      * @return mixed
