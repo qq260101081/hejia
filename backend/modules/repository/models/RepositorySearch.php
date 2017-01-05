@@ -18,7 +18,7 @@ class RepositorySearch extends Repository
     {
         return [
             [['id', 'created_at'], 'integer'],
-            [['type', 'title', 'path', 'username'], 'safe'],
+            [['type', 'title', 'path', 'name'], 'safe'],
         ];
     }
 
@@ -64,7 +64,7 @@ class RepositorySearch extends Repository
 
         $query->andFilterWhere(['like', 'type', $this->type])
             ->andFilterWhere(['like', 'title', $this->title])
-            ->andFilterWhere(['like', 'username', $this->username])
+            ->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'path', $this->path]);
 
         return $dataProvider;

@@ -72,7 +72,7 @@ class RepositoryController extends CommonController
             if ($listImgFile) $data['Repository']['path'] = $listImgFile['path'];
 
             $data['Repository']['userid'] = Yii::$app->user->identity->id;
-            $data['Repository']['username'] = Yii::$app->user->identity->username;
+            $data['Repository']['name'] = Yii::$app->user->identity->name;
             if($model->load($data) && $model->save())
             {
                 Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'保存成功！']);
@@ -105,11 +105,11 @@ class RepositoryController extends CommonController
 
         if ($data) {
             $listImgFile = Common::uploadFile('Repository[path]');
-            $data['Repository']['path'] = $model->headimg;
+            $data['Repository']['path'] = $model->path;
             if($listImgFile)
             {
                 $data['Repository']['path'] = $listImgFile['path'];
-                @unlink(\Yii::getAlias('@upPath') . '/' . $model->headimg);
+                @unlink(\Yii::getAlias('@upPath') . '/' . $model->path);
             }
             if($model->load($data) && $model->save())
             {

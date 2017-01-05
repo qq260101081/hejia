@@ -32,7 +32,7 @@ class Repository extends \yii\db\ActiveRecord
             ['title','required'],
             [['created_at', 'userid'], 'integer'],
             [['type'], 'string', 'max' => 10],
-            [['username'], 'string', 'max' => 30],
+            [['name'], 'string', 'max' => 12],
             [['title', 'path'], 'string', 'max' => 150],
             ['created_at', 'default', 'value'=>time()],
             ['path', 'file', 'extensions' => ['png', 'jpg', 'gif','mp4'], 'maxSize' => 1024 * 1024 * 1000],
@@ -51,7 +51,7 @@ class Repository extends \yii\db\ActiveRecord
             'title' => '标题',
             'path' => '影像路径',
             'userid' => '上传者ID',
-            'username' => '上传者',
+            'name' => '上传者',
             'created_at' => '创建时间',
         ];
     }
