@@ -164,6 +164,14 @@ class StaffController extends CommonController
      */
     public function actionUpdate($id)
     {
+        $position = Yii::$app->params['position'];
+        if(Yii::$app->user->identity->role == 'principal' || Yii::$app->user->identity->role == 'teacher') //校长只能开以下职位员工
+            $position = ['老师'=>'老师'];
+        elseif(Yii::$app->user->identity->role == 'customer') //客服只能开以下职位员工
+            $position = ['老师'=>'老师','校长'=>'校长'];
+        elseif(Yii::$app->user->identity->role == 'customer_super') //客服主管只能开以下职位员工
+            $position = ['老师'=>'老师','校长'=>'校长','客服'=>'客服'];
+
         $model = $this->findModel($id);
         $categoryInfo = ServiceCategory::find()->where(['id'=>$model->category_id])->asArray()->one();
         $categoryPath = ServiceCategory::find()
@@ -231,6 +239,7 @@ class StaffController extends CommonController
         return $this->render('/update', [
             'model' => $model,
             'categoryPath' => $categoryPath,
+            'position' => $position
         ]);
     }
 
