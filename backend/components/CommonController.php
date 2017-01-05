@@ -57,8 +57,8 @@ class CommonController extends Controller
         if(Yii::$app->user->identity->role == 'principal' || Yii::$app->user->identity->role == 'teacher') {
             $staff = Staff::find()->select(['id','category_id'])->where(['userid'=>Yii::$app->user->identity->id])->one();
             if($staff) $dataProvider->query->andWhere([$tablePrefix.'category_id'=>$staff->category_id]);
-            return $dataProvider;
         }
+        return $dataProvider;
     }
 
 }
