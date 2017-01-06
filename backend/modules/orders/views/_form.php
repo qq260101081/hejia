@@ -21,6 +21,7 @@ use kartik\date\DatePicker;
 
         <?php $form = ActiveForm::begin([
             'options' => ['class'=>'form-horizontal','enctype'=>'multipart/form-data','id'=>'order-create'],
+            'validateOnBlur' => false,
             'fieldConfig' => [
                 'labelOptions' => ['class' => 'col-sm-2 control-label'],
                 'template' => "{label}\n<div class=\"col-sm-8\">{input}</div>\n<div class=\"col-sm-8\">{error}</div>",
@@ -120,9 +121,7 @@ $js = <<<JS
         }  
     );
 
-    $('#student_name').on('click',function() {
-        $(this).parent().parent().removeClass('has-error');  
-    });
+   
 JS;
 $this->registerJs($js);
 Modal::end();

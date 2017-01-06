@@ -19,6 +19,7 @@ use yii\bootstrap\Modal;
 
             <?php $form = ActiveForm::begin([
                 'options' => ['class'=>'form-horizontal','enctype'=>'multipart/form-data'],
+                'validateOnBlur' => false,
                 'fieldConfig' => [
                     'labelOptions' => ['class' => 'col-sm-2 control-label'],
                     'template' => "{label}\n<div class=\"col-sm-8\">{input}</div>\n<div class=\"col-sm-8\">{error}</div>",
