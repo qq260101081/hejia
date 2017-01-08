@@ -16,7 +16,6 @@ use Yii;
  * @property string $city
  * @property string $province
  * @property string $phone
- * @property integer $address
  * @property string $auth_key
  * @property string $password_hash
  * @property string $email
@@ -46,16 +45,15 @@ class User extends \yii\db\ActiveRecord
     {
         return [
             [['username', 'auth_key', 'password_hash', 'email', 'status', 'updated_at'], 'required'],
-            [['sex', 'address', 'created_at', 'updated_at'], 'integer'],
+            [['sex', 'created_at', 'updated_at'], 'integer'],
             [['status', 'role'], 'string'],
-            [['username', 'openid', 'nickname'], 'string', 'max' => 60],
-            [['headimgurl'], 'string', 'max' => 250],
-            [['city', 'province'], 'string', 'max' => 30],
-            [['phone', 'reg_ip'], 'string', 'max' => 15],
+            [['username'], 'string', 'max' => 60],
             [['auth_key'], 'string', 'max' => 32],
             [['password_hash'], 'string', 'max' => 65],
             [['email'], 'string', 'max' => 45],
             [['password','passwordok'], 'string', 'max' => 16],
+            [['password','passwordok'], 'string', 'min' => 6],
+            ['passwordok', 'compare','compareAttribute'=>'password','message'=>'两次密码必须一致'],
             [['email'], 'unique'],
             [['username'], 'unique'],
         ];
@@ -71,20 +69,12 @@ class User extends \yii\db\ActiveRecord
             'username' => 'Username',
             'password' => '新密码',
             'passwordok' => '确认密码',
-            'openid' => 'Openid',
-            'nickname' => '昵称',
-            'headimgurl' => '头像',
-            'sex' => '性别',
-            'city' => '城市',
-            'province' => '省份',
             'phone' => '电话',
-            'address' => 'Address',
             'auth_key' => 'Auth Key',
             'password_hash' => 'Password Hash',
             'email' => 'Email',
             'status' => 'Status',
             'role' => '用户角色',
-            'reg_ip' => 'Reg Ip',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];

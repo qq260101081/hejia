@@ -9,6 +9,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use common\models\LoginForm;
 
 /**
  * UserController implements the CRUD actions for User model.
@@ -34,13 +35,29 @@ class UserController extends Controller
     //修改密码
     public function actionResetPassword($id = 0)
     {
+        if (Yii::$app->user->isGuest) {
+            $model = new LoginForm();
+            return $this->render('login', [
+                'model' => $model,
+            ]);
+        }
+
+        $id = Yii::$app->user->identity->role == 'admin' ? $id : Yii::$app->user->identity->id;
         $model = User::findOne($id);
         $data = Yii::$app->request->post();
         if($data)
-        {print_r($data);die;
-            $data['User']['passowrd'] = $data['User']['passowrd'] ?
-                Yii::$app->security->generatePasswordHash($data['User']['passowrd']) :
-                $model-> password_hash;
+        {
+
+            $model->password_hash = $data['User']['password'] ?
+                Yii::$app->security->generatePasswordHash($data['User']['password']) :
+                $model->password_hash;
+            if($model->save())
+            {
+                Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'修改成功！']);
+                return $this->goBack();
+            }
+            Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'修改成功！']);
+
         }
         return $this->render('reset-password', ['model' => $model]);
     }
