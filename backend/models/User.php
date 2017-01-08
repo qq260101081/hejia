@@ -31,6 +31,9 @@ class User extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public $password;
+    public $passwordok;
+
     public static function tableName()
     {
         return '{{%user}}';
@@ -52,6 +55,7 @@ class User extends \yii\db\ActiveRecord
             [['auth_key'], 'string', 'max' => 32],
             [['password_hash'], 'string', 'max' => 65],
             [['email'], 'string', 'max' => 45],
+            [['password','passwordok'], 'string', 'max' => 16],
             [['email'], 'unique'],
             [['username'], 'unique'],
         ];
@@ -65,6 +69,8 @@ class User extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'username' => 'Username',
+            'password' => '新密码',
+            'passwordok' => '确认密码',
             'openid' => 'Openid',
             'nickname' => '昵称',
             'headimgurl' => '头像',

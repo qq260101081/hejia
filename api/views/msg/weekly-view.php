@@ -9,6 +9,11 @@
 ?>
 
 <ul class="nav">
+    <li style="text-align:center; font-size:1.4rem;">
+        <p><?=$model->student_name;?>学生周报</p>
+        <p>【<?=date('Y-m-d',$model->stime);?>至<?=date('Y-m-d',$model->etime);?>】</p>
+    </li>
+
     <li>
         <span class="title-bt">纪律：</span>
         <span class="title-xin">

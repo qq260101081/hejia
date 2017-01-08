@@ -50,13 +50,6 @@
             <i class="am-icon-angle-right"></i>
         </a>
     </li>
-    <li>
-        <a href="#">
-            <img src="/images/i5.png" />
-            <span>联系客服</span>
-            <i class="am-icon-angle-right"></i>
-        </a>
-    </li>
 </ul>
 <ul class="nav">
     <li>

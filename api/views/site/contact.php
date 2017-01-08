@@ -9,7 +9,7 @@
 
 <div class="map">
     <div data-am-widget="map" class="am-map am-map-default"
-         data-name="和家总部" data-address="广州市天河区黄埔大道中222号" data-longitude="" data-latitude="" data-scaleControl="" data-zoomControl="true" data-setZoom="17" data-icon="http://amuituku.qiniudn.com/mapicon.png">
+         data-name="和家总部" data-address="广州市高新技术产业开发区科学大道162号B1区504" data-longitude="" data-latitude="" data-scaleControl="" data-zoomControl="true" data-setZoom="17" data-icon="http://amuituku.qiniudn.com/mapicon.png">
         <div id="bd-map"></div>
     </div>
 </div>

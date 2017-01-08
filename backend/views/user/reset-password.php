@@ -10,25 +10,17 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form class="form-horizontal">
             <?php $form = ActiveForm::begin([
-                'action' => ['reset-password']
+                'options' => ['class'=>'form-horizontal'],
+                'fieldConfig' => [
+                    'labelOptions' => ['class' => 'col-sm-2 control-label'],
+                    'template' => "{label}\n<div class=\"col-sm-9\">{input}</div>\n<div class=\"col-sm-9\">{error}</div>",
+                ]
             ]);?>
             <div class="box-body">
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">新密码</label>
+                <?= $form->field($model, 'password')?>
+                <?= $form->field($model, 'passwordok')?>
 
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" name="[User][password]" placeholder="">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label  class="col-sm-2 control-label">确认密码</label>
-
-                    <div class="col-sm-10">
-                        <input name="[User][passowrdok]" class="form-control" placeholder="">
-                    </div>
-                </div>
             </div>
             <!-- /.box-body -->
             <div class="box-footer">
