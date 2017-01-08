@@ -18,8 +18,8 @@ class ServiceProductSearch extends ServiceProduct
     public function rules()
     {
         return [
-            [['id', 'created_at'], 'integer'],
-            [['name', 'type', 'info'], 'safe'],
+            [['id'], 'integer'],
+            [['name', 'type', 'created_at'], 'safe'],
         ];
     }
 
@@ -61,10 +61,10 @@ class ServiceProductSearch extends ServiceProduct
         $query->andFilterWhere([
             'id' => $this->id,
             'created_at' => $this->created_at,
+            'type' => $this->type
         ]);
 
-        $query->andFilterWhere(['like', 'name', $this->name])
-            ->andFilterWhere(['like', 'type', $this->type]);
+        $query->andFilterWhere(['like', 'name', $this->name]);
 
         return $dataProvider;
     }

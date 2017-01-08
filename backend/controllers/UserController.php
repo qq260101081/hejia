@@ -8,26 +8,13 @@ use app\models\UserSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 /**
  * UserController implements the CRUD actions for User model.
  */
 class UserController extends Controller
 {
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
 
     /**
      * Lists all User models.
@@ -44,6 +31,19 @@ class UserController extends Controller
         ]);
     }
 
+    //修改密码
+    public function actionResetPassword($id = 0)
+    {
+        $model = User::findOne($id);
+        $data = Yii::$app->request->post();
+        if($data)
+        {print_r($data);die;
+            $data['User']['passowrd'] = $data['User']['passowrd'] ?
+                Yii::$app->security->generatePasswordHash($data['User']['passowrd']) :
+                $model-> password_hash;
+        }
+        return $this->render('reset-password', ['model' => $model]);
+    }
     /**
      * Displays a single User model.
      * @param integer $id

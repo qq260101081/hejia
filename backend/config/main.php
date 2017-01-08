@@ -30,6 +30,9 @@ return [
         'student' => [
             'class' => 'app\modules\student\Module',
         ],
+        'weekly' => [
+            'class' => 'app\modules\weekly\Module',
+        ],
         'staff' => [
             'class' => 'app\modules\staff\Module',
         ],
@@ -41,9 +44,6 @@ return [
         ],
         'orders' => [
             'class' => 'app\modules\orders\Module',
-        ],
-        'repository' => [
-            'class' => 'app\modules\repository\Module',
         ],
         'msg' => [
             'class' => 'app\modules\msg\Module',

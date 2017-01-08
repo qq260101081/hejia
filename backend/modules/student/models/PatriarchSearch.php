@@ -18,8 +18,8 @@ class PatriarchSearch extends Patriarch
     public function rules()
     {
         return [
-            [['id', 'userid', 'student_id'], 'integer'],
-            [['name', 'relation', 'phone', 'urgency_phone', 'urgency_person', 'address', 'remark'], 'safe'],
+            [['id'], 'integer'],
+            [['name', 'relation', 'phone', 'urgency_phone', 'urgency_person'], 'safe'],
         ];
     }
 
@@ -59,17 +59,14 @@ class PatriarchSearch extends Patriarch
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
-            'userid' => $this->userid,
-            'student_id' => $this->student_id,
+            'user_patriarch.id' => $this->id,
         ]);
 
-        $query->andFilterWhere(['like', 'name', $this->name])
-            ->andFilterWhere(['like', 'relation', $this->relation])
-            ->andFilterWhere(['like', 'phone', $this->phone])
-            ->andFilterWhere(['like', 'urgency_phone', $this->urgency_phone])
-            ->andFilterWhere(['like', 'urgency_person', $this->urgency_person])
-            ->andFilterWhere(['like', 'address', $this->address]);
+        $query->andFilterWhere(['like', 'user_patriarch.name', $this->name])
+            ->andFilterWhere(['like', 'user_patriarch.relation', $this->relation])
+            ->andFilterWhere(['like', 'user_patriarch.phone', $this->phone])
+            ->andFilterWhere(['like', 'user_patriarch.urgency_phone', $this->urgency_phone])
+            ->andFilterWhere(['like', 'user_patriarch.urgency_person', $this->urgency_person]);
 
         return $dataProvider;
     }

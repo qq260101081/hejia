@@ -57,10 +57,10 @@ class Staff extends \yii\db\ActiveRecord
         return [
             'id' => Yii::t('app', 'ID'),
             'userid' => Yii::t('app', '用户表关联ID'),
-            'name' => Yii::t('app', '姓名'),
+            'name' => Yii::t('app', '员工姓名'),
+            'category_id' => Yii::t('app', '所属校区'),
             'sex' => Yii::t('app', '性别'),
             'age' => Yii::t('app', '年龄'),
-            'category_id' => Yii::t('app', '所属校区'),
             'diploma' => Yii::t('app', '学历'),
             'photo' => Yii::t('app', '照片'),
             'position' => Yii::t('app', '岗位'),

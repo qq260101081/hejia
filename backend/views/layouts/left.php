@@ -1,3 +1,4 @@
+
 <aside class="main-sidebar">
 
     <section class="sidebar">
@@ -15,11 +16,23 @@
                         'url' => '#',
                         'visible'=> isset($permissions['student']) ? 1 : 0,
                         'items' => [
-                            ['label' => '学生列表', 'icon' => 'fa fa-dot-circle-o', 'visible'=> isset($permissions['student']['student']['index']) ? 1 : 0, 'url' => ['/student/student/index']],
-                            ['label' => '学生周报', 'icon' => 'fa fa-dot-circle-o', 'visible'=> isset($permissions['student']['weekly']['index']) ? 1 : 0,'url' => ['/student/weekly/index']],
-                            ['label' => '周报审核(客服)', 'icon' => 'fa fa-dot-circle-o', 'visible'=> isset($permissions['student']['weekly']['customer-index']) ? 1 : 0,'url' => ['/student/weekly/customer-index']],
-                            ['label' => '周报审核(校长)', 'icon' => 'fa fa-dot-circle-o', 'visible'=> isset($permissions['student']['weekly']['president-index']) ? 1 : 0,'url' => ['/student/weekly/president-index']],
+                            ['label' => '学生列表','icon' => 'fa fa-dot-circle-o', 'visible'=> isset($permissions['student']['student']['index']) ? 1 : 0, 'url' => ['/student/student/index']],
                             ['label' => '家长列表', 'icon' => 'fa fa-dot-circle-o', 'visible'=> isset($permissions['student']['patriarch']['index']) ? 1 : 0,'url' => ['/student/patriarch/index']],
+                        ],
+                    ],
+                    [
+                        'label' => '周报管理',
+                        'icon' => 'fa fa-share',
+                        'url' => '#',
+                        'visible'=> isset($permissions['weekly']) ? 1 : 0,
+                        'items' => [
+                            ['label' => '学生周报', 'icon' => 'fa fa-dot-circle-o', 'visible'=> isset($permissions['weekly']['weekly']['index']) ? 1 : 0,'url' => ['/weekly/weekly/index']],
+                            ['label' => '周报审核(校长)', 'icon' => 'fa fa-dot-circle-o', 'visible'=> isset($permissions['weekly']['president-check']['index']) ? 1 : 0,'url' => ['/weekly/president-check/index']],
+                            ['label' => '周报审核(客服)', 'icon' => 'fa fa-dot-circle-o', 'visible'=> isset($permissions['weekly']['customer-check']['index']) ? 1 : 0,'url' => ['/weekly/customer-check/index']],
+                            ['label' => '周报推送', 'icon' => 'fa fa-dot-circle-o', 'visible'=> isset($permissions['weekly']['weekly-push']['index']) ? 1 : 0,'url' => ['/weekly/weekly-push/index']],
+                            ['label' => '学生影像', 'icon' => 'fa fa-dot-circle-o', 'visible'=> isset($permissions['weekly']['repository']['index']) ? 1 : 0,'url' => ['/weekly/repository/index']],
+                            ['label' => '影像推送', 'icon' => 'fa fa-dot-circle-o', 'visible'=> isset($permissions['weekly']['repository-push']['index']) ? 1 : 0,'url' => ['/weekly/repository-push/index']],
+
                         ],
                     ],
                     [
@@ -32,14 +45,14 @@
                         ],
                     ],
                     ['label' => '服务项目列表', 'icon' => 'fa fa-share', 'visible'=> isset($permissions['serviceProduct']['service-product']['index']) ? 1 : 0, 'url' => ['/serviceProduct/service-product/index']],
-                    ['label' => '影像资料管理', 'icon' => 'fa fa-share', 'visible'=> isset($permissions['repository']['repository']['index']) ? 1 : 0, 'url' => ['/repository/repository/index']],
                     [
                         'label' => '订单管理',
                         'icon' => 'fa fa-share',
                         'visible'=> isset($permissions['orders']) ? 1 : 0,
                         'url' => '#',
                         'items' => [
-                            ['label' => '所有订单', 'icon' => 'fa fa-dot-circle-o', 'visible'=> isset($permissions['orders']['orders']['index']) ? 1 : 0, 'url' => ['/orders/orders/index']],
+                            ['label' => '所有订单', 'icon' => 'fa fa-dot-circle-o', 'visible'=> isset($permissions['orders']['orders']['index']) ? 1 : 0, 'url' => ['/orders/orders/index',]],
+                            //['label' => '活动订单', 'icon' => 'fa fa-dot-circle-o', 'visible'=> isset($permissions['orders']['orders']['atv-index']) ? 1 : 0, 'url' => ['/orders/orders/atv-index']],
                             ['label' => '已过期订单', 'icon' => 'fa fa-dot-circle-o', 'visible'=> isset($permissions['orders']['orders']['expired-index']) ? 1 : 0, 'url' => ['/orders/orders/expired-index']],
                         ],
                     ],
@@ -60,8 +73,6 @@
                         'url' => '#',
                         'visible'=> isset($permissions['msg']) ? 1 : 0,
                         'items' => [
-                            ['label' => '学生周报推送', 'icon' => 'fa fa-dot-circle-o','visible'=> isset($permissions['msg']['weekly-push-logs']['index']) ? 1 : 0, 'url' => ['/msg/weekly-push-logs/index']],
-                            ['label' => '学生影像推送', 'icon' => 'fa fa-dot-circle-o','visible'=> isset($permissions['msg']['repository-push-logs']['index']) ? 1 : 0, 'url' => ['/msg/repository-push-logs/index']],
                             ['label' => '官方消息推送', 'icon' => 'fa fa-dot-circle-o','visible'=> isset($permissions['msg']['msg-push-logs']['index']) ? 1 : 0, 'url' => ['/msg/msg-push-logs/index']],
                         ],
                     ],

@@ -18,8 +18,8 @@ class StudentSearch extends Student
     public function rules()
     {
         return [
-            [['id', 'sex', 'age', 'created_at', 'updated_at'], 'integer'],
-            [['name', 'school', 'grade'], 'safe'],
+            [['id',  'age'], 'integer'],
+            [['name', 'sex', 'created_at', 'updated_at','school', 'grade'], 'safe'],
         ];
     }
 
@@ -59,16 +59,17 @@ class StudentSearch extends Student
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
-            'sex' => $this->sex,
-            'age' => $this->age,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
+            'student.id' => $this->id,
+            'student.sex' => $this->sex,
+            'student.age' => $this->age,
+            //'student.created_at' => strtotime($this->created_at),
+            //'student.updated_at' => strtotime($this->updated_at),
         ]);
+       if($this->created_at) $query->andFilterWhere(['>','student.created_at',strtotime($this->created_at)]);
 
-        $query->andFilterWhere(['like', 'name', $this->name])
-            ->andFilterWhere(['like', 'school', $this->school])
-            ->andFilterWhere(['like', 'grade', $this->grade]);
+        $query->andFilterWhere(['like', 'student.name', $this->name])
+            ->andFilterWhere(['like', 'student.school', $this->school])
+            ->andFilterWhere(['like', 'student.grade', $this->grade]);
 
         return $dataProvider;
     }

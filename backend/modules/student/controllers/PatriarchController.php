@@ -33,21 +33,7 @@ class PatriarchController extends CommonController
         ]);
     }
 
-    //选择家长单选
-    public function actionModalList2()
-    {
-        $searchModel = new PatriarchSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        //给家长开有账号的才显示
-        $dataProvider->query->andFilterWhere(['>', 'userid', '0']);
-        //限制跨校区操作
-        $dataProvider = $this->schoolRule($dataProvider, Patriarch::tableName().'.');
 
-        return $this->renderAjax('/patriarch-modal-list2', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
-    }
 
     //选择家长多选
     public function actionModalList()
@@ -113,11 +99,15 @@ class PatriarchController extends CommonController
             //更新家长表
             $model->userid = $user->id;
             if($model->save())
-                Yii::$app->session->setFlash('success', [
-                    'delay'=>9000,'message'=>'开通成功！'
-                ]);
-            return $this->redirect(['/users/users/view', 'id' => $user->id]);
+                Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'开通成功！']);
+            else
+                Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'开通失败！']);
         }
+        else
+        {
+            Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'开通失败！']);
+        }
+        return $this->redirect(['index']);
     }
 
     /**

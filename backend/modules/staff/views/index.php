@@ -23,10 +23,46 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             'id',
             'name',
-            'diploma',
-            // 'photo',
-            'position',
             'school',
+            [
+                'attribute' => 'sex',
+                'value' => function($model){
+                    $sex = ['男'=>'男','女'=>'女'];
+                    return $sex[$model->sex];
+                },
+                'filter' => Html::activeDropDownList($searchModel, 'sex',[
+                    '男'=>'男','女'=>'女'
+                ],['prompt'=>'全部','class' => 'form-control'] )
+            ],
+            'age',
+            [
+                'attribute' => 'diploma',
+                'value' => function($model){
+                    $diploma = [
+                        '博士' => '博士',
+                        '硕士' => '硕士',
+                        '本科' => '本科',
+                        '专科' => '专科',
+                        '高中' => '高中',
+                    ];
+                    return $diploma[$model->diploma];
+                },
+                'filter' => Html::activeDropDownList($searchModel, 'diploma',[
+                    '博士' => '博士',
+                    '硕士' => '硕士',
+                    '本科' => '本科',
+                    '专科' => '专科',
+                    '高中' => '高中',
+                ],['prompt'=>'全部','class' => 'form-control'] )
+            ],
+            [
+                'attribute' => 'position',
+                'value' => function($model){
+                    return Yii::$app->params['position'][$model->position];
+                },
+                'filter' => Html::activeDropDownList($searchModel, 'position',Yii::$app->params['position'],
+                    ['prompt'=>'全部','class' => 'form-control'] )
+            ],
             'phone',
             [
                 'class' => 'yii\grid\ActionColumn',

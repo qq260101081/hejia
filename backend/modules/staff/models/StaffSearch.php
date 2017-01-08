@@ -18,8 +18,8 @@ class StaffSearch extends Staff
     public function rules()
     {
         return [
-            [['id', 'userid', 'sex', 'age', 'position'], 'integer'],
-            [['name', 'diploma', 'photo', 'school', 'phone'], 'safe'],
+            [['id','age'], 'integer'],
+            [['name', 'diploma', 'position','sex','school', 'phone'], 'safe'],
         ];
     }
 
@@ -60,7 +60,6 @@ class StaffSearch extends Staff
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'userid' => $this->userid,
             'sex' => $this->sex,
             'age' => $this->age,
             'position' => $this->position,
@@ -68,7 +67,6 @@ class StaffSearch extends Staff
 
         $query->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'diploma', $this->diploma])
-            ->andFilterWhere(['like', 'photo', $this->photo])
             ->andFilterWhere(['like', 'school', $this->school])
             ->andFilterWhere(['like', 'phone', $this->phone]);
 

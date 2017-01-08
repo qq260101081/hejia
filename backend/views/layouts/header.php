@@ -38,6 +38,9 @@ use yii\helpers\Url;
                                     <a href="<?=Url::to(['/users/users/view','id'=>Yii::$app->user->identity->id])?>" class="btn btn-default btn-flat">用户信息</a>
                                 <?php endif;?>
                             </div>
+                            <div class="pull-left">
+                                <a href="<?=Url::to(['/user/reset-password','id'=>Yii::$app->user->identity->id])?>" class="btn btn-default btn-flat">修改密码</a>
+                            </div>
                             <div class="pull-right">
                                 <?= Html::a(
                                     '安全退出',
