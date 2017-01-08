@@ -105,6 +105,7 @@ class PatriarchController extends CommonController
         }
         else
         {
+            var_dump($model->getErrors());die;
             Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'开通失败！']);
         }
         return $this->redirect(['index']);
