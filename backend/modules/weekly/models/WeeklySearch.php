@@ -5,7 +5,7 @@ namespace app\modules\weekly\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\modules\student\models\Weekly;
+use app\modules\weekly\models\Weekly;
 
 /**
  * WeeklySearch represents the model behind the search form about `app\modules\student\models\Weekly`.

@@ -61,7 +61,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Weekly Check');
 
             <div class="box-footer">
                 <a href="<?= Url::to(['/weekly/president-check/index']);?>" class="btn btn-info fa fa-reply"></a>
-                <?= Html::submitButton('', ['class' => 'btn btn-info pull-right fa fa-save']) ?>
+                <?= Html::submitButton('', ['class' => 'btn btn-success pull-right fa fa-check-circle']) ?>
             </div>
 
             <?php ActiveForm::end(); ?>

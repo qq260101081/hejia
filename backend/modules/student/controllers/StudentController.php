@@ -90,6 +90,17 @@ class StudentController extends CommonController
                 $data['Student']['category_id'] = $staff ? $staff->category_id : 0;
                 $data['Student']['school'] = $staff ? $staff->school : '';
             }
+            //判断是否已存在手机
+            $arr = Patriarch::find()->select(['id','phone'])->where(['phone'=>$data['Patriarch']['phone']])->one();
+            if($arr)
+            {
+                Yii::$app->session->setFlash('error', ['delay'=>9000,'message'=>'保存失败,家长手机号已存在。']);
+                return $this->render('/create', [
+                    'model' => $model,
+                    'patriarch' => $patriarch,
+                    'categoryPath' => $categoryPath,
+                ]);
+            }
             if($model->load($data) && $model->save())
             {
                 //保存家长信息
@@ -142,6 +153,19 @@ class StudentController extends CommonController
         if ($data) {
             $data['Student']['category_id'] = $data['Student']['category_id'] ? $data['Student']['category_id'] : $model->category_id;
             $data['Student']['school'] = $data['Student']['school'] ? $data['Student']['school'] : $model->school;
+
+            //判断是否已存在手机
+            $arr = Patriarch::find()->select(['id','phone'])->where(['phone'=>$data['Patriarch']['phone']])->one();
+            if($arr)
+            {
+                Yii::$app->session->setFlash('error', ['delay'=>9000,'message'=>'保存失败,家长手机号已存在。']);
+                return $this->render('/update', [
+                    'model' => $model,
+                    'patriarch' => $patriarch,
+                    'categoryPath' => $categoryPath,
+                ]);
+            }
+
 
             if($model->load($data) && $model->save())
             {

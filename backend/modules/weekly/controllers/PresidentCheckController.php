@@ -5,8 +5,8 @@
 namespace app\modules\weekly\controllers;
 
 use Yii;
-use app\modules\student\models\Weekly;
-use app\modules\student\models\WeeklySearch;
+use app\modules\weekly\models\Weekly;
+use app\modules\weekly\models\WeeklySearch;
 use app\components\CommonController;
 use yii\web\NotFoundHttpException;
 

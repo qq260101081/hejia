@@ -120,13 +120,30 @@ class PatriarchController extends CommonController
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        } else {
-            return $this->render('/patriarch_update', [
-                'model' => $model,
-            ]);
+        $data = Yii::$app->request->post();
+
+        if ($model->load($data)) {
+            //判断是否已存在手机
+            $arr = Patriarch::find()->select(['id','phone'])->where(['phone'=>$data['Patriarch']['phone']])->one();
+            if($arr)
+            {
+                Yii::$app->session->setFlash('error', ['delay'=>9000,'message'=>'保存失败,家长手机号已存在。']);
+                return $this->render('/patriarch_update', [
+                    'model' => $model,
+                ]);
+            }
+
+            if($model->save())
+            {
+                Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'保存成功！']);
+                return $this->redirect(['index']);
+            }
+            Yii::$app->session->setFlash('error', ['delay'=>9000,'message'=>'保存失败。']);
         }
+
+        return $this->render('/patriarch_update', [
+            'model' => $model,
+        ]);
     }
 
     /**
