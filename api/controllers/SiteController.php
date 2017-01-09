@@ -38,11 +38,23 @@ class SiteController extends Controller
         ]);
     }
 
+    //服务流程
+    public function actionServiceProcess()
+    {
+        return $this->render('service-process');
+    }
+
+
     //和家服务
     public function actionServe()
     {
-        return $this->render('serve', [
-        ]);
+        return $this->render('serve');
+    }
+
+    //和家教育education
+    public function actionEducation()
+    {
+        return $this->render('education');
     }
 
     public function actionLogin()

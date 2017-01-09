@@ -222,10 +222,10 @@ class WechatController extends Controller
                             'url'  => 'http://m.liusheji.com/msg/index'
                         ],
                         [
-                            'name' => urlencode('和家特色'),
+                            'name' => urlencode('和家教育'),
                             'type' => 'view',
                             //'url'  => 'http://mp.weixin.qq.com/s/MZvyaqG67Kvsnmj1BkrKSw'
-                            'url'  => 'http://m.liusheji.com/article/index'
+                            'url'  => 'http://m.liusheji.com/site/education'
                         ],
                         [
                             'name' => urlencode('投诉建议'),

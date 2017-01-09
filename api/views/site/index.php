@@ -56,7 +56,7 @@ $this->title = '和家主页';
     </li>
     <li>
         <div class="am-gallery-item">
-            <a href="<?= Url::to(['article/view','type'=>'about']);?>" class="">
+            <a href="<?= Url::to(['site/education']);?>" class="">
                 <img src="/images/icon7.png">
                 <p>和家教育</p>
             </a>
@@ -76,7 +76,7 @@ $this->title = '和家主页';
 </div>-->
 <ul class="brand">
     <li>
-        <a href="#####">
+        <a href="<?= Url::to(['site/service-process'])?>">
             <div class="brand-left">
                 <i class="am-icon-user-plus"></i>
                 <div class="text">
