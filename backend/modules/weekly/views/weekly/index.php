@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
         <p>
             <?= Html::button(Yii::t('app', '导出'), ['class' => 'btn btn-success btn-xs','id'=>'export']) ?>
-            <?php if(Yii::$app->user->can('student/weekly/create')) echo Html::a(Yii::t('app', 'Create Weekly'), ['create'], ['class' => 'btn btn-success btn-xs']) ?>
+            <?php if(Yii::$app->user->can('weekly/weekly/create')) echo Html::a(Yii::t('app', 'Create Weekly'), ['create'], ['class' => 'btn btn-success btn-xs']) ?>
         </p>
 
         <?php Pjax::begin(); ?>
