@@ -42,6 +42,13 @@ use kartik\date\DatePicker;
             'readonly'=> true
             ]) ?>
 
+        <?= $form->field($model, 'teacher_name')->textInput([
+            'data-toggle'=>'modal',
+            'data-target'=>'#teacher-modal',
+            'id' => 'teacher_name',
+            'readonly'=> true
+        ]) ?>
+
         <?= $form->field($model, 'stime')->widget(DatePicker::className(),[
             'type' => DatePicker::TYPE_INPUT,
             'readonly' => true,
@@ -78,6 +85,7 @@ use kartik\date\DatePicker;
         <?= Html::hiddenInput('Orders[student_id]',$model->student_id,['id'=>'student_id']);?>
         <?= Html::hiddenInput('Orders[product_id]',$model->product_id,['id'=>'product_id']);?>
         <?= Html::hiddenInput('Orders[category_id]',$model->category_id,['id'=>'category_id']);?>
+        <?= Html::hiddenInput('Orders[teacher_id]',$model->category_id,['id'=>'teacher_id']);?>
 
     <div class="box-footer">
         <a href="<?= Url::to(['/orders/orders/index']);?>" class="btn btn-info fa fa-reply"></a>
@@ -118,6 +126,24 @@ $js = <<<JS
     $.get('{$getProductUrl}', {},
         function (data) {
             $('#product-modal .modal-body').html(data);
+        }  
+    );
+
+   
+JS;
+$this->registerJs($js);
+Modal::end();
+
+Modal::begin([
+    'id' => 'teacher-modal',
+    'header' => '<h4 class="modal-title">选取服务人员</h4>',
+    'footer' => '<a href="#" class="btn btn-primary" data-dismiss="modal">关闭</a>',
+]);
+$getProductUrl = Url::toRoute('/orders/orders/select-teacher');//弹窗的html内容，下面的js会调用获得该页面的Html内容，直接填充在弹框中
+$js = <<<JS
+    $.get('{$getProductUrl}', {},
+        function (data) {
+            $('#teacher-modal .modal-body').html(data);
         }  
     );
 

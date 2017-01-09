@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
         <p>
-            <?php if(Yii::$app->user->can('weekly/repository/create')) echo Html::a(Yii::t('app', 'Created Repository'), ['create'], ['class' => 'btn btn-success btn-xs']) ?>
+            <?php if(Yii::$app->user->can('weekly/repository/create')) echo Html::a(Yii::t('app', '创建影像'), ['create'], ['class' => 'btn btn-success btn-xs']) ?>
         </p>
 <?php Pjax::begin(); ?>    <?= GridView::widget([
         'dataProvider' => $dataProvider,

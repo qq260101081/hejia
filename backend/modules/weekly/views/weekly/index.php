@@ -92,12 +92,12 @@ $this->params['breadcrumbs'][] = $this->title;
                     'headerOptions'=> ['width'=> '80'],
                     'buttons' => [
                         'view' => function ($url, $model) {
-                            return  Yii::$app->user->can('student/weekly/view') ?
+                            return  Yii::$app->user->can('weekly/weekly/view') ?
                                 Html::a('<span class="glyphicon glyphicon-eye-open"></span>', $url):
                                 '';
                         },
                         'update' => function ($url,$model, $key) {
-                            if(Yii::$app->user->can('student/weekly/update'))
+                            if(Yii::$app->user->can('weekly/weekly/update'))
                             {
                                 if(!$model->check1)
                                 {
@@ -110,7 +110,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             }
                         },
                         'delete' => function ($url, $model) {
-                            return  Yii::$app->user->can('student/weekly/delete') ?
+                            return  Yii::$app->user->can('weekly/weekly/delete') ?
                                 Html::a('<span class="glyphicon glyphicon-trash"></span>', $url):
                                 '';
                         },

@@ -32,23 +32,26 @@ class PresidentCheckController extends CommonController
     public function actionCheck($id)
     {
         $model = $this->findModel($id);
-        if ($model->load(Yii::$app->request->post())) {
-            if(!$model->remark)
-            {
+        $data = Yii::$app->request->post();
+        if($data)
+        {
+            if($data['check']){
                 $model->check2 = 1;
             }
             else
             {
                 $model->check1 = 0;
                 $model->check2 = 0;
+                $model->remark = $data['remark'];
             }
-            if($model->save())
+            if($model->save(false))
             {
                 Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'审核成功！']);
                 return $this->redirect(['index']);
             }
             Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'审核失败！']);
         }
+
         return $this->render('check', [
             'model' => $model,
         ]);

@@ -30,6 +30,7 @@ class Orders extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public $teacher_name;
     public static function tableName()
     {
         return '{{%orders}}';
@@ -42,9 +43,9 @@ class Orders extends \yii\db\ActiveRecord
     {
         return [
             [['student_id','student_name','product_name','product_id','stime','etime'], 'required'],
-            [['student_id', 'product_id', 'category_id','created_at'], 'integer'],
+            [['student_id', 'product_id','teacher_id', 'category_id','created_at'], 'integer'],
             [['money'], 'number'],
-            [['student_name', 'principal'], 'string', 'max' => 12],
+            [['student_name', 'principal','teacher_name'], 'string', 'max' => 12],
             [['product_name'], 'string', 'max' => 90],
             [['payment_type'], 'string', 'max' => 9],
             [['remark'], 'string', 'max' => 300],
@@ -60,11 +61,14 @@ class Orders extends \yii\db\ActiveRecord
         return [
             'id' => Yii::t('app', 'ID'),
             'student_id' => Yii::t('app', '学生ID'),
+            'teacher_id' => Yii::t('app', '服务人员'),
             'student_name' => Yii::t('app', '学生'),
             'product_id' => Yii::t('app', '服务项目ID'),
             'product_name' => Yii::t('app', '服务项目'),
             'patriarch_name' => Yii::t('app', '家长姓名'),
             'phone' => Yii::t('app', '家长电话'),
+            'teacher_name' => Yii::t('app', '服务人员'),
+
             'stime' => Yii::t('app', '开始日期'),
             'etime' => Yii::t('app', '结束日期'),
             'money' => Yii::t('app', '金额'),

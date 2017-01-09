@@ -157,10 +157,7 @@ a:hover{text-decoration: none;}
 
 .ch{ clear:both;}
 
-.title-bt{ font-weight:bold; display:block; width:30%; text-align:right; float:left;}
-.title-text{ display:block; float:left; width:65%; padding-left:2%; color:#B0B0B0;}
+.title-bt{display:block; width:33%; text-align:right; float:left;}
+.title-text{ display:block; float:left; width:62%; padding-left:2%; color:#B0B0B0;}
 .title-xin{ width:135px; height:25px; float:left; background:url(../images/xin-g.png) no-repeat; display:block; position:relative;}
 .title-xinhh{width:135px; height:25px; float:left; background:url(../images/xin-l.png) no-repeat; display:block; position:absolute; top:0; left:-2px;}
-
-.am-list>li{ border:none;}
-.kuan{ width:80%; margin-left:10%; float:left; border:1px solid #EBEBEB; text-align:center; line-height:50px; margin-top:20px;}

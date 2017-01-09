@@ -3,6 +3,7 @@
 namespace app\modules\orders\controllers;
 
 
+use app\modules\staff\models\StaffSearch;
 use Yii;
 use app\modules\orders\models\Orders;
 use app\modules\orders\models\OrdersSearch;
@@ -103,6 +104,21 @@ class OrdersController extends CommonController
             'model' => $model,
         ]);
 
+    }
+
+    //选择服务人员
+    public function actionSelectTeacher()
+    {
+        $searchModel = new StaffSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider->query->andFilterWhere(['position'=>'老师']);
+        //限制跨校区操作
+        $dataProvider = $this->schoolRule($dataProvider, Orders::tableName().'.');
+
+        return $this->renderAjax('/teacher-list', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
     }
 
     /**
