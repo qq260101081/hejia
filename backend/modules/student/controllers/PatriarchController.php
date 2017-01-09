@@ -98,7 +98,7 @@ class PatriarchController extends CommonController
         {
             //更新家长表
             $model->userid = $user->id;
-            if($model->save())
+            if($model->save(false))
                 Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'开通成功！']);
             else
                 Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'开通失败！']);

@@ -19,7 +19,7 @@ class OrdersSearch extends Orders
     {
         return [
             [['id', 'student_id', 'product_id', 'stime', 'etime', 'created_at'], 'integer'],
-            [['student_name', 'product_name', 'payment_type', 'principal', 'remark'], 'safe'],
+            [['student_name', 'product_name', 'payment_type', 'principal'], 'safe'],
             [['money'], 'number'],
         ];
     }
@@ -72,8 +72,7 @@ class OrdersSearch extends Orders
         $query->andFilterWhere(['like', 'student_name', $this->student_name])
             ->andFilterWhere(['like', 'product_name', $this->product_name])
             ->andFilterWhere(['like', 'payment_type', $this->payment_type])
-            ->andFilterWhere(['like', 'principal', $this->principal])
-            ->andFilterWhere(['like', 'remark', $this->remark]);
+            ->andFilterWhere(['like', 'principal', $this->principal]);
 
         return $dataProvider;
     }

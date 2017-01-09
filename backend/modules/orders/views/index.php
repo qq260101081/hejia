@@ -7,7 +7,7 @@ use yii\widgets\Pjax;
 /* @var $searchModel app\modules\presscentre\models\PresscentreSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', '所有订单');
+$this->title = Yii::t('app', '托辅订单');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
     <div class="box box-info guarantee-index">
@@ -29,8 +29,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'money',
             'payment_type',
             'principal',
-            'remark',
-            'created_at:date',
+            //'remark',
+            //'created_at:date',
 
             [
                 'class' => 'yii\grid\ActionColumn',

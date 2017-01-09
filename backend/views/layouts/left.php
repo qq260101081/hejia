@@ -51,8 +51,8 @@
                         'visible'=> isset($permissions['orders']) ? 1 : 0,
                         'url' => '#',
                         'items' => [
-                            ['label' => '所有订单', 'icon' => 'fa fa-dot-circle-o', 'visible'=> isset($permissions['orders']['orders']['index']) ? 1 : 0, 'url' => ['/orders/orders/index',]],
-                            //['label' => '活动订单', 'icon' => 'fa fa-dot-circle-o', 'visible'=> isset($permissions['orders']['orders']['atv-index']) ? 1 : 0, 'url' => ['/orders/orders/atv-index']],
+                            ['label' => '托辅订单', 'icon' => 'fa fa-dot-circle-o', 'visible'=> isset($permissions['orders']['orders']['index']) ? 1 : 0, 'url' => ['/orders/orders/index',]],
+                            ['label' => '活动订单', 'icon' => 'fa fa-dot-circle-o', 'visible'=> isset($permissions['orders']['orders-atv']['index']) ? 1 : 0, 'url' => ['/orders/orders-atv/index']],
                             ['label' => '已过期订单', 'icon' => 'fa fa-dot-circle-o', 'visible'=> isset($permissions['orders']['orders']['expired-index']) ? 1 : 0, 'url' => ['/orders/orders/expired-index']],
                         ],
                     ],

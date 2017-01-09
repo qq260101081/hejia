@@ -96,7 +96,7 @@ class OrdersController extends CommonController
                 Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'保存成功！']);
                 return $this->redirect(['index']);
             }
-            Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败成功！']);
+            Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败！']);
 
         }
         return $this->render('/create', [
