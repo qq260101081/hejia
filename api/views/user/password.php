@@ -15,7 +15,7 @@
 
 <?php if(!Yii::$app->getSession()->getFlash('success')):;?>
 <?php $form = ActiveForm::begin();?>
-    <input type="text" name="mobile" value="<?=$model->username;?>" class="login-password">
+    <input type="text" name="mobile" value="<?=$model->username;?>" disabled class="login-password">
     <!--<div class="yzm">
         <input type="text" class="reg-yzm" placeholder="输入验证码">
         <input type="button" class="yzm-hq" value="获取验证码">
