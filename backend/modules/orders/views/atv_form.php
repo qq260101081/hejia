@@ -29,7 +29,7 @@ use kartik\date\DatePicker;
         ]); ?>
 
         <?= $form->field($model, 'patriarch_name')?>
-        <?= $form->field($model, 'phone')?>
+        <?= $form->field($model, 'phone')->textInput(['maxlength'=>'11'])?>
 
         <?= $form->field($model, 'product_name')->textInput([
             'data-toggle'=>'modal',

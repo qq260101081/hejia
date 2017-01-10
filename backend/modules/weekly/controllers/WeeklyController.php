@@ -96,6 +96,7 @@ class WeeklyController extends CommonController
     {
         $this->findModel($id)->delete();
 
+        Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'删除成功！']);
         return $this->redirect(['index']);
     }
 

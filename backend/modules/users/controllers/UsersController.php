@@ -185,7 +185,7 @@ class UsersController extends CommonController
             break;
         }
 
-
+        Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'删除成功！']);
         $model->delete();
         return $this->redirect(['index']);
     }

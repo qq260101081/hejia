@@ -47,6 +47,8 @@ return [
     'Content' => '内容',
     'Created At' => '创建时间',
     'Updated At' => '更新时间',
+    'Are you sure you want to delete this item?' => '确定删除此项？',
+
     //影像资料
     'Repository' => '影像资料管理',
     'Created Repository' => '创建影像资料',

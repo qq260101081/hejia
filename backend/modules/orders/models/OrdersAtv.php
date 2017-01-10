@@ -47,6 +47,7 @@ class OrdersAtv extends \yii\db\ActiveRecord
             [['patriarch_name', 'principal'], 'string', 'max' => 12],
             [['product_name'], 'string', 'max' => 90],
             [['payment_type'], 'string', 'max' => 9],
+            [['phone'], 'string', 'max' => 11],
             [['remark'], 'string', 'max' => 300],
             ['created_at', 'default', 'value' => time()]
         ];

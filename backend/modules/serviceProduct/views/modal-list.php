@@ -21,14 +21,25 @@ use yii\widgets\Pjax;
             'name',
             [
                 'attribute' => 'type',
+                'value' => function($model){
+                    $type = [
+                        '1'=>'兴趣班',
+                        '2'=>'夏冬令营',
+                        '3'=>'课程班',
+                        '4'=>'拓展班',
+                        '5'=>'基础服务',
+                        '0'=>'其他',
+                    ];
+                    return $type[$model->type];
+                },
                 'filter' => Html::activeDropDownList($searchModel, 'type',[
-                    1=>'兴趣班',
-                    2=>'夏冬令营',
-                    3=>'课程班',
-                    4=>'拓展班',
-                    5=>'基础服务',
-                    0=>'其他',
-                ],['prompt'=>'全部'] )
+                    '1'=>'兴趣班',
+                    '2'=>'夏冬令营',
+                    '3'=>'课程班',
+                    '4'=>'拓展班',
+                    '5'=>'基础服务',
+                    '0'=>'其他',
+                ],['prompt'=>'全部','class' => 'form-control'] )
             ],
             [
                 'class' => 'yii\grid\ActionColumn',

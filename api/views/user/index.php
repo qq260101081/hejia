@@ -10,7 +10,7 @@
 
 <div class="wo">
     <img src="/images/tx.png" />
-    <p><a href="<?= Url::to(['user/view','id'=>Yii::$app->user->id])?>"><?= Yii::$app->user->identity->username;?></a></p>
+    <p><a href="<?= Url::to(['user/view','id'=>Yii::$app->user->id])?>"><?= Yii::$app->user->identity->name;?></a></p>
 </div>
 <ul class="nav">
     <li>

@@ -50,7 +50,12 @@ $this->params['breadcrumbs'][] = $this->title;
                     },
                     'delete' => function ($url, $model) {
                         return  Yii::$app->user->can('users/users/delete') ?
-                            Html::a('<span class="glyphicon glyphicon-trash"></span>', $url):
+                            Html::a('<span class="glyphicon glyphicon-trash"></span>', $url, [
+                                'data' => [
+                                    'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
+                                    'method' => 'post',
+                                ],
+                            ]):
                             '';
                     },
                 ],

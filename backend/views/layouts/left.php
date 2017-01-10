@@ -82,9 +82,9 @@
                         'url' => '#',
                         'visible'=> isset($permissions['users']) ? 1 : 0,
                         'items' => [
-                            ['label' => '用户列表', 'icon' => 'fa fa-dot-circle-o',isset($permissions['users']['users']['index']) ? 1 : 0, 'url' => ['/users/users/index']],
-                            ['label' => '用户组', 'icon' => 'fa fa-dot-circle-o',isset($permissions['role']['role']['index']) ? 1 : 0, 'url' => ['/role/role/index']],
-                            ['label' => '留言列表', 'icon' => 'fa fa-dot-circle-o',isset($permissions['users']['guestbook']['index']) ? 1 : 0, 'url' => ['/users/guestbook/index']],
+                            ['label' => '用户列表', 'icon' => 'fa fa-dot-circle-o','visible'=> isset($permissions['users']['users']['index']) ? 1 : 0, 'url' => ['/users/users/index']],
+                            ['label' => '用户组', 'icon' => 'fa fa-dot-circle-o','visible'=> isset($permissions['role']['role']['index']) ? 1 : 0, 'url' => ['/role/role/index']],
+                            ['label' => '留言列表', 'icon' => 'fa fa-dot-circle-o','visible'=> isset($permissions['users']['guestbook']['index']) ? 1 : 0, 'url' => ['/users/guestbook/index']],
                         ],
                     ],
                     ['label' => '活动资讯', 'icon' => 'fa fa-share', 'visible'=> isset($permissions['events']['events']['index']) ? 1 : 0, 'url' => ['/events/events/index']],

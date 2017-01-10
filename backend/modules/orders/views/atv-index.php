@@ -7,7 +7,7 @@ use yii\widgets\Pjax;
 /* @var $searchModel app\modules\presscentre\models\PresscentreSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', '活动订单');
+$this->title = Yii::t('app', '其他服务订单');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
     <div class="box box-info guarantee-index">
@@ -50,7 +50,12 @@ $this->params['breadcrumbs'][] = $this->title;
                     },
                     'delete' => function ($url, $model) {
                         return  Yii::$app->user->can('orders/orders-atv/delete') ?
-                            Html::a('<span class="glyphicon glyphicon-trash"></span>', $url):
+                            Html::a('<span class="glyphicon glyphicon-trash"></span>', $url, [
+                                'data' => [
+                                    'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
+                                    'method' => 'post',
+                                ],
+                            ]):
                             '';
                     },
                 ],
