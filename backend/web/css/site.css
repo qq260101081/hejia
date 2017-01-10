@@ -21,6 +21,9 @@ body .sidebar-menu > li > ul>li>a {
 .box-header p {
 	float: right;
 }
+.box-header tr td p {
+	float: none;
+}
 .form-control {
 	height: 28px;
 }
