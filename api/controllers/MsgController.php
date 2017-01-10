@@ -28,7 +28,6 @@ class MsgController extends BaseController
             ->all();
         //周报消息
         $weekly = WeeklyLogs::find()
-            ->select(['id', 'student_name', 'created_at'])
             ->where(['patriarch_id'=>Yii::$app->user->id])
             ->andWhere(['>', 'created_at', $start])
             ->all();
@@ -58,7 +57,7 @@ class MsgController extends BaseController
     public function actionWeeklyView($id)
     {
         $model = WeeklyLogs::findOne($id);
-
+print_r($model);die;
         return $this->render('weekly-view', [
             'model' => $model
         ]);

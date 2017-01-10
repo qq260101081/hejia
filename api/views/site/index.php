@@ -54,7 +54,7 @@
     </li>
     <li>
         <div class="am-gallery-item">
-            <a href="<?= Url::to(['article/view','type'=>'about']);?>" class="">
+            <a href="<?= Url::to(['site/education']);?>" class="">
                 <img src="/images/icon7.png">
                 <p>和家教育</p>
             </a>
@@ -74,7 +74,7 @@
 </div>-->
 <ul class="brand">
     <li>
-        <a href="#####">
+        <a href="<?= Url::to(['site/service-process'])?>">
             <div class="brand-left">
                <span style="float:left; margin-top:7px; margin-right:5px;"><img src="/images/ptd_03.png" width="30px" height="30"></span>
                	  		<div class="text" style="color:#fb803d;">

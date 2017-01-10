@@ -29,7 +29,9 @@
                 <?php endforeach;?>
                 <?php foreach ($weekly as $v):;?>
                     <li class="am-g am-list-item-dated">
-                        <a href="<?= Url::to(['msg/weekly-view','id'=>$v->id])?>" class="am-list-item-hd ">学生周报</a>
+                        <a href="<?= Url::to(['msg/weekly-view','id'=>$v->id])?>" class="am-list-item-hd ">
+                            学生周报【<?=date('Y-m-d', $v->stime);?> - <?=date('Y-m-d', $v->etime);?>】
+                        </a>
                         <span class="am-list-date"><?= date('Y-m-d',$v->created_at);?></span>
                     </li>
                 <?php endforeach;?>
