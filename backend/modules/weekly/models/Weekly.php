@@ -74,7 +74,7 @@ class Weekly extends ActiveRecord
             'stime' => Yii::t('app', '开始时间'),
             'etime' => Yii::t('app', '结束时间'),
             'diet' => Yii::t('app', '饮食'),
-            'remark' => Yii::t('app', '不通过原因'),
+            'remark' => Yii::t('app', '驳回原因'),
             'study' => Yii::t('app', '学习'),
             'synthesize' => Yii::t('app', '综合评定'),
             'created_at' => Yii::t('app', '创建时间'),

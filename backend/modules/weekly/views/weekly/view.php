@@ -39,6 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'study',
             'synthesize:html',
             'created_at:date',
+            'remark:text'
         ],
     ]) ?>
 
