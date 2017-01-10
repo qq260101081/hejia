@@ -57,7 +57,6 @@ class MsgController extends BaseController
     public function actionWeeklyView($id)
     {
         $model = WeeklyLogs::findOne($id);
-
         return $this->render('weekly-view', [
             'model' => $model
         ]);
