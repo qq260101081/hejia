@@ -33,8 +33,7 @@ class WeeklyController extends CommonController
     {
         $model = $this->findModel($id);
         $patriarch = Patriarch::find()->select(['name','id'])->where(['student_id'=>$model->student_id])->one();
-
-        $model->userid = $patriarch->name;
+        if($patriarch) $model->userid = $patriarch->name;
         return $this->render('view', [
             'model' => $model,
         ]);
