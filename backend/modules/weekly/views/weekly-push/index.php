@@ -46,7 +46,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 <?php
-echo Html::beginForm(['/msg/weekly-push-logs/create'], 'post');
+echo Html::beginForm(['/weekly/weekly-push/create'], 'post');
 Modal::begin([
 'id' => 'weekly-modal',
 'size' => 'modal-lg',

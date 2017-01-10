@@ -33,7 +33,10 @@ class WeeklyController extends CommonController
     {
         $model = $this->findModel($id);
         $patriarch = Patriarch::find()->select(['name','id'])->where(['student_id'=>$model->student_id])->one();
-        if($patriarch) $model->userid = $patriarch->name;
+        if($patriarch)
+            $model->userid = $patriarch->name;
+        else
+            $model->userid = '';
         return $this->render('view', [
             'model' => $model,
         ]);
@@ -45,8 +48,10 @@ class WeeklyController extends CommonController
         $model = new Weekly();
         $data = Yii::$app->request->post();
         if ($model->load($data)) {
+
             $model->stime = strtotime($model->stime);
             $model->etime = strtotime($model->etime);
+
             if($model->save())
             {
                 Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'创建成功！']);
@@ -63,6 +68,7 @@ class WeeklyController extends CommonController
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+
         $model->stime = date('Y-m-d',$model->stime);
         $model->etime = date('Y-m-d',$model->etime);
         if ($model->load(Yii::$app->request->post())) {

@@ -53,7 +53,7 @@ class Weekly extends ActiveRecord
             ['student_name', 'string', 'max'=>12],
             [['remark','synthesize'], 'string', 'max'=>600],
             ['synthesize', 'string', 'min'=>50],
-            //[['stime','etime'],'string'],
+            [['stime','etime'],'safe'],
             ['remark', 'default', 'value'=>NULL],
             ['userid', 'default', 'value' => Yii::$app->user->identity->id],
         ];
