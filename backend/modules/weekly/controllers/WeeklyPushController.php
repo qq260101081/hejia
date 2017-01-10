@@ -57,6 +57,7 @@ class WeeklyPushController extends CommonController
             foreach($selection as $k => $id){
                 $weekly = Weekly::findOne((int)$id);//make a typecasting
                 $patriarch = Patriarch::find()->select(['userid','name'])->where(['student_id' => $weekly->student_id])->one();
+                if(!$patriarch) continue;
                 $rows[$k]['id'] = null;
                 $rows[$k]['student_id'] = $weekly->student_id;
                 $rows[$k]['student_name'] = $weekly->student_name;
