@@ -7,9 +7,6 @@
 
 namespace api\controllers;
 
-
-use api\models\Order;
-use api\models\Student;
 use Yii;
 use api\models\Msg;
 use api\models\Patriarch;
@@ -26,24 +23,7 @@ class UserController extends BaseController
         return $this->render('index', [
         ]);
     }
-    /*
-     * 我的服务
-     */
-    public function actionServe()
-    {
-        $patriarch = Patriarch::find()->where(['userid'=>Yii::$app->user->id])->one();
 
-        $studentID = isset($patriarch->student_id) ? $patriarch->student_id : 0;
-
-        $student = Student::find()->where(['id' => $studentID])->one();
-        $order = Order::find()->where(['student_id' => $studentID])->one();
-        //print_r($patriarch);
-        return $this->render('serve', [
-            'patriarch' => $patriarch,
-            'student' => $student,
-            'order' => $order,
-        ]);
-    }
     /*
      * 我的资料
      */

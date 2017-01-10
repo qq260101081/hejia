@@ -8,13 +8,13 @@ namespace api\models;
 
 use yii\db\ActiveRecord;
 
-class Order extends ActiveRecord
+class Staff extends ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return '{{%orders}}';
+        return '{{%user_staff}}';
     }
 }

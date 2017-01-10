@@ -37,7 +37,7 @@ AppAsset::register($this);
             </a>
         </li>
         <li>
-            <a href="<?= Url::to(['user/serve'])?>" class="">
+            <a href="<?= Url::to(['orders/index'])?>" class="">
                 <span class="am-icon-coffee"></span>
                 <span class="am-navbar-label">我的服务</span>
             </a>

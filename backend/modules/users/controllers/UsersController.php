@@ -167,14 +167,18 @@ class UsersController extends CommonController
         //删除对应员工
         if($model->type == 'staff')
         {
-            Staff::find()->where(['userid' => $model->id])->one()->delete();
+            $staff = Staff::find()->where(['userid' => $model->id])->one();
+            if($staff) $staff->delete();
         }
         //更新对应家长表
         elseif ($model->type == 'patriarch')
         {
             $patriarch = Patriarch::find()->where(['userid' => $model->id])->one();
-            $patriarch->userid = 0;
-            $patriarch->save();
+            if($patriarch)
+            {
+                $patriarch->userid = 0;
+                $patriarch->save(false);
+            }
         }
 
         //删除对应的角色

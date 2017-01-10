@@ -7,9 +7,6 @@
     $this->title = '我的服务';
 ?>
 
-<?php if(!$order):;?>
-    您没有任何服务。
-<?php else:;?>
 <ul class="nav">
     <li>
         <span class="title-bt">服务名称：</span>
@@ -100,29 +97,28 @@
         <span class="title-text"><?= $patriarch->remark; ?></span>
     </li>
 </ul>
-<!--
+<?php if($staff):;?>
 <ul class="nav">
     <li>
         <span class="title-bt">服务人员资料：</span>
     </li>
     <li>
         <span class="title-bt">姓名：</span>
-        <span class="title-text">李XX</span>
+        <span class="title-text"><?=$staff->name;?></span>
     </li>
     <li>
         <span class="title-bt">性别：</span>
-        <span class="title-text">男</span>
+        <span class="title-text"><?=$staff->name;?></span>
     </li>
     <li>
         <span class="title-bt">岗位：</span>
-        <span class="title-text">教师</span>
+        <span class="title-text"><?=$staff->position;?></span>
     </li>
     <li>
         <span class="title-bt">学历：</span>
-        <span class="title-text">本科</span>
+        <span class="title-text"><?=$staff->diploma;?></span>
     </li>
 
 </ul>
--->
 <?php endif;?>
 <div style="height: 49px;"></div>
