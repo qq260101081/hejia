@@ -17,7 +17,8 @@ class AuxiliaryController extends Controller
     //区域 校区选择
     public function actionArea()
     {
-        $category = ServeCategory::find()->select(['id','name','parent'])->indexBy('id')->asArray()->all();
+        $category = ServeCategory::find()->select(['id','name','parent'])->where(['type'=>'default'])->indexBy('id')->asArray()->all();
+
         $model = $this->generateTree($category);
 
         return $this->render('area', ['model' => $model]);
