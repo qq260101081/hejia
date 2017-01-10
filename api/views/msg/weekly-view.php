@@ -17,25 +17,25 @@
     <li>
         <span class="title-bt">纪律：</span>
         <span class="title-xin">
-            <span class="title-xinhh" style="width: <?=$model->discipline*25; ?>px"></span>
+            <span class="title-xinhh" style="width: <?=$model->discipline*19; ?>px"></span>
         </span>
     </li>
     <li>
         <span class="title-bt">睡眠：</span>
         <span class="title-xin">
-            <span class="title-xinhh" style="width: <?=$model->sleep*25; ?>px"></span>
+            <span class="title-xinhh" style="width: <?=$model->sleep*19; ?>px"></span>
         </span>
     </li>
     <li>
         <span class="title-bt">饮食：</span>
         <span class="title-xin">
-            <span class="title-xinhh" style="width: <?=$model->diet*25; ?>px"></span>
+            <span class="title-xinhh" style="width: <?=$model->diet*19; ?>px"></span>
         </span>
     </li>
     <li>
         <span class="title-bt">学习：</span>
         <span class="title-xin">
-            <span class="title-xinhh" style="width: <?=$model->study*25; ?>px"></span>
+            <span class="title-xinhh" style="width: <?=$model->study*19; ?>px"></span>
         </span>
     </li>
     <li>
