@@ -4,7 +4,7 @@ namespace app\modules\weekly\controllers;
 
 use Yii;
 use app\modules\weekly\models\Weekly;
-use app\modules\student\models\Student;
+use app\modules\student\models\Patriarch;
 use app\modules\weekly\models\WeeklySearch;
 use app\components\CommonController;
 use yii\web\NotFoundHttpException;
@@ -32,8 +32,9 @@ class WeeklyController extends CommonController
     public function actionView($id)
     {
         $model = $this->findModel($id);
-        $student = Student::find()->select(['name','id'])->where(['id'=>$model->student_id])->one();
-        $model->userid = $student->name;
+        $patriarch = Patriarch::find()->select(['name','id'])->where(['student_id'=>$model->student_id])->one();
+
+        $model->userid = $patriarch->name;
         return $this->render('view', [
             'model' => $model,
         ]);
