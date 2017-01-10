@@ -1,8 +1,6 @@
 <?php
     use yii\helpers\Url;
-/* @var $this yii\web\View */
-
-$this->title = '和家主页';
+    $this->title = '和家主页';
 ?>
 <div class="banner"><img src="/images/banner.png"/></div>
 <ul class="menu">
@@ -56,7 +54,7 @@ $this->title = '和家主页';
     </li>
     <li>
         <div class="am-gallery-item">
-            <a href="<?= Url::to(['site/education']);?>" class="">
+            <a href="<?= Url::to(['article/view','type'=>'about']);?>" class="">
                 <img src="/images/icon7.png">
                 <p>和家教育</p>
             </a>
@@ -76,22 +74,22 @@ $this->title = '和家主页';
 </div>-->
 <ul class="brand">
     <li>
-        <a href="<?= Url::to(['site/service-process'])?>">
+        <a href="#####">
             <div class="brand-left">
-                <i class="am-icon-user-plus"></i>
-                <div class="text">
-                    <h2>服务流程</h2>
-                    <p>享受优质服务</p>
-                </div>
+               <span style="float:left; margin-top:7px; margin-right:5px;"><img src="/images/ptd_03.png" width="30px" height="30"></span>
+               	  		<div class="text" style="color:#fb803d;">
+               	  			<h2 style="color:#fb803d;">服务流程</h2>
+               	  			<p style="color:#fb803d;">让服务更贴心</p>
+               	  		</div>
             </div>
         </a>
         <a href="<?= Url::to(['guestbook/create'])?>">
             <div class="brand-right">
-                <i class="am-icon-edit"></i>
-                <div class="text">
-                    <h2>意见反馈</h2>
-                    <p>让服务更贴心</p>
-                </div>
+                <span style="float:left; margin-top:7px; margin-right:5px;"><img src="/images/ptd_05.png" width="30px" height="30"></span>
+               	  		<div class="text">
+               	  			<h2 style="color:#fb803d;">意见反馈</h2>
+               	  			<p style="color:#fb803d;">让我们变得更好</p>
+               	  		</div>
             </div>
         </a>
     </li>
