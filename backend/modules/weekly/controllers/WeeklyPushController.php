@@ -67,8 +67,10 @@ class WeeklyPushController extends CommonController
                 $rows[$k]['diet'] = $weekly->diet;
                 $rows[$k]['study'] = $weekly->study;
                 $rows[$k]['synthesize'] = $weekly->synthesize;
-                $rows[$k]['username'] = Yii::$app->user->identity->username;
+                $rows[$k]['username'] = Yii::$app->user->identity->name;
                 $rows[$k]['status'] = 0;
+                $rows[$k]['stime'] = $weekly->stime;
+                $rows[$k]['etime'] = $weekly->etime;
                 $rows[$k]['created_at'] = $time;
             }
             Yii::$app->db->createCommand()->batchInsert(

@@ -35,7 +35,7 @@ class WeeklyPushLogs extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['student_id', 'discipline', 'sleep', 'diet', 'study', 'status', 'created_at'], 'integer'],
+            [['student_id', 'stime','etime','discipline', 'sleep', 'diet', 'study', 'status', 'created_at'], 'integer'],
             [['student_name'], 'string', 'max' => 12],
             [['synthesize'], 'string', 'max' => 300],
             [['username'], 'string', 'max' => 30],
