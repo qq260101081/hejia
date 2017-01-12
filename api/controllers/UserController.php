@@ -20,7 +20,7 @@ class UserController extends BaseController
      */
     public function actionIndex()
     {
-        $msgStatus = MsgStatus::find()->where(['userid' => Yii::$app->user->id]);
+        $msgStatus = MsgStatus::find()->where(['userid' => Yii::$app->user->id])->one();
         return $this->render('index', [
             'msgStatus' => $msgStatus
         ]);
