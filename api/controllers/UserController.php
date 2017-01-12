@@ -34,7 +34,7 @@ class UserController extends BaseController
         $model = User::find()->where(['id' => Yii::$app->user->id])->one();
         $patriarch = null;
         if($model->type = 'patriarch')
-            $patriarch = Patriarch::find()->where(['userid'=>$model->id])->one();
+            $patriarch = Patriarch::findOne($model->id);
         return $this->render('view', [
             'model' => $model,
             'patriarch' => $patriarch
