@@ -20,8 +20,13 @@
             <i class="am-icon-angle-right"></i>
         </a>
     </li>
-    <li>
+    <li style="position:relative;">
         <a href="<?= Url::to(['msg/index']);?>">
+
+            <?php if($msgStatus && $msgStatus->status):?>
+                <span class="hongdian" style="width:8px; height:8px; border-radius:4px; background-color:red; float:right; position:absolute; right:15px; top:25px;"></span>
+            <?php endif;?>
+
             <img src="/images/i2.png" />
             <span>消息中心</span>
             <i class="am-icon-angle-right"></i>

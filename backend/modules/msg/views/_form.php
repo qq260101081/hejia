@@ -55,7 +55,7 @@ Modal::begin([
                  <button type="button" onclick="getSelectd()" class="btn btn-warning" data-dismiss="modal">确定</button>',
 ]);
 
-$getStudentUrl = Url::toRoute('/student/patriarch/modal-list');//弹窗的html内容，下面的js会调用获得该页面的Html内容，直接填充在弹框中
+$getStudentUrl = Url::toRoute('/msg/msg-push-logs/modal-list');//弹窗的html内容，下面的js会调用获得该页面的Html内容，直接填充在弹框中
 $js = <<<JS
     $.get('{$getStudentUrl}', {},
         function (data) {

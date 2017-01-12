@@ -4,6 +4,8 @@ namespace app\modules\student\models;
 
 use Yii;
 use yii\behaviors\TimestampBehavior;
+use yii\db\ActiveRecord;
+
 /**
  * This is the model class for table "{{%student}}".
  *
@@ -16,8 +18,9 @@ use yii\behaviors\TimestampBehavior;
  * @property integer $created_at
  * @property integer $updated_at
  */
-class Student extends Patriarch
+class Student extends ActiveRecord
 {
+    public $patriarch_name;
     public function behaviors()
     {
 
@@ -42,7 +45,7 @@ class Student extends Patriarch
     //获取家长
     public function getPatriarch()
     {
-        return $this->hasOne(Patriarch::className(), ['student_id' => 'id']);
+        return $this->hasOne(Patriarch::className(), ['id' => 'patriarch_id']);
     }
     /**
      * @inheritdoc
@@ -50,9 +53,9 @@ class Student extends Patriarch
     public function rules()
     {
         return [
-            [['name', 'sex', 'age', 'school', 'grade', 'category_id'], 'required'],
-            [['age', 'created_at', 'updated_at', 'category_id'], 'integer'],
-            [['sex','name'], 'string', 'max' => 12],
+            [['name', 'sex', 'age', 'school', 'grade', 'category_id', 'patriarch_name'], 'required'],
+            [['age', 'created_at', 'updated_at', 'category_id', 'patriarch_id'], 'integer'],
+            [['sex','name','patriarch_name'], 'string', 'max' => 12],
             ['remark', 'string', 'max' => 300],
             [['school', 'grade'], 'string', 'max' => 90],
         ];
@@ -66,6 +69,7 @@ class Student extends Patriarch
         return [
             'id' => Yii::t('app', 'ID'),
             'name' => Yii::t('app', 'Student Name'),
+            'patriarch_name' => Yii::t('app', '家长'),
             'sex' => Yii::t('app', 'Sex'),
             'age' => Yii::t('app', 'Age'),
             'remark' => Yii::t('app', '备注'),

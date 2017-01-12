@@ -66,3 +66,13 @@ form .help-block {
 	width: 18px;
 	height: 18px;
 }
+
+
+.grid-view tr td{
+	white-space: nowrap; !important;
+	text-overflow: ellipsis;!important;
+	overflow: hidden;!important;
+}
+.grid-view table {
+	table-layout: fixed;
+}

@@ -28,7 +28,7 @@ use yii\helpers\Url;
         <?= $form->field($model, 'relation')->dropDownList([
             '爸爸'=>'爸爸','妈妈'=>'妈妈','爷爷'=>'爷爷','奶奶'=>'奶奶','大伯'=>'大伯','大婶'=>'大婶','大伯'=>'大伯','其他'=>'其他'
         ]) ?>
-        <?= $form->field($model, 'phone')->textInput() ?>
+        <?= $form->field($model, 'phone')->textInput(['maxlength'=>'11']) ?>
         <?= $form->field($model, 'urgency_phone')->textInput() ?>
         <?= $form->field($model, 'urgency_person')->textInput() ?>
         <?= $form->field($model, 'address')->textInput() ?>
@@ -36,7 +36,7 @@ use yii\helpers\Url;
 
 
         <div class="box-footer">
-            <a href="<?= Url::to(['/student/student/index']);?>" class="btn btn-info fa fa-reply"></a>
+            <a href="<?= Url::to(['index']);?>" class="btn btn-info fa fa-reply"></a>
             <?= Html::submitButton('', ['class' => 'btn btn-info pull-right fa fa-save']) ?>
         </div>
 

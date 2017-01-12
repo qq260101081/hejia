@@ -18,8 +18,8 @@ class OrdersSearch extends Orders
     public function rules()
     {
         return [
-            [['id', 'student_id', 'product_id', 'stime', 'etime', 'created_at'], 'integer'],
-            [['student_name', 'product_name', 'payment_type', 'principal'], 'safe'],
+            [['id', 'student_id', 'product_id', 'created_at'], 'integer'],
+            [['student_name', 'product_name', 'stime', 'etime', 'payment_type', 'principal'], 'safe'],
             [['money'], 'number'],
         ];
     }
@@ -63,8 +63,6 @@ class OrdersSearch extends Orders
             'id' => $this->id,
             'student_id' => $this->student_id,
             'product_id' => $this->product_id,
-            'stime' => $this->stime,
-            'etime' => $this->etime,
             'money' => $this->money,
             'created_at' => $this->created_at,
         ]);
@@ -73,6 +71,9 @@ class OrdersSearch extends Orders
             ->andFilterWhere(['like', 'product_name', $this->product_name])
             ->andFilterWhere(['like', 'payment_type', $this->payment_type])
             ->andFilterWhere(['like', 'principal', $this->principal]);
+//var_dump($this->etime);die;
+        if($this->stime) $query->andWhere(['>','stime',strtotime($this->stime)]);
+        if($this->etime) $query->andWhere(['<','etime',strtotime($this->etime)]);
 
         return $dataProvider;
     }

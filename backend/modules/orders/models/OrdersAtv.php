@@ -62,7 +62,7 @@ class OrdersAtv extends \yii\db\ActiveRecord
             'id' => Yii::t('app', 'ID'),
             'product_id' => Yii::t('app', '服务项目ID'),
             'product_name' => Yii::t('app', '服务项目'),
-            'patriarch_name' => Yii::t('app', '家长姓名'),
+            'patriarch_name' => Yii::t('app', '客户姓名'),
             'phone' => Yii::t('app', '家长电话'),
             'stime' => Yii::t('app', '开始日期'),
             'etime' => Yii::t('app', '结束日期'),

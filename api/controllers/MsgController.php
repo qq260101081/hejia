@@ -8,6 +8,7 @@
 
 namespace api\controllers;
 
+use common\models\MsgStatus;
 use Yii;
 use api\components\BaseController;
 use api\models\MsgLogs;
@@ -37,6 +38,13 @@ class MsgController extends BaseController
             ->where(['patriarch_id'=>Yii::$app->user->id])
             ->andWhere(['>', 'created_at', $start])
             ->all();
+        //更新红点消息状态
+        $msgStatus = MsgStatus::find()->where(['userid'=>Yii::$app->user->id])->one();
+        if($msgStatus) {
+            $msgStatus->status = 0;
+            $msgStatus->save(false);
+        }
+
         return $this->render('index',[
             'msg' => $msg,
             'weekly' => $weekly,

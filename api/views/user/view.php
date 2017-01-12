@@ -14,12 +14,12 @@
         <span class="title-bt">姓名：</span>
         <span class="title-text"><?= $model->name; ?></span>
     </li>
-    <li>
+    <!--<li>
         <span class="title-bt">性别：</span>
         <span class="title-text">
             <?php if($model->sex == 1) echo '男';elseif($model->sex == 2) echo '女'; else echo '保密';?>
         </span>
-    </li>
+    </li>-->
     <li>
         <span class="title-bt">关系：</span>
         <span class="title-text"><?php if($patriarch) echo $patriarch->relation;?></span>

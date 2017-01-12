@@ -11,6 +11,7 @@ use app\modules\student\models\Student;
 use app\modules\student\models\StudentSearch;
 use app\components\CommonController;
 use yii\web\NotFoundHttpException;
+use app\modules\student\models\PatriarchSearch;
 
 /**
  * PresscentreController implements the CRUD actions for Presscentre model.
@@ -65,7 +66,6 @@ class StudentController extends CommonController
     public function actionCreate()
     {
         $model = new Student();
-        $patriarch = new Patriarch();
         $model->sex = '男';
 
         $categoryInfo = ServiceCategory::find()->where(['id'=>137])->asArray()->one();
@@ -83,43 +83,16 @@ class StudentController extends CommonController
         $data = Yii::$app->request->post();
 
         if ($data) {
-            //如果当前用户为教师，客服，客服主管，校长则默认为本校区
-            if(Yii::$app->user->identity->type)
-            {
-                $staff = Staff::find()->select(['id','category_id','school'])->where(['userid'=>Yii::$app->user->identity->id])->one();
-                $data['Student']['category_id'] = $staff ? $staff->category_id : 0;
-                $data['Student']['school'] = $staff ? $staff->school : '';
-            }
-            //判断是否已存在手机
-            $arr = Patriarch::find()->select(['id','phone'])->where(['phone'=>$data['Patriarch']['phone']])->one();
-            if($arr)
-            {
-                Yii::$app->session->setFlash('error', ['delay'=>9000,'message'=>'保存失败,家长手机号已存在。']);
-                return $this->render('/create', [
-                    'model' => $model,
-                    'patriarch' => $patriarch,
-                    'categoryPath' => $categoryPath,
-                ]);
-            }
             if($model->load($data) && $model->save())
             {
-                //保存家长信息
-                $patriarch->load($data);
-                $patriarch->student_id = $model->id;
-                $patriarch->category_id = $model->category_id;
-                $patriarch->save($data);
-
                 Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'保存成功！']);
                 return $this->redirect(['index']);
-            }
-            else{
-                Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败！']);
-            }
+            }print_r($model->getErrors());
+            Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败！']);
         }
 
         return $this->render('/create', [
             'model' => $model,
-            'patriarch' => $patriarch,
             'categoryPath' => $categoryPath,
         ]);
 
@@ -134,8 +107,8 @@ class StudentController extends CommonController
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-        $patriarch = Patriarch::find()->where(['student_id'=>$id])->one();
-
+        $patriarch = Patriarch::find()->select(['id','name'])->where(['id' => $model->patriarch])->one();
+        if($patriarch) $model->patriarch_name = $patriarch->name;
         $categoryInfo = ServiceCategory::find()->where(['id'=>$model->category_id])->asArray()->one();
         $categoryPath = ServiceCategory::find()
             ->where(['<','lft',$categoryInfo['lft']])
@@ -151,38 +124,16 @@ class StudentController extends CommonController
         $data = Yii::$app->request->post();
 
         if ($data) {
-            $data['Student']['category_id'] = $data['Student']['category_id'] ? $data['Student']['category_id'] : $model->category_id;
-            $data['Student']['school'] = $data['Student']['school'] ? $data['Student']['school'] : $model->school;
-
-            //判断是否已存在手机
-            $arr = Patriarch::find()->select(['id','phone'])->where(['phone'=>$data['Patriarch']['phone']])->one();
-            if($arr)
-            {
-                Yii::$app->session->setFlash('error', ['delay'=>9000,'message'=>'保存失败,家长手机号已存在。']);
-                return $this->render('/update', [
-                    'model' => $model,
-                    'patriarch' => $patriarch,
-                    'categoryPath' => $categoryPath,
-                ]);
-            }
-
-
             if($model->load($data) && $model->save())
             {
-                //保存家长信息
-                $patriarch->load($data);
-                $patriarch->save();
-
                 Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'保存成功！']);
                 return $this->redirect(['index']);
             }
-
             Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败！']);
         }
 
         return $this->render('/update', [
             'model' => $model,
-            'patriarch' => $patriarch,
             'categoryPath' => $categoryPath,
         ]);
 
@@ -196,11 +147,23 @@ class StudentController extends CommonController
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
-        //删除对应的家长
-        $patriarch = Patriarch::find()->where(['student_id'=>$id])->one();
-        if($patriarch) $patriarch->delete();
+        $model = $this->findModel($id);
+        if($model->delete()) Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'删除成功！']);
         return $this->redirect(['index']);
+    }
+
+    //选择家长
+    public function actionPatriarchList()
+    {
+        $searchModel = new PatriarchSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        //限制跨校区操作
+        $dataProvider = $this->schoolRule($dataProvider);
+
+        return $this->renderAjax('/patriarch-list', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
     }
 
     /**

@@ -32,7 +32,7 @@ class Patriarch extends \yii\db\ActiveRecord
     //获取学生
     public function getStudent()
     {
-        return $this->hasOne(Student::className(), ['id' => 'student_id']);
+        return $this->hasOne(Student::className(), ['patriarch_id' => 'id']);
     }
 
     /**
@@ -41,8 +41,8 @@ class Patriarch extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['student_id', 'name', 'urgency_person','urgency_phone', 'relation', 'phone'], 'required'],
-            [['student_id','category_id'], 'integer'],
+            [['name', 'urgency_person','urgency_phone', 'relation', 'phone'], 'required'],
+            [['category_id'], 'integer'],
             ['phone','number'],
             ['phone','string', 'min' =>11],
             ['phone','string', 'max' =>11],
@@ -51,6 +51,7 @@ class Patriarch extends \yii\db\ActiveRecord
             [['phone', 'urgency_phone'], 'string', 'max' => 15],
             [['address'], 'string', 'max' => 90],
             [['remark'], 'string', 'max' => 600],
+            [['id','phone'], 'unique'],
         ];
     }
 
@@ -61,7 +62,6 @@ class Patriarch extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'student_id' => Yii::t('app', '学生ID'),
             'name' => Yii::t('app', '姓名'),
             'relation' => Yii::t('app', '关系'),
             'phone' => Yii::t('app', '电话'),

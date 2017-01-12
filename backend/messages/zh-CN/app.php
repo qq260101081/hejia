@@ -73,6 +73,7 @@ return [
     //家长
     'Patriarch List' => '家长列表',
     'Update Patriarch' => '更新家长',
+    'Create Patriarch' => '添加家长',
     //员工
     'Staff List' => '员工列表',
     'Create Staff' => '创建员工',

@@ -2,6 +2,8 @@
 
 namespace app\modules\weekly\models;
 
+use app\modules\student\models\Patriarch;
+use app\modules\student\models\Student;
 use Yii;
 
 /**
@@ -24,6 +26,11 @@ class RepositoryPushLogs extends \yii\db\ActiveRecord
     public static function tableName()
     {
         return '{{%repository_push_logs}}';
+    }
+    //获取家长信息
+    public function getPatriarch()
+    {
+        return $this->hasOne(Patriarch::className(), ['id' => 'patriarch_id']);
     }
 
     /**

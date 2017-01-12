@@ -3,6 +3,7 @@
 namespace app\modules\student\controllers;
 
 
+use app\modules\student\models\Student;
 use Yii;
 use app\modules\student\models\Patriarch;
 use app\modules\student\models\PatriarchSearch;
@@ -35,7 +36,7 @@ class PatriarchController extends CommonController
 
 
 
-    //选择家长多选
+    /*选择家长多选
     public function actionModalList()
     {
         $searchModel = new PatriarchSearch();
@@ -50,7 +51,7 @@ class PatriarchController extends CommonController
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
-    }
+    }*/
 
     /**
      * Displays a single Patriarch model.
@@ -64,50 +65,33 @@ class PatriarchController extends CommonController
         ]);
     }
 
-    /**
-     * Creates a new Patriarch model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
-
+    //创建家长
     public function actionCreate()
     {
         $model = new Patriarch();
+        $data = Yii::$app->request->post();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
+        if ($model->load($data)) {
+            $user = new Users();
+            $user->type = 'patriarch';
+            $user->username = $model->phone;
+            $user->name = $model->name;
+            $user->password_hash = Yii::$app->security->generatePasswordHash(substr($model->phone, -6));
+            $user->auth_key = Yii::$app->security->generateRandomString();
+            if($user->save(false))
+            {
+                $model->id = $user->id;
+                $model->save();
+                Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'保存成功！']);
+                return $this->redirect(['index']);
+            }
+            Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败！']);
         }
-    }*/
 
-    //给家长开账号
-    public function actionCreateUser($id)
-    {
-        $model = $this->findModel($id);
+        return $this->render('/patriarch_create', [
+            'model' => $model,
+        ]);
 
-        //USER表添加用户
-        $user = new Users();
-        $user->type = 'patriarch';
-        $user->username = $model->phone;
-        $user->name = $model->name;
-        $user->password_hash = Yii::$app->security->generatePasswordHash(substr($model->phone, -6));
-        $user->auth_key = Yii::$app->security->generateRandomString();
-        if($user->save())
-        {
-            //更新家长表
-            $model->userid = $user->id;
-            if($model->save(false))
-                Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'开通成功！']);
-            else
-                Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'开通失败！']);
-        }
-        else
-        {
-            Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'开通失败！']);
-        }
-        return $this->redirect(['index']);
     }
 
     /**
@@ -119,20 +103,19 @@ class PatriarchController extends CommonController
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-
         $data = Yii::$app->request->post();
 
         if ($model->load($data)) {
-            //判断是否已存在手机
-            $arr = Patriarch::find()->select(['id','phone'])->where(['phone'=>$data['Patriarch']['phone']])->one();
-            if($arr)
+            //如果电话改变了，则更新
+            if($model->phone != $model->oldAttributes['phone'] || $model->name != $model->oldAttributes['name'])
             {
-                Yii::$app->session->setFlash('error', ['delay'=>9000,'message'=>'保存失败,家长手机号已存在。']);
-                return $this->render('/patriarch_update', [
-                    'model' => $model,
-                ]);
+                $user = Users::findOne($id);
+                $user->username = $model->phone;
+                $user->name = $model->name;
+                $user->password_hash = Yii::$app->security->generatePasswordHash(substr($model->phone, -6));
+                $user->auth_key = Yii::$app->security->generateRandomString();
+                $user->save(false);
             }
-
             if($model->save())
             {
                 Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'保存成功！']);
@@ -151,13 +134,18 @@ class PatriarchController extends CommonController
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
-
+    */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
-
+        $model = $this->findModel($id);
+        $user = Users::findOne($id);
+        if($model->delete())
+        {
+            if($user) $user->delete();
+            Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'删除成功！']);
+        }
         return $this->redirect(['index']);
-    }*/
+    }
 
     /**
      * Finds the Patriarch model based on its primary key value.

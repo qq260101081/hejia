@@ -15,6 +15,10 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="box-header">
         <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
+        <p>
+            <?php if(Yii::$app->user->can('student/patriarch/create')) echo Html::a(Yii::t('app', 'Create Patriarch'), ['create'], ['class' => 'btn btn-success btn-xs']) ?>
+        </p>
+
         <?php Pjax::begin(); ?>    <?= GridView::widget([
             'dataProvider' => $dataProvider,
             'filterModel' => $searchModel,
@@ -28,7 +32,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 [
                     'label' => '学生',
                     'headerOptions'=>['width' => 100],
-                    'value' => 'student.name'
+                    'value' => function($model){
+                        if(isset($model['student']->name))
+                            return $model['student']->name;
+                        else
+                            return '';
+                    }
                 ],
                 'relation',
                 'phone',
@@ -37,20 +46,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 [
                     'class' => 'yii\grid\ActionColumn',
-                    'template' => '{view} {update} {open}',
+                    'template' => '{view} {update} {delete}',
                     'header' => '操作',
                     'buttons' => [
-                        'open' => function ($url,$model, $key) {
-                            if(Yii::$app->user->can('student/patriarch/create-user'))
-                            {
-                                if($model->userid) return '';
-                                return Html::a('<span class="glyphicon glyphicon-user"></span>',
-                                    ['/student/patriarch/create-user','id'=>$model->id],
-                                    [
-                                    'title'=> '开账号',
-                                ] );
-                            }
-                        },
                         'view' => function ($url, $model) {
                             return  Yii::$app->user->can('student/patriarch/view') ?
                                 Html::a('<span class="glyphicon glyphicon-eye-open"></span>', $url):
@@ -59,6 +57,16 @@ $this->params['breadcrumbs'][] = $this->title;
                         'update' => function ($url, $model) {
                             return  Yii::$app->user->can('student/patriarch/update') ?
                                 Html::a('<span class="glyphicon glyphicon-pencil"></span>', $url):
+                                '';
+                        },
+                        'delete' => function ($url, $model) {
+                            return  Yii::$app->user->can('student/patriarch/delete') ?
+                                Html::a('<span class="glyphicon glyphicon-trash"></span>', $url, [
+                                    'data' => [
+                                        'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
+                                        'method' => 'post',
+                                    ],
+                                ]):
                                 '';
                         },
                     ],

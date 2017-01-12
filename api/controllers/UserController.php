@@ -7,8 +7,8 @@
 
 namespace api\controllers;
 
+use common\models\MsgStatus;
 use Yii;
-use api\models\Msg;
 use api\models\Patriarch;
 use api\models\User;
 use api\components\BaseController;
@@ -20,7 +20,9 @@ class UserController extends BaseController
      */
     public function actionIndex()
     {
+        $msgStatus = MsgStatus::find()->where(['userid' => Yii::$app->user->id]);
         return $this->render('index', [
+            'msgStatus' => $msgStatus
         ]);
     }
 

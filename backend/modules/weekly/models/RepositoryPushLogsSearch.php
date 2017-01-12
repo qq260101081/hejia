@@ -18,7 +18,7 @@ class RepositoryPushLogsSearch extends RepositoryPushLogs
     public function rules()
     {
         return [
-            [['id', 'patriarch_id', 'created_at'], 'integer'],
+            [['id', 'patriarch_id'], 'integer'],
             [['username', 'type', 'title', 'path'], 'safe'],
         ];
     }
@@ -41,7 +41,7 @@ class RepositoryPushLogsSearch extends RepositoryPushLogs
      */
     public function search($params)
     {
-        $query = RepositoryPushLogs::find();
+        $query = RepositoryPushLogs::find()->joinWith('patriarch');
 
         // add conditions that should always apply here
 
@@ -59,15 +59,13 @@ class RepositoryPushLogsSearch extends RepositoryPushLogs
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
-            'patriarch_id' => $this->patriarch_id,
+            'repository_push_logs.id' => $this->id,
             'created_at' => $this->created_at,
         ]);
 
-        $query->andFilterWhere(['like', 'username', $this->username])
-            ->andFilterWhere(['like', 'type', $this->type])
-            ->andFilterWhere(['like', 'title', $this->title])
-            ->andFilterWhere(['like', 'path', $this->path]);
+        $query->andFilterWhere(['like', 'repository_push_logs.username', $this->username])
+            //->andFilterWhere(['like', 'type', $this->type])
+            ->andFilterWhere(['like', 'repository_push_logs.title', $this->title]);
 
         return $dataProvider;
     }

@@ -10,6 +10,7 @@ use app\modules\weekly\models\RepositoryPushLogsSearch;
 use app\modules\student\models\PatriarchSearch;
 use app\components\CommonController;
 use yii\web\NotFoundHttpException;
+use common\models\MsgStatus;
 
 /**
  * RepositoryPushLogsController implements the CRUD actions for RepositoryPushLogs model.
@@ -37,7 +38,7 @@ class RepositoryPushController extends CommonController
         ]);
     }
 
-   //创建
+   //影像推送
     public function actionCreate()
     {
         $model = new RepositoryPushLogs();
@@ -53,7 +54,7 @@ class RepositoryPushController extends CommonController
                 $repository = Repository::find()->where(['id' => $id])->one();
                 $rows[$k]['id'] = null;
                 $rows[$k]['patriarch_id'] = $data['RepositoryPushLogs']['patriarch_id'];
-                $rows[$k]['username'] = Yii::$app->user->identity->username;
+                $rows[$k]['username'] = Yii::$app->user->identity->name;
                 $rows[$k]['type'] = $repository->type;
                 $rows[$k]['title'] = $repository->title;
                 $rows[$k]['path'] = $repository->path;
@@ -65,6 +66,16 @@ class RepositoryPushController extends CommonController
                 $model->attributes(),
                 $rows
             )->execute();
+
+            //更新消息状态
+            $msgStatus = MsgStatus::find()->where(['userid' => $data['RepositoryPushLogs']['patriarch_id']])->one();
+            if(!$msgStatus) {
+                $msgStatus = new MsgStatus();
+                $msgStatus->userid = $data['RepositoryPushLogs']['patriarch_id'];
+            }
+            $msgStatus->status = 1;
+            $msgStatus->save(false);
+            Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'推送成功！']);
             return $this->redirect(['index']);
         }
 
@@ -76,8 +87,6 @@ class RepositoryPushController extends CommonController
     {
         $searchModel = new PatriarchSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        //给家长开有账号的才显示
-        $dataProvider->query->andFilterWhere(['>', 'userid', '0']);
 
         return $this->renderAjax('modal-list2', [
             'searchModel' => $searchModel,

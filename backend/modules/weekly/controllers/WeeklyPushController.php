@@ -2,6 +2,7 @@
 
 namespace app\modules\weekly\controllers;
 
+use app\modules\student\models\Student;
 use Yii;
 use app\modules\weekly\models\WeeklyPushLogs;
 use app\modules\weekly\models\WeeklyPushLogsSearch;
@@ -9,6 +10,7 @@ use app\modules\weekly\models\Weekly;
 use app\modules\weekly\models\WeeklySearch;
 use app\components\CommonController;
 use app\modules\student\models\Patriarch;
+use common\models\MsgStatus;
 use yii\web\NotFoundHttpException;
 
 
@@ -34,6 +36,7 @@ class WeeklyPushController extends CommonController
         $searchModel = new WeeklySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $dataProvider->query->andWhere(['check1'=>1]);
+        $dataProvider->query->andWhere(['status'=>0]);
         //限制跨校区操作
         $dataProvider = $this->schoolRule($dataProvider);
 
@@ -53,15 +56,24 @@ class WeeklyPushController extends CommonController
         if($selection)
         {
             $rows = [];
+            $userids = [];
             $time = time();
             foreach($selection as $k => $id){
-                $weekly = Weekly::findOne((int)$id);//make a typecasting
-                $patriarch = Patriarch::find()->select(['userid','name'])->where(['student_id' => $weekly->student_id])->one();
+                $weekly = Weekly::findOne((int)$id);
+                $student = Student::findOne($weekly->student_id);
+                if(!$student) continue;
+                $patriarch = Patriarch::find()->select(['id','name'])->where(['id' => $student->patriarch_id])->one();
                 if(!$patriarch) continue;
+
+                $userids[$patriarch->id] = $patriarch->id;
+                //更新推送状态
+                $weekly->status = 1;
+                $weekly->save(false);
+
                 $rows[$k]['id'] = null;
-                $rows[$k]['student_id'] = $weekly->student_id;
-                $rows[$k]['student_name'] = $weekly->student_name;
-                $rows[$k]['patriarch_id'] = $patriarch->userid;
+                $rows[$k]['student_id'] = $student->student_id;
+                $rows[$k]['student_name'] = $student->student_name;
+                $rows[$k]['patriarch_id'] = $patriarch->id;
                 $rows[$k]['patriarch_name'] = $patriarch->name;
                 $rows[$k]['discipline'] = $weekly->discipline;
                 $rows[$k]['sleep'] = $weekly->sleep;
@@ -79,6 +91,16 @@ class WeeklyPushController extends CommonController
                 $model->attributes(),
                 $rows
             )->execute();
+            foreach ($userids as $v)
+            {
+                $msgStatus = MsgStatus::find()->where(['userid' => $v])->one();
+                if(!$msgStatus) {
+                    $msgStatus = new MsgStatus();
+                    $msgStatus->userid = $v;
+                }
+                $msgStatus->status = 1;
+                $msgStatus->save(false);
+            }
         }
         Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'推送成功！']);
         return $this->redirect(['index']);

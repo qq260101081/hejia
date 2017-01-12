@@ -30,7 +30,12 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'label' => '家长',
                 'headerOptions'=>['width' => 100],
-                'value' => 'patriarch.name'
+                'value' => function($model){
+                    if(isset($model['patriarch']->name))
+                        return $model['patriarch']->name;
+                    else
+                        return '';
+                },
             ],
             [
                 'attribute' => 'sex',

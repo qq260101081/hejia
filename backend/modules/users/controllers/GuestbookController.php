@@ -3,6 +3,7 @@
 namespace app\modules\users\controllers;
 
 
+use app\modules\users\models\Guestbook;
 use Yii;
 use app\modules\users\models\GuestbookSearch;
 use app\components\CommonController;
@@ -37,12 +38,18 @@ class GuestbookController extends CommonController
      */
     public function actionView($id)
     {
-        return $this->render('/view', [
+        return $this->render('/guestbook-view', [
             'model' => $this->findModel($id),
         ]);
     }
 
-
+    public function actionDelete($id)
+    {
+        $model = $this->findModel($id);
+        $model->delete();
+        Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'删除成功！']);
+        return $this->redirect(['index']);
+    }
     /**
      * Finds the Users model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
@@ -52,7 +59,7 @@ class GuestbookController extends CommonController
      */
     protected function findModel($id)
     {
-        if (($model = Users::findOne($id)) !== null) {
+        if (($model = Guestbook::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

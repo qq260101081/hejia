@@ -2,6 +2,7 @@
 
 namespace app\modules\msg\models;
 
+use app\modules\student\models\Patriarch;
 use Yii;
 
 /**
@@ -26,6 +27,11 @@ class MsgPushLogs extends \yii\db\ActiveRecord
         return '{{%msg_push_logs}}';
     }
 
+    //获取家长信息
+    public function getPatriarch()
+    {
+        return $this->hasOne(Patriarch::className(), ['id' => 'patriarch_id']);
+    }
     /**
      * @inheritdoc
      */

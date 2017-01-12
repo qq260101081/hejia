@@ -18,7 +18,7 @@ class MsgPushLogsSearch extends MsgPushLogs
     public function rules()
     {
         return [
-            [['id', 'patriarch_id', 'status', 'created_at'], 'integer'],
+            [['id', 'patriarch_id', 'status'], 'integer'],
             [['username', 'title', 'content'], 'safe'],
         ];
     }
@@ -41,7 +41,7 @@ class MsgPushLogsSearch extends MsgPushLogs
      */
     public function search($params)
     {
-        $query = MsgPushLogs::find();
+        $query = MsgPushLogs::find()->joinWith('patriarch');
 
         // add conditions that should always apply here
 
@@ -59,15 +59,11 @@ class MsgPushLogsSearch extends MsgPushLogs
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
-            'patriarch_id' => $this->patriarch_id,
-            'status' => $this->status,
-            'created_at' => $this->created_at,
+            'msg_push_logs.id' => $this->id,
         ]);
 
-        $query->andFilterWhere(['like', 'username', $this->username])
-            ->andFilterWhere(['like', 'title', $this->title])
-            ->andFilterWhere(['like', 'content', $this->content]);
+        $query->andFilterWhere(['like', 'msg_push_logs.username', $this->username])
+            ->andFilterWhere(['like', 'msg_push_logs.title', $this->title]);
 
         return $dataProvider;
     }

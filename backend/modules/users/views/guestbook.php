@@ -19,7 +19,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
 
             'id',
             'username',
@@ -30,9 +29,30 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'password_hash',
              //'status',
              'content',
-             'created_at:datetime',
+             'created_at:date',
             // 'updated_at',
-
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'header' => '操作',
+                'template' => '{view} &nbsp; {delete}',
+                'buttons' => [
+                    'view' => function ($url, $model) {
+                        return  Yii::$app->user->can('users/guestbook/view') ?
+                            Html::a('<span class="glyphicon glyphicon-eye-open"></span>', $url):
+                            '';
+                    },
+                    'delete' => function ($url, $model) {
+                        return  Yii::$app->user->can('users/guestbook/delete') ?
+                            Html::a('<span class="glyphicon glyphicon-trash"></span>', $url, [
+                                'data' => [
+                                    'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
+                                    'method' => 'post',
+                                ],
+                            ]):
+                            '';
+                    },
+                ],
+            ],
         ],
     ]); ?>
 <?php Pjax::end(); ?></div>

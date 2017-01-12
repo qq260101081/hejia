@@ -23,12 +23,31 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
 
-            'id',
-            'patriarch_id',
-            'username',
+            [
+                'attribute'=>'id',
+                'headerOptions'=> ['width'=> '60'],
+            ],
+            [
+                'attribute'=>'username',
+                'headerOptions'=> ['width'=> '80'],
+            ],
+            [
+                'label' => '推送家长',
+                'value' => function($model){
+                    if(isset($model['patriarch']->name))
+                        return $model['patriarch']->name;
+                    else
+                        return '';
+                },
+                'headerOptions'=> ['width'=> '80'],
+            ],
             'title',
             //'status',
-            'created_at:date',
+            [
+                'attribute'=>'created_at',
+                'format' => 'date',
+                'headerOptions'=> ['width'=> '80'],
+            ],
         ],
     ]); ?>
 <?php Pjax::end(); ?></div>

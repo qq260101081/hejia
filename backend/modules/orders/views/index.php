@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
+use kartik\date\DatePicker;
 /* @var $this yii\web\View */
 /* @var $searchModel app\modules\presscentre\models\PresscentreSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -24,8 +25,40 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'student_name',
             'product_name',
-            'stime:date',
-            'etime:date',
+            [
+                'attribute' => 'stime',
+                'label' => '开始日期(>)',
+                'format' => 'date',
+                'headerOptions'=> ['width'=> '100'],
+                'filter' => DatePicker::widget([
+                    'model' => $searchModel,
+                    'attribute' => 'stime',
+                    'type' => DatePicker::TYPE_INPUT,
+                    'convertFormat' => true,
+                    'pluginOptions' => [
+                        'autoclose'=>true, 'locale' => [
+                            'format' => 'Y-m-d'
+                        ]
+                    ],
+                ]),
+            ],
+            [
+                'attribute' => 'etime',
+                'label' => '结束日期(<)',
+                'format' => 'date',
+                'headerOptions'=> ['width'=> '100'],
+                'filter' => DatePicker::widget([
+                    'model' => $searchModel,
+                    'attribute' => 'etime',
+                    'type' => DatePicker::TYPE_INPUT,
+                    'convertFormat' => true,
+                    'pluginOptions' => [
+                        'autoclose'=>true, 'locale' => [
+                            'format' => 'Y-m-d'
+                        ]
+                    ],
+                ]),
+            ],
             'money',
             'payment_type',
             'principal',

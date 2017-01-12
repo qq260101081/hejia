@@ -54,7 +54,13 @@ $this->params['breadcrumbs'][] = $this->title;
                     'attribute'=>'study',
                     'headerOptions'=> ['width'=> '50'],
                 ],
-                'synthesize:html',
+                [
+                    'attribute'=>'synthesize',
+                    'format' => 'raw',
+                    'value' => function($model){
+                        return strip_tags($model->synthesize);
+                    },
+                ],
                 [
                     'attribute'=>'check1',
                     'headerOptions'=> ['width'=> '80'],

@@ -2,13 +2,15 @@
 
 namespace app\modules\msg\controllers;
 
-
 use Yii;
 use app\modules\msg\models\MsgPushLogs;
+use app\modules\student\models\PatriarchSearch;
 use app\modules\msg\models\MsgPushLogsSearch;
 use app\components\CommonController;
 use app\modules\student\models\Patriarch;
 use yii\web\NotFoundHttpException;
+use common\models\MsgStatus;
+
 
 /**
  * MsgPushLogsController implements the CRUD actions for MsgPushLogs model.
@@ -43,6 +45,21 @@ class MsgPushLogsController extends CommonController
         ]);
     }
 
+    //选择家长推送 多选
+    public function actionModalList()
+    {
+        $searchModel = new PatriarchSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        //限制跨校区操作
+        $dataProvider = $this->schoolRule($dataProvider, Patriarch::tableName().'.');
+
+
+        return $this->renderAjax('/modal-list', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
     /**
      * Displays a single MsgPushLogs model.
      * @param integer $id
@@ -55,17 +72,14 @@ class MsgPushLogsController extends CommonController
         ]);
     }
 
-    /**
-     * Creates a new MsgPushLogs model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
-     */
+    //推送消息
     public function actionCreate()
     {
         $model = new MsgPushLogs();
         $data = Yii::$app->request->post();
         if ($data) {
             $rows = [];
+            $userids = [];
             $time = time();
             if($userids = $data['MsgPushLogs']['patriarch_id'])
             {
@@ -74,7 +88,7 @@ class MsgPushLogsController extends CommonController
                 {
                     $rows[$k]['id'] = null;
                     $rows[$k]['patriarch_id'] = $v;
-                    $rows[$k]['username'] = Yii::$app->user->identity->username;
+                    $rows[$k]['username'] = Yii::$app->user->identity->name;
                     $rows[$k]['title'] = $data['MsgPushLogs']['title'];
                     $rows[$k]['content'] = $data['MsgPushLogs']['content'];
                     $rows[$k]['status'] = 0;
@@ -83,12 +97,13 @@ class MsgPushLogsController extends CommonController
             }
             else
             {
-                $patriarch = Patriarch::find()->select('userid')->where(['>','userid', '0'])->all();
+                $patriarch = Patriarch::find()->select('id')->all();
                 foreach ($patriarch as $k => $v)
                 {
+                    $userids[$v->id] = $v->id;
                     $rows[$k]['id'] = null;
-                    $rows[$k]['patriarch_id'] = $v->userid;
-                    $rows[$k]['username'] = Yii::$app->user->identity->username;
+                    $rows[$k]['patriarch_id'] = $v->id;
+                    $rows[$k]['username'] = Yii::$app->user->identity->name;
                     $rows[$k]['title'] = $data['MsgPushLogs']['title'];
                     $rows[$k]['content'] = $data['MsgPushLogs']['content'];
                     $rows[$k]['status'] = 0;
@@ -101,6 +116,18 @@ class MsgPushLogsController extends CommonController
                 $model->attributes(),
                 $rows
             )->execute();
+            //更新消息状态
+            foreach ($userids as $v)
+            {
+                $msgStatus = MsgStatus::find()->where(['userid' => $v])->one();
+                if(!$msgStatus) {
+                    $msgStatus = new MsgStatus();
+                    $msgStatus->userid = $v;
+                }
+                $msgStatus->status = 1;
+                $msgStatus->save(false);
+            }
+
             Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'保存成功！']);
             return $this->redirect(['index']);
         } else {

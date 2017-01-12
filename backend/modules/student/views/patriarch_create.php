@@ -6,14 +6,14 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\modules\guarantee\models\Guarantee */
 
-$this->title = Yii::t('app', 'Create Student');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Student List'), 'url' => ['index']];
+$this->title = Yii::t('app', 'Create Patriarch');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Patriarch List'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <div class="mien-create">
 
-    <?= $this->render('_form', [
+    <?= $this->render('patriarch_form', [
         'model' => $model,
     ]) ?>
 

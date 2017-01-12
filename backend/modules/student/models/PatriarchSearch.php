@@ -41,7 +41,7 @@ class PatriarchSearch extends Patriarch
      */
     public function search($params)
     {
-        $query = Patriarch::find()->joinWith('student');
+        $query = Patriarch::find();
 
         // add conditions that should always apply here
 
@@ -59,14 +59,14 @@ class PatriarchSearch extends Patriarch
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'user_patriarch.id' => $this->id,
+            'id' => $this->id,
         ]);
 
-        $query->andFilterWhere(['like', 'user_patriarch.name', $this->name])
-            ->andFilterWhere(['like', 'user_patriarch.relation', $this->relation])
-            ->andFilterWhere(['like', 'user_patriarch.phone', $this->phone])
-            ->andFilterWhere(['like', 'user_patriarch.urgency_phone', $this->urgency_phone])
-            ->andFilterWhere(['like', 'user_patriarch.urgency_person', $this->urgency_person]);
+        $query->andFilterWhere(['like', 'name', $this->name])
+            ->andFilterWhere(['like', 'relation', $this->relation])
+            ->andFilterWhere(['like', 'phone', $this->phone])
+            ->andFilterWhere(['like', 'urgency_phone', $this->urgency_phone])
+            ->andFilterWhere(['like', 'urgency_person', $this->urgency_person]);
 
         return $dataProvider;
     }
