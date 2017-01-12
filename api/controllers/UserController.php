@@ -49,12 +49,19 @@ class UserController extends BaseController
         $dada = Yii::$app->request->post();
         if($dada)
         {
-            $dada['User']['password_hash'] = Yii::$app->security->generatePasswordHash($dada['User']['password']);
-            $dada['User']['auth_key'] = Yii::$app->security->generateRandomString();
-            if ($model->load($dada) && $model->save())
-                Yii::$app->session->setFlash('success', '保存成功！');
+            if ($model->load($dada))
+            {
+                $model->password_hash = Yii::$app->security->generatePasswordHash($model->password);
+                $model->auth_key = Yii::$app->security->generateRandomString();
+                if($model->save())
+                    Yii::$app->session->setFlash('success', '保存成功！');
+                else
+                    Yii::$app->session->setFlash('error', '保存失败！');
+            }
             else
+            {
                 Yii::$app->session->setFlash('error', '保存失败！');
+            }
         }
 
         return $this->render('password',[
