@@ -7,6 +7,7 @@
 
 namespace api\controllers;
 
+use Yii;
 use api\components\BaseController;
 use api\models\Orders;
 use api\models\Patriarch;
@@ -20,11 +21,16 @@ class OrdersController extends BaseController
      */
     public function actionIndex()
     {
-        //获取家长信息
-        $patriarch = Patriarch::find()->select(['id','student_id'])->where(['userid'=>Yii::$app->user->id])->one();
-        $studentID = isset($patriarch->student_id) ? $patriarch->student_id : 0;
+        $studentids = [];
+        $orders = [];
+        $students = Student::find()->select(['id','name'])->where(['patriarch_id' => Yii::$app->user->id])->all();
+        foreach ($students as $v)
+        {
+            $studentids[$v->id] = $v->id;
+        }
 
-        $orders = Orders::find()->where(['student_id' => $studentID])->all();
+        if($studentids)
+            $orders = Orders::find()->where(['in', 'student_id', $studentids])->all();
 
         return $this->render('index', [
             'orders' => $orders
@@ -37,7 +43,7 @@ class OrdersController extends BaseController
     {
         $order = Orders::findOne($id);
 
-        $patriarch = Patriarch::find()->where(['userid'=>Yii::$app->user->id])->one();
+        $patriarch = Patriarch::find()->where(['id'=>Yii::$app->user->id])->one();
         $student = Student::find()->where(['id' => $order->student_id])->one();
         $staff = Staff::findOne($order->teacher_id);
 
