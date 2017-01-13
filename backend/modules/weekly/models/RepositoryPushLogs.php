@@ -20,6 +20,7 @@ use Yii;
 class RepositoryPushLogs extends \yii\db\ActiveRecord
 {
     public $images_id;
+    public $patriarch_name;
     /**
      * @inheritdoc
      */
@@ -41,9 +42,8 @@ class RepositoryPushLogs extends \yii\db\ActiveRecord
         return [
             [['patriarch_id', 'images_id'], 'required'],
             [['patriarch_id', 'created_at', 'status'], 'integer'],
-            [['username'], 'string', 'max' => 30],
-            [['type'], 'string', 'max' => 10],
-            [['title', 'path'], 'string', 'max' => 150],
+            [['username','patriarch_name'], 'string', 'max' => 30],
+            ['content','string']
         ];
     }
 
@@ -55,11 +55,10 @@ class RepositoryPushLogs extends \yii\db\ActiveRecord
         return [
             'id' => Yii::t('app', 'ID'),
             'patriarch_id' => Yii::t('app', '家长ID'),
+            'patriarch_name' => Yii::t('app', '家长'),
             'images_id' => Yii::t('app', '影像ID'),
             'username' => Yii::t('app', '推送者'),
-            'type' => Yii::t('app', '类型'),
-            'title' => Yii::t('app', '标题'),
-            'path' => Yii::t('app', '资源路径'),
+            'content' => Yii::t('app', '推送内容'),
             'status' => Yii::t('app', 'Status'),
             'created_at' => Yii::t('app', '创建于'),
         ];

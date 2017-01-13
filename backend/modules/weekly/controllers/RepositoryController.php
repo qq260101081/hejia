@@ -2,8 +2,8 @@
 
 namespace app\modules\weekly\controllers;
 
-
 use Yii;
+use \yii\web\UploadedFile;
 use app\components\libs\Common;
 use app\modules\weekly\models\Repository;
 use app\modules\weekly\models\RepositorySearch;
@@ -56,6 +56,8 @@ class RepositoryController extends CommonController
 
         if ($data)
         {
+            //$files = UploadedFile::getInstances($model, 'path');
+            //print_r($files);die;
             $listImgFile = Common::uploadFile('Repository[path]');
 
             if ($listImgFile) $data['Repository']['path'] = $listImgFile['path'];

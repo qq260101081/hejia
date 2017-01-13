@@ -30,7 +30,7 @@
 
                 <?php foreach ($repository as $v):;?>
                     <li class="am-g am-list-item-dated">
-                        <a href="<?= Url::to(['msg/repository-view','id'=>$v->id])?>" class="am-list-item-hd ">【学生影像】<?= $v->title;?></a>
+                        <a href="<?= Url::to(['msg/repository-view','id'=>$v->id])?>" class="am-list-item-hd ">【学生影像】</a>
                         <span class="am-list-date"><?= date('Y-m-d',$v->created_at);?></span>
                     </li>
                 <?php endforeach;?>

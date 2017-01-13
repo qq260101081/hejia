@@ -19,7 +19,7 @@ class RepositoryPushLogsSearch extends RepositoryPushLogs
     {
         return [
             [['id', 'patriarch_id'], 'integer'],
-            [['username', 'type', 'title', 'path'], 'safe'],
+            [['username'], 'safe'],
         ];
     }
 
@@ -63,9 +63,7 @@ class RepositoryPushLogsSearch extends RepositoryPushLogs
             'created_at' => $this->created_at,
         ]);
 
-        $query->andFilterWhere(['like', 'repository_push_logs.username', $this->username])
-            //->andFilterWhere(['like', 'type', $this->type])
-            ->andFilterWhere(['like', 'repository_push_logs.title', $this->title]);
+        $query->andFilterWhere(['like', 'repository_push_logs.username', $this->username]);
 
         return $dataProvider;
     }

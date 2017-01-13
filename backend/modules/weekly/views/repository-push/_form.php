@@ -26,10 +26,10 @@ use yii\bootstrap\Modal;
                 ]
             ]); ?>
 
-            <?= $form->field($model, 'patriarch_id')->textInput([
+            <?= $form->field($model, 'patriarch_name')->textInput([
                 'data-toggle'=>'modal',
                 'data-target'=>'#patriarch-modal',
-                'id' => 'patriarch_id',
+                'id' => 'patriarch_name',
                 'placeholder' => '请选择家长',
                 'readonly'=> true
             ]) ?>
@@ -41,6 +41,8 @@ use yii\bootstrap\Modal;
                 'placeholder' => '请选择影像',
                 'readonly'=> true
             ]) ?>
+
+            <?= Html::hiddenInput('RepositoryPushLogs[patriarch_id]','',['id'=>'patriarch_id'])?>
 
     <div class="box-footer">
         <a href="<?= Url::to(['index']);?>" class="btn btn-info fa fa-reply"></a>
@@ -98,6 +100,7 @@ Modal::end();
         check_val = [];
         for(k in obj){
         if(obj[k].checked)
+
         check_val.push(obj[k].value);
         }
         document.getElementById('images_id').value = check_val;

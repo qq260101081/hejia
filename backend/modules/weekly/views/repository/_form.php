@@ -30,6 +30,7 @@ use \kartik\file\FileInput;
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
         <?=
         $form->field($model, 'path')->widget(FileInput::classname(), [
+            'options'=> ['multiple'=> true],
             'pluginOptions' =>[
                 'showUpload' => false,
                 'showRemove' => false,

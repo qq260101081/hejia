@@ -34,7 +34,6 @@ class MsgController extends BaseController
             ->all();
         //影像消息
         $repository = RepositoryLogs::find()
-            ->select(['id','title', 'created_at'])
             ->where(['patriarch_id'=>Yii::$app->user->id])
             //->andWhere(['>', 'created_at', $start])
             ->all();

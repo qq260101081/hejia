@@ -35,7 +35,7 @@ class Repository extends \yii\db\ActiveRecord
             [['name'], 'string', 'max' => 12],
             [['title', 'path'], 'string', 'max' => 150],
             ['created_at', 'default', 'value'=>time()],
-            ['path', 'file', 'extensions' => ['png', 'jpg', 'gif','mp4'], 'maxSize' => 1024 * 1024 * 1000],
+            ['path', 'file','maxFiles'=>10, 'extensions' => ['png', 'jpg', 'gif','mp4'], 'maxSize' => 1024 * 1024 * 1000],
 
         ];
     }

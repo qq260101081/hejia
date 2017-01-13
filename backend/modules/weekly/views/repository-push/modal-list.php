@@ -26,6 +26,7 @@ use yii\widgets\Pjax;
             'created_at:date',
             [
                 'class' => 'yii\grid\CheckboxColumn',
+                //'header' => '会选',
             ],
         ],
     ]); ?>

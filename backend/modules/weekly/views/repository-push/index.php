@@ -43,12 +43,20 @@ $this->params['breadcrumbs'][] = $this->title;
                 },
                 'headerOptions'=> ['width'=> '80'],
             ],
-            'title',
+            [
+                'attribute'=>'content',
+                'value' => function($model){
+                    $titles = [];
+                    foreach ((array)json_decode($model->content) as $v)
+                        $titles[] = $v->title;
+                    return implode('，', $titles);
+                }
+            ],
             [
                 'attribute'=>'created_at',
                 'format' => 'date',
                 'headerOptions'=> ['width'=> '80'],
-            ],
+            ]
         ],
     ]); ?>
 <?php Pjax::end(); ?></div>

@@ -47,36 +47,33 @@ class RepositoryPushController extends CommonController
 
         if($data)
         {
-            $rows = [];
-            $time = time();
             $imagesids = explode(',', $data['RepositoryPushLogs']['images_id']);
-            foreach($imagesids as $k => $id){
-                $repository = Repository::find()->where(['id' => $id])->one();
-                $rows[$k]['id'] = null;
-                $rows[$k]['patriarch_id'] = $data['RepositoryPushLogs']['patriarch_id'];
-                $rows[$k]['username'] = Yii::$app->user->identity->name;
-                $rows[$k]['type'] = $repository->type;
-                $rows[$k]['title'] = $repository->title;
-                $rows[$k]['path'] = $repository->path;
-                $rows[$k]['status'] = 0;
-                $rows[$k]['created_at'] = $time;
+            if(count($imagesids) > 20)
+            {
+                Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'一次不能选择超过20个影像！']);
+                return $this->render('create', ['model' => $model]);
             }
-            Yii::$app->db->createCommand()->batchInsert(
-                RepositoryPushLogs::tableName(),
-                $model->attributes(),
-                $rows
-            )->execute();
-
-            //更新消息状态
-            $msgStatus = MsgStatus::find()->where(['userid' => $data['RepositoryPushLogs']['patriarch_id']])->one();
-            if(!$msgStatus) {
-                $msgStatus = new MsgStatus();
-                $msgStatus->userid = $data['RepositoryPushLogs']['patriarch_id'];
+            $repository = Repository::find()->select(['type','title','path'])->where(['in','id',$imagesids])->asArray()->all();
+            if($repository)
+            {
+                $model->patriarch_id = $data['RepositoryPushLogs']['patriarch_id'];
+                $model->content = json_encode($repository);
+                $model->username = Yii::$app->user->identity->name;
+                $model->created_at = time();
+                if($model->save(false))
+                {
+                    //更新消息状态
+                    $msgStatus = MsgStatus::find()->where(['userid' => $data['RepositoryPushLogs']['patriarch_id']])->one();
+                    if(!$msgStatus) {
+                        $msgStatus = new MsgStatus();
+                        $msgStatus->userid = $data['RepositoryPushLogs']['patriarch_id'];
+                    }
+                    $msgStatus->status = 1;
+                    $msgStatus->save(false);
+                    Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'推送成功！']);
+                    return $this->redirect(['index']);
+                }
             }
-            $msgStatus->status = 1;
-            $msgStatus->save(false);
-            Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'推送成功！']);
-            return $this->redirect(['index']);
         }
 
         return $this->render('create', ['model' => $model]);

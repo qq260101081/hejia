@@ -48,7 +48,7 @@ if (Yii::$app->controller->action->id === 'login') {
         <?php $this->head() ?>
     </head>
     <!--自动隐藏菜单在BODY添加CLASS sidebar-collapse -->
-    <body class="<?= \dmstr\helpers\AdminLteHelper::skinClass() ?>">
+    <body class=" <?= \dmstr\helpers\AdminLteHelper::skinClass() ?>">
     <?php $this->beginBody() ?>
 
     <?php foreach(Yii::$app->session->getAllFlashes() as $message):; ?>
