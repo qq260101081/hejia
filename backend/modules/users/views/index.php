@@ -20,23 +20,32 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
 
             'id',
             'username',
             'name',
-            'phone',
-            'email',
+            //'phone',
+            //'email',
             // 'auth_key',
             // 'password_hash',
-             //'status',
+            [
+                'attribute' => 'status',
+                'format' => 'raw',
+                'value' => function($model){
+                    if($model->status == 'active')
+                        return '<span style="color: #00A000">有效</span>';
+                    else
+                        return '<span style="color: #ccc">无效</span>';
+                },
+            ],
              'created_at:date',
             // 'updated_at',
 
             [
                 'class' => 'yii\grid\ActionColumn',
                 'header' => '操作',
-                'template' => '{view} {update} {delete}',
+                'headerOptions'=> ['width'=> '70'],
+                'template' => '{view} &nbsp; {update} &nbsp; {delete}',
                 'buttons' => [
                     'view' => function ($url, $model) {
                         return  Yii::$app->user->can('users/users/view') ?
@@ -50,11 +59,12 @@ $this->params['breadcrumbs'][] = $this->title;
                     },
                     'delete' => function ($url, $model) {
                         return  Yii::$app->user->can('users/users/delete') ?
-                            Html::a('<span class="glyphicon glyphicon-trash"></span>', $url, [
+                            Html::a('<span style="color: red" class="glyphicon glyphicon-ban-circle"></span>', $url, [
                                 'data' => [
-                                    'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
+                                    'confirm' => Yii::t('app', '您确定要禁用此用户吗?'),
                                     'method' => 'post',
                                 ],
+                                'title' => '设为无效',
                             ]):
                             '';
                     },

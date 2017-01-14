@@ -24,6 +24,8 @@ class WeeklyPushLogs extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public $weekly_name;
+    public $weekly_id;
     public static function tableName()
     {
         return '{{%weekly_push_logs}}';
@@ -35,10 +37,13 @@ class WeeklyPushLogs extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['weekly_name','images'], 'required'],
             [['student_id', 'stime','etime','discipline', 'sleep', 'diet', 'study', 'status', 'created_at'], 'integer'],
             [['student_name'], 'string', 'max' => 12],
-            [['synthesize'], 'string', 'max' => 300],
+            [['synthesize','weekly_name'], 'string', 'max' => 300],
             [['username'], 'string', 'max' => 30],
+            ['images', 'string'],
+            ['images', 'file','maxFiles'=>10, 'extensions' => ['png', 'jpg', 'gif','mp4'], 'maxSize' => 1024 * 1024 * 1000],
         ];
     }
 
@@ -51,11 +56,13 @@ class WeeklyPushLogs extends \yii\db\ActiveRecord
             'id' => Yii::t('app', 'ID'),
             'student_id' => Yii::t('app', '学生ID'),
             'student_name' => Yii::t('app', '学生姓名'),
+            'weekly_name' => Yii::t('app', '周报名称'),
             'discipline' => Yii::t('app', '纪律'),
             'sleep' => Yii::t('app', '睡眠'),
             'diet' => Yii::t('app', '饮食'),
             'study' => Yii::t('app', '学习'),
             'synthesize' => Yii::t('app', '综合评定'),
+            'images' => Yii::t('app', '影像'),
             'username' => Yii::t('app', '推送者'),
             'status' => Yii::t('app', '状态0未读1已读2删除'),
             'created_at' => Yii::t('app', '创建时间'),

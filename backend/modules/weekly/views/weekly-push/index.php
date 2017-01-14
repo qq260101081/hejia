@@ -17,11 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="box-header">
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
     <p>
-        <?php if(Yii::$app->user->can('weekly/weekly-push/create')) echo Html::button(Yii::t('app', 'Created Weekly'),
-            ['class' => 'btn btn-success btn-xs','data-toggle'=>'modal',
-                'data-target'=>'#weekly-modal']
-        ) ?>
-
+        <?php if(Yii::$app->user->can('weekly/weekly-push/create')) echo Html::a(Yii::t('app', 'Created Weekly'), ['create'], ['class' => 'btn btn-success btn-xs']) ?>
     </p>
 
 <?php Pjax::begin(); ?>    <?= GridView::widget([
@@ -43,30 +39,4 @@ $this->params['breadcrumbs'][] = $this->title;
     ]); ?>
 <?php Pjax::end(); ?></div>
 </div>
-
-
-<?php
-echo Html::beginForm(['/weekly/weekly-push/create'], 'post');
-Modal::begin([
-'id' => 'weekly-modal',
-'size' => 'modal-lg',
-'header' => '<h4 class="modal-title">选取周报推送</h4>',
-'footer' => '<a href="#" class="btn btn-primary pull-left" data-dismiss="modal">关闭</a>
-<button type="submit" class="btn btn-warning">推送</button>',
-]);
-Html::endForm();
-
-
-$getStudentUrl = Url::to(['modal-list']);//弹窗的html内容，下面的js会调用获得该页面的Html内容，直接填充在弹框中
-$js = <<<JS
-    $.get('{$getStudentUrl}', {},
-function (data) {
-$('#weekly-modal .modal-body').html(data);
-}
-);
-JS;
-$this->registerJs($js);
-Modal::end();
-
-?>
 

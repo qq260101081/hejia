@@ -25,7 +25,7 @@ use yii\helpers\Url;
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="<?= $directoryAsset ?>/img/user2-160x160.jpg" class="user-image" alt="User Image"/>
-                        <span class="hidden-xs"><?= Yii::$app->user->identity->name;?></span>
+                        <span class="hidden-xs"><?php if(!Yii::$app->user->isGuest) echo Yii::$app->user->identity->name;?></span>
                     </a>
                     <ul class="dropdown-menu">
 

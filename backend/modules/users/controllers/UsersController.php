@@ -163,6 +163,26 @@ class UsersController extends CommonController
      */
     public function actionDelete($id)
     {
+        //更新状态
+        $model = $this->findModel($id);
+        $model->status = 'inactive';
+        if($model->save(false))
+            Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'更改成功！']);
+        else
+            Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'更改失败！']);
+
+        if($model->id = Yii::$app->user->id)
+        {
+            Yii::$app->user->logout();
+            return $this->redirect(['site/login']);
+        }
+        return $this->redirect(['index']);
+
+
+
+
+
+
         $model = $this->findModel($id);
         //删除对应员工
         if($model->type == 'staff')

@@ -42,8 +42,9 @@ class LoginForm extends Model
     {
         if (!$this->hasErrors()) {
             $user = $this->getUser();
+
             if(!$user)
-                $this->addError($attribute, '账号不存在，请联系管理员开通.');
+                $this->addError($attribute, '账号不存在或无效，请联系管理员开通.');
             elseif (!$user->validatePassword($this->password))
                 $this->addError($attribute, '密码错误.');
 

@@ -26,13 +26,29 @@ use yii\bootstrap\Modal;
                 ]
             ]); ?>
 
-            <?= $form->field($model, 'patriarch_id')->textarea([
+            <?= $form->field($model, 'weekly_name')->textInput([
                 'data-toggle'=>'modal',
-                'data-target'=>'#patriarch-modal',
-                'id' => 'patriarch_id',
-                'placeholder' => '留空则推送到全部家长',
+                'data-target'=>'#weekly-modal',
+                'id' => 'weekly_name',
+                'placeholder' => '请选择学生周报',
                 'readonly'=> true
             ]) ?>
+
+            <?=
+            $form->field($model, 'images[]')->widget(FileInput::classname(), [
+                'options'=> ['multiple'=> true],
+                'pluginOptions' =>[
+                    'showUpload' => false,
+                    'showRemove' => false,
+                    'showPreview' => false,
+                    'showCaption' => true,
+                    'allowedFileExtensions'=>['jpg','jpeg','png','mp4'],
+                ],
+
+            ]);
+            ?>
+
+            <?= Html::hiddenInput('WeeklyPushLogs[weekly_id]',$model->weekly_id,['id'=>'weekly_id'])?>
 
     <div class="box-footer">
         <a href="<?= Url::to(['index']);?>" class="btn btn-info fa fa-reply"></a>
@@ -42,40 +58,27 @@ use yii\bootstrap\Modal;
 
 </div>
     </div>
+
+
 <?php
 Modal::begin([
-    'id' => 'patriarch-modal',
+    'id' => 'weekly-modal',
     'size' => 'modal-lg',
-    'header' => '<h4 class="modal-title">选取家长</h4>',
+    'header' => '<h4 class="modal-title">选取周报推送</h4>',
     'footer' => '<a href="#" class="btn btn-primary pull-left" data-dismiss="modal">关闭</a>
-                 <button type="button" onclick="getSelectd()" class="btn btn-warning" data-dismiss="modal">确定</button>',
+<button type="submit" class="btn btn-warning">推送</button>',
 ]);
 
-$getStudentUrl = Url::toRoute('/student/patriarch/modal-list');//弹窗的html内容，下面的js会调用获得该页面的Html内容，直接填充在弹框中
+
+$getUrl = Url::to(['modal-list']);//弹窗的html内容，下面的js会调用获得该页面的Html内容，直接填充在弹框中
 $js = <<<JS
-    $.get('{$getStudentUrl}', {},
+    $.get('{$getUrl}', {},
         function (data) {
-            $('#patriarch-modal .modal-body').html(data);
-        }  
+            $('#weekly-modal .modal-body').html(data);
+        }
     );
 JS;
 $this->registerJs($js);
 Modal::end();
 
-
-
 ?>
-
-<?php $this->beginBlock('js');?>
-    function getSelectd()
-    {
-        obj = document.getElementsByName("selection[]");
-        check_val = [];
-        for(k in obj){
-        if(obj[k].checked)
-        check_val.push(obj[k].value);
-        }
-        document.getElementById('patriarch_id').value = check_val;
-    }
-<?php $this->endBlock();?>
-<?php $this->registerJs($this->blocks['js'],\yii\web\View::POS_END)?>

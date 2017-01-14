@@ -26,13 +26,13 @@ return [
     'Cfg' => '设置',
     'Ads' => '轮播图管理',
     'Users' => '用户管理',
-    'Create Product' => '创建产品',
-    'Create Pages' => '创建页面',
-    'Create Users' => '创建用户',
-    'Create User' => '创建用户',
+    'Create Product' => '新增产品',
+    'Create Pages' => '新增页面',
+    'Create Users' => '新增用户',
+    'Create User' => '新增用户',
     'Update Users' => '更新用户',
     'Create Web Cfg' => '创建配置',
-    'Create Ad' => '创建广告',
+    'Create Ad' => '新增广告',
     //公用
     'Products' => '产品',
     'Name' => '名称',
@@ -51,11 +51,11 @@ return [
 
     //影像资料
     'Repository' => '影像资料管理',
-    'Created Repository' => '创建影像资料',
+    'Created Repository' => '新增影像资料',
     'Updated Repository' => '更新影像资料',
     //学生管理
     'Student List' => '学生列表',
-    'Create Student' => '创建学生',
+    'Create Student' => '新增学生',
     'Update Student' => '更新学生',
     'Student Name' => '姓名',
     'Sex' => '性别',
@@ -64,7 +64,7 @@ return [
     'Grade' => '年级',
     //学生周报
     'Weekly List' => '学生周报',
-    'Create Weekly' => '创建周报',
+    'Create Weekly' => '新增周报',
     'Update Weekly' => '更新周报',
     //客服周报审核
     'Customer Weekly List' => '客服周报审核',
@@ -73,43 +73,44 @@ return [
     //家长
     'Patriarch List' => '家长列表',
     'Update Patriarch' => '更新家长',
-    'Create Patriarch' => '添加家长',
+    'Create Patriarch' => '新增家长',
     //员工
     'Staff List' => '员工列表',
-    'Create Staff' => '创建员工',
+    'Create Staff' => '新增员工',
     'Update Staff' => '更新员工',
     //服务项目
     'ServiceProducts' => '服务项目',
-    'Create ServiceProducts' => '创建服务项目',
+    'Create ServiceProducts' => '新增服务项目',
     'Update ServiceProducts' => '更新服务项目',
     //订单
     'Orders' => '订单管理',
-    'Create Orders' => '创建订单',
+    'Create Orders' => '新增订单',
     'Update Orders' => '更新订单',
     //消息服务
     'Msg Push Logs' => '官方消息推送',
-    'Created Msg'  => '创建消息',
+    'Created Msg'  => '新增消息',
 
     'Weekly Push Logs' => '学生周报推送',
-    'Created Weekly'  => '创建周报推送',
+    'Weekly Push' => '周报推送',
+    'Created Weekly'  => '新增周报推送',
 
     'Repository Push Logs' => '学生影像推送',
-    'Created Repository'  => '创建影像推送',
+    'Created Repository'  => '新增影像推送',
     //活动资讯
     'Events' => '活动资讯',
-    'Create Events' => '创建活动资讯',
+    'Create Events' => '新增活动资讯',
     'Update Events' => '更新活动资讯',
     //和家服务
     'Auxiliary' => '校区管理',
-    'Create Auxiliary' => '创建校区管理',
+    'Create Auxiliary' => '新增校区管理',
     'Update Auxiliary' => '更新校区管理',
 
     'Family' => '家庭服务',
-    'Create Family' => '创建家庭服务',
+    'Create Family' => '新增家庭服务',
     'Update Family' => '更新家庭服务',
     //用户组
     'Role' => '用户组',
-    'Created Role' => '创建用户组',
+    'Created Role' => '新增用户组',
     'Updated Role' => '更新用户组',
     'Set Role' => '组权限配置',
 

@@ -7,7 +7,7 @@ use yii\helpers\Html;
 /* @var $model app\models\Article */
 
 $this->title = Yii::t('app', 'Created Weekly');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Weekly Push Logs'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Weekly Push'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="article-create">
