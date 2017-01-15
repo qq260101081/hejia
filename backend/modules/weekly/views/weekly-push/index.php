@@ -33,8 +33,22 @@ $this->params['breadcrumbs'][] = $this->title;
             'study',
             // 'synthesize',
             'username',
-            // 'status',
             'created_at:date',
+            // 'status',
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'template' => '{view}',
+                'header' => '操作',
+                'headerOptions'=> ['width'=> '80'],
+
+                'buttons' => [
+                    'view' => function ($url, $model) {
+                        return  Yii::$app->user->can('weekly/weekly-push/view') ?
+                            Html::a('<span class="glyphicon glyphicon-eye-open"></span>', $url):
+                            '';
+                    },
+                ],
+            ],
         ],
     ]); ?>
 <?php Pjax::end(); ?></div>

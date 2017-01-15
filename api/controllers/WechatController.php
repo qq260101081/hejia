@@ -154,27 +154,27 @@ class WechatController extends Controller
                         [
                             'name' => urlencode('主页'),
                             'type' => 'view',
-                            'url'  => 'http://m.liusheji.com/site/index'
+                            'url'  => 'http://m.hejiafuwu.com/site/index'
                         ],
                         [
                             'name' => urlencode('家庭服务'),
                             'type' => 'view',
-                            'url'  => 'http://m.liusheji.com/family/index'
+                            'url'  => 'http://m.hejiafuwu.com/family/index'
                         ],
                         [
                             'name' => urlencode('托辅中心'),
                             'type' => 'view',
-                            'url'  => 'http://m.liusheji.com/auxiliary/area'
+                            'url'  => 'http://m.hejiafuwu.com/auxiliary/area'
                         ],
                         [
                             'name' => urlencode('代购服务'),
                             'type' => 'view',
-                            'url'  => 'http://m.liusheji.com/behalf/index'
+                            'url'  => 'http://m.hejiafuwu.com/behalf/index'
                         ],
                         [
                             'name' => urlencode('员工风采'),
                             'type' => 'view',
-                            'url'  => 'http://m.liusheji.com/auxiliary/mien'
+                            'url'  => 'http://m.hejiafuwu.com/auxiliary/mien'
                         ]
                     ]
                 ],
@@ -184,22 +184,22 @@ class WechatController extends Controller
                         [
                             'name' => urlencode('最新活动'),
                             'type' => 'view',
-                            'url'  => 'http://m.liusheji.com/events/index?category_id=146'
+                            'url'  => 'http://m.hejiafuwu.com/events/index?category_id=146'
                         ],
                         [
                             'name' => urlencode('行业资讯'),
                             'type' => 'view',
-                            'url'  => 'http://m.liusheji.com/events/index?category_id=136'
+                            'url'  => 'http://m.hejiafuwu.com/events/index?category_id=136'
                         ],
                         [
                             'name' => urlencode('和家动态'),
                             'type' => 'view',
-                            'url'  => 'http://m.liusheji.com/events/index?category_id=106'
+                            'url'  => 'http://m.hejiafuwu.com/events/index?category_id=106'
                         ],
                         [
                             'name' => urlencode('活动花絮'),
                             'type' => 'view',
-                            'url'  => 'http://m.liusheji.com/events/index?category_id=4'
+                            'url'  => 'http://m.hejiafuwu.com/events/index?category_id=4'
                         ]
                     ]
                 ],
@@ -209,33 +209,33 @@ class WechatController extends Controller
                         [
                             'name' => urlencode('我的资料'),
                             'type' => 'view',
-                            'url'  => 'http://m.liusheji.com/user/view'
+                            'url'  => 'http://m.hejiafuwu.com/user/view'
                         ],
                         [
                             'name' => urlencode('我的服务'),
                             'type' => 'view',
-                            'url'  => 'http://m.liusheji.com/user/serve'
+                            'url'  => 'http://m.hejiafuwu.com/user/serve'
                         ],
                         [
                             'name' => urlencode('我的消息'),
                             'type' => 'view',
-                            'url'  => 'http://m.liusheji.com/msg/index'
+                            'url'  => 'http://m.hejiafuwu.com/msg/index'
                         ],
                         [
                             'name' => urlencode('和家教育'),
                             'type' => 'view',
                             //'url'  => 'http://mp.weixin.qq.com/s/MZvyaqG67Kvsnmj1BkrKSw'
-                            'url'  => 'http://m.liusheji.com/site/education'
+                            'url'  => 'http://m.hejiafuwu.com/site/education'
                         ],
                         [
                             'name' => urlencode('投诉建议'),
                             'type' => 'view',
-                            'url'  => 'http://m.liusheji.com/guestbook/create'
+                            'url'  => 'http://m.hejiafuwu.com/guestbook/create'
                         ],
                         /*[
                             'name' => urlencode('我的订单'),
                             'type' => 'view',
-                            'url'  => 'http://liusheji.com/api.php/user/orders'
+                            'url'  => 'http://hejiafuwu.com/api.php/user/orders'
                         ],
                         [
                             'name' => urlencode('联系客服'),

@@ -3,6 +3,7 @@
 namespace app\modules\student\controllers;
 
 
+use app\modules\users\models\Users;
 use Yii;
 use backend\modules\service\models\ServiceCategory;
 use app\modules\staff\models\Staff;
@@ -53,8 +54,11 @@ class StudentController extends CommonController
      */
     public function actionView($id)
     {
+        $model = $this->findModel($id);
+        $patriarch = Patriarch::findOne($model->patriarch_id);
         return $this->render('/view', [
-            'model' => $this->findModel($id),
+            'model' => $model,
+            'patriarch' => $patriarch,
         ]);
     }
 
@@ -66,6 +70,7 @@ class StudentController extends CommonController
     public function actionCreate()
     {
         $model = new Student();
+        $patriarch = new Patriarch();
         $model->sex = '男';
 
         $categoryInfo = ServiceCategory::find()->where(['id'=>137])->asArray()->one();
@@ -82,17 +87,48 @@ class StudentController extends CommonController
 
         $data = Yii::$app->request->post();
 
-        if ($data) {
-            if($model->load($data) && $model->save())
+        if ($model->load($data)) {
+            //如果家长已存在则自动关联，否则创建
+            $old_patriarch = Patriarch::find()->where(['phone' => $data['Patriarch']['phone']])->one();
+            if($old_patriarch)
+            {
+                $model->patriarch_id = $old_patriarch->id;
+            }
+            else
+            {
+                if(!$patriarch->load($data))
+                {
+                    Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败！']);
+                    return $this->render('/create', [
+                        'model' => $model,
+                        'patriarch' => $patriarch,
+                        'categoryPath' => $categoryPath,
+                    ]);
+                }
+                $user = new Users();
+                $user->type = 'patriarch';
+                $user->username = $patriarch->phone;
+                $user->name = $patriarch->name;
+                $user->password_hash = Yii::$app->security->generatePasswordHash(substr($patriarch->phone, -6));
+                $user->auth_key = Yii::$app->security->generateRandomString();
+                $user->save(false);
+
+                $patriarch->id = $model->patriarch_id = $user->id;
+                $patriarch->category_id = $model->category_id;
+                $patriarch->save();
+            }
+
+            if($model->save())
             {
                 Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'保存成功！']);
                 return $this->redirect(['index']);
-            }print_r($model->getErrors());
+            }
             Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败！']);
         }
 
         return $this->render('/create', [
             'model' => $model,
+            'patriarch' => $patriarch,
             'categoryPath' => $categoryPath,
         ]);
 
@@ -152,8 +188,16 @@ class StudentController extends CommonController
         return $this->redirect(['index']);
     }
 
+    //ajax 获取家长信息
+    public function actionGetPatriarch($phone = '')
+    {
+        $model = Patriarch::find()->where(['phone' => $phone])->asArray()->one();
+        echo json_encode($model);
+        exit;
+    }
+
     //选择家长
-    public function actionPatriarchList()
+    /*public function actionPatriarchList()
     {
         $searchModel = new PatriarchSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
@@ -164,7 +208,7 @@ class StudentController extends CommonController
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
-    }
+    }*/
 
     /**
      * Finds the Guarantee model based on its primary key value.

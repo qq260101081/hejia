@@ -20,7 +20,6 @@ use yii\db\ActiveRecord;
  */
 class Student extends ActiveRecord
 {
-    public $patriarch_name;
     public function behaviors()
     {
 
@@ -53,9 +52,9 @@ class Student extends ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'sex', 'age', 'school', 'grade', 'category_id', 'patriarch_name'], 'required'],
+            [['name', 'sex', 'age', 'school', 'grade', 'category_id'], 'required'],
             [['age', 'created_at', 'updated_at', 'category_id', 'patriarch_id'], 'integer'],
-            [['sex','name','patriarch_name'], 'string', 'max' => 12],
+            [['sex','name'], 'string', 'max' => 12],
             ['remark', 'string', 'max' => 300],
             [['school', 'grade'], 'string', 'max' => 90],
         ];
@@ -69,7 +68,6 @@ class Student extends ActiveRecord
         return [
             'id' => Yii::t('app', 'ID'),
             'name' => Yii::t('app', 'Student Name'),
-            'patriarch_name' => Yii::t('app', '家长'),
             'sex' => Yii::t('app', 'Sex'),
             'age' => Yii::t('app', 'Age'),
             'remark' => Yii::t('app', '备注'),

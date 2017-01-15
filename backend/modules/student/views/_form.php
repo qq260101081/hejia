@@ -19,7 +19,7 @@ use yii\bootstrap\Modal;
 
         <?php $form = ActiveForm::begin([
             'options' => ['class'=>'form-horizontal','enctype'=>'multipart/form-data'],
-            'validateOnBlur' => false,
+            //'validateOnBlur' => false,
             'fieldConfig' => [
                 'labelOptions' => ['class' => 'col-sm-2 control-label'],
                 'template' => "{label}\n<div class=\"col-sm-8\">{input}</div>\n<div class=\"col-sm-8\">{error}</div>",
@@ -41,18 +41,25 @@ use yii\bootstrap\Modal;
         <?= $form->field($model, 'age')->textInput() ?>
         <?= $form->field($model, 'grade')->textInput() ?>
 
-        <?= $form->field($model, 'patriarch_name')->textInput([
-            'data-toggle'=>'modal',
-            'data-target'=>'#patriarch-modal',
-            'id' => 'patriarch_name',
-            'readonly'=> true
-        ]) ?>
-
         <?= $form->field($model, 'remark')->textarea(); ?>
+
+        <div class="box-header with-border">
+            <h5 class="box-title">家长信息</h5>
+        </div>
+        <p></p>
+
+        <?= $form->field($patriarch, 'phone')->textInput(['maxlength'=>'11']) ?>
+        <?= $form->field($patriarch, 'name')->textInput() ?>
+        <?= $form->field($patriarch, 'relation')->dropDownList([
+            '爸爸'=>'爸爸','妈妈'=>'妈妈','爷爷'=>'爷爷','奶奶'=>'奶奶','大伯'=>'大伯','大婶'=>'大婶','大伯'=>'大伯','其他'=>'其他'
+        ]) ?>
+        <?= $form->field($patriarch, 'urgency_person')->textInput() ?>
+        <?= $form->field($patriarch, 'urgency_phone')->textInput(['maxlength'=>'11']) ?>
+        <?= $form->field($patriarch, 'address')->textInput() ?>
+        <?= $form->field($patriarch, 'remark')->textarea() ?>
 
         <?= Html::hiddenInput('Student[category_id]',$model->category_id, ['id' => 'category_id'])?>
         <?= Html::hiddenInput('Student[school]',$model->school, ['id' => 'school'])?>
-        <?= Html::hiddenInput('Student[patriarch_id]',$model->patriarch_id, ['id' => 'patriarch_id'])?>
 
         <div class="box-footer">
         <a href="<?= Url::to(['/student/student/index']);?>" class="btn btn-info fa fa-reply"></a>
@@ -87,28 +94,21 @@ use yii\bootstrap\Modal;
     $('#category_id').val(linkageSel.getSelectedValue());
     $('#school').val(linkageSel.getSelectedData().name);
     });
+
+    $('#patriarch-phone').on('change', function(){
+        $.get('<?=Url::to(['get-patriarch'])?>&phone='+$(this).val(), function(res){
+            if(res)
+            {
+                $('#patriarch-name').val(res.name);
+                $('#patriarch-urgency_phone').val(res.urgency_phone);
+                $("#patriarch-relation").find("option[value="+res.relation+"]").attr("selected",true);
+                $('#patriarch-urgency_person').val(res.urgency_person);
+                $('#patriarch-address').val(res.address);
+                $('#patriarch-remark').val(res.remark);
+            }
+        },'json');
+    });
 <?php $this->endBlock(); ?>
 
 <?php $this->registerJs($this->blocks['js_end'],\yii\web\View::POS_LOAD);//将编写的js代码注册到页面底部 ?>
 <?php endif;?>
-
-<?php
-Modal::begin([
-    'id' => 'patriarch-modal',
-    'size' => 'modal-lg',
-    'header' => '<h4 class="modal-title">选取家长</h4>',
-    'footer' => '<a href="#" class="btn btn-primary pull-left" data-dismiss="modal">关闭</a>
-    <button type="button" class="btn btn-warning" data-dismiss="modal">确定</button>',
-]);
-
-$getStudentUrl = Url::toRoute('/student/student/patriarch-list');//弹窗的html内容，下面的js会调用获得该页面的Html内容，直接填充在弹框中
-$js = <<<JS
-        $.get('{$getStudentUrl}', {},
-    function (data) {
-    $('#patriarch-modal .modal-body').html(data);
-    }
-    );
-JS;
-    $this->registerJs($js);
-    Modal::end();
-?>

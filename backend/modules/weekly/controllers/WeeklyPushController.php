@@ -135,6 +135,14 @@ class WeeklyPushController extends CommonController
         return $this->render('create', ['model' => $model]);
     }
 
+    public function actionView($id)
+    {
+        $model = $this->findModel($id);
+
+        return $this->render('view', [
+            'model' => $model
+        ]);
+    }
     protected function findModel($id)
     {
         if (($model = WeeklyPushLogs::findOne($id)) !== null) {

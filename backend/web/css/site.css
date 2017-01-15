@@ -76,3 +76,25 @@ form .help-block {
 .grid-view table {
 	table-layout: fixed;
 }
+
+.weekly li div {
+	padding-left: 50px;
+}
+.weekly li div p {
+	height: 10px;
+}
+.site-index {
+	background: url("../images/welcome.jpg") center no-repeat;
+	background-size: 100%;
+}
+.site-index .row {
+	width: 50%;
+	margin: 0 auto;
+}
+.site-index .row div {
+	height: 100px;
+}
+.site-index .row div a {
+	width: 150px;
+	margin-right: 50px;
+}
