@@ -112,8 +112,7 @@ class OrdersController extends CommonController
         $searchModel = new StaffSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $dataProvider->query->andFilterWhere(['in','position',['老师','校长']]);
-        //限制跨校区操作
-        $dataProvider = $this->schoolRule($dataProvider, Orders::tableName().'.');
+        
 
         return $this->renderAjax('/teacher-list', [
             'searchModel' => $searchModel,
