@@ -54,13 +54,13 @@
             <?php if($v->extension != 'mp4'):;?>
                 <li>
                     <div class="am-gallery-item">
-                        <img src="http://img.hejiafuwu.com/<?=$v->path;?>"
-                             data-rel="http://img.hejiafuwu.com/<?=$v->path;?>"/>
+                        <img src="http://img.hejiafuwu.com/<?=$v['path'];?>"
+                             data-rel="http://img.hejiafuwu.com/<?=$v['path'];?>"/>
                     </div>
                 </li>
             <?php else:?>
                 <li>
-                    <video src="http://img.hejiafuwu.com/<?=$v->path;?>" controls="controls">
+                    <video src="http://img.hejiafuwu.com/<?=$v['path'];?>" controls="controls">
                         您的浏览器不支持 video 标签。
                     </video>
                 </li>

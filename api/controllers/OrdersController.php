@@ -47,7 +47,7 @@ class OrdersController extends BaseController
         $student = Student::find()->where(['id' => $order->student_id])->one();
         $staff = Staff::findOne($order->teacher_id);
 
-        return $this->render('serve', [
+        return $this->render('view', [
             'patriarch' => $patriarch,
             'student' => $student,
             'staff' => $staff,

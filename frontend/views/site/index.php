@@ -23,13 +23,13 @@
             </div>
             <a href="<?= Url::to(['product/index','category_id'=>'4']);?>" class="more_cp">更多>></a>
         </div>
-        <?php foreach ($server as $v):?>
+        <?php foreach ($family as $v):?>
         <div class="product_block">
             <div class="fl">
                 <a href="<?= Url::to(['product/view','id'=>$v->id,'category_id'=>'4',$v->category_id]);?>">
-                    <img src="upload/<?= $v->list_img;?>">
+                    <img src="upload/">
                 </a></div>
-            <span class="product_title"><?=$v->name;?></span>
+            <span class="product_title"><?=$v->title;?></span>
         </div>
         <?php endforeach;?>
 
@@ -58,7 +58,7 @@
             </div>
             <a class="more_cp" href="<?= Url::to(['news/index','category_id'=>$new->category_id])?>">更多>></a>
             <div class="box_body">
-                <img src="upload/<?= $new->list_img;?>"/>
+                <img src="upload/"/>
                 <h3><a href="<?= Url::to(['news/view','id'=>$new->id, 'category_id'=>$new->category_id])?>"><?= $new->title;?></a></h3>
                 <p><?= mb_substr(strip_tags($new->content),0,50,'utf-8');?>....</p>
             </div>

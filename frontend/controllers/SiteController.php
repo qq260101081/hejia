@@ -2,6 +2,7 @@
 namespace frontend\controllers;
 
 use frontend\models\Ad;
+use frontend\models\Events;
 use frontend\models\Family;
 use frontend\models\Interesting;
 use frontend\models\Mien;
@@ -85,21 +86,23 @@ class SiteController extends Controller
     {
         //家庭服务
         $family = Family::find()->orderBy('id')->limit(2)->all();
-        print_r($family);die;
+
+        //最新活动
+        $news = Events::find()->where(['category_id'=>'146'])->orderBy('id')->limit(2)->all();
+
         $jtCategory = ProductCategory::find()->select('id')->where(['parent'=>4])->indexBy('id')->asArray()->all();
         $tpCategory = ProductCategory::find()->select('id')->where(['parent'=>106])->indexBy('id')->asArray()->all();
 
         $server = Product::find()->where(['in','category_id',array_keys($jtCategory)])->limit(2)->all();
         $hosting = Product::find()->where(['in','category_id',array_keys($tpCategory)])->limit(2)->all();
 
-        $interesting = Interesting::find()->orderBy('id desc')->one();
-        $mien = Mien::find()->orderBy('id desc')->one();
-        $new = News::find()->orderBy('id desc')->one();
+        $interesting = [];
+        $mien = [];
+        $new = [];
 
         $ad = Ad::find()->all();
         return $this->render('index', [
             'family' => $family,
-            'server' => $server,
             'hosting' => $hosting,
             'interesting' => $interesting,
             'mien' => $mien,
