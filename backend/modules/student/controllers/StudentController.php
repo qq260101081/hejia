@@ -93,6 +93,7 @@ class StudentController extends CommonController
             {
                 $staff = Staff::find()->where(['userid' => Yii::$app->user->id])->one();
                 $model->category_id = $staff->category_id;
+                $model->school = $staff->school;
             }
 
             //如果家长已存在则自动关联，否则创建
@@ -130,7 +131,6 @@ class StudentController extends CommonController
                 Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'保存成功！']);
                 return $this->redirect(['index']);
             }
-            var_dump($model->save());
             Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败！']);
         }
 
