@@ -112,7 +112,7 @@ class OrdersController extends CommonController
         $searchModel = new StaffSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $dataProvider->query->andFilterWhere(['in','position',['老师','校长']]);
-        
+
 
         return $this->renderAjax('/teacher-list', [
             'searchModel' => $searchModel,

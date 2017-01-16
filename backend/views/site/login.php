@@ -19,7 +19,7 @@ $fieldOptions2 = [
 ];
 ?>
 
-<div class="login-box">
+<div class="login-box" id="login-page">
     <div class="login-logo">
         <a href="#"><b>广东和家服务管理平台</b></a>
     </div>

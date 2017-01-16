@@ -2,6 +2,7 @@
 namespace frontend\controllers;
 
 use frontend\models\Ad;
+use frontend\models\Family;
 use frontend\models\Interesting;
 use frontend\models\Mien;
 use frontend\models\News;
@@ -82,6 +83,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        //家庭服务
+        $family = Family::find()->orderBy('id')->limit(2)->all();
+
         $jtCategory = ProductCategory::find()->select('id')->where(['parent'=>4])->indexBy('id')->asArray()->all();
         $tpCategory = ProductCategory::find()->select('id')->where(['parent'=>106])->indexBy('id')->asArray()->all();
 
@@ -94,6 +98,7 @@ class SiteController extends Controller
 
         $ad = Ad::find()->all();
         return $this->render('index', [
+            'family' => $family,
             'server' => $server,
             'hosting' => $hosting,
             'interesting' => $interesting,
