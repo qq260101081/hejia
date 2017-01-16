@@ -25,8 +25,8 @@ use yii\bootstrap\Modal;
                 'template' => "{label}\n<div class=\"col-sm-8\">{input}</div>\n<div class=\"col-sm-8\">{error}</div>",
             ]
         ]); ?>
-
-        <?php if(!Yii::$app->user->identity->type):;?>
+        <!--如果当前登录用户不是老师和校长，则显示选择校区-->
+        <?php if(Yii::$app->user->identity->role !='principal' && Yii::$app->user->identity->role !='teacher'):;?>
             <div class="form-group field-student-category_id">
                 <div class="category">
                     <label class="col-sm-2 control-label">所属校区</label>
@@ -71,7 +71,7 @@ use yii\bootstrap\Modal;
 
 </div>
 
-<?php if(!Yii::$app->user->identity->type):;?>
+<?php if(Yii::$app->user->identity->role !='principal' && Yii::$app->user->identity->role !='teacher'):;?>
 <?php $this->beginBlock('js_end') ?>
     var categoryPath = <?= json_encode(array_keys(isset($categoryPath) ? $categoryPath : []))?>;
     var opts = {

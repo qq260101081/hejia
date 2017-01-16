@@ -57,6 +57,7 @@ class Student extends ActiveRecord
             [['sex','name'], 'string', 'max' => 12],
             ['remark', 'string', 'max' => 300],
             [['school', 'grade'], 'string', 'max' => 90],
+            ['category_id', 'default', 'value' => 0]
         ];
     }
 

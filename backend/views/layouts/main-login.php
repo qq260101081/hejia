@@ -17,7 +17,7 @@ dmstr\web\AdminLteAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body class="login-page" style="background: url('<?= Yii::$app->basePath;?>/web/images/bg01.jpg') no-repeat;">
+<body class="login-page">
 
 <?php $this->beginBody() ?>
 

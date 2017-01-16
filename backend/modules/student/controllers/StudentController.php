@@ -88,6 +88,13 @@ class StudentController extends CommonController
         $data = Yii::$app->request->post();
 
         if ($model->load($data)) {
+            //如果当前登录的是老师或校长，则默认分类与当前用户对应
+            if(Yii::$app->user->identity->role =='principal' || Yii::$app->user->identity->role =='teacher')
+            {
+                $staff = Staff::find()->where(['userid' => Yii::$app->user->id])->one();
+                $model->category_id = $staff->category_id;
+            }
+
             //如果家长已存在则自动关联，否则创建
             $old_patriarch = Patriarch::find()->where(['phone' => $data['Patriarch']['phone']])->one();
             if($old_patriarch)

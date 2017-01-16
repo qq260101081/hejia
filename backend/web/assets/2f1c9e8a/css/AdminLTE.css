@@ -3222,12 +3222,11 @@ table.text-center th {
 }
 .login-page,
 .register-page {
-  background: #d2d6de;
+  background: url("../img/bg01.jpg") no-repeat;
 }
 .login-box,
 .register-box {
   width: 360px;
-  margin: 7% auto;
 }
 @media (max-width: 768px) {
   .login-box,
