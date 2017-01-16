@@ -11,7 +11,7 @@ $this->title = '';
                 <a href="<?= Url::to(['/student/student/create'])?>" class="btn btn-lg btn-primary">新增学生</a>
             <?php endif;?>
             <?php if(Yii::$app->user->can('orders/orders/create')):?>
-                <a href="<?= Url::to(['/orders/orders/create\''])?>" class="btn btn-lg btn-primary">新增托辅订单</a>
+                <a href="<?= Url::to(['/orders/orders/create'])?>" class="btn btn-lg btn-primary">新增托辅订单</a>
             <?php endif;?>
         </div>
         <div>
