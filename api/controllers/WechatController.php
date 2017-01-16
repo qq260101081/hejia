@@ -214,7 +214,7 @@ class WechatController extends Controller
                         [
                             'name' => urlencode('我的服务'),
                             'type' => 'view',
-                            'url'  => 'http://m.hejiafuwu.com/user/serve'
+                            'url'  => 'http://m.hejiafuwu.com/orders/index'
                         ],
                         [
                             'name' => urlencode('我的消息'),
