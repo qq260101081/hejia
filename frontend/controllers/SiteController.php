@@ -85,7 +85,7 @@ class SiteController extends Controller
     {
         //家庭服务
         $family = Family::find()->orderBy('id')->limit(2)->all();
-
+        print_r($family);die;
         $jtCategory = ProductCategory::find()->select('id')->where(['parent'=>4])->indexBy('id')->asArray()->all();
         $tpCategory = ProductCategory::find()->select('id')->where(['parent'=>106])->indexBy('id')->asArray()->all();
 

@@ -20,8 +20,8 @@
             <?php foreach ($model as $v):;?>
             <li>
                 <div class="am-gallery-item">
-                    <a href="http://img.liusheji.com/<?=$v->list_img;?>" class="">
-                        <img src="http://img.liusheji.com/<?=$v->list_img;?>"/>
+                    <a href="http://img.hejiafuwu.com/<?=$v->list_img;?>" class="">
+                        <img src="http://img.hejiafuwu.com/<?=$v->list_img;?>"/>
                         <h3 class="am-gallery-title"><?=$v->title;?></h3>
                     </a>
                 </div>
