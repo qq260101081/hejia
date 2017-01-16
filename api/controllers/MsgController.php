@@ -33,10 +33,10 @@ class MsgController extends BaseController
             //->andWhere(['>', 'created_at', $start])
             ->all();
         //影像消息
-        $repository = RepositoryLogs::find()
-            ->where(['patriarch_id'=>Yii::$app->user->id])
+        //$repository = RepositoryLogs::find()
+        //    ->where(['patriarch_id'=>Yii::$app->user->id])
             //->andWhere(['>', 'created_at', $start])
-            ->all();
+        //    ->all();
         //更新红点消息状态
         $msgStatus = MsgStatus::find()->where(['userid'=>Yii::$app->user->id])->one();
         if($msgStatus) {
@@ -47,7 +47,6 @@ class MsgController extends BaseController
         return $this->render('index',[
             'msg' => $msg,
             'weekly' => $weekly,
-            'repository' => $repository,
         ]);
     }
 

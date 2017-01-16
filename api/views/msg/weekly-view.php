@@ -47,5 +47,28 @@
 </ul>
 
 
+<div class="cont-block02">
+    <ul data-am-widget="gallery" class="am-gallery am-avg-sm-2 am-gallery-imgbordered" data-am-gallery="{pureview: 1}">
+        <?php $images = json_decode($model->images);?>
+        <?php foreach ($images as $v):?>
+            <?php if($v->extension != 'mp4'):;?>
+                <li>
+                    <div class="am-gallery-item">
+                        <img src="http://img.hejiafuwu.com/<?=$v->path;?>"
+                             data-rel="http://img.hejiafuwu.com/<?=$v->path;?>"/>
+                    </div>
+                </li>
+            <?php else:?>
+                <li>
+                    <video src="http://img.hejiafuwu.com/<?=$v->path;?>" controls="controls">
+                        您的浏览器不支持 video 标签。
+                    </video>
+                </li>
+            <?php endif;?>
+        <?php endforeach;?>
+    </ul>
+</div>
+
+
 
 <div style="height: 49px;"></div>
