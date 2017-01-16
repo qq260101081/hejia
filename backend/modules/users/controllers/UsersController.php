@@ -174,7 +174,7 @@ class UsersController extends CommonController
         if($model->id = Yii::$app->user->id)
         {
             Yii::$app->user->logout();
-            return $this->redirect(['site/login']);
+            return $this->redirect(['/site/login']);
         }
         return $this->redirect(['index']);
 

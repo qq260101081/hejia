@@ -51,7 +51,7 @@ class UserController extends Controller
             $model->password_hash = $data['User']['password'] ?
                 Yii::$app->security->generatePasswordHash($data['User']['password']) :
                 $model->password_hash;
-            if($model->save())
+            if($model->save(false))
             {
                 Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'修改成功！']);
                 return $this->goBack();
