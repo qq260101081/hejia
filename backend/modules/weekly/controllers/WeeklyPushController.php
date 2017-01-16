@@ -85,13 +85,13 @@ class WeeklyPushController extends CommonController
                     BaseFileHelper::createDirectory($save_path);
                 }
                 //遍历保存
-                foreach ($files as $file)
+                foreach ($files as $k => $file)
                 {
                     // 新文件名
                     $newFile = date("YmdHis") . '_' . rand(10000, 99999) . '.' . $file->extension;
                     $file->saveAs($save_path . $newFile);
-                    $imgs[]['extension'] = $file->extension;
-                    $imgs[]['path'] = $ymd . '/' . $newFile;
+                    $imgs[$k]['extension'] = $file->extension;
+                    $imgs[$k]['path'] = $ymd . '/' . $newFile;
                 }
             }
             if(!$imgs)
