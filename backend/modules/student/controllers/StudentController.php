@@ -95,35 +95,26 @@ class StudentController extends CommonController
                 $model->category_id = $staff->category_id;
                 $model->school = $staff->school;
             }
-
             //如果家长已存在则自动关联，否则创建
-            $old_patriarch = Patriarch::find()->where(['phone' => $data['Patriarch']['phone']])->one();
-            if($old_patriarch)
+            $user = Users::find()->where(['phone' => $data['Patriarch']['phone']])->one();
+            if(!$user)
             {
-                $model->patriarch_id = $old_patriarch->id;
-            }
-            else
-            {
-                if(!$patriarch->load($data))
-                {
-                    Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败！']);
-                    return $this->render('/create', [
-                        'model' => $model,
-                        'patriarch' => $patriarch,
-                        'categoryPath' => $categoryPath,
-                    ]);
-                }
                 $user = new Users();
                 $user->type = 'patriarch';
-                $user->username = $patriarch->phone;
-                $user->name = $patriarch->name;
-                $user->password_hash = Yii::$app->security->generatePasswordHash(substr($patriarch->phone, -6));
+                $user->username = $data['Patriarch']['phone'];
+                $user->name = $data['Patriarch']['name'];
+                $user->password_hash = Yii::$app->security->generatePasswordHash(substr($data['Patriarch']['phone'], -6));
                 $user->auth_key = Yii::$app->security->generateRandomString();
                 $user->save(false);
-
-                $patriarch->id = $model->patriarch_id = $user->id;
+            }
+            $model->patriarch_id = $user->id;
+            $oldPatriarch = Patriarch::findOne($user->id);
+            if(!$oldPatriarch)
+            {
+                $patriarch->load($data);
+                $patriarch->id = $user->id;
                 $patriarch->category_id = $model->category_id;
-                $patriarch->save();
+                $patriarch->save(false);
             }
 
             if($model->save())

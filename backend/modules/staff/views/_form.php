@@ -41,7 +41,7 @@ use yii\helpers\Url;
             <div class="col-sm-8"><div class="help-block"></div></div>
         </div>
 
-        <?= $form->field($model, 'name')->textInput() ?>
+        <?= $form->field($model, 'name')->textInput(['maxlength' => '4']) ?>
 
         <?= $form->field($model, 'position')->dropDownList($position) ?>
 

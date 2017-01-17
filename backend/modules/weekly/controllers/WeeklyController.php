@@ -32,7 +32,7 @@ class WeeklyController extends CommonController
     public function actionView($id)
     {
         $model = $this->findModel($id);
-        $patriarch = Patriarch::find()->select(['name','id'])->where(['student_id'=>$model->student_id])->one();
+        $patriarch = Patriarch::find()->select(['name','id'])->where(['id'=>$model->patriarch_id])->one();
         if($patriarch)
             $model->userid = $patriarch->name;
         else

@@ -72,16 +72,22 @@ class PatriarchController extends CommonController
         $data = Yii::$app->request->post();
 
         if ($model->load($data)) {
-            $user = new Users();
-            $user->type = 'patriarch';
-            $user->username = $model->phone;
-            $user->name = $model->name;
-            $user->password_hash = Yii::$app->security->generatePasswordHash(substr($model->phone, -6));
-            $user->auth_key = Yii::$app->security->generateRandomString();
-            if($user->save(false))
+            $user = Users::find()->where(['username' => $model->phone])->one();
+            //如果账号不存在
+            if(!$user)
             {
-                $model->id = $user->id;
-                $model->save();
+                $user = new Users();
+                $user->type = 'patriarch';
+                $user->username = $model->phone;
+                $user->name = $model->name;
+                $user->password_hash = Yii::$app->security->generatePasswordHash(substr($model->phone, -6));
+                $user->auth_key = Yii::$app->security->generateRandomString();
+                $user->save(false);
+            }
+            $model->id = $user->id;
+
+            if($model->save())
+            {
                 Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'保存成功！']);
                 return $this->redirect(['index']);
             }
@@ -109,11 +115,19 @@ class PatriarchController extends CommonController
             //如果电话改变了，则更新
             if($model->phone != $model->oldAttributes['phone'] || $model->name != $model->oldAttributes['name'])
             {
-                $user = Users::findOne($id);
-                $user->username = $model->phone;
-                $user->name = $model->name;
-                $user->password_hash = Yii::$app->security->generatePasswordHash(substr($model->phone, -6));
-                $user->auth_key = Yii::$app->security->generateRandomString();
+                $user = Users::find()->where(['username'=>$model->phone])->one();
+                if(!$user)
+                {
+                    $user = Users::findOne($id);
+                    $user->username = $model->phone;
+                    $user->name = $model->name;
+                    $user->password_hash = Yii::$app->security->generatePasswordHash(substr($model->phone, -6));
+                    $user->auth_key = Yii::$app->security->generateRandomString();
+                }
+                else
+                {
+                    $user->name = $model->name;
+                }
                 $user->save(false);
             }
             if($model->save())
@@ -138,12 +152,8 @@ class PatriarchController extends CommonController
     public function actionDelete($id)
     {
         $model = $this->findModel($id);
-        $user = Users::findOne($id);
         if($model->delete())
-        {
-            if($user) $user->delete();
             Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'删除成功！']);
-        }
         return $this->redirect(['index']);
     }
 

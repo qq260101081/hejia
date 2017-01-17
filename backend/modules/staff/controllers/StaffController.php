@@ -117,31 +117,46 @@ class StaffController extends CommonController
 
             if($model->load($data))
             {
-                //开通员工账号
-                $user = new Users();
-                $user->type = 'staff';
+                $user = Users::find()->where(['username'=>$model->phone])->one();
+                //如果账号不存在，则开通员工账号
+                if(!$user)
+                {
+                    $user = new Users();
+                    $user->type = 'staff';
 
-                if($model->position=='校长')
-                    $user->role = 'principal';
-                elseif ($model->position=='老师')
-                    $user->role = 'teacher';
-                elseif ($model->position=='客服')
-                    $user->role = 'customer';
-                elseif ($model->position=='客服主管')
-                    $user->role = 'customer_super';
+                    if ($model->position == '校长')
+                        $user->role = 'principal';
+                    elseif ($model->position == '老师')
+                        $user->role = 'teacher';
+                    elseif ($model->position == '客服')
+                        $user->role = 'customer';
+                    elseif ($model->position == '客服主管')
+                        $user->role = 'customer_super';
 
-                $user->name = $model->name;
-                $user->username = $model->phone;
-                $user->password_hash = Yii::$app->security->generatePasswordHash(substr($user->username, -6));
-                $user->auth_key = Yii::$app->security->generateRandomString();
-                if($user->save())
+                    $user->name = $model->name;
+                    $user->username = $model->phone;
+                    $user->password_hash = Yii::$app->security->generatePasswordHash(substr($user->username, -6));
+                    $user->auth_key = Yii::$app->security->generateRandomString();
+                    if ($user->save()) {
+                        $model->userid = $user->id;
+                        //分配到权限组
+                        $role = Yii::$app->getAuthManager()->createRole($user->role);
+                        Yii::$app->getAuthManager()->assign($role, $user->id);
+                    }
+                }
+                else
                 {
                     $model->userid = $user->id;
-                    //分配到权限组
-                    $role = Yii::$app->getAuthManager()->createRole($user->role);
-                    Yii::$app->getAuthManager()->assign($role, $user->id);
+                    if ($model->position == '校长')
+                        $user->role = 'principal';
+                    elseif ($model->position == '老师')
+                        $user->role = 'teacher';
+                    elseif ($model->position == '客服')
+                        $user->role = 'customer';
+                    elseif ($model->position == '客服主管')
+                        $user->role = 'customer_super';
+                    $user->save(false);
                 }
-
                 $model->save();
 
                 Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'保存成功！']);
@@ -253,20 +268,8 @@ class StaffController extends CommonController
     public function actionDelete($id)
     {
         $model = $this->findModel($id);
-        $user = Users::findOne($model->userid);
-        if($user)
-        {
-            //删除对应的角色
-            $role = Yii::$app->getAuthManager()->getRolesByUser($model->userid);
-            foreach ($role as $v)
-            {
-                Yii::$app->getAuthManager()->revoke($v, $model->userid);
-                break;
-            }
-            //删除对应的用户
-            $user->delete();
-        }
-        $model->delete();
+        if($model->delete())
+            Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'删除成功！']);
         return $this->redirect(['index']);
     }
 
