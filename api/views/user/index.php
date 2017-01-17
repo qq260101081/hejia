@@ -13,13 +13,7 @@
     <p><a href="<?= Url::to(['user/view','id'=>Yii::$app->user->id])?>"><?= Yii::$app->user->identity->name;?></a></p>
 </div>
 <ul class="nav">
-    <li>
-        <a href="<?= Url::to(['user/view'])?>">
-            <img src="/images/i1.png" />
-            <span>我的资料</span>
-            <i class="am-icon-angle-right"></i>
-        </a>
-    </li>
+
     <li style="position:relative;">
         <a href="<?= Url::to(['msg/index']);?>">
 

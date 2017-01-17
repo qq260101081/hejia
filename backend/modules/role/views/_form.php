@@ -27,10 +27,10 @@ use yii\helpers\Url;
         <?= $form->field($model, 'name')->textInput(['placeholder'=>'字段唯一，英文字母数字组合']) ?>
         <?= $form->field($model, 'description')->textInput(['placeholder'=>'例如：老师，老师用户组']) ?>
 
-    <div class="box-footer">
-        <a href="<?= Url::to(['/role/role/index']);?>" class="btn btn-info fa fa-reply"></a>
-        <?= Html::submitButton('', ['class' => 'btn btn-info pull-right fa fa-save']) ?>
-    </div>
+        <div class="box-footer">
+            <a href="<?= Url::to(['index']);?>" class="col-md-offset-5 btn btn-info fa fa-reply"></a>
+            <?= Html::submitButton('', ['class' => 'col-md-offset-1 btn btn-info fa fa-save']) ?>
+        </div>
 
     <?php ActiveForm::end(); ?>
     </div>

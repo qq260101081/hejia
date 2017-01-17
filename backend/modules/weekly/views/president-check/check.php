@@ -58,10 +58,9 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Weekly Check');
             <br>
             <textarea class="form-control" rows="3" cols="100" name="remark" style="display: none;" placeholder="请填写驳回的原因"></textarea>
             <div class="box-footer">
-                <a href="<?= Url::to(['/weekly/president-check/index']);?>" class="btn btn-info fa fa-reply"></a>
-                <?= Html::submitButton('', ['class' => 'btn btn-success pull-right fa fa-check-circle']) ?>
+                <a href="<?= Url::to(['/weekly/president-check/index']);?>" class="col-md-offset-5 btn btn-info fa fa-reply"></a>
+                <?= Html::submitButton('', ['class' => 'col-md-offset-1 btn btn-success pull-right fa fa-check-circle']) ?>
             </div>
-
             <?php ActiveForm::end(); ?>
         </div>
 

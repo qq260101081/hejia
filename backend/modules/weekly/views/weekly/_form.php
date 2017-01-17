@@ -76,8 +76,8 @@ use kartik\date\DatePicker;
         <?= Html::hiddenInput('Weekly[category_id]',$model->category_id,['id'=>'category_id']);?>
 
         <div class="box-footer">
-            <a href="<?= Url::to(['/student/weekly/index']);?>" class="btn btn-info fa fa-reply"></a>
-            <?= Html::submitButton('', ['class' => 'btn btn-info pull-right fa fa-save']) ?>
+            <a href="<?= Url::to(['index']);?>" class="col-md-offset-5 btn btn-info fa fa-reply"></a>
+            <?= Html::submitButton('', ['class' => 'col-md-offset-1 btn btn-info fa fa-save']) ?>
         </div>
 
         <?php ActiveForm::end(); ?>

@@ -48,10 +48,10 @@ $category = [
     ?>
     <?= $form->field($model, 'content')->widget('kucha\ueditor\UEditor',[]) ?>
 
-    <div class="box-footer">
-        <a href="<?= Url::to(['ad/index']);?>" class="btn btn-info fa fa-reply"></a>
-        <?= Html::submitButton('', ['class' => 'btn btn-info pull-right fa fa-save']) ?>
-    </div>
+        <div class="box-footer">
+            <a href="<?= Url::to(['index']);?>" class="col-md-offset-5 btn btn-info fa fa-reply"></a>
+            <?= Html::submitButton('', ['class' => 'col-md-offset-1 btn btn-info fa fa-save']) ?>
+        </div>
 
     <?php ActiveForm::end(); ?>
     </div>
