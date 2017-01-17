@@ -151,8 +151,7 @@ class StudentController extends CommonController
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-        $patriarch = Patriarch::find()->select(['id','name'])->where(['id' => $model->patriarch])->one();
-        if($patriarch) $model->patriarch_name = $patriarch->name;
+
         $categoryInfo = ServiceCategory::find()->where(['id'=>$model->category_id])->asArray()->one();
         $categoryPath = ServiceCategory::find()
             ->where(['<','lft',$categoryInfo['lft']])
@@ -167,8 +166,9 @@ class StudentController extends CommonController
 
         $data = Yii::$app->request->post();
 
-        if ($data) {
-            if($model->load($data) && $model->save())
+        if ($model->load($data)) {
+            //更新学生
+            if($model->save())
             {
                 Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'保存成功！']);
                 return $this->redirect(['index']);

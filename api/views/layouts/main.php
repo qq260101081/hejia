@@ -24,7 +24,7 @@ AppAsset::register($this);
 <?php if(Yii::$app->controller->action->id !='login'):?>
 <div data-am-widget="navbar" class="am-navbar  gm-foot am-no-layout" id="">
     <ul class="am-navbar-nav am-cf am-avg-sm-4">
-        <li <?php if(Yii::$app->controller->id == 'site') echo 'class="curr"';?>>
+        <li <?php if(in_array(Yii::$app->controller->id, ['site','family','events','behalf','centralize','guestbook'])) echo 'class="curr"';?>>
             <a href="<?= Url::to(['site/index']); ?>" class="curr">
                 <span class="am-icon-home"></span>
                 <span class="am-navbar-label">首页</span>

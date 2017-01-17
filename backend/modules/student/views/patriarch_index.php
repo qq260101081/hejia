@@ -46,8 +46,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 [
                     'class' => 'yii\grid\ActionColumn',
-                    'template' => '{view} {update} {delete}',
+                    'template' => '{view} &nbsp; {update} &nbsp; {delete}',
                     'header' => '操作',
+                    'headerOptions'=>['width' => 70],
                     'buttons' => [
                         'view' => function ($url, $model) {
                             return  Yii::$app->user->can('student/patriarch/view') ?

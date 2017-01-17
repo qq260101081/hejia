@@ -36,20 +36,20 @@ use yii\bootstrap\Modal;
             </div>
          <?php endif;?>
 
-        <?= $form->field($model, 'name')->textInput() ?>
+        <?= $form->field($model, 'name')->textInput(['maxlength'=>'4']) ?>
         <?= $form->field($model, 'sex')->dropDownList(['男' => '男', '女' => '女']) ?>
         <?= $form->field($model, 'age')->textInput() ?>
         <?= $form->field($model, 'grade')->textInput() ?>
 
         <?= $form->field($model, 'remark')->textarea(); ?>
-
+<?php if(Yii::$app->controller->action->id == 'create'):;?>
         <div class="box-header with-border">
             <h5 class="box-title">家长信息</h5>
         </div>
         <p></p>
 
         <?= $form->field($patriarch, 'phone')->textInput(['maxlength'=>'11']) ?>
-        <?= $form->field($patriarch, 'name')->textInput() ?>
+        <?= $form->field($patriarch, 'name')->textInput(['maxlength'=>'4']) ?>
         <?= $form->field($patriarch, 'relation')->dropDownList([
             '爸爸'=>'爸爸','妈妈'=>'妈妈','爷爷'=>'爷爷','奶奶'=>'奶奶','大伯'=>'大伯','大婶'=>'大婶','大伯'=>'大伯','其他'=>'其他'
         ]) ?>
@@ -57,7 +57,7 @@ use yii\bootstrap\Modal;
         <?= $form->field($patriarch, 'urgency_phone')->textInput(['maxlength'=>'11']) ?>
         <?= $form->field($patriarch, 'address')->textInput() ?>
         <?= $form->field($patriarch, 'remark')->textarea() ?>
-
+<?php endif;?>
         <?= Html::hiddenInput('Student[category_id]',$model->category_id, ['id' => 'category_id'])?>
         <?= Html::hiddenInput('Student[school]',$model->school, ['id' => 'school'])?>
 
