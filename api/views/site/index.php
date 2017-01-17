@@ -2,7 +2,7 @@
     use yii\helpers\Url;
     $this->title = '和家主页';
 ?>
-<div class="banner"><img src="/images/banner.png"/></div>
+<div class="banner"><img src="/images/banner.jpg"/></div>
 <ul class="menu">
     <li>
         <div class="am-gallery-item">

@@ -14,6 +14,11 @@ use yii\web\Controller;
 
 class AuxiliaryController extends Controller
 {
+    //列表页面
+    public function actionServe()
+    {
+        return $this->render('serve');
+    }
     //区域 校区选择
     public function actionArea()
     {

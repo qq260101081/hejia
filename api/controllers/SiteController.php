@@ -44,13 +44,6 @@ class SiteController extends Controller
         return $this->render('service-process');
     }
 
-
-    //和家服务
-    public function actionServe()
-    {
-        return $this->render('serve');
-    }
-
     //和家教育education
     public function actionEducation()
     {
