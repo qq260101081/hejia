@@ -61,14 +61,14 @@
             <h2 style=" margin-left:15px;">课程活动</h2>
         </a>
     </div>
-    <div class="cont-block02" style="padding-top:15px; margin-bottom:50px;">
+    <div class="cont-block02" style=" padding-top:0px; padding-bottom:0[x; margin-bottom:55px;">
         <div data-am-widget="list_news" class="am-list-news am-list-news-default" >
             <!--列表标题-->
             <div class="am-list-news-bd">
                 <ul class="am-list">
                     <?php foreach ($model[2] as $v):;?>
 
-                    <li class="am-g am-list-item-desced">
+                    <li class="am-g am-list-item-desced" style="border-bottom:1px solid #e3e3e3;">
                         <a href="<?= Url::to(['auxiliary/view', 'id'=>$v->id]);?>" class="am-list-item-hd "><?= $v->title; ?></a>
                         <div class="am-list-item-text"><?= $v->info; ?></div>
                     </li>

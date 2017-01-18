@@ -34,7 +34,15 @@ $this->params['breadcrumbs'][] = $this->title;
                     '男'=>'男','女'=>'女'
                 ],['prompt'=>'全部','class' => 'form-control'] )
             ],
-            'age',
+            [
+                'attribute' => 'age',
+                'value' => function($model){
+                    if($model->age)
+                        return $model->age;
+                    else
+                        return '';
+                }
+            ],
             [
                 'attribute' => 'diploma',
                 'value' => function($model){
