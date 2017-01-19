@@ -80,4 +80,4 @@
     </div>
 </div>
 <?php endif;?>
-<div style="height:50px;"></div>
+<div style="height:60px;"></div>
