@@ -10,13 +10,13 @@ namespace frontend\models;
 
 use yii\db\ActiveRecord;
 
-class NewsCategory extends ActiveRecord
+class EventsCategory extends ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return '{{%news_category}}';
+        return '{{%events_category}}';
     }
 }

@@ -31,11 +31,11 @@
 
             <ul class="side_nav_l">
                 <?php foreach ($category[4]['son'][137]['son'] as $v):?>
-                <li <?php if($category_id == $v['id']) echo 'class="now"';?> style="color:blue" onclick="document.all.child1.style.display=(document.all.child1.style.display =='none')?'':'none'">
-                    <span style="margin-left:5px; color:#fff;"><?= $v['name']?></span>
-                    <div id="child1" style="display:none" class="nav-zi">
+                <li <?php if($categoryData[$category_id]['parent']==$v['id']) echo 'class="now"';?>>
+                    <a href="javascript:void(0)" class="cur" style="margin-left:5px; display: block; color:#fff;"><?= $v['name']?></a>
+                    <div style="display:<?php if($categoryData[$category_id]['parent']==$v['id']) echo 'block'; else echo 'none'?>" class="nav-zi">
                         <?php foreach ($v['son'] as $vv):?>
-                            <a href="#"><?=$v['name']?></a> <br>
+                            <a style="color: <?php if($category_id==$vv['id'])echo'#de673a';else echo '#000';?>" href="<?=Url::to(['auxiliary/index','category_id'=>$vv['id']])?>"><?=$vv['name']?></a> <br>
                         <?php endforeach;?>
                     </div>
                 </li>
@@ -46,79 +46,65 @@
     <!--左边重要导航盒子-->
     <!--右边主要内容-->
     <div class="s_main">
-        <h1>泰安小学校区</h1>
-        <div class="tongy">
-            <span class="ts-biaot">校区特色</span>
-            <div class="ts-text">
-                研究英国、香港，菲律宾和日本等国的家庭服务模式，根据中国家庭服务特色，引入先进的服务管理理念， 高质量的服务产品体系，和家服务专注服务的高品质、专业的服务体系和精细的服务标准，以客户满意度为导向，提供5H服务理念，服务让家庭更安心！
+        <h1><?=$categoryData[$category_id]['name'];?></h1>
+        <?php if(isset($model[0])):?>
+            <div class="tongy">
+                <span class="ts-biaot">校区特色</span>
+                <div class="ts-text">
+                    <?=$model[0][0]->content;?>
+                </div>
             </div>
-        </div>
+        <?php endif;?>
+        <?php if(isset($model[1])):?>
         <div class="tongy" style=" margin-top:20px;">
             <span class="ts-biaot">校区团队</span>
             <!--学员中心-->
             <ul class="student clearfix">
+                <?php foreach ($model[1] as $v):?>
                 <li>
                     <dl>
-                        <dt><a href="#"><img src="Assets/upload/cp_05.jpg" alt=""></a></dt>
-                        <dd>图片标题</dd>
+                        <dt><a href="#"><img src="upload/<?=$v->list_img;?>" alt=""></a></dt>
+                        <dd><?=$v->title;?></dd>
                     </dl>
                 </li>
-                <li>
-                    <dl>
-                        <dt><a href="#"><img src="Assets/upload/cp_05.jpg" alt=""></a></dt>
-                        <dd>图片标题</dd>
-                    </dl>
-                </li>
-                <li>
-                    <dl>
-                        <dt><a href="#"><img src="Assets/upload/cp_05.jpg" alt=""></a></dt>
-                        <dd >图片标题</dd>
-                    </dl>
-                </li>
-                <li>
-                    <dl>
-                        <dt><a href="#"><img src="Assets/upload/cp_05.jpg" alt=""></a></dt>
-                        <dd>图片标题</dd>
-                    </dl>
-                </li>
-                <li>
-                    <dl>
-                        <dt><a href="#"><img src="Assets/upload/cp_05.jpg" alt=""></a></dt>
-                        <dd>图片标题</dd>
-                    </dl>
-                </li>
+                <?php endforeach;?>
             </ul>
         </div>
+        <?php endif;?>
+        <?php if(isset($model[2])):?>
         <div class="tongy" style=" margin-top:20px;">
             <span class="ts-biaot">校区课程</span>
             <div class="kecheng-xq">
                 <ul>
+                    <?php foreach ($model[2] as $v):?>
                     <li>
-                        <p class="biaotid">中小学生午托班</p>
-                        <p class="jiage">￥800元/人</p>
-                        <p class="miansu">描述.....</p>
+                        <p class="biaotid"><?=$v->title;?></p>
+                        <!--<p class="jiage">￥800元/人</p>-->
+                        <p class="miansu"><?=$v->info;?></p>
                     </li>
-                    <li>
-                        <p class="biaotid">中小学生午托班</p>
-                        <p class="jiage">￥800元/人</p>
-                        <p class="miansu">描述.....</p>
-                    </li>
-                    <li>
-                        <p class="biaotid">中小学生午托班</p>
-                        <p class="jiage">￥800元/人</p>
-                        <p class="miansu">描述.....</p>
-                    </li>
-                    <li>
-                        <p class="biaotid">中小学生午托班</p>
-                        <p class="jiage">￥800元/人</p>
-                        <p class="miansu">描述.....</p>
-                    </li>
+                    <?php endforeach;?>
                 </ul>
             </div>
         </div>
+        <?php endif;?>
         <!--学员中心-->
     </div>
     <!--右边主要内容-->
 </div>
 <!--主体盒子-->
 <div class="space_hx">&nbsp;</div>
+
+<?php
+    $js = <<<JS
+    $(".sidenav ul li").click(function(){
+		var thisSpan=$(this);
+		$(".sidenav ul li div").prev("a").removeClass("cur");
+		$("div", this).prev("a").addClass("cur");
+		$(this).children("div").slideDown("fast");
+		$(this).siblings().children("div").slideUp("fast");
+	})
+JS;
+
+$this->registerJS($js);
+
+?>

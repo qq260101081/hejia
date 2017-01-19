@@ -21,7 +21,8 @@
             <div class="line_01">&nbsp;</div>
             <ul class="side_nav_l">
                 <?php foreach ($category as $v):?>
-                <li <?php if($category_id == $v['id']) echo 'class="now"';?>><a href="<?=Url::to(['news/index','category_id' => $v['id']])?>"><?= $v['name']?></a></li>
+                <li <?php if($category_id == $v->id) echo 'class="now"';?>>
+                    <a href="<?=Url::to(['events/index','category_id' => $v->id])?>"><?= $v->name?></a></li>
                 <?php endforeach;?>
             </ul>
             <div class="line_02">&nbsp;</div>
@@ -36,7 +37,7 @@
             <?php foreach ($model as $v):?>
             <li>
                 <div class="title">
-                    <h5><a href="<?= Url::to(['news/view', 'id' => $v->id,'category_id' => $category_id]); ?>"><?=$v->title;?></a></h5>
+                    <h5><a href="<?= Url::to(['events/view', 'id' => $v->id,'category_id' => $category_id]); ?>"><?=$v->title;?></a></h5>
                     <span>[ <?=date('Y-m-d',$v->created_at);?> ]</span>
                 </div>
                 <div class="des">

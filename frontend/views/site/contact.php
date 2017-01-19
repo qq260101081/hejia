@@ -26,6 +26,7 @@ $this->title = "联系我们";
             <ul class="side_nav_l">
                 <li class="now"><a href="<?= Url::to(['site/contact'])?>">联系我们</a></li>
                 <li><a href="<?= Url::to(['site/guestbook'])?>">留言反馈</a></li>
+                <li><a href="<?= Url::to(['service/process'])?>">服务流程</a></li>
             </ul>
             <div class="line_02">&nbsp;</div>
         </div>

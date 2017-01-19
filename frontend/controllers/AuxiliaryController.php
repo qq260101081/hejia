@@ -11,7 +11,6 @@ namespace frontend\controllers;
 use frontend\models\Auxiliary;
 use frontend\models\ServiceCategory;
 use yii\web\Controller;
-use yii\data\Pagination;
 
 class AuxiliaryController extends Controller
 {
@@ -19,9 +18,6 @@ class AuxiliaryController extends Controller
     {
         $categoryData = ServiceCategory::find()->indexBy('id')->asArray()->all();
         $category = $this->generateTree($categoryData);
-        $data = Auxiliary::find()->orderBy('id desc');
-        $pages = new Pagination(['totalCount' => $data->count(), 'pageSize'=>4]);
-        $model = $data->offset($pages->offset)->limit($pages->limit)->all();
         if(!$category_id)
         {
             foreach($category[4]['son'][137]['son'][140]['son'] as $v)
@@ -30,12 +26,18 @@ class AuxiliaryController extends Controller
                 break;
             }
         }
-var_dump($category_id);
+        $data = Auxiliary::find()->where(['category_id'=>$category_id])->all();
+        $model = [];
+        foreach ($data as $v)
+        {
+            $model[$v->type][] = $v;
+        }
+        unset($category[4]['son'][137]['son'][151]);
         return $this->render('index', [
             'category' => $category,
             'category_id' => $category_id,
+            'categoryData' => $categoryData,
             'model' => $model,
-            'pages' => $pages
         ]);
     }
 

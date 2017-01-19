@@ -19,7 +19,8 @@
             <div class="line_01">&nbsp;</div>
             <ul class="side_nav_l">
                 <?php foreach ($category as $v):?>
-                <li <?php if($category_id == $v['id']) echo 'class="now"';?>><a href="<?=Url::to(['news/index','category_id' => $v['id']])?>"><?= $v['name']?></a></li>
+                <li <?php if($category_id == $v->id) echo 'class="now"';?>>
+                    <a href="<?=Url::to(['events/index','category_id' => $v->id])?>"><?= $v->name;?></a></li>
                 <?php endforeach;?>
             </ul>
             <div class="line_02">&nbsp;</div>
