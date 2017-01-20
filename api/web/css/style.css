@@ -158,7 +158,7 @@ a:hover{text-decoration: none;}
 .ch{ clear:both;}
 
 .title-bt{display:block; width:33%; text-align:right; float:left;}
-.title-bt-to{display:block; width:100%; text-align:center; float:left; color:#e5e5e5;}
+.title-bt-to{display:block; width:100%; text-align:center; float:left; color:#999;}
 .title-text{ display:block; float:left; width:62%; padding-left:2%; color:#B0B0B0;}
 .title-xin{ width:135px; height:25px; float:left; background:url(../images/xin-g.png) no-repeat; display:block; position:relative; background-size:100px;}
 .title-xinhh{ width:135px; height:25px; float:left; background:url(../images/xin-l.png) no-repeat; display:block; position:absolute; top:0; left:-2px; background-size:100px;}

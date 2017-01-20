@@ -80,4 +80,4 @@
     </div>
 </div>
 <?php endif;?>
-<div style="height:60px; clear:both; width:100%; float:left;"></div>
+<div style="height:60px; clear:both; width:100%; float"></div>

@@ -84,7 +84,7 @@
         <span class="title-text"><?= $patriarch->phone; ?></span>
     </li>
     <li>
-        <span class="title-bt">紧急联系人</span>
+        <span class="title-bt-to">紧急联系人</span>
         <span class="title-text"><?= $patriarch->urgency_person; ?></span>
     </li>
     <li>
