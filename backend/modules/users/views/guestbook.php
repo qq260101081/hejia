@@ -21,9 +21,10 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
 
             'id',
-            'username',
-            'phone',
-            'address',
+            'name',
+            //'username',
+            //'phone',
+            //'address',
             //'website',
             // 'auth_key',
             // 'password_hash',

@@ -71,9 +71,9 @@ return [
     'President Weekly List' => '校长周报审核',
     'Weekly Check' => '周报审核',
     //家长
-    'Patriarch List' => '家长列表',
-    'Update Patriarch' => '更新家长',
-    'Create Patriarch' => '新增家长',
+    'Patriarch List' => '客户列表',
+    'Update Patriarch' => '更新客户',
+    'Create Patriarch' => '新增客户',
     //员工
     'Staff List' => '员工列表',
     'Create Staff' => '新增员工',

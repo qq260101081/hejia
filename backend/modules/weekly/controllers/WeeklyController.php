@@ -2,6 +2,7 @@
 
 namespace app\modules\weekly\controllers;
 
+use app\modules\staff\models\Staff;
 use app\modules\student\models\Student;
 use Yii;
 use app\modules\weekly\models\Weekly;
@@ -33,13 +34,10 @@ class WeeklyController extends CommonController
     public function actionView($id)
     {
         $model = $this->findModel($id);
-        $student = Student::findOne($model->student_id);
-        if($student)
-            $patriarch = Patriarch::find()->select(['name','id'])->where(['id'=>$student->patriarch_id])->one();
-        else
-            $patriarch = null;
-        if($patriarch)
-            $model->userid = $patriarch->name;
+        $staff = Staff::findOne($model->userid);
+
+        if($staff)
+            $model->userid = $staff->name;
         else
             $model->userid = '';
         return $this->render('view', [

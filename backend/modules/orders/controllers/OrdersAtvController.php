@@ -99,7 +99,7 @@ class OrdersAtvController extends CommonController
         $data = Yii::$app->request->post();
 
         if ($model->load($data)) {
-            $model->principal = Yii::$app->user->identity->username;
+            $model->principal = Yii::$app->user->identity-name;
             $model->stime = strtotime($data['OrdersAtv']['stime']);
             $model->etime = strtotime($data['OrdersAtv']['etime']);
             //print_r($data);

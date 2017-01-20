@@ -65,8 +65,8 @@ class Orders extends \yii\db\ActiveRecord
             'student_name' => Yii::t('app', '学生'),
             'product_id' => Yii::t('app', '服务项目ID'),
             'product_name' => Yii::t('app', '服务项目'),
-            'patriarch_name' => Yii::t('app', '家长姓名'),
-            'phone' => Yii::t('app', '家长电话'),
+            'patriarch_name' => Yii::t('app', '客户姓名'),
+            'phone' => Yii::t('app', '客户电话'),
             'teacher_name' => Yii::t('app', '服务人员'),
 
             'stime' => Yii::t('app', '开始日期'),

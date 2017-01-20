@@ -37,6 +37,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'address',
             'remark',
         ],
+        'template' => '<tr><th class="col-md-2">{label}</th><td>{value}</td></tr>',
+        //'options' => ['class' => 'table table-striped table-bordered detail-view'],
     ]) ?>
 
 </div>

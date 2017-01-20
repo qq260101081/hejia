@@ -34,6 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'content',
             'created_at:date',
         ],
+        'template' => '<tr><th class="col-md-2">{label}</th><td>{value}</td></tr>',
     ]) ?>
 
 </div>

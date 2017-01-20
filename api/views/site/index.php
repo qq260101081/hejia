@@ -62,7 +62,7 @@
     </li>
     <li>
         <div class="am-gallery-item">
-            <a href="#" class="">
+            <a href="<?= Url::to(['site/contact']);?>" class="">
                 <img src="/images/icon4.png">
                 <p>联系客服</p>
             </a>

@@ -55,15 +55,17 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?php
                     $images = json_decode($model->images);
                 ?>
+                <?php if($images):;?>
                 <?php foreach ((array)$images as $v):?>
-                    <?php if($v->extension == 'mp4'):?>
-                        <video src="upload/<?=$model->path;?>" controls="controls">
+                    <?php if($v->extension == 'mp4'):;?>
+                        <video src="upload/<?=$v['path'];?>" controls="controls">
                             您的浏览器不支持 video 标签。
                         </video>
                     <?php else:;?>
-                        <img class="img-responsive pad" src="upload/<?=$model->path;?>">
+                        <img class="img-responsive pad" src="upload/<?=$v['path'];?>">
                     <?php endif;?>
                 <?php endforeach;?>
+                <?php endif;?>
                 <span class="pull-right text-muted"><?= date('Y-m-d H:i:s', $model->created_at); ?></span>
             </div>
         </div>

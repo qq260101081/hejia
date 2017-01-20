@@ -134,7 +134,7 @@ class OrdersController extends CommonController
         $data = Yii::$app->request->post();
 
         if ($model->load($data)) {
-            $model->principal = Yii::$app->user->identity->username;
+            $model->principal = Yii::$app->user->identity->name;
             $model->stime = strtotime($data['Orders']['stime']);
             $model->etime = strtotime($data['Orders']['etime']);
             //print_r($data);

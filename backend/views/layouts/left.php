@@ -22,7 +22,7 @@
                                 'active' => Yii::$app->controller->id == 'student',
                                 'url' => ['/student/student/index']
                             ],
-                            ['label' => '家长列表', 'icon' => 'fa fa-dot-circle-o',
+                            ['label' => '客户列表', 'icon' => 'fa fa-dot-circle-o',
                                 'visible'=> isset($permissions['student']['patriarch']['index']) ? 1 : 0,
                                 'active' => Yii::$app->controller->id == 'patriarch',
                                 'url' => ['/student/patriarch/index']
