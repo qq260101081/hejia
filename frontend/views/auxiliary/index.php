@@ -30,11 +30,11 @@
             <div class="line_01">&nbsp;</div>
 
             <ul class="side_nav_l">
-                <?php foreach ($category[4]['son'][137]['son'] as $v):?>
+                <?php foreach ($category[4]['son'][137]['son'] as $v):;?>
                 <li <?php if($categoryData[$category_id]['parent']==$v['id']) echo 'class="now"';?>>
                     <a href="javascript:void(0)" class="cur" style="margin-left:5px; display: block; color:#fff;"><?= $v['name']?></a>
                     <div style="display:<?php if($categoryData[$category_id]['parent']==$v['id']) echo 'block'; else echo 'none'?>" class="nav-zi">
-                        <?php foreach ($v['son'] as $vv):?>
+                        <?php foreach ($v['son'] as $vv):;?>
                             <a style="color: <?php if($category_id==$vv['id'])echo'#de673a';else echo '#000';?>" href="<?=Url::to(['auxiliary/index','category_id'=>$vv['id']])?>"><?=$vv['name']?></a> <br>
                         <?php endforeach;?>
                     </div>
