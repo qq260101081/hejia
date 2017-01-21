@@ -54,6 +54,21 @@ class OrdersAtvController extends CommonController
         $data = Yii::$app->request->post();
 
         if ($model->load($data)) {
+            $tmp = OrdersAtv::find()
+                ->where(['patriarch_name'=>$model->patriarch_name])
+                ->andWhere(['product_id'=>$model->product_id])
+                ->andWhere(['>','stime',strtotime(date("Y-m-d"))])
+                ->andWhere(['<','etime',strtotime(date("Y-m-d"))+86400])
+                ->andWhere(['type'=>1])
+                ->one();
+            if($tmp)
+            {
+                Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败,同一个订单已经存在']);
+                return $this->render('/atv-create', [
+                    'model' => $model,
+                ]);
+            }
+
             $model->principal = Yii::$app->user->identity->name;
             $model->category_id = 0;
             $model->type = 1;

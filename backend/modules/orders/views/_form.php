@@ -53,6 +53,7 @@ use kartik\date\DatePicker;
             'type' => DatePicker::TYPE_INPUT,
             'readonly' => true,
             'pluginOptions' => [
+                'startDate' => date('Y-m-d'),
                 'autoclose'=>true,
                 'todayHighlight' => true,
                 'format' => 'yyyy-mm-dd'
@@ -64,6 +65,7 @@ use kartik\date\DatePicker;
             'type' => DatePicker::TYPE_INPUT,
             'readonly' => true,
             'pluginOptions' => [
+                'startDate' => date('Y-m-d'),
                 'autoclose'=>true,
                 'todayHighlight' => true,
                 'format' => 'yyyy-mm-dd'

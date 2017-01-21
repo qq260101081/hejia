@@ -90,6 +90,22 @@ class OrdersController extends CommonController
         $data = Yii::$app->request->post();
 
         if ($model->load($data)) {
+            $tmp = Orders::find()
+                ->where(['student_id'=>$model->student_id])
+                ->andWhere(['product_id'=>$model->product_id])
+                ->andWhere(['patriarch_name'=>$model->patriarch_name])
+                ->andWhere(['>','stime',strtotime(date("Y-m-d"))])
+                ->andWhere(['<','etime',strtotime(date("Y-m-d"))+86400])
+                ->andWhere(['type'=>0])
+                ->one();
+            if($tmp)
+            {
+                Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败,同一个订单已经存在']);
+                return $this->render('/create', [
+                    'model' => $model,
+                ]);
+            }
+
             $model->principal = Yii::$app->user->identity->name;
             $model->stime = strtotime($data['Orders']['stime']);
             $model->etime = strtotime($data['Orders']['etime']);

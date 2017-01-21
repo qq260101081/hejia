@@ -119,7 +119,7 @@ class UserController extends Controller
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
-
+        Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'禁用成功！']);
         return $this->redirect(['index']);
     }
 
