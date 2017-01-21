@@ -3,6 +3,13 @@
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 
+function teacherName($model)
+{
+    if(isset($model['staff']->name))
+        return $model['staff']->name;
+    else
+        return '';
+}
 /* @var $this yii\web\View */
 /* @var $model app\modules\guarantee\models\Guarantee */
 
@@ -31,6 +38,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'student_name',
             'product_name',
+            [
+               'label' => '服务人员',
+                'attribute' => 'teacher_name',
+                'value' => teacherName($model)
+            ],
             'stime:date',
             'etime:date',
             'money',

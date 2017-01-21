@@ -111,7 +111,7 @@
     </li>
     <li>
         <span class="title-bt">性别：</span>
-        <span class="title-text"><?=$staff->name;?></span>
+        <span class="title-text"><?=$staff->sex;?></span>
     </li>
     <li>
         <span class="title-bt">岗位：</span>

@@ -85,7 +85,7 @@ use kartik\date\DatePicker;
         <?= Html::hiddenInput('Orders[student_id]',$model->student_id,['id'=>'student_id']);?>
         <?= Html::hiddenInput('Orders[product_id]',$model->product_id,['id'=>'product_id']);?>
         <?= Html::hiddenInput('Orders[category_id]',$model->category_id,['id'=>'category_id']);?>
-        <?= Html::hiddenInput('Orders[teacher_id]',$model->category_id,['id'=>'teacher_id']);?>
+        <?= Html::hiddenInput('Orders[teacher_id]',$model->teacher_id,['id'=>'teacher_id']);?>
 
         <div class="box-footer">
             <a href="<?= Url::to(['index']);?>" class="col-md-offset-5 btn btn-info fa fa-reply"></a>

@@ -32,7 +32,7 @@ $category_id = Yii::$app->getRequest()->getQueryParam('category_id');
     <div class="h_top_m">
         <span class="tel_t">
             <i>服务热线：</i>
-            <img src="frontend/web/images/tel.png"/>
+            <img src="frontend/web/images/head_tel.png"/>
         </span>
         <a href="">设为首页</a>|
         <a href="">收藏本站</a>|

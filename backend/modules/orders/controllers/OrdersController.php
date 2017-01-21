@@ -3,6 +3,7 @@
 namespace app\modules\orders\controllers;
 
 
+use app\modules\staff\models\Staff;
 use app\modules\staff\models\StaffSearch;
 use Yii;
 use app\modules\orders\models\Orders;
@@ -72,8 +73,9 @@ class OrdersController extends CommonController
      */
     public function actionView($id)
     {
+        $model = Orders::find()->joinWith('staff')->where([Orders::tableName().'.'.'id'=>$id])->one();
         return $this->render('/view', [
-            'model' => $this->findModel($id),
+            'model' => $model,
         ]);
     }
 
@@ -129,6 +131,8 @@ class OrdersController extends CommonController
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $staff = Staff::findOne($model->teacher_id);
+        $model->teacher_name = $staff ? $staff->name : '';
         $model->stime = date('Y-m-d', $model->stime);
         $model->etime = date('Y-m-d', $model->etime);
         $data = Yii::$app->request->post();

@@ -7,6 +7,7 @@
 
 namespace app\modules\orders\models;
 
+use app\modules\staff\models\Staff;
 use Yii;
 
 /**
@@ -36,6 +37,10 @@ class Orders extends \yii\db\ActiveRecord
         return '{{%orders}}';
     }
 
+    public function getStaff()
+    {
+        return $this->hasOne(Staff::className(), ['id' => 'teacher_id']);
+    }
     /**
      * @inheritdoc
      */
