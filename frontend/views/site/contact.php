@@ -5,6 +5,9 @@ use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 $this->title = "联系我们";
 
+$this->registerJsFile('@web/frontend/web/js/amazeui.min.js',['depends' => [\yii\web\JqueryAsset::className()]]);
+$this->registerCssFile('@web/frontend/web/css/amazeui.min.css');
+
 ?>
 <!--当前位置-->
 <div class="position_ab">
@@ -34,13 +37,16 @@ $this->title = "联系我们";
     <!--左边重要导航盒子-->
     <!--右边主要内容-->
     <div class="s_main">
-        <h1>联系我们</h1>
-        <div class="map_l"><img src="upload/lianxi_09.jpg" width="100%" height="280"/></div>
-        <div class="lianxi_text">
-            <div class="tongy" style="margin-top:15px;">
-                <span class="fl"><img src="upload/lianxi_12.jpg" /></span>
-                <Span class="fl dizhi"><p>广州市高新技术产业开发区科学大道162号B1区504</p></Span>
+
+        <div class="map">
+            <div data-am-widget="map" class="am-map am-map-default"
+                 data-name="和家总部" data-address="广州市高新技术产业开发区科学大道162号B1区504" data-longitude="" data-latitude="" data-scaleControl="" data-zoomControl="true" data-setZoom="17" data-icon="http://amuituku.qiniudn.com/mapicon.png">
+                <div id="bd-map"></div>
             </div>
+        </div>
+
+        <div class="lianxi_text">
+
             <div class="tongy" style="margin-top:15px;">
                 <div class="lianxdh">
                     <?php foreach ($model as $v):;?>
@@ -48,7 +54,7 @@ $this->title = "联系我们";
                     <?php endforeach;?>
                 </div>
                 <div class="erweimas">
-                    <Span class="fl"><img src="upload/lianxi_18.jpg" /></Span>
+                    <Span class="fl"><img width="145" src="upload/weixin.jpg" /></Span>
                 </div>
             </div>
         </div>

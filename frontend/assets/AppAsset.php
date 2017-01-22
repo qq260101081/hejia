@@ -12,10 +12,15 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
+        //'frontend/web/css/amazeui.min.css',
         'frontend/web/css/reset.css',
         'frontend/web/css/thems.css',
+
+
     ];
     public $js = [
+
+        //'frontend/web/js/amazeui.min.js',
         //'frontend/web/js/js_z.js'
     ];
     public $depends = [
