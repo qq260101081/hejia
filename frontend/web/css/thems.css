@@ -119,7 +119,7 @@ a:hover{ text-decoration:underline;}
 .second .s_main .student{ width:100%; margin-top:15px; padding-bottom:10px;}
 .second .s_main .student li{ width:247px; border:1px solid #FFF; float:left; margin:10px 8px;}
 .second .s_main .student li:hover , .second .s_main .student li:hover dl{ border:1px solid #888888;}
-.second .s_main .student li dl{ width:245px; border:1px solid #ddd; text-align:left;}
+.second .s_main .student li dl{ width:245px; border:1px solid #ddd; text-align:left;overflow: hidden;}
 .second .s_main .student li dl dt{ width:235px; height:130px; margin-left:5px; margin-top:5px;}
 .second .s_main .student li dl dd{text-align:center; line-height:30px;}
 .second .s_main .student li dl dt img{ width:100%;}
@@ -185,7 +185,7 @@ a:hover{ text-decoration:underline;}
 .tedian ul li:hover .tanchuang{display:block;  top:0; left:0;} 
 .ts-bt{ border:1px solid #fff; color:#fff; padding:2px 10px;}
 
-.ts-text{ width:100%; text-align:left; font-size:14px; text-indent:25px; line-height:24px;}
+.ts-text{ width:100%; text-align:left; font-size:14px; text-indent:25px; line-height:24px;overflow: hidden;}
 .ts-biaot{ font-size:18px; display:block; width:100%; float:left; text-align:left; color:#de673a;}
 .kecheng-xq{ width:100%; float:left;}
 .kecheng-xq ul li{ display:block; float:left; width:100%; text-align:left; margin-top:10px; border-top:1px solid #e3e3e3; padding:5px 0;}

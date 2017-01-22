@@ -28,6 +28,7 @@
                 <img src="frontend/web/images/family_left.png"/>
             </div>
             <div class="line_01">&nbsp;</div>
+            <?php if($model):;?>
             <ul class="side_nav_l">
                 <?php foreach ($model as $v):?>
                 <li class="now">
@@ -38,13 +39,14 @@
                 <?php endforeach;?>
             </ul>
             <div class="line_02">&nbsp;</div>
+            <?php endif;?>
         </div>
     </div>
     <!--左边重要导航盒子-->
     <!--右边主要内容-->
     <div class="s_main">
         <h1>家庭服务</h1>
-        <!--学员中心-->
+        <?php if($model):;?>
         <ul class="student clearfix">
             <?php foreach ($model as $v):?>
             <li>
@@ -56,9 +58,9 @@
                 </dl>
             </li>
             <?php endforeach;?>
-
         </ul>
         <div class="space_hx">&nbsp;</div>
+        <?php endif;?>
         <!--分页导航-->
         <?php
         echo LinkPager::widget([
