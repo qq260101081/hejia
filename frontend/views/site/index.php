@@ -79,9 +79,9 @@
                 最新活动<span>News</span>
             </div>
             <div class="box_body">
-                <img src="upload/<?=$news->list_img;?>"/>
-                <h3><a href="<?= Url::to(['events/view', 'id'=>$news->id]);?>"><?= $news->title;?></a></h3>
-                <p><?= $news->info;?>....</p>
+                <a href="<?= Url::to(['events/view', 'id'=>$news->id,'category_id'=>$news->category_id]);?>">
+                    <img src="upload/<?=$news->list_img;?>"/>
+                </a>
             </div>
         </li>
         <?php endif;?>
@@ -91,7 +91,8 @@
                 活动花絮<span>Style</span>
             </div>
             <div class="box_body">
-                <a href="<?= Url::to(['events/view', 'id'=>$interesting->id]);?>"><img src="upload/<?=$interesting->list_img;?>"></a>
+                <a href="<?= Url::to(['events/view', 'id'=>$interesting->id,'category_id'=>$interesting->category_id]);?>">
+                    <img src="upload/<?=$interesting->list_img;?>"></a>
             </div>
         </li>
         <?php endif;?>
@@ -101,7 +102,8 @@
                 团队风采<span>Teacher</span>
             </div>
             <div class="box_body">
-                <a href="<?= Url::to(['auxiliary/view', 'id'=>$news->id]);?>"><img src="upload/<?=$news->list_img;?>"/></a>
+                <a href="<?= Url::to(['auxiliary/view', 'id'=>$mien->id,'category_id'=>$mien->category_id]);?>">
+                    <img src="upload/<?=$mien->list_img;?>"/></a>
             </div>
         </li>
         <?php endif;?>

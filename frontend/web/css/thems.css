@@ -57,7 +57,7 @@ a:hover{ text-decoration:underline;}
 .wrap .box_m .box_body h3{ width:100%; height:30px; line-height:30px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
 .wrap .box_m .box_body h3 a{ color:#595959; font-weight:bold;}
 .wrap .box_m li img{ width:317px; height:188px; vertical-align:top;}
-.wrap .box_m .zxhd img{ width:317px; height:110px;}
+.wrap .box_m .zxhd img{ width:317px;}
 .wrap .box_m .zxhd p{ width:317px; height:45px; overflow:hidden; line-height:130%;}
 .wrap .box_m .box_body h3 a:hover{ color:#C1A50D;}
 /*主体盒子*/

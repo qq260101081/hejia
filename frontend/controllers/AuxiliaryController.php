@@ -41,10 +41,17 @@ class AuxiliaryController extends Controller
         ]);
     }
 
-    public function actionView($id = 0)
+    public function actionView($id = 0,$category_id=0)
     {
+        $categoryData = ServiceCategory::find()->indexBy('id')->asArray()->all();
+        $category = $this->generateTree($categoryData);
+        unset($category[4]['son'][137]['son'][151]);
+
         $model = Auxiliary::findOne($id);
         return $this->render('view',[
+            'category' => $category,
+            'category_id' => $category_id,
+            'categoryData' => $categoryData,
             'model' => $model
         ]);
     }
