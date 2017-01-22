@@ -12,7 +12,7 @@ $this->registerCssFile('@web/frontend/web/css/amazeui.min.css');
 <!--当前位置-->
 <div class="position_ab">
     <b>所在位置：</b>
-    <a href="">首页</a>>
+    <a href="">首页</a> >
     <a class="yellow">联系我们</a>
 </div>
 <!--当前位置-->

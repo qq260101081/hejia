@@ -73,7 +73,7 @@ a:hover{ text-decoration:underline;}
 .second .sidenav .side_m .side_h img{ width:93px; height:28px;}
 .second .sidenav .side_m .line_01{ width:150px; height:5px; border-bottom:1px solid #7A7A7A; margin-top:3px;}
 .second .sidenav .side_m .side_nav_l{ width:115px; margin-top:15px; padding-bottom:25px;}
-.second .sidenav .side_m .side_nav_l li{ width:100%; text-align:left; background:#4C4C4C; color:#FFF; margin-bottom:5px; margin-left:9px; line-height:30px;}
+.second .sidenav .side_m .side_nav_l li{ width:100%; text-align:left; background:#4C4C4C; color:#FFF; margin-bottom:5px;line-height:30px;}
 .second .sidenav .side_m .side_nav_l li .nav-zi{ background-color:#f7f6f7; color:red;}
 .second .sidenav .side_m .side_nav_l li .nav-zi a{ color:#000;}
 .second .sidenav .side_m .side_nav_l li .nav-zi a:hover{ color:#de673a;}
