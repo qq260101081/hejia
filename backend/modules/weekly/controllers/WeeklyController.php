@@ -34,12 +34,12 @@ class WeeklyController extends CommonController
     public function actionView($id)
     {
         $model = $this->findModel($id);
-        $staff = Staff::findOne($model->userid);
-
+        $staff = Staff::find()->where(['userid'=>$model->userid])->one();
         if($staff)
             $model->userid = $staff->name;
         else
             $model->userid = '';
+
         return $this->render('view', [
             'model' => $model,
         ]);
