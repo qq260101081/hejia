@@ -55,10 +55,9 @@ class OrdersAtvController extends CommonController
 
         if ($model->load($data)) {
             $tmp = OrdersAtv::find()
-                ->where(['patriarch_name'=>$model->patriarch_name])
-                ->andWhere(['product_id'=>$model->product_id])
-                ->andWhere(['>','stime',strtotime(date("Y-m-d"))])
-                ->andWhere(['<','etime',strtotime(date("Y-m-d"))+86400])
+                ->where(['product_id'=>$model->product_id])
+                ->andWhere(['stime'=>strtotime($model->stime)])
+                ->andWhere(['etime'=>strtotime($model->etime)])
                 ->andWhere(['type'=>1])
                 ->one();
             if($tmp)
