@@ -93,9 +93,8 @@ class OrdersController extends CommonController
             $tmp = Orders::find()
                 ->where(['student_id'=>$model->student_id])
                 ->andWhere(['product_id'=>$model->product_id])
-                ->andWhere(['patriarch_name'=>$model->patriarch_name])
-                ->andWhere(['>','stime',strtotime(date("Y-m-d"))])
-                ->andWhere(['<','etime',strtotime(date("Y-m-d"))+86400])
+                ->andWhere(['stime'=>strtotime($model->stime)])
+                ->andWhere(['etime'=>strtotime($model->etime)])
                 ->andWhere(['type'=>0])
                 ->one();
             if($tmp)
