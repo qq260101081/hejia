@@ -93,16 +93,19 @@ class OrdersController extends CommonController
             $tmp = Orders::find()
                 ->where(['student_id'=>$model->student_id])
                 ->andWhere(['product_id'=>$model->product_id])
-                ->andWhere(['stime'=>strtotime($model->stime)])
-                ->andWhere(['etime'=>strtotime($model->etime)])
                 ->andWhere(['type'=>0])
+                ->orderBy('id')
                 ->one();
+            //如果同一个服务订单的开始时间小于最近一个订单的结束时间，则不允许创建
             if($tmp)
             {
-                Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败,同一个订单已经存在']);
-                return $this->render('/create', [
-                    'model' => $model,
-                ]);
+                if(strtotime($model->stime) < $tmp->etime)
+                {
+                    Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败,服务开始时间必须大于最近订单服务结束时间']);
+                    return $this->render('/create', [
+                        'model' => $model,
+                    ]);
+                }
             }
 
             $model->principal = Yii::$app->user->identity->name;
