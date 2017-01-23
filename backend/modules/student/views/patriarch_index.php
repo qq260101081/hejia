@@ -27,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'id',
                 [
                     'attribute' => 'name',
-                    'label' => '家长',
+                    'label' => '客户',
                 ],
                 [
                     'label' => '学生',

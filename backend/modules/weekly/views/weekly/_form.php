@@ -36,13 +36,13 @@ use kartik\date\DatePicker;
             'placeholder'=>'请选择学生'
         ]) ?>
 
-        <?= $form->field($model, 'discipline')->textInput(['placeholder'=>'填写数字，最大为5星']) ?>
+        <?= $form->field($model, 'discipline')->dropDownList(['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5']) ?>
 
-        <?= $form->field($model, 'sleep')->textInput(['placeholder'=>'填写数字，最大为5星']) ?>
+        <?= $form->field($model, 'sleep')->dropDownList(['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5']) ?>
 
-        <?= $form->field($model, 'diet')->textInput(['placeholder'=>'填写数字，最大为5星']) ?>
+        <?= $form->field($model, 'diet')->dropDownList(['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5']) ?>
 
-        <?= $form->field($model, 'study')->textInput(['placeholder'=>'填写数字，最大为5星']) ?>
+        <?= $form->field($model, 'study')->dropDownList(['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5']) ?>
 
         <?= $form->field($model, 'stime')->widget(DatePicker::className(),[
         'type' => DatePicker::TYPE_INPUT,

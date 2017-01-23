@@ -10,7 +10,7 @@ use yii\helpers\Url;
 
 <div class="presscentre-form box box-info">
     <div class="box-header with-border">
-        <h5 class="box-title">家长信息</h5>
+        <h5 class="box-title">客户信息</h5>
     </div>
     <p></p>
 
