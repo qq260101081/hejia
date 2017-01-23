@@ -18,8 +18,8 @@ class StudentSearch extends Student
     public function rules()
     {
         return [
-            [['id',  'age'], 'integer'],
-            [['name', 'sex', 'created_at', 'updated_at','school', 'grade'], 'safe'],
+            [['id'], 'integer'],
+            [['name', 'classes', 'sex', 'created_at', 'updated_at','school'], 'safe'],
         ];
     }
 

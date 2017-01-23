@@ -52,11 +52,11 @@ class Student extends ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'sex', 'age', 'school', 'grade', 'category_id'], 'required'],
-            [['age', 'created_at', 'updated_at', 'category_id', 'patriarch_id'], 'integer'],
-            [['sex','name'], 'string', 'max' => 12],
+            [['name', 'sex', 'age', 'school', 'grade','classes', 'category_id'], 'required'],
+            [['created_at','classes', 'grade', 'updated_at', 'category_id', 'patriarch_id'], 'integer'],
+            [['age','sex','name'], 'string', 'max' => 12],
             ['remark', 'string', 'max' => 300],
-            [['school', 'grade'], 'string', 'max' => 90],
+            [['school'], 'string', 'max' => 90],
             ['category_id', 'default', 'value' => 0]
         ];
     }
@@ -70,11 +70,12 @@ class Student extends ActiveRecord
             'id' => Yii::t('app', 'ID'),
             'name' => Yii::t('app', 'Student Name'),
             'sex' => Yii::t('app', 'Sex'),
-            'age' => Yii::t('app', 'Age'),
+            'age' => Yii::t('app', '出生日期'),
             'remark' => Yii::t('app', '备注'),
             'school' => Yii::t('app', 'School'),
             'category_id' => Yii::t('app', '所属校区'),
-            'grade' => Yii::t('app', 'Grade'),
+            'grade' => Yii::t('app', '班级'),
+            'classes' => Yii::t('app', '班'),
             'created_at' => Yii::t('app', 'Created At'),
             'updated_at' => Yii::t('app', 'Updated At'),
         ];

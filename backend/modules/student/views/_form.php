@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 use yii\bootstrap\Modal;
+use kartik\date\DatePicker;
 /* @var $this yii\web\View */
 /* @var $model app\modules\guarantee\models\Guarantee */
 /* @var $form yii\widgets\ActiveForm */
@@ -38,8 +39,52 @@ use yii\bootstrap\Modal;
 
         <?= $form->field($model, 'name')->textInput(['maxlength'=>'4']) ?>
         <?= $form->field($model, 'sex')->dropDownList(['男' => '男', '女' => '女']) ?>
-        <?= $form->field($model, 'age')->textInput() ?>
-        <?= $form->field($model, 'grade')->textInput() ?>
+        <?= $form->field($model, 'age')->widget(DatePicker::className(),[
+            'type' => DatePicker::TYPE_INPUT,
+            'readonly' => true,
+            'pluginOptions' => [
+                //'startDate' => date('Y-m-d'),
+                'autoclose'=>true,
+                'todayHighlight' => true,
+                'format' => 'yyyy-mm-dd'
+            ]
+        ]);
+        ?>
+        <?= $form->field($model, 'grade', [
+            'options'=> ['class'=>''],
+            'template' => '{label} <div class="col-sm-2 pull-left">{input}{error}{hint}</div>'
+        ])->dropDownList([
+            '1'=>'一年级',
+            '2'=>'二年级',
+            '3'=>'三年级',
+            '4'=>'四年级',
+            '5'=>'五年级',
+            '6'=>'六年级',
+        ]) ?>
+        <?= $form->field($model, 'classes', [
+            'template' => '{label} <div class="col-sm-2 pull-left">{input}{error}{hint}</div>'
+        ])->dropDownList([
+            '1'=>'(1)班',
+            '2'=>'(2)班',
+            '3'=>'(3)班',
+            '4'=>'(4)班',
+            '5'=>'(5)班',
+            '6'=>'(6)班',
+            '7'=>'(7)班',
+            '8'=>'(8)班',
+            '9'=>'(9)班',
+            '10'=>'(10)班',
+            '11'=>'(11)班',
+            '12'=>'(12)班',
+            '13'=>'(13)班',
+            '14'=>'(14)班',
+            '15'=>'(15)班',
+            '16'=>'(16)班',
+            '17'=>'(17)班',
+            '18'=>'(18)班',
+            '19'=>'(19)班',
+            '20'=>'(20)班',
+        ])->label(false) ?>
 
         <?= $form->field($model, 'remark')->textarea(); ?>
 <?php if(Yii::$app->controller->action->id == 'create'):;?>

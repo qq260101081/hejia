@@ -61,7 +61,7 @@ return [
     'Sex' => '性别',
     'Age' => '年龄',
     'School' => '学校',
-    'Grade' => '年级',
+    'Grade' => '班级',
     //学生周报
     'Weekly List' => '学生周报',
     'Create Weekly' => '新增周报',

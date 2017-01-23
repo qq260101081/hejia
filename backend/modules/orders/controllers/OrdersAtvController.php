@@ -54,6 +54,15 @@ class OrdersAtvController extends CommonController
         $data = Yii::$app->request->post();
 
         if ($model->load($data)) {
+            //开始时间不能小于结束时间
+            if(strtotime($model->stime) > strtotime($model->etime))
+            {
+                Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'保存失败,服务开始时间必须小于结束时间']);
+                return $this->render('/atv-create', [
+                    'model' => $model,
+                ]);
+            }
+
             $tmp = Orders::find()
                 ->where(['student_id'=>$model->student_id])
                 ->andWhere(['product_id'=>$model->product_id])

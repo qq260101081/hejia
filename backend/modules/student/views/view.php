@@ -9,6 +9,36 @@ use yii\widgets\DetailView;
 $this->title = Yii::t('app', 'View');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Student List'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
+$grade = [
+    '1'=>'一年级',
+    '2'=>'二年级',
+    '3'=>'三年级',
+    '4'=>'四年级',
+    '5'=>'五年级',
+    '6'=>'六年级',
+];
+$classes = [
+    '1'=>'(1)班',
+    '2'=>'(2)班',
+    '3'=>'(3)班',
+    '4'=>'(4)班',
+    '5'=>'(5)班',
+    '6'=>'(6)班',
+    '7'=>'(7)班',
+    '8'=>'(8)班',
+    '9'=>'(9)班',
+    '10'=>'(10)班',
+    '11'=>'(11)班',
+    '12'=>'(12)班',
+    '13'=>'(13)班',
+    '14'=>'(14)班',
+    '15'=>'(15)班',
+    '16'=>'(16)班',
+    '17'=>'(17)班',
+    '18'=>'(18)班',
+    '19'=>'(19)班',
+    '20'=>'(20)班',
+];
 ?>
 <div class="guarantee-view">
 
@@ -32,9 +62,9 @@ $this->params['breadcrumbs'][] = $this->title;
             <tr><th>ID</th><td>14</td></tr>
             <tr><th>姓名</th><td><?=$model->name;?></td></tr>
             <tr><th>性别</th><td><?=$model->sex;?></td></tr>
-            <tr><th>年龄</th><td><?=$model->age;?></td></tr>
+            <tr><th>出生日期</th><td><?=$model->age;?></td></tr>
             <tr><th>学校</th><td><?=$model->school;?></td></tr>
-            <tr><th>年级</th><td><?=$model->grade;?></td></tr>
+            <tr><th>班级</th><td><?=$grade[$model->grade] . ' ' . $classes[$model->classes];?></td></tr>
             <tr><th>创建时间</th><td><?=date('Y-m-d', $model->updated_at);?></td></tr>
             <tr><th>备注</th><td><?=$model->remark;?></td></tr>
         </tbody>

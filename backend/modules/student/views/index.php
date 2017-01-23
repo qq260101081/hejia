@@ -24,12 +24,55 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
 
-            'id',
-            'name',
+            [
+                'attribute' => 'id',
+                'headerOptions'=>['width' => 60],
+            ],
+            [
+                'attribute' => 'name',
+                'headerOptions'=>['width' => 70],
+            ],
             'school',
             [
-                'label' => '家长',
+                'attribute' => 'grade',
                 'headerOptions'=>['width' => 100],
+                'value' => function($model) {
+                    $grade = [
+                        '1'=>'一年级',
+                        '2'=>'二年级',
+                        '3'=>'三年级',
+                        '4'=>'四年级',
+                        '5'=>'五年级',
+                        '6'=>'六年级',
+                    ];
+                    $classes = [
+                        '1'=>'(1)班',
+                        '2'=>'(2)班',
+                        '3'=>'(3)班',
+                        '4'=>'(4)班',
+                        '5'=>'(5)班',
+                        '6'=>'(6)班',
+                        '7'=>'(7)班',
+                        '8'=>'(8)班',
+                        '9'=>'(9)班',
+                        '10'=>'(10)班',
+                        '11'=>'(11)班',
+                        '12'=>'(12)班',
+                        '13'=>'(13)班',
+                        '14'=>'(14)班',
+                        '15'=>'(15)班',
+                        '16'=>'(16)班',
+                        '17'=>'(17)班',
+                        '18'=>'(18)班',
+                        '19'=>'(19)班',
+                        '20'=>'(20)班',
+                    ];
+                    return $grade[$model->grade] . ' ' . $classes[$model->classes];
+                }
+            ],
+            [
+                'label' => '家长',
+                'headerOptions'=>['width' => 70],
                 'value' => function($model){
                     if(isset($model['patriarch']->name))
                         return $model['patriarch']->name;
@@ -45,9 +88,14 @@ $this->params['breadcrumbs'][] = $this->title;
                 },
                 'filter' => Html::activeDropDownList($searchModel, 'sex',[
                     '男'=>'男','女'=>'女'
-                ],['prompt'=>'全部','class' => 'form-control'] )
+                ],
+                ['prompt'=>'全部','class' => 'form-control'] ),
+                'headerOptions'=>['width' => 80],
             ],
-            'age',
+            [
+               'attribute' => 'age',
+                'headerOptions'=>['width' => 100],
+            ],
             [
                 'attribute' => 'created_at',
                 'format' => 'date',
@@ -62,6 +110,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         ]
                     ],
                 ]),
+                'headerOptions'=>['width' => 100],
             ],
             [
                 'class' => 'yii\grid\ActionColumn',
