@@ -5,6 +5,36 @@
  * Date: 16/12/6 上午11:07
  */
     $this->title = '我的服务';
+$grade = [
+    '1'=>'一年级',
+    '2'=>'二年级',
+    '3'=>'三年级',
+    '4'=>'四年级',
+    '5'=>'五年级',
+    '6'=>'六年级',
+];
+$classes = [
+    '1'=>'(1)班',
+    '2'=>'(2)班',
+    '3'=>'(3)班',
+    '4'=>'(4)班',
+    '5'=>'(5)班',
+    '6'=>'(6)班',
+    '7'=>'(7)班',
+    '8'=>'(8)班',
+    '9'=>'(9)班',
+    '10'=>'(10)班',
+    '11'=>'(11)班',
+    '12'=>'(12)班',
+    '13'=>'(13)班',
+    '14'=>'(14)班',
+    '15'=>'(15)班',
+    '16'=>'(16)班',
+    '17'=>'(17)班',
+    '18'=>'(18)班',
+    '19'=>'(19)班',
+    '20'=>'(20)班',
+];
 ?>
 
 <ul class="nav">
@@ -49,12 +79,12 @@
         <span class="title-text"><?= $student->sex; ?></span>
     </li>
     <li>
-        <span class="title-bt">年龄：</span>
+        <span class="title-bt">出生日期：</span>
         <span class="title-text"><?= $student->age; ?></span>
     </li>
     <li>
-        <span class="title-bt">年级：</span>
-        <span class="title-text"><?= $student->grade; ?></span>
+        <span class="title-bt">班级：</span>
+        <span class="title-text"><?= $grade[$student->grade] . ' ' . $classes[$student->classes]; ?></span>
     </li>
     <li>
         <span class="title-bt">备注：</span>
