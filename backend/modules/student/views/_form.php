@@ -51,8 +51,8 @@ use kartik\date\DatePicker;
         ]);
         ?>
         <?= $form->field($model, 'grade', [
-            'options'=> ['class'=>''],
-            'template' => '{label} <div class="col-sm-2 pull-left">{input}{error}{hint}</div>'
+            //'options'=> ['class'=>'col-sm-2'],
+            //'template' => '{label} <div class="col-sm-2">{input}{error}{hint}</div>'
         ])->dropDownList([
             '1'=>'一年级',
             '2'=>'二年级',
@@ -60,9 +60,9 @@ use kartik\date\DatePicker;
             '4'=>'四年级',
             '5'=>'五年级',
             '6'=>'六年级',
-        ]) ?>
+        ])->label('年级') ?>
         <?= $form->field($model, 'classes', [
-            'template' => '{label} <div class="col-sm-2 pull-left">{input}{error}{hint}</div>'
+            //'template' => '{label} <div class="col-sm-2">{input}{error}{hint}</div>'
         ])->dropDownList([
             '1'=>'(1)班',
             '2'=>'(2)班',
@@ -84,7 +84,7 @@ use kartik\date\DatePicker;
             '18'=>'(18)班',
             '19'=>'(19)班',
             '20'=>'(20)班',
-        ])->label(false) ?>
+        ])?>
 
         <?= $form->field($model, 'remark')->textarea(); ?>
 <?php if(Yii::$app->controller->action->id == 'create'):;?>
