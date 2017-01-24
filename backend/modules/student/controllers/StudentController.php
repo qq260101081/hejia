@@ -96,7 +96,7 @@ class StudentController extends CommonController
                 $model->school = $staff->school;
             }
             //如果家长已存在则自动关联，否则创建
-            $user = Users::find()->where(['phone' => $data['Patriarch']['phone']])->one();
+            $user = Users::find()->where(['username' => $data['Patriarch']['phone']])->one();
             if(!$user)
             {
                 $user = new Users();
