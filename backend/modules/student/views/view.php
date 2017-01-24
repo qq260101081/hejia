@@ -39,6 +39,7 @@ $classes = [
     '19'=>'(19)班',
     '20'=>'(20)班',
 ];
+$type = ['午托','晚托', '日托'];
 ?>
 <div class="guarantee-view">
 
@@ -63,6 +64,7 @@ $classes = [
             <tr><th>姓名</th><td><?=$model->name;?></td></tr>
             <tr><th>性别</th><td><?=$model->sex;?></td></tr>
             <tr><th>出生日期</th><td><?=$model->age;?></td></tr>
+            <tr><th>托管类型</th><td><?= $type[$model->type];?></td></tr>
             <tr><th>学校</th><td><?=$model->school;?></td></tr>
             <tr><th>班级</th><td><?=$grade[$model->grade] . ' ' . $classes[$model->classes];?></td></tr>
             <tr><th>创建时间</th><td><?=date('Y-m-d', $model->updated_at);?></td></tr>

@@ -35,6 +35,7 @@ $classes = [
     '19'=>'(19)班',
     '20'=>'(20)班',
 ];
+$type = ['午托','晚托','日托'];
 ?>
 
 <ul class="nav">
@@ -82,6 +83,12 @@ $classes = [
         <span class="title-bt">出生日期：</span>
         <span class="title-text"><?= $student->age; ?></span>
     </li>
+    <?php if(isset($student->type)):;?>
+    <li>
+        <span class="title-bt">托管类型：</span>
+        <span class="title-text"><?= $type[$student->type]; ?></span>
+    </li>
+    <?php endif;?>
     <li>
         <span class="title-bt">班级：</span>
         <span class="title-text"><?= $grade[$student->grade] . ' ' . $classes[$student->classes]; ?></span>

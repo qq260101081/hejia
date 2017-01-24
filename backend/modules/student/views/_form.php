@@ -86,6 +86,12 @@ use kartik\date\DatePicker;
             '20'=>'(20)班',
         ])?>
 
+        <?= $form->field($model, 'type')->dropDownList([
+                '午托',
+                '晚托',
+                '日托',
+        ]); ?>
+
         <?= $form->field($model, 'remark')->textarea(); ?>
 <?php if(Yii::$app->controller->action->id == 'create'):;?>
         <div class="box-header with-border">

@@ -32,6 +32,16 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'name',
                 'headerOptions'=>['width' => 70],
             ],
+            [
+                'label' => '家长',
+                'headerOptions'=>['width' => 70],
+                'value' => function($model){
+                    if(isset($model['patriarch']->name))
+                        return $model['patriarch']->name;
+                    else
+                        return '';
+                },
+            ],
             'school',
             [
                 'attribute' => 'grade',
@@ -71,14 +81,16 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
             [
-                'label' => '家长',
-                'headerOptions'=>['width' => 70],
+                'attribute' => 'type',
                 'value' => function($model){
-                    if(isset($model['patriarch']->name))
-                        return $model['patriarch']->name;
-                    else
-                        return '';
+                    $type = ['午托','晚托','日托'];
+                    return $type[$model->type];
                 },
+                'filter' => Html::activeDropDownList($searchModel, 'type',[
+                    '午托','晚托','日托'
+                ],
+                    ['prompt'=>'全部','class' => 'form-control'] ),
+                'headerOptions'=>['width' => 80],
             ],
             [
                 'attribute' => 'sex',
@@ -94,7 +106,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             [
                'attribute' => 'age',
-                'headerOptions'=>['width' => 100],
+                'headerOptions'=>['width' => 80],
             ],
             [
                 'attribute' => 'created_at',
@@ -110,7 +122,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         ]
                     ],
                 ]),
-                'headerOptions'=>['width' => 100],
+                'headerOptions'=>['width' => 80],
             ],
             [
                 'class' => 'yii\grid\ActionColumn',

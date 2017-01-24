@@ -19,7 +19,7 @@ class StudentSearch extends Student
     {
         return [
             [['id'], 'integer'],
-            [['name', 'classes', 'sex', 'created_at', 'updated_at','school'], 'safe'],
+            [['name', 'classes', 'sex','type', 'created_at', 'updated_at','school'], 'safe'],
         ];
     }
 
@@ -62,6 +62,7 @@ class StudentSearch extends Student
             'student.id' => $this->id,
             'student.sex' => $this->sex,
             'student.age' => $this->age,
+            'student.type' => $this->type,
             //'student.created_at' => strtotime($this->created_at),
             //'student.updated_at' => strtotime($this->updated_at),
         ]);
