@@ -40,7 +40,7 @@ class WeeklyPushLogs extends \yii\db\ActiveRecord
             [['weekly_name','images'], 'required'],
             [['student_id', 'stime','etime','discipline', 'sleep', 'diet', 'study', 'status', 'created_at'], 'integer'],
             [['student_name'], 'string', 'max' => 12],
-            [['synthesize','weekly_name'], 'string', 'max' => 300],
+            [['synthesize','weekly_name'], 'string', 'max' => 600],
             [['username'], 'string', 'max' => 30],
             ['images', 'string'],
             ['images', 'file','maxFiles'=>10, 'extensions' => ['png', 'jpg', 'gif','mp4'], 'maxSize' => 1024 * 1024 * 1000],

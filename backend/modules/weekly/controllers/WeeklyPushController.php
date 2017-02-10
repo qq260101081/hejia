@@ -130,6 +130,7 @@ class WeeklyPushController extends CommonController
                 Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'推送成功！']);
                 return $this->redirect(['index']);
             }
+
             Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'推送失败']);
         }
         return $this->render('create', ['model' => $model]);
