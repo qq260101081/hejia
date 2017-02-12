@@ -9,6 +9,7 @@ use yii\widgets\Pjax;
 
 $this->title = Yii::t('app', '用户管理');
 $this->params['breadcrumbs'][] = $this->title;
+$this->params['breadcrumbs'][] = '员工列表';
 ?>
 <div class="box box-info">
     <div class="box-header">
@@ -61,10 +62,10 @@ $this->params['breadcrumbs'][] = $this->title;
                         return  Yii::$app->user->can('users/users/delete') ?
                             Html::a('<span style="color: red" class="glyphicon glyphicon-ban-circle"></span>', $url, [
                                 'data' => [
-                                    'confirm' => Yii::t('app', '您确定要禁用此用户吗?'),
+                                    'confirm' => Yii::t('app', '您确定要禁用或启用此用户吗?'),
                                     'method' => 'post',
                                 ],
-                                'title' => '设为无效',
+                                'title' => '禁用/启用',
                             ]):
                             '';
                     },

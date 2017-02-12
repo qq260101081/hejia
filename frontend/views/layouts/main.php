@@ -46,13 +46,15 @@ $category_id = Yii::$app->getRequest()->getQueryParam('category_id');
         <div class="logo"><a href=""><img src="frontend/web/images/logo.png"/></a></div>
         <ul class="nav clearfix">
             <li <?php if($ctl == 'site' && $act_id == 'index') echo 'class="now"';?>>
-                <a href="<?= Url::to(['site/index']);?>">网站首页</a></li>
-            <li <?php if($ctl == 'family') echo 'class="now"';?>>
-                <a href="<?= Url::to(['family/view']);?>">家庭服务</a>
+                <a href="<?= Url::to(['site/index']);?>">网站首页</a>
             </li>
             <li <?php if($ctl == 'auxiliary') echo 'class="now"';?>>
                 <a href="<?= Url::to(['auxiliary/index']);?>">托辅中心</a>
             </li>
+            <li <?php if($ctl == 'family') echo 'class="now"';?>>
+                <a href="<?= Url::to(['family/view']);?>">家庭服务</a>
+            </li>
+
             <li <?php if($ctl == 'service') echo 'class="now"';?>>
                 <a href="<?= Url::to(['service/process']);?>">服务流程</a>
             </li>

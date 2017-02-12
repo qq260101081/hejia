@@ -97,7 +97,9 @@
                         'active' => Yii::$app->controller->module->id == 'users',
                         'visible'=> isset($permissions['users']) ? 1 : 0,
                         'items' => [
-                            ['label' => '用户列表', 'icon' => 'fa fa-dot-circle-o','active' => Yii::$app->controller->id == 'users','visible'=> isset($permissions['users']['users']['index']) ? 1 : 0, 'url' => ['/users/users/index']],
+                            ['label' => '员工列表', 'icon' => 'fa fa-dot-circle-o','active' => Yii::$app->controller->id == 'users'&&Yii::$app->controller->action->id == 'index','visible'=> isset($permissions['users']['users']['index']) ? 1 : 0, 'url' => ['/users/users/index']],
+                            ['label' => '客户列表', 'icon' => 'fa fa-dot-circle-o','active' => Yii::$app->controller->id == 'users'&&Yii::$app->controller->action->id == 'patriarch-index','visible'=> isset($permissions['users']['users']['patriarch-index']) ? 1 : 0, 'url' => ['/users/users/patriarch-index']],
+
                             ['label' => '用户组', 'icon' => 'fa fa-dot-circle-o','active' => Yii::$app->controller->id == 'role','visible'=> isset($permissions['role']['role']['index']) ? 1 : 0, 'url' => ['/role/role/index']],
                             ['label' => '留言列表', 'icon' => 'fa fa-dot-circle-o','active' => Yii::$app->controller->id == 'guestbook','visible'=> isset($permissions['users']['guestbook']['index']) ? 1 : 0, 'url' => ['/users/guestbook/index']],
                         ],

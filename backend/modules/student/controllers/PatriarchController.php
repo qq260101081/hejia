@@ -153,7 +153,16 @@ class PatriarchController extends CommonController
     {
         $model = $this->findModel($id);
         if($model->delete())
+        {
+            $user = Users::findOne($id);
+            if($user)
+            {
+                $user->status = 'inactive';
+                $user->save(false);
+            }
             Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'删除成功！']);
+        }
+
         return $this->redirect(['index']);
     }
 

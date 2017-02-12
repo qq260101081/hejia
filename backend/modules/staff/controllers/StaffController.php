@@ -268,8 +268,13 @@ class StaffController extends CommonController
     public function actionDelete($id)
     {
         $model = $this->findModel($id);
+        $userid = $model->userid;
         if($model->delete())
+        {
+            Users::findOne($userid)->delete();
             Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'删除成功！']);
+        }
+
         return $this->redirect(['index']);
     }
 

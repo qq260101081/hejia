@@ -21,16 +21,31 @@ class UsersController extends CommonController
      * Lists all Users models.
      * @return mixed
      */
-    public function actionIndex()
+    public function actionIndex() //员工列表
     {
         $searchModel = new UsersSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        $dataProvider->query->andWhere(['<>', 'type', 'patriarch']);
 
         return $this->render('/index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
+
+    public function actionPatriarchIndex()
+    {
+        $searchModel = new UsersSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider->query->andWhere(['type' => 'patriarch']);
+
+        return $this->render('/patriarch_index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
 
     public function actionModalList()
     {
@@ -160,18 +175,24 @@ class UsersController extends CommonController
     {
         //更新状态
         $model = $this->findModel($id);
-        $model->status = 'inactive';
+        if($model->status == 'inactive')
+            $model->status = 'active';
+        else
+            $model->status = 'inactive';
         if($model->save(false))
             Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'更改成功！']);
         else
             Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'更改失败！']);
 
-        if($model->id = Yii::$app->user->id)
+        if($model->id == Yii::$app->user->id)
         {
             Yii::$app->user->logout();
             return $this->redirect(['/site/login']);
         }
-        return $this->redirect(['index']);
+        if($model->type == 'staff')
+            return $this->redirect(['index']);
+        else
+            return $this->redirect(['patriarch-index']);
 
 
 
