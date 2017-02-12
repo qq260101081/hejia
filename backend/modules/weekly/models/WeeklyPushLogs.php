@@ -31,6 +31,14 @@ class WeeklyPushLogs extends \yii\db\ActiveRecord
         return '{{%weekly_push_logs}}';
     }
 
+    public function getHiddenFormTokenField() {
+        $token = \Yii::$app->getSecurity()->generateRandomString();
+        $token = str_replace('+', '.', base64_encode($token));
+
+        \Yii::$app->session->set(\Yii::$app->params['form_token_param'], $token);;
+        return Html::hiddenInput(\Yii::$app->params['form_token_param'], $token);
+    }
+
     /**
      * @inheritdoc
      */

@@ -47,15 +47,15 @@ $type = ['午托','晚托','日托'];
         <span class="title-text"><?= $order->product_name; ?></span>
     </li>
     <li>
-        <span class="title-bt">服务开始时间：</span>
+        <span class="title-bt">开始时间：</span>
         <span class="title-text"><?= date('Y-m-d', $order->stime); ?></span>
     </li>
     <li>
-        <span class="title-bt">服务结束时间：</span>
+        <span class="title-bt">结束时间：</span>
         <span class="title-text"><?= date('Y-m-d', $order->etime); ?></span>
     </li>
     <li>
-        <span class="title-bt">金额：</span>
+        <span class="title-bt">订单金额：</span>
         <span class="title-text">￥<?= $order->money; ?></span>
     </li>
     <li>
@@ -69,14 +69,14 @@ $type = ['午托','晚托','日托'];
 </ul>
 <ul class="nav">
     <li>
-        <span class="title-bt">服务对象</span>
+        <span class="title-bt-to">服务对象</span>
     </li>
     <li>
-        <span class="title-bt">姓名：</span>
+        <span class="title-bt">学生姓名：</span>
         <span class="title-text"><?= $student->name; ?></span>
     </li>
     <li>
-        <span class="title-bt">性别：</span>
+        <span class="title-bt">学生性别：</span>
         <span class="title-text"><?= $student->sex; ?></span>
     </li>
     <li>
@@ -103,11 +103,11 @@ $type = ['午托','晚托','日托'];
         <span class="title-bt-to">家长资料</span>
     </li>
     <li>
-        <span class="title-bt">姓名：</span>
+        <span class="title-bt">家长姓名：</span>
         <span class="title-text"><?= $patriarch->name; ?></span>
     </li>
     <li>
-        <span class="title-bt">性别：</span>
+        <span class="title-bt">家长性别：</span>
         <span class="title-text">
             <?php if(Yii::$app->user->identity->sex == 1) echo '男';elseif(Yii::$app->user->identity->sex == 2) echo '女'; else echo '保密';?>
         </span>

@@ -4,15 +4,7 @@
 ?>
 <div class="banner"><img src="/images/banner.jpg"/></div>
 <ul class="menu">
-    <li>
-        <div class="am-gallery-item">
-            <a href="<?= Url::to(['family/index']);?>" class="">
-                <img src="/images/icon1.png">
-                <p>家庭服务</p>
-            </a>
-        </div>
-    </li>
-    <li>
+   <li>
         <div class="am-gallery-item">
             <a href="<?= Url::to(['auxiliary/area']);?>" class="">
                 <img src="/images/icon2.png">
@@ -30,33 +22,9 @@
     </li>
     <li>
         <div class="am-gallery-item">
-            <a href="<?= Url::to(['behalf/index']);?>" class="">
-                <img src="/images/icon5.png">
-                <p>和家代购</p>
-            </a>
-        </div>
-    </li>
-    <li>
-        <div class="am-gallery-item">
             <a href="<?= Url::to(['auxiliary/mien']);?>" class="">
                 <img src="/images/icon8.png">
                 <p>员工风采</p>
-            </a>
-        </div>
-    </li>
-    <li>
-        <div class="am-gallery-item">
-            <a href="<?= Url::to(['centralize/index']);?>" class="">
-                <img src="/images/icon6.png">
-                <p>集中服务</p>
-            </a>
-        </div>
-    </li>
-    <li>
-        <div class="am-gallery-item">
-            <a href="<?= Url::to(['site/education']);?>" class="">
-                <img src="/images/icon7.png">
-                <p>和家教育</p>
             </a>
         </div>
     </li>
@@ -68,6 +36,42 @@
             </a>
         </div>
     </li>
+    <li>
+        <div class="am-gallery-item">
+            <a href="<?= Url::to(['site/education']);?>" class="">
+                <img src="/images/icon7.png">
+                <p>和家特色</p>
+            </a>
+        </div>
+    </li>
+    <li>
+        <div class="am-gallery-item">
+            <a href="<?= Url::to(['family/index']);?>" class="">
+                <img src="/images/icon1.png">
+                <p>家庭服务</p>
+            </a>
+        </div>
+    </li>
+   
+   
+    <li>
+        <div class="am-gallery-item">
+            <a href="<?= Url::to(['behalf/index']);?>" class="">
+                <img src="/images/icon5.png">
+                <p>和家代购</p>
+            </a>
+        </div>
+    </li>
+   
+    <li>
+        <div class="am-gallery-item">
+            <a href="<?= Url::to(['centralize/index']);?>" class="">
+                <img src="/images/icon6.png">
+                <p>集中服务</p>
+            </a>
+        </div>
+    </li>  
+   
 </ul>
 <!--<div class="reg2">
     <a href="#"><img src="/images/reg.png"/></a>

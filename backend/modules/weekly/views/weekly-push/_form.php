@@ -20,6 +20,7 @@ use yii\bootstrap\Modal;
             <?php $form = ActiveForm::begin([
                 'options' => ['class'=>'form-horizontal','enctype'=>'multipart/form-data'],
                 'validateOnBlur' => false,
+                //'validateOnSubmit' => true,
                 'fieldConfig' => [
                     'labelOptions' => ['class' => 'col-sm-2 control-label'],
                     'template' => "{label}\n<div class=\"col-sm-8\">{input}</div>\n<div class=\"col-sm-8\">{error}</div>",
@@ -66,7 +67,7 @@ Modal::begin([
     'size' => 'modal-lg',
     'header' => '<h4 class="modal-title">选取周报推送</h4>',
     'footer' => '<a href="#" class="btn btn-primary pull-left" data-dismiss="modal">关闭</a>
-<button type="submit" class="btn btn-warning">推送</button>',
+<button type="submit" class="btn btn-warning">选择</button>',
 ]);
 
 
@@ -77,8 +78,18 @@ $js = <<<JS
             $('#weekly-modal .modal-body').html(data);
         }
     );
+    
+$("#w0 button").click(function(){  
+  
+    $(this).attr("disabled","true"); //设置变灰按钮  
+    //$("#messageForm").submit();//提交表单  
+    setTimeout("$('#w0 button').removeAttr('disabled')",3000); //设置三秒后提交按钮 显示  
+       
+})
+
 JS;
 $this->registerJs($js);
 Modal::end();
+
 
 ?>

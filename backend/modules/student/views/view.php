@@ -47,6 +47,7 @@ $type = ['午托','晚托', '日托'];
 
     <p>
         <?php if(Yii::$app->user->can('student/student/update')) echo Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+
         <?php if(Yii::$app->user->can('student/student/delete')) echo Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
@@ -54,6 +55,9 @@ $type = ['午托','晚托', '日托'];
                 'method' => 'post',
             ],
         ]) ?>
+
+        <?php if(Yii::$app->user->can('student/patriarch/update')) echo Html::a(Yii::t('app', '更新家长'), ['/student/patriarch/update', 'id' => $model->patriarch_id], ['class' => 'btn btn-primary']) ?>
+
     </p>
     <table style="background:#fff;width: 50%;float: left" class="table table-striped table-bordered detail-view">
         <thead style="color: #eb8f00">
