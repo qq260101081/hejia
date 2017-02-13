@@ -18,11 +18,10 @@
     </div>
 </div>
 <div class="s_main">
-    <h1>服务流程</h1>
     <!--学员中心-->
 
-    <div class="map_hf">
-        <img src="frontend/web/images/liucheng_01.png">
+    <div class="">
+        <img src="frontend/web/images/liucheng_01.jpg">
     </div>
     <div class="space_hx">&nbsp;</div>
     <!--学员中心-->

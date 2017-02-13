@@ -1,10 +1,10 @@
 <?php $this->title = '服务流程';?>
 <div class="cont">
     <div class="cont-block" style="padding-top:15px; margin-bottom:15px;">
-    	<div class="tongy"><img src="/images/liuc_01.png"/></div>
-        <div class="tongy"><img src="/images/liuc_01.png"/></div>
-        <div class="tongy"><img src="/images/liuc_01.png"/></div>
-        <div class="tongy"><img src="/images/liuc_01.png"/></div>
+    	<div class="tongy"><img src="/images/liuc_01.png" width="100%"/></div>
+        <div class="tongy"><img src="/images/liuc_01.png"  width="100%"/></div>
+        <div class="tongy"><img src="/images/liuc_01.png"  width="100%"/></div>
+        <div class="tongy"><img src="/images/liuc_01.png" width="100%"/></div>
         <!-----<div class="kuan">第一步：注册会员</div>
         <div class="kuan">第二步：在线预约</div>
         <div class="kuan">第三步：客户确认</div>

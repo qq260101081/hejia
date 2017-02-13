@@ -122,6 +122,7 @@ return [
                 'from'=>['admin@bnboxes.com'=>'admin']
             ],
         ],
+
         'formatter' => [
             'dateFormat' => 'yyyy-MM-dd',
             'datetimeFormat' => 'yyyy-MM-dd H:i:s',

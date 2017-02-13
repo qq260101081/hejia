@@ -11,14 +11,14 @@ use kartik\date\DatePicker;
 $this->title = Yii::t('app', 'Student List');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-    <div class="box box-info guarantee-index">
+    <div class="box box-info">
         <div class="box-header">
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
         <?php if(Yii::$app->user->can('student/student/create')) echo Html::a(Yii::t('app', 'Create Student'), ['create'], ['class' => 'btn btn-success btn-xs']) ?>
     </p>
-    <?php Pjax::begin(); ?>
+    <?php Pjax::begin(['id'=>'pjax-student-gridview']); ?>
             <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -108,22 +108,24 @@ $this->params['breadcrumbs'][] = $this->title;
                'attribute' => 'age',
                 'headerOptions'=>['width' => 80],
             ],
-            [
+            'created_at:date',
+            /*[
                 'attribute' => 'created_at',
                 'format' => 'date',
                 'filter' => DatePicker::widget([
                     'model' => $searchModel,
                     'attribute' => 'created_at',
                     'type' => DatePicker::TYPE_INPUT,
-                    'convertFormat' => true,
+                    //'convertFormat' => true,
                     'pluginOptions' => [
-                        'autoclose'=>true, 'locale' => [
+                        'autoclose'=>true,
+                        'locale' => [
                             'format' => 'Y-m-d'
                         ]
                     ],
                 ]),
                 'headerOptions'=>['width' => 80],
-            ],
+            ],*/
             [
                 'class' => 'yii\grid\ActionColumn',
                 'header'=>'操作',

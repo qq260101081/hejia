@@ -19,7 +19,7 @@ class StudentSearch extends Student
     {
         return [
             [['id'], 'integer'],
-            [['name', 'classes', 'sex','type', 'created_at', 'updated_at','school'], 'safe'],
+            [['name', 'classes', 'sex','type',  'updated_at','school'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class StudentSearch extends Student
      */
     public function search($params)
     {
-        $query = Student::find()->joinWith('patriarch');
+        $query = Student::find();
 
         // add conditions that should always apply here
 
@@ -59,18 +59,18 @@ class StudentSearch extends Student
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'student.id' => $this->id,
-            'student.sex' => $this->sex,
-            'student.age' => $this->age,
-            'student.type' => $this->type,
+            'id' => $this->id,
+            'sex' => $this->sex,
+            'age' => $this->age,
+            'type' => $this->type,
             //'student.created_at' => strtotime($this->created_at),
             //'student.updated_at' => strtotime($this->updated_at),
         ]);
-       if($this->created_at) $query->andFilterWhere(['>','student.created_at',strtotime($this->created_at)]);
+       if($this->created_at) $query->andFilterWhere(['>','created_at',strtotime($this->created_at)]);
 
-        $query->andFilterWhere(['like', 'student.name', $this->name])
-            ->andFilterWhere(['like', 'student.school', $this->school])
-            ->andFilterWhere(['like', 'student.grade', $this->grade]);
+        $query->andFilterWhere(['like', 'name', $this->name])
+            ->andFilterWhere(['like', 'school', $this->school])
+            ->andFilterWhere(['like', 'grade', $this->grade]);
 
         return $dataProvider;
     }
