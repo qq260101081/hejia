@@ -8,9 +8,6 @@
 ?>
 <ul class="nav">
     <li>
-        <span class="title-bt">我的资料：</span>
-    </li>
-    <li>
         <span class="title-bt">姓名：</span>
         <span class="title-text"><?= $model->name; ?></span>
     </li>
