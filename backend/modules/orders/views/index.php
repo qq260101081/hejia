@@ -22,7 +22,10 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            'id',
+            [
+                'attribute' => 'id',
+                'headerOptions'=> ['width'=> '80'],
+            ],
             'student_name',
             'product_name',
             [
@@ -60,10 +63,13 @@ $this->params['breadcrumbs'][] = $this->title;
                 ]),
             ],
             'money',
-            'payment_type',
+            [
+                'attribute' => 'payment_type',
+                'headerOptions'=> ['width'=> '80'],
+            ],
             'principal',
             //'remark',
-            //'created_at:date',
+            'created_at:date',
 
             [
                 'class' => 'yii\grid\ActionColumn',
