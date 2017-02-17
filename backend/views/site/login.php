@@ -21,7 +21,7 @@ $fieldOptions2 = [
 
 <div class="login-box" id="login-page">
     <div class="login-logo">
-        <a href="#"><b>广东和家服务管理平台</b></a>
+        <a href="#"><b>和家托辅教育管理平台</b></a>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
