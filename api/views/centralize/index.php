@@ -7,6 +7,6 @@
     $this->title = '集中服务';
 ?>
 
-<p>
-    暂未开放.
-</p>
+<div>
+    <img width="100%" src="/images/baocuo.jpg">
+</div>
