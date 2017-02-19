@@ -223,6 +223,11 @@ class SiteController extends Controller
         ]);
     }
 
+    //活动体系
+    public function actionServerInfo()
+    {
+        return $this->render('server-info');
+    }
     /**
      * Resets password.
      *
