@@ -58,11 +58,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?php if($images):;?>
                 <?php foreach ((array)$images as $v):?>
                     <?php if($v->extension == 'mp4'):;?>
-                        <video src="upload/<?=$v['path'];?>" controls="controls">
+                        <video src="upload/<?=$v->path;?>" controls="controls">
                             您的浏览器不支持 video 标签。
                         </video>
                     <?php else:;?>
-                        <img class="img-responsive pad" src="upload/<?=$v['path'];?>">
+                        <img class="img-responsive pad" src="upload/<?=$v->path;?>">
                     <?php endif;?>
                 <?php endforeach;?>
                 <?php endif;?>

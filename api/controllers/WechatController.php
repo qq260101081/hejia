@@ -157,24 +157,25 @@ class WechatController extends Controller
                             'url'  => 'http://m.hejiafuwu.com/site/index'
                         ],
                         [
-                            'name' => urlencode('家庭服务'),
-                            'type' => 'view',
-                            'url'  => 'http://m.hejiafuwu.com/family/index'
-                        ],
-                        [
                             'name' => urlencode('托辅中心'),
                             'type' => 'view',
                             'url'  => 'http://m.hejiafuwu.com/auxiliary/area'
                         ],
                         [
-                            'name' => urlencode('代购服务'),
-                            'type' => 'view',
-                            'url'  => 'http://m.hejiafuwu.com/behalf/index'
-                        ],
-                        [
                             'name' => urlencode('员工风采'),
                             'type' => 'view',
                             'url'  => 'http://m.hejiafuwu.com/auxiliary/mien'
+                        ],
+                        [
+                            'name' => urlencode('家庭服务'),
+                            'type' => 'view',
+                            'url'  => 'http://m.hejiafuwu.com/family/index'
+                        ],
+
+                        [
+                            'name' => urlencode('代购服务'),
+                            'type' => 'view',
+                            'url'  => 'http://m.hejiafuwu.com/behalf/index'
                         ]
                     ]
                 ],

@@ -16,7 +16,7 @@
             <h2 style=" margin-left:15px;"><?= $model[0][0]->title;?></h2>
         </a>
     </div>
-    <div class="cont-block" style="padding-top:15px; margin-bottom:15px;">
+    <div class="cont-block" style="margin-bottom:15px;">
         <article data-am-widget="paragraph"
                  class="am-paragraph am-paragraph-default"
                  data-am-paragraph="{ tableScrollable: true, pureview: true }">

@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'category_id',
                 'value' => $model->getCategoryPath($model->category_id)
             ],
-            'content:text',
+            'content:html',
             'created_at:date',
             'updated_at:date',
         ],
