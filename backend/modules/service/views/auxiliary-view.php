@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'title',
-            'type',
+            //'type',
             'info',
             'list_img',
             [
