@@ -8,6 +8,7 @@
 
 namespace api\controllers;
 
+use Yii;
 use api\models\Auxiliary;
 use api\models\Patriarch;
 use api\models\ServeCategory;
