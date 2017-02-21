@@ -6,7 +6,7 @@
 <ul class="menu">
    <li>
         <div class="am-gallery-item">
-            <a href="<?= Url::to(['auxiliary/area']);?>" class="">
+            <a href="<?= Url::to(['auxiliary/index']);?>" class="">
                 <img src="/images/icon2.png">
                 <p>托辅中心</p>
             </a>

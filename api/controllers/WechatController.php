@@ -159,7 +159,7 @@ class WechatController extends Controller
                         [
                             'name' => urlencode('托辅中心'),
                             'type' => 'view',
-                            'url'  => 'http://m.hejiafuwu.com/auxiliary/area'
+                            'url'  => 'http://m.hejiafuwu.com/auxiliary/index'
                         ],
                         [
                             'name' => urlencode('员工风采'),

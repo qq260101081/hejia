@@ -9,6 +9,7 @@
 namespace api\controllers;
 
 use api\models\Auxiliary;
+use api\models\Patriarch;
 use api\models\ServeCategory;
 use yii\web\Controller;
 
@@ -32,6 +33,16 @@ class AuxiliaryController extends Controller
     //校区介绍页
     public function actionIndex($pid = 0)
     {
+        if (Yii::$app->user->isGuest) {
+            return $this->redirect(['site/login']);
+        }
+        //默认自己孩子所在校区
+        if(!$pid)
+        {
+            $patriarch = Patriarch::findOne(Yii::$app->user->id);
+            $pid =  $patriarch ? $patriarch->category_id : 0;
+        }
+
         $res = Auxiliary::find()->where(['category_id' => $pid])->all();
         $model = [];
         foreach ($res as $v)
