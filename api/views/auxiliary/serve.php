@@ -10,7 +10,7 @@
 
 <ul class="nav">
     <li>
-        <a href="<?= Url::to(['auxiliary/area']); ?>">
+        <a href="<?= Url::to(['auxiliary/index']); ?>">
             <span>托辅中心</span>
             <i class="am-icon-angle-right"></i>
         </a>
