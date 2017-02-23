@@ -14,13 +14,12 @@
             <h2 style=" margin-left:15px;">团队风采</h2>
         </a>
     </div>
-    <div class="cont-block02" style="padding-top:15px; margin-bottom:15px;">
-        <ul data-am-widget="gallery" class="am-gallery am-avg-sm-2
-                      am-avg-md-3 am-avg-lg-4 am-gallery-default" data-am-gallery="{ pureview: true }" >
+    <div class="cont-block02" style="padding-top:15px; margin-bottom:50px;">
+        <ul>
             <?php foreach ($model as $v):;?>
             <li>
-                <div class="am-gallery-item">
-                    <a href="http://img.hejiafuwu.com/<?=$v->list_img;?>" class="">
+                <div>
+                    <a href="<?= \yii\helpers\Url::to(['auxiliary/view','id'=>$v->id])?>" class="">
                         <img src="http://img.hejiafuwu.com/<?=$v->list_img;?>"/>
                         <h3 class="am-gallery-title"><?=$v->title;?></h3>
                     </a>

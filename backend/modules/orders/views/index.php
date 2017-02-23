@@ -27,8 +27,19 @@ $this->params['breadcrumbs'][] = $this->title;
                 'headerOptions'=> ['width'=> '80'],
             ],
             'student_name',
-            'product_name',
             [
+                'attribute' => 'category_id',
+                'label' => '学校',
+                'headerOptions'=> ['width'=> '80'],
+                'value' => function($model){
+                    return $model['category']->name;
+                },
+
+            ],
+            'product_name',
+            'stime:date',
+            'etime:date',
+            /*[
                 'attribute' => 'stime',
                 'label' => '开始日期(>)',
                 'format' => 'date',
@@ -61,7 +72,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         ]
                     ],
                 ]),
-            ],
+            ],*/
             'money',
             [
                 'attribute' => 'payment_type',

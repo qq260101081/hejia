@@ -5,6 +5,7 @@ namespace app\modules\orders\controllers;
 
 use app\modules\staff\models\Staff;
 use app\modules\staff\models\StaffSearch;
+use backend\modules\service\models\ServiceCategory;
 use Yii;
 use app\modules\orders\models\Orders;
 use app\modules\orders\models\OrdersSearch;
@@ -24,6 +25,12 @@ class OrdersController extends CommonController
     //托服订单列表
     public function actionIndex()
     {
+        /*$category = ServiceCategory::find()
+            ->where(['>','lft', '10'])
+            ->andWhere(['<','rgt','23'])
+            ->andWhere(['level'=>'3'])->asArray()
+            ->indexBy('id')
+            ->all();*/
         $searchModel = new OrdersSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $dataProvider->query->andFilterWhere(['type'=>0]);
@@ -33,6 +40,7 @@ class OrdersController extends CommonController
         return $this->render('/index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            //'category' => $category
         ]);
     }
 

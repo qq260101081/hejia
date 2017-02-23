@@ -48,6 +48,20 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format' => 'date',
                 'headerOptions'=> ['width'=> '80'],
             ],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'template' => '{view}',
+                'header' => '操作',
+                'headerOptions'=> ['width'=> '80'],
+
+                'buttons' => [
+                    'view' => function ($url, $model) {
+                        return  Yii::$app->user->can('msg/msg-push-logs/view') ?
+                            Html::a('<span class="glyphicon glyphicon-eye-open"></span>', $url):
+                            '';
+                    },
+                ],
+            ],
         ],
     ]); ?>
 <?php Pjax::end(); ?></div>

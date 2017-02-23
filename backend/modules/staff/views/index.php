@@ -7,6 +7,7 @@ use yii\widgets\Pjax;
 /* @var $searchModel app\modules\presscentre\models\PresscentreSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
+
 $this->title = Yii::t('app', 'Staff List');
 $this->params['breadcrumbs'][] = $this->title;
 ?>

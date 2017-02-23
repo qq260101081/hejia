@@ -8,6 +8,7 @@
 namespace app\modules\orders\models;
 
 use app\modules\staff\models\Staff;
+use backend\modules\service\models\ServiceCategory;
 use Yii;
 
 /**
@@ -41,6 +42,12 @@ class Orders extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Staff::className(), ['id' => 'teacher_id']);
     }
+
+    public function getCategory()
+    {
+        return $this->hasOne(ServiceCategory::className(), ['id' => 'category_id']);
+    }
+
     /**
      * @inheritdoc
      */
