@@ -161,11 +161,11 @@ class WechatController extends Controller
                             'type' => 'view',
                             'url'  => 'http://m.hejiafuwu.com/auxiliary/index'
                         ],
-                        [
+                        /*[
                             'name' => urlencode('员工风采'),
                             'type' => 'view',
                             'url'  => 'http://m.hejiafuwu.com/auxiliary/mien'
-                        ],
+                        ],*/
                         [
                             'name' => urlencode('家庭服务'),
                             'type' => 'view',

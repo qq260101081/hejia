@@ -20,14 +20,14 @@
             </a>
         </div>
     </li>
-    <li>
+    <!--<li>
         <div class="am-gallery-item">
             <a href="<?= Url::to(['auxiliary/mien']);?>" class="">
                 <img src="/images/icon8.png">
                 <p>员工风采</p>
             </a>
         </div>
-    </li>
+    </li>-->
     <li>
         <div class="am-gallery-item">
             <a href="<?= Url::to(['site/contact']);?>" class="">

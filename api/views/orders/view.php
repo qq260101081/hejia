@@ -90,7 +90,7 @@ $type = ['午托','晚托','日托'];
     </li>
     <?php endif;?>
     <li>
-        <span class="title-bt">班级：</span>
+        <span class="title-bt">学生班级：</span>
         <span class="title-text"><?= $grade[$student->grade] . ' ' . $classes[$student->classes]; ?></span>
     </li>
     <li>
@@ -106,12 +106,12 @@ $type = ['午托','晚托','日托'];
         <span class="title-bt">家长姓名：</span>
         <span class="title-text"><?= $patriarch->name; ?></span>
     </li>
-    <li>
+    <!--<li>
         <span class="title-bt">家长性别：</span>
         <span class="title-text">
             <?php if(Yii::$app->user->identity->sex == 1) echo '男';elseif(Yii::$app->user->identity->sex == 2) echo '女'; else echo '保密';?>
         </span>
-    </li>
+    </li>-->
     <li>
         <span class="title-bt">关系：</span>
         <span class="title-text"><?= $patriarch->relation; ?></span>
