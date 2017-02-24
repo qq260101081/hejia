@@ -140,7 +140,7 @@ $type = ['午托','晚托','日托'];
 <?php if($staff):;?>
 <ul class="nav">
     <li>
-        <span class="title-bt">服务人员资料：</span>
+        <span class="title-bt-to">服务人员资料</span>
     </li>
     <li>
         <span class="title-bt">姓名：</span>
