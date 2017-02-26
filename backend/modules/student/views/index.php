@@ -108,6 +108,10 @@ $this->params['breadcrumbs'][] = $this->title;
                'attribute' => 'age',
                 'headerOptions'=>['width' => 80],
             ],
+            [
+                'attribute' => 'pub_username',
+                'headerOptions'=>['width' => 70],
+            ],
             'created_at:date',
             /*[
                 'attribute' => 'created_at',

@@ -54,7 +54,7 @@ class Student extends ActiveRecord
         return [
             [['name', 'sex', 'age', 'school', 'grade','classes', 'category_id'], 'required'],
             [['created_at','type','classes', 'grade', 'updated_at', 'category_id', 'patriarch_id'], 'integer'],
-            [['age','sex','name'], 'string', 'max' => 12],
+            [['age','sex','name','pub_username'], 'string', 'max' => 12],
             ['remark', 'string', 'max' => 300],
             [['school'], 'string', 'max' => 90],
             ['category_id', 'default', 'value' => 0]
@@ -76,6 +76,7 @@ class Student extends ActiveRecord
             'type' => Yii::t('app', '托管类型'),
             'category_id' => Yii::t('app', '所属校区'),
             'grade' => Yii::t('app', '班级'),
+            'pub_username' => Yii::t('app', '操作员'),
             'classes' => Yii::t('app', '班'),
             'created_at' => Yii::t('app', 'Created At'),
             'updated_at' => Yii::t('app', 'Updated At'),

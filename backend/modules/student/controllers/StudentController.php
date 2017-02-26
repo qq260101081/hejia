@@ -108,6 +108,7 @@ class StudentController extends CommonController
                 $user->save(false);
             }
             $model->patriarch_id = $user->id;
+            $model->pub_username = Yii::$app->user->identity->username;
             $oldPatriarch = Patriarch::findOne($user->id);
             if(!$oldPatriarch)
             {

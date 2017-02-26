@@ -19,7 +19,7 @@ class StudentSearch extends Student
     {
         return [
             [['id'], 'integer'],
-            [['name', 'classes', 'sex','type',  'updated_at','school'], 'safe'],
+            [['name', 'classes', 'sex','type','pub_username',  'updated_at','school'], 'safe'],
         ];
     }
 
@@ -69,6 +69,7 @@ class StudentSearch extends Student
        if($this->created_at) $query->andFilterWhere(['>','created_at',strtotime($this->created_at)]);
 
         $query->andFilterWhere(['like', 'name', $this->name])
+            ->andFilterWhere(['like', 'pub_username', $this->pub_username])
             ->andFilterWhere(['like', 'school', $this->school])
             ->andFilterWhere(['like', 'grade', $this->grade]);
 
