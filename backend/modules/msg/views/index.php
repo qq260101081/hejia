@@ -50,7 +50,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             [
                 'class' => 'yii\grid\ActionColumn',
-                'template' => '{view}',
+                'template' => '{view} {delete}',
                 'header' => '操作',
                 'headerOptions'=> ['width'=> '80'],
 
@@ -58,6 +58,16 @@ $this->params['breadcrumbs'][] = $this->title;
                     'view' => function ($url, $model) {
                         return  Yii::$app->user->can('msg/msg-push-logs/view') ?
                             Html::a('<span class="glyphicon glyphicon-eye-open"></span>', $url):
+                            '';
+                    },
+                    'delete' => function ($url, $model) {
+                        return  Yii::$app->user->can('msg/msg-push-logs/delete') ?
+                            Html::a('<span class="glyphicon glyphicon-trash"></span>', $url, [
+                                'data' => [
+                                    'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
+                                    'method' => 'post',
+                                ],
+                            ]):
                             '';
                     },
                 ],

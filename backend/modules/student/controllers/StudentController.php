@@ -159,6 +159,7 @@ class StudentController extends CommonController
         $data = Yii::$app->request->post();
 
         if ($model->load($data)) {
+            $model->pub_username = Yii::$app->user->identity->username;
             //更新学生
             if($model->save())
             {
