@@ -75,7 +75,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             return '<span style="color: grey">待审</span>';
                     }
                 ],
-                [
+                /*[
                     'attribute' => 'created_at',
                     'format' => 'date',
                     'headerOptions'=> ['width'=> '100'],
@@ -90,7 +90,8 @@ $this->params['breadcrumbs'][] = $this->title;
                             ]
                         ],
                     ]),
-                ],
+                ],*/
+                'created_at:date',
                 [
                     'class' => 'yii\grid\ActionColumn',
                     'template' => '{view} &nbsp; &nbsp;{update}&nbsp; &nbsp; {delete}',

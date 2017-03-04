@@ -19,7 +19,7 @@ class WeeklySearch extends Weekly
     {
         return [
             [['id', 'student_id', 'discipline', 'sleep', 'diet', 'study'], 'integer'],
-            [['student_name', 'created_at'],'string'],
+            [['student_name'],'string'],
         ];
     }
 
