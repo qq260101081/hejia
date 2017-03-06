@@ -104,3 +104,5 @@ body.login-page {
 .detail-view {
 	background: #fff;
 }
+
+iframe{WuWei:expression(this.src='about:blank',this.outerHTML='');} 
