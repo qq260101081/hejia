@@ -53,6 +53,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 ],
                 [
                     'attribute' => 'created_at',
+                    'headerOptions'=> ['width'=> '100'],
+                ],
+                /*[
+                    'attribute' => 'created_at',
                     'format' => 'date',
                     'headerOptions'=> ['width'=> '100'],
                     'filter' => DatePicker::widget([
@@ -66,7 +70,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             ]
                         ],
                     ]),
-                ],
+                ],*/
                 [
                     'class' => 'yii\grid\ActionColumn',
                     'header' => '操作',

@@ -2,7 +2,7 @@
 return [
     'adminEmail' => 'admin@bnboxes.com',
     'supportEmail' => 'admin@bnboxes.com',
-    'imageUrlPrefix' => 'http://img.liusheji.com', //编辑器上传文件时使用
+    'imageUrlPrefix' => 'http://img.hejiafuwu.com', //编辑器上传文件时使用
     'user.passwordResetTokenExpire' => 3600,
     //微信公众号开发
     'wechat' => [

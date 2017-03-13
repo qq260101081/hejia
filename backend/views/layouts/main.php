@@ -91,21 +91,6 @@ if (Yii::$app->controller->action->id === 'login') {
 
     </div>
 
-<?php
-    $js = <<<JS
-    try{  
-　　top.location.hostname;  
-　　if (top.location.hostname != window.location.hostname) {  
-　　　　top.location.href =window.location.href;  
-　　}  
-}  
-catch(e){  
-　　top.location.href = window.location.href;  
-}  
-JS;
-$this->registerJs($js);
-
-?>
 
     <?php $this->endBody() ?>
     </body>
