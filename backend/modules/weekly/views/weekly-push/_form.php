@@ -82,8 +82,9 @@ $js = <<<JS
 $("#w0 button").click(function(){  
   
     $(this).attr("disabled","true"); //设置变灰按钮  
-    //$("#messageForm").submit();//提交表单  
-    setTimeout("$('#w0 button').removeAttr('disabled')",3000); //设置三秒后提交按钮 显示  
+     
+    setTimeout("$('#w0 button').removeAttr('disabled')",3000); //设置三秒后提交按钮 显示 
+    $("#w0").submit();//提交表单
        
 })
 

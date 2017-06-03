@@ -83,11 +83,11 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'type',
                 'value' => function($model){
-                    $type = ['午托','晚托','日托'];
+                    $type = ['午托','晚托','日托','其他'];
                     return $type[$model->type];
                 },
                 'filter' => Html::activeDropDownList($searchModel, 'type',[
-                    '午托','晚托','日托'
+                    '午托','晚托','日托','其他'
                 ],
                     ['prompt'=>'全部','class' => 'form-control'] ),
                 'headerOptions'=>['width' => 80],

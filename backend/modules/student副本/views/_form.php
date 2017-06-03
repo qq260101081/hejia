@@ -90,6 +90,7 @@ use kartik\date\DatePicker;
                 '午托',
                 '晚托',
                 '日托',
+            '其他'
         ]); ?>
 
         <?= $form->field($model, 'remark')->textarea(); ?>

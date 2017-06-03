@@ -27,6 +27,15 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'student_name',
+            [
+                'label' => '周报名称',
+                //'attribute'=>'student_name',
+                'format' =>'raw',
+                'headerOptions'=> ['width'=> '150'],
+                'value' => function($model){
+                    return $model->student_name . '周报 (<span style="color:gray">'.date('m.d',$model->stime).'~'.date('m.d',$model->etime).'</span>)';
+                }
+            ],
             'discipline',
             'sleep',
             'diet',
@@ -37,7 +46,7 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'status',
             [
                 'class' => 'yii\grid\ActionColumn',
-                'template' => '{view}',
+                'template' => '{view} &nbsp; {delete}',
                 'header' => '操作',
                 'headerOptions'=> ['width'=> '80'],
 
@@ -47,7 +56,18 @@ $this->params['breadcrumbs'][] = $this->title;
                             Html::a('<span class="glyphicon glyphicon-eye-open"></span>', $url):
                             '';
                     },
+                    'delete' => function ($url, $model) {
+                        return  Yii::$app->user->can('weekly/weekly-push/delete') ?
+                            Html::a('<span class="glyphicon glyphicon-trash"></span>', $url, [
+                                'data' => [
+                                    'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
+                                    'method' => 'post',
+                                ],
+                            ]):
+                            '';
+                    },
                 ],
+
             ],
         ],
     ]); ?>

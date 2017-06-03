@@ -61,6 +61,15 @@ class WeeklyPushController extends CommonController
         if($model->load($postData))
         {
             $weekly = Weekly::findOne($postData['WeeklyPushLogs']['weekly_id']);
+            $weeklyLog = WeeklyPushLogs::find()
+                ->where(['stime' => $weekly->stime,'etime'=>$weekly->etime,'student_id'=>$weekly->student_id])
+                ->one();
+            if($weeklyLog)
+            {
+                Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'周报已推送，请勿重复推送']);
+                return $this->render('create', ['model' => $model]);
+            }
+
             $student = Student::findOne($weekly->student_id);
             if(!$student)
             {
@@ -94,11 +103,11 @@ class WeeklyPushController extends CommonController
                     $imgs[$k]['path'] = $ymd . '/' . $newFile;
                 }
             }
-            if(!$imgs)
+            /*if(!$imgs)
             {
                 Yii::$app->session->setFlash('error', ['delay'=>3000,'message'=>'推送失败，未能保存影像信息']);
                 return $this->render('create', ['model' => $model]);
-            }
+            }*/
             //赋值保存
             $model->student_id = $weekly->student_id;
             $model->student_name = $weekly->student_name;
@@ -113,7 +122,9 @@ class WeeklyPushController extends CommonController
             $model->etime  = $weekly->etime;
             $model->created_at  = time();
             $model->username  = Yii::$app->user->identity->name;
+
             $model->images = json_encode($imgs);
+
             if($model->save()){
                 //更新学生周报推送状态
                 $weekly->status = 1;
@@ -143,6 +154,21 @@ class WeeklyPushController extends CommonController
         return $this->render('view', [
             'model' => $model
         ]);
+    }
+
+    public function actionDelete($id)
+    {
+        $model = $this->findModel($id);
+
+        $weekly = Weekly::find()
+            ->where(['stime' => $model->stime,'etime'=>$model->etime,'student_id'=>$model->student_id])
+            ->one();
+        $weekly->status = 0;
+        $weekly->save(false);
+
+        $model->delete();
+        Yii::$app->session->setFlash('success', ['delay'=>3000,'message'=>'删除成功！']);
+        return $this->redirect(['index']);
     }
     protected function findModel($id)
     {

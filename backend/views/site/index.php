@@ -2,7 +2,7 @@
     use yii\helpers\Url;
 /* @var $this yii\web\View */
 
-$this->title = '';
+$this->title = '和家托辅教育管理平台';
 ?>
 <div class="site-index">
     <div class="row">
